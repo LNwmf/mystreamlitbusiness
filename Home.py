@@ -20,3 +20,6 @@ with st.expander("Contact Us", icon=":material/emoji_people:"):
     st.write("Lessons: classes@theworldmusicfoundation.org")
     st.write()
     st.write("Podcasts: podcast@theworldmusicfoundation.org")
+
+with st.expander("Support Us", icon=":material/store:"):
+    st.write("https://theworldmusicfoundation.org/products/")

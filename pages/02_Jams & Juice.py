@@ -3,13 +3,13 @@ import streamlit as st
 #streamlit run sl1.py
 
 st.set_page_config(
-    page_title="Cultural Music Exchange & BIPOC Business Support",
-    page_icon="🎶",
+    page_title="🍹 Jams & Juice",
+    page_icon="🍹",
     layout="centered",
 )
 
 st.image("https://theworldmusicfoundation.org/wp-content/uploads/2016/11/wmf_small_logo.png.webp", width=180)
-st.title("🎶 Cultural Music Exchange & BIPOC Businesses")
+st.title("🍹 Jams & Juice")
 st.markdown("""
 Welcome! Pick a drink below to discover a playlist, support a local BIPOC business, and unlock a reward for sharing with others.
 """)

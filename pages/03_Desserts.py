@@ -67,3 +67,13 @@ if dessert_choice:
     st.write(f"💼 **Business Name:** {info['business_name']}")
     st.write(f"🌐 [Visit Website]({info['website']})")
     st.write(f"🎁 **Special Offer:** {info['offer']}")
+
+    st.write("👥 How many people did you share your playlist with?")
+    shared_count = st.number_input("Number of people:", min_value=0, step=1)
+
+    if st.button("Check Reward Status"):
+        if shared_count >= 3:
+            st.balloons()  # Add some confetti for fun
+            st.success(f"🎁 You unlocked a reward! Show this screen at {info['booth_name']} to claim your prize!")
+        else:
+            st.warning("⏳ Share your playlist with at least 3 people to unlock your reward!")

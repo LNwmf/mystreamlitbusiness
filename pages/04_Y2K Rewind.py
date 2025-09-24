@@ -1,21 +1,21 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Sweet Melodies",
-    page_icon="🍬",
+    page_title="Y2K Rewind",
+    page_icon="💿",
     layout="centered",
 )
 
 st.image("https://theworldmusicfoundation.org/wp-content/uploads/2016/11/wmf_small_logo.png.webp", width=180)
-st.title("🍬 Sweet Melodies")
+st.title("💿 Y2K Rewind")
 st.markdown("""
-Welcome! Pick a dessert below to discover a blended playlist, support a local BIPOC business, and unlock a reward for sharing with others.
+Welcome! Pick a 2000s music artist below to discover a blended playlist, support a local BIPOC business, and unlock a reward for sharing with others.
 """)
 
 # Business options and related data
 business_data = {
-    "Flan": {
-        "playlist": "Dancing Jelly",
+    "Britney Spears": {
+        "playlist": "Oop...I did it again",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         "business_name": "Tapas Valencia",
         "offer": "10% off your first order with this screen!",
@@ -23,8 +23,8 @@ business_data = {
         "website": "https://www.tapasvalencia.com/",
         "business_image": "https://www.tapasvalencia.com/wp-content/uploads/2017/08/Valencia-TRANSPARENT.png",
     },
-    "Souffle": {
-    "playlist": "Pastries & Strings",
+    "Usher": {
+    "playlist": "Smooth Grooves",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "Petite Vie Brasserie",
     "offer": "Buy 1 Combo, Get 1 Free Chicken Sandwich with this screen.",
@@ -32,8 +32,8 @@ business_data = {
     "website": "https://www.petite-vie.com/",
     "business_image": "https://images.squarespace-cdn.com/content/v1/652e9491cec326539e621efe/2d266898-08ee-4747-8242-8a59a020b47b/large+white+backless.png?format=1000w",
     },
-    "Taiyaki": {
-    "playlist": "Chill J-Rock",
+    "Green Day": {
+    "playlist": "Amped Up",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "Izakaya",
     "offer": "5% off your drink order!",
@@ -41,8 +41,8 @@ business_data = {
     "website": "https://www.momotarochicago.com/izakaya",
     "business_image": "https://cdn.prod.website-files.com/621e6fe3c0a99283c0cc87fb/65f86e09a6e239d1ffac94dd_zakaya-Logo-black-Transparent.svg"
     },
-    "Mandazi": {
-    "playlist": "Reggaeton Fusions",
+    "Destiny's Child": {
+    "playlist": "Off the Charts Pop",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "SAMIFLORENCIA AFRICAN CUISINE",
     "offer": "Get 1 free appetizer with your order!",
@@ -52,11 +52,11 @@ business_data = {
     },
 }
     # Dessert Selection
-dessert_choice = st.selectbox("Pick a dessert to get started:", ["", *business_data.keys()])
+y2k_choice = st.selectbox("Pick an artist to get started:", ["", *business_data.keys()])
 
-if dessert_choice:
+if y2k_choice:
     # Retrieve information about selected drink/business
-    info = business_data[dessert_choice]
+    info = business_data[y2k_choice]
 
     # Display playlist and business info
     st.subheader(f"🎵 {info['playlist']}")

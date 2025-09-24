@@ -17,38 +17,38 @@ business_data = {
     "Britney Spears": {
         "playlist": "Oop...I did it again",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "business_name": "Tapas Valencia",
+        "business_name": "Sugar Bliss",
         "offer": "10% off your first order with this screen!",
         "booth_name": "Booth A",
-        "website": "https://www.tapasvalencia.com/",
-        "business_image": "https://www.tapasvalencia.com/wp-content/uploads/2017/08/Valencia-TRANSPARENT.png",
+        "website": "https://www.sugarblisscakes.com/",
+        "business_image": "https://static.wixstatic.com/media/2859e8_d08aa804763e451fa31e64108db79992~mv2.jpg/v1/fill/w_352,h_110,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/%20Brand%20Guide%20(8_edited.jpg",
     },
     "Usher": {
     "playlist": "Smooth Grooves",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Petite Vie Brasserie",
-    "offer": "Buy 1 Combo, Get 1 Free Chicken Sandwich with this screen.",
+    "business_name": "Soule to Soule",
+    "offer": "Get 5% off a selected entree with this screen.",
     "booth_name": "Booth B",
-    "website": "https://www.petite-vie.com/",
-    "business_image": "https://images.squarespace-cdn.com/content/v1/652e9491cec326539e621efe/2d266898-08ee-4747-8242-8a59a020b47b/large+white+backless.png?format=1000w",
+    "website": "https://www.souletosoule.com/",
+    "business_image": "https://images.squarespace-cdn.com/content/v1/64bf276689b7b563702a2634/f03ab85d-0add-4844-a07f-58b2deca1264/Soule-To-Soule-Logo_gold-.png?format=2500w",
     },
     "Green Day": {
     "playlist": "Amped Up",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Izakaya",
-    "offer": "5% off your drink order!",
+    "business_name": "Hecky's",
+    "offer": "5% off your order!",
     "booth_name": "Booth C",
-    "website": "https://www.momotarochicago.com/izakaya",
-    "business_image": "https://cdn.prod.website-files.com/621e6fe3c0a99283c0cc87fb/65f86e09a6e239d1ffac94dd_zakaya-Logo-black-Transparent.svg"
+    "website": "https://www.heckys.com/",
+    "business_image": "https://static.spotapps.co/website_images/ab_websites/88743_website/logo.png"
     },
     "Destiny's Child": {
     "playlist": "Off the Charts Pop",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "SAMIFLORENCIA AFRICAN CUISINE",
-    "offer": "Get 1 free appetizer with your order!",
+    "business_name": "Kokorokoko",
+    "offer": "Get 10% discount with your purchase!",
     "booth_name": "Booth D",
-    "website": "https://samiflorenciacatering.com/",
-    "business_image": "https://samiflorenciacatering.com/wp-content/uploads/2024/02/Florencia-logo.jpg.webp"
+    "website": "https://www.kokorokokovintage.com/",
+    "business_image": "https://www.kokorokokovintage.com/cdn/shop/files/koko.LOGO_360x.jpg?v=1613785534"
     },
 }
     # Dessert Selection

@@ -24,7 +24,7 @@ with st.form("business_form"):
     submitted = st.form_submit_button("Submit")
 
     if submitted:
-        if not name or not description or not email:
+        if not name or not description or not email or not otheroption:
             st.error("Please fill in all required fields.")
         else:
             # Prepare the row data

@@ -14,7 +14,7 @@ with st.form("business_form"):
         selected_category = st.selectbox("Category*", options=category)
     with placeholder_for_optional_text:
         if selected_category == "Other":
-            otheroption = st.text_input("Enter your other option...")
+            otheroption = st.text_input("Enter your other option.")
 
     website = st.text_input("Website (optional)")
     image_url = st.text_input("Image URL (optional)")

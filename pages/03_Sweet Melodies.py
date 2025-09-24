@@ -1,13 +1,13 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Cultural Music Exchange & BIPOC Business Support",
-    page_icon="🎶",
+    page_title="Sweet Melodies",
+    page_icon="🍬",
     layout="centered",
 )
 
 st.image("https://theworldmusicfoundation.org/wp-content/uploads/2016/11/wmf_small_logo.png.webp", width=180)
-st.title("🎶 Cultural Music Exchange & BIPOC Businesses")
+st.title("🍬 Sweet Melodies")
 st.markdown("""
 Welcome! Pick a dessert below to discover a playlist, support a local BIPOC business, and unlock a reward for sharing with others.
 """)

@@ -3,7 +3,7 @@ import streamlit as st
 #streamlit run sl1.py
 
 st.set_page_config(
-    page_title="🍹 Jams & Juice",
+    page_title="Jams & Juice",
     page_icon="🍹",
     layout="centered",
 )

@@ -6,6 +6,8 @@ with st.form("business_form"):
     name = st.text_input("Business Name*", max_chars=100)
     description = st.text_area("Short Description*", max_chars=300)
     category = st.selectbox("Category*", ["Restaurant", "Cafe", "Shop", "Service", "Other"])
+    if category == "Other":
+        other = st.text_input("Other Business Name*")
     website = st.text_input("Website (optional)")
     image_url = st.text_input("Image URL (optional)")
     email = st.text_input("Contact Email*")

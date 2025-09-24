@@ -5,9 +5,15 @@ st.title("📬 Submit Your Business")
 with st.form("business_form"):
     name = st.text_input("Business Name*", max_chars=100)
     description = st.text_area("Short Description*", max_chars=300)
-    category = st.selectbox("Category*", ["Restaurant", "Cafe", "Shop", "Service", "Other"])
-    if category == "Other":
-        other = st.text_input("Other Business Name*")
+    placeholder_for_selectbox = st.empty()
+    placeholder_for_optional_text = st.empty()
+    with placeholder_for_selectbox:
+        category = ["Restaurant", "Cafe", "Shop", "Service"] + ["Other"])
+        selected_category = st.selectbox("Category*", category=category)
+    with placeholder_for_optional_text:
+        if selected_category == "Other":
+        otheroption = st.text_input("Enter your other option...")
+
     website = st.text_input("Website (optional)")
     image_url = st.text_input("Image URL (optional)")
     email = st.text_input("Contact Email*")

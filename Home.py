@@ -23,3 +23,11 @@ with st.expander("Contact Us", icon=":material/emoji_people:"):
 
 with st.expander("Support Us", icon=":material/store:"):
     st.write("https://theworldmusicfoundation.org/products/")
+    st.write()
+    st.write("Donate: https://www.paypal.com/donate/?hosted_button_id=QXGAJ7QC8TKZL")
+    st.write()
+    st.write("Instagram: https://www.instagram.com/theworldmusicfoundation/")
+    st.write()
+    st.write("Facebook: https://www.facebook.com/TheWorldMusicFoundation")
+    st.write()
+    st.write("TikTok: https://www.tiktok.com/@theworldmusicfoundation")

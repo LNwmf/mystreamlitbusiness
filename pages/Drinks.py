@@ -90,9 +90,9 @@ if drink_choice:
             st.warning("⏳ Share your playlist with at least 3 people to unlock your reward!")
 
 # Weekly Business Spotlight
-st.markdown("---")
-st.subheader("Business Spotlight")
+#st.markdown("---")
+#st.subheader("Business Spotlight")
 
-with st.expander("Click to see this week's featured businesses"):
-    st.markdown("**1. Hangry Cluck**")
-    st.markdown("**1. Tea yard**")
+#with st.expander("Click to see this week's featured businesses"):
+    #st.markdown("**1. Hangry Cluck**")
+    #st.markdown("**1. Tea yard**")

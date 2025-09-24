@@ -22,7 +22,7 @@ with st.expander("Contact Us", icon=":material/emoji_people:"):
     st.write("Podcasts: podcast@theworldmusicfoundation.org")
 
 with st.expander("Support Us", icon=":material/store:"):
-    st.write("https://theworldmusicfoundation.org/products/")
+    st.write("Merchandise: https://theworldmusicfoundation.org/products/")
     st.write()
     st.write("Donate: https://www.paypal.com/donate/?hosted_button_id=QXGAJ7QC8TKZL")
     st.write()

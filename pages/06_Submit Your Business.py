@@ -19,6 +19,7 @@ with st.form("business_form"):
     website = st.text_input("Website (optional)")
     image_url = st.text_input("Image URL (optional)")
     email = st.text_input("Contact Email*")
+    otheroption = st.text_input("Other Option*")
     spotlight = st.checkbox("Consider us for a Spotlight Feature")
 
     submitted = st.form_submit_button("Submit")
@@ -27,6 +28,7 @@ with st.form("business_form"):
         if not name or not description or not email or not otheroption:
             st.error("Please fill in all required fields.")
         else:
+            st.success("Submitted")
             # Prepare the row data
             #row = [
                 #datetime.now().isoformat(),

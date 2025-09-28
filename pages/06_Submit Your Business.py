@@ -1,7 +1,17 @@
 import streamlit as st
+from streamlit_gsheets import GSheetsConnection
 
+#Display Title & Description
 st.title("📬 Submit Your Business")
 
+#Establish Google Sheets Connection
+conn = st.experimental_connection("gsheets", type=GSheetsConnection)
+
+#Fetch existing sheet data
+existing_data = conn.read(worksheet="Sheet1", usecols=list(range(6)), ttl=5)
+existing_data = existing_data.dropna(how="all")
+
+# Actual Form
 with st.form("business_form"):
     name = st.text_input("Business Name*", max_chars=100)
     description = st.text_area("Short Description*", max_chars=300)
@@ -11,7 +21,7 @@ with st.form("business_form"):
 
     with placeholder_for_selectbox:
         category = ["Restaurant", "Cafe", "Shop", "Service", "Other"]
-        selected_category = st.selectbox("Category*", options=category)
+        selected_category = st.selectbox("Category*", options=category, index=None)
     with placeholder_for_optional_text:
         if selected_category == "Other":
             otheroption = st.text_input("Enter your other option.")

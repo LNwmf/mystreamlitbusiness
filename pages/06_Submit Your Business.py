@@ -27,7 +27,7 @@ with st.form("business_form"):
         if not name or not description or not email:
             st.error("Please fill in all required fields.")
         else:
-            st.success("Submitted")
+            st.success("Thank you! Your business has been submitted successfully.")
             # Prepare the row data
             #row = [
                 #datetime.now().isoformat(),
@@ -41,6 +41,5 @@ with st.form("business_form"):
             #]
             #try:
                 #sheet.append_row(row)
-            st.success("Thank you! Your business has been submitted successfully.")
             #except Exception as e:
              #   st.error(f"Oops! Something went wrong: {e}")

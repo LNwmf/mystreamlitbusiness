@@ -1,11 +1,13 @@
 import streamlit as st
+from streamlit.connections import ExperimentalBaseConnection
 from streamlit_gsheets import GSheetsConnection
 
 #Display Title & Description
 st.title("📬 Submit Your Business")
 
 #Establish Google Sheets Connection
-conn = st.experimental_connection("gsheets", type=GSheetsConnection)
+conn = st.connection("gsheets")
+data = conn.read(spreadsheet="1HLAtHc3aRer4ZqYXoCFBJNWTrKvTsP76_JudA0bZqok", worksheet="Sheet1")
 
 #Fetch existing sheet data
 existing_data = conn.read(worksheet="Sheet1", usecols=list(range(6)), ttl=5)

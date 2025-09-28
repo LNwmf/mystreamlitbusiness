@@ -19,13 +19,12 @@ with st.form("business_form"):
     website = st.text_input("Website (optional)")
     image_url = st.text_input("Image URL (optional)")
     email = st.text_input("Contact Email*")
-    otheroption = st.text_input("Other Option*")
     spotlight = st.checkbox("Consider us for a Spotlight Feature")
 
     submitted = st.form_submit_button("Submit")
 
     if submitted:
-        if not name or not description or not email or not otheroption:
+        if not name or not description or not email:
             st.error("Please fill in all required fields.")
         else:
             st.success("Submitted")

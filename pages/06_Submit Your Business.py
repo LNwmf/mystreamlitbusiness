@@ -42,6 +42,6 @@ with st.form("business_form"):
             #]
             #try:
                 #sheet.append_row(row)
-                st.success("Thank you! Your business has been submitted successfully.")
+            st.success("Thank you! Your business has been submitted successfully.")
             #except Exception as e:
              #   st.error(f"Oops! Something went wrong: {e}")

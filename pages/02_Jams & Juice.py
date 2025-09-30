@@ -14,6 +14,22 @@ st.markdown("""
 Welcome! Pick a drink below to discover a blended playlist, support a local BIPOC business, and unlock a reward for sharing with others.
 """)
 
+#Q1
+flavor_options = ["Sweet", "Salty", "Bitter", "Sour", "Umami"]
+selected_flavor = st.selectbox("Select a Flavor:", flavor_options)
+
+#Q2
+travel_options = ["Middle East", "Latin American", "Asia", "Europe"]
+selected_travel = st.selectbox("Which place do you wish to travel to one day?", travel_options)
+
+#Q3
+ingredient_options = ["Rose", "Tamarind", "Hot Honey", "Ginger"]
+selected_ingredient = st.selectbox("Select a Secret Ingredient:", ingredient_options)
+
+#Q4
+mood = ["Romantic", "Happy", "Relaxed", "Energetic"]
+selected_mood = st.selectbox("How are you feeling right now?", mood)
+
 # Business options and related data
 business_data = {
     "Caramel Macchiato": {

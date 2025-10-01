@@ -12,6 +12,22 @@ st.markdown("""
 Welcome! Pick a dessert below to discover a blended playlist, support a local BIPOC business, and unlock a reward for sharing with others.
 """)
 
+#Q1
+flavor_type = ["Chocolate", "Vanilla", "Strawberry", "Coffee", "Mint"]
+selected_type = st.selectbox("Select a Flavor:", flavor_type, index=None)
+
+#Q2
+time_options = ["After a morning run", "Late night cravings", "During special occasions", "All day, everyday"]
+selected_time = st.selectbox("Best time to have dessert:", time_options, index=None)
+
+#Q3
+life_options = ["Layers of experience", "Bittersweet spices", "A tough shell but soft center", "Unexpected textures"]
+selected_life = st.selectbox("If your life were a dessert, what would it be made of?", life_options, index=None)
+
+#Q4
+season = ["Summer", "Winter", "Spring", "Autumn"]
+selected_season = st.selectbox("How are you feeling right now?", season, index=None)
+
 # Business options and related data
 business_data = {
     "Flan": {
@@ -52,7 +68,7 @@ business_data = {
     },
 }
     # Dessert Selection
-dessert_choice = st.selectbox("Pick a dessert to get started:", ["", *business_data.keys()])
+dessert_choice = st.selectbox("Pick a dessert!", ["", *business_data.keys()])
 
 if dessert_choice:
     # Retrieve information about selected drink/business

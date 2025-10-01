@@ -74,7 +74,7 @@ business_data = {
 
 
 # Drink Selection
-drink_choice = st.selectbox("Pick a drink:", ["", *business_data.keys()])
+drink_choice = st.selectbox("Pick a drink!", ["", *business_data.keys()])
 
 if drink_choice:
     # Retrieve information about selected drink/business

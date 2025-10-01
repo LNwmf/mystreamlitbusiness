@@ -68,7 +68,7 @@ business_data = {
     },
 }
     # Dessert Selection
-y2k_choice = st.selectbox("Pick an artist to get started:", ["", *business_data.keys()])
+y2k_choice = st.selectbox("Pick an artist!", ["", *business_data.keys()])
 
 if y2k_choice:
     # Retrieve information about selected drink/business

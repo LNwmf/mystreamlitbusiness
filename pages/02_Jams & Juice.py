@@ -20,15 +20,15 @@ selected_flavor = st.selectbox("Select a Flavor:", flavor_options, index=None)
 
 #Q2
 travel_options = ["Middle East", "Latin American", "Asia", "Europe"]
-selected_travel = st.selectbox("Which place do you wish to travel to one day?", travel_options)
+selected_travel = st.selectbox("Which place do you wish to travel to one day?", travel_options, index=None)
 
 #Q3
 ingredient_options = ["Rose", "Tamarind", "Hot Honey", "Ginger"]
-selected_ingredient = st.selectbox("Select a Secret Ingredient:", ingredient_options)
+selected_ingredient = st.selectbox("Select a Secret Ingredient:", ingredient_options, index=None)
 
 #Q4
 mood = ["Romantic", "Happy", "Relaxed", "Energetic"]
-selected_mood = st.selectbox("How are you feeling right now?", mood)
+selected_mood = st.selectbox("How are you feeling right now?", mood, index=None)
 
 # Business options and related data
 business_data = {
@@ -74,7 +74,7 @@ business_data = {
 
 
 # Drink Selection
-drink_choice = st.selectbox("Pick a drink to get started:", ["", *business_data.keys()])
+drink_choice = st.selectbox("Pick a drink:", ["", *business_data.keys()])
 
 if drink_choice:
     # Retrieve information about selected drink/business

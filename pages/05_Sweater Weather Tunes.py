@@ -68,7 +68,7 @@ business_data = {
     },
 }
     # Activity Selection
-fall_choice = st.selectbox("Pick a fall activity to get started:", ["", *business_data.keys()])
+fall_choice = st.selectbox("Pick a fall activity!", ["", *business_data.keys()])
 
 if fall_choice:
     # Retrieve information about selected drink/business

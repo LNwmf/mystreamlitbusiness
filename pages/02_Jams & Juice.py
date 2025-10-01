@@ -80,6 +80,13 @@ if drink_choice:
     # Retrieve information about selected drink/business
     info = business_data[drink_choice]
 
+submitted = st.form_submit_button("Next")
+
+if submitted:
+        if not selected_flavor or not selected_travel or not selected_ingredient or not selected_mood:
+            st.error("Please fill in all fields.")
+        else:
+            st.success("Finally, choose your drink!")
     # Display playlist and business info
     st.subheader(f"🎵 {info['playlist']}")
     st.markdown(f"[Listen Here]({info['playlist_link']})")

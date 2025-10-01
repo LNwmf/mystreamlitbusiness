@@ -12,6 +12,22 @@ st.markdown("""
 Welcome! Pick a fall activity below to discover a blended playlist, support a local BIPOC business, and unlock a reward for sharing with others.
 """)
 
+#Q1
+falldrink_options = ["Apple cider", "Pumpkin spice latte", "Chai tea", "Hot chocolate"]
+selected_fall = st.selectbox("Select a Fall Drink:", falldrink_options, index=None)
+
+#Q2
+film_options = ["Hocus Pocus", "Trick 'r Treat", "It", "Halloween"]
+selected_film = st.selectbox("Which movie is your go-to Halloween movie?", film_options, index=None)
+
+#Q3
+element_options = ["Falling leaves", "Long spooky nights", "Crackling fire", "Foggy skies"]
+selected_element = st.selectbox("What fall element speaks to you the most?", element_options, index=None)
+
+#Q4
+spent = ["Alone", "With family and friends", "In nature", "In love"]
+selected_spent = st.selectbox("Fall is best spent...", spent, index=None)
+
 # Business options and related data
 business_data = {
     "Pumpkin Carving": {

@@ -26,7 +26,7 @@ selected_life = st.selectbox("If your life were a dessert, what would it be made
 
 #Q4
 season = ["Summer", "Winter", "Spring", "Autumn"]
-selected_season = st.selectbox("How are you feeling right now?", season, index=None)
+selected_season = st.selectbox("What season defines you?", season, index=None)
 
 # Business options and related data
 business_data = {

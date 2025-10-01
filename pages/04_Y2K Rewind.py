@@ -12,6 +12,22 @@ st.markdown("""
 Welcome! Pick a 2000s music artist below to discover a blended playlist, support a local BIPOC business, and unlock a reward for sharing with others.
 """)
 
+#Q1
+tech_type = ["Flip phones", "MP3 players", "Nintendo DS", "Digital cameras"]
+selected_tech = st.selectbox("What Y2K tech do you miss the most?", tech_type, index=None)
+
+#Q2
+trend_options = ["Tracksuit with rhinestones", "Chunky sunglasses", "Metallic", "Trucker hats"]
+selected_trend = st.selectbox("Pick a 2000s fashion trend:", trend_options, index=None)
+
+#Q3
+movie_options = ["Mean Girls", "10 Things I Hate About You", "Lord of the Rings Trilogy", "13 Going On 30"]
+selected_movie = st.selectbox("If you were teleported into a movie, which one would you prefer to be in?", movie_options, index=None)
+
+#Q4
+animal = ["Cyber kid", "Pop princess", "TV junkie", "Chill surfer"]
+selected_animal = st.selectbox("Which Y2K spirit animal are you?", animal, index=None)
+
 # Business options and related data
 business_data = {
     "Britney Spears": {

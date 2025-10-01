@@ -7,7 +7,7 @@ st.title("📬 Submit Your Business")
 
 #Establish Google Sheets Connection
 conn = st.connection("gsheets", type=GSheetsConnection)
-data = conn.read(spreadsheet="1HLAtHc3aRer4ZqYXoCFBJNWTrKvTsP76_JudA0bZqok", worksheet="Sheet1")
+data = conn.read(spreadsheet="Business Submissions (Test)", worksheet="Sheet1")
 
 #Fetch existing sheet data
 existing_data = conn.read(worksheet="Sheet1", usecols=list(range(6)), ttl=5)

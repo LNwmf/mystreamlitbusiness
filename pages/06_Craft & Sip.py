@@ -57,7 +57,7 @@ place_data = {
 selected_place = st.selectbox("Select an ideal creative environment:", ["", *place_data.keys()])
 
 if selected_place:
-    info2 = place_data[selected_perform]
+    info2 = place_data[selected_place]
 
     st.image(info2['place_image'], width=250)
 

@@ -13,8 +13,6 @@ Welcome! Pick a fall activity below to discover a blended playlist, support a lo
 """)
 
 #Q1
-falldrink_options = ["Apple cider", "Pumpkin spice latte", "Chai", "Hot chocolate"]
-selected_fall = st.selectbox("Select a Fall Drink:", falldrink_options, index=None)
 drink_data = {
     "Apple cider": {
     "drink_image": "https://sallysbakingaddiction.com/wp-content/uploads/2015/09/homemade-apple-cider-1.jpg",

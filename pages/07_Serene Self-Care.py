@@ -31,7 +31,7 @@ scent_data = {
     "scent_image": "https://www.carrementbelle.com/blog/wp-content/uploads/2020/08/sandalwood.jpg"
     },
 }
-selected_scent = st.selectbox("Select an ideal creative environment:", ["", *scent_data.keys()])
+selected_scent = st.selectbox("Select an ideal creative environment:", [*scent_data.keys()])
 
 if selected_scent:
     info1 = scent_data[selected_scent]

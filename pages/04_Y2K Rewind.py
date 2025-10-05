@@ -60,9 +60,7 @@ selected_char = st.selectbox("Which Y2K character are you?", ["", *char_data.key
 
 if selected_trend:
     info2 = char_data[selected_char]
-
     st.image(info2['char_image'], width=250)
-
 # Business options and related data
 business_data = {
     "Britney Spears": {

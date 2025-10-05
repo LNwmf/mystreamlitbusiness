@@ -41,26 +41,26 @@ if selected_trend:
 movie_options = ["Mean Girls", "10 Things I Hate About You", "Lord of the Rings Trilogy", "13 Going On 30"]
 selected_movie = st.selectbox("If you were teleported into a movie, which one would you prefer to be in?", movie_options, index=None)
 
-#Q4 cyber kid, pop princess, tv junkie, chill surfer
-char_data = {
+#Q4
+ppl_data = {
     "Cyber kid": {
-    "char_image": "https://preview.redd.it/i50tlz0frw881.jpg?width=640&crop=smart&auto=webp&s=b2ca22d81b586b8af2ed79b3cbbcbabe08426749",
+    "ppl_image": "https://preview.redd.it/i50tlz0frw881.jpg?width=640&crop=smart&auto=webp&s=b2ca22d81b586b8af2ed79b3cbbcbabe08426749",
     },
     "Pop princess": {
-    "char_image": "https://www.lemon8-app.com/seo/image?item_id=7455214455610278443&index=8&sign=43ec144c3e2ad90e5330db38c2f0458a",
+    "ppl_image": "https://www.lemon8-app.com/seo/image?item_id=7455214455610278443&index=8&sign=43ec144c3e2ad90e5330db38c2f0458a",
     },
     "Fashion icon": {
-    "char_image": "https://media.glamourmagazine.co.uk/photos/633d964a11a32370a8bb3b9e/4:3/w_1920,h_1440,c_limit/Y2K%20TRENDS%20051022%20SQUARE.jpg"
+    "ppl_image": "https://media.glamourmagazine.co.uk/photos/633d964a11a32370a8bb3b9e/4:3/w_1920,h_1440,c_limit/Y2K%20TRENDS%20051022%20SQUARE.jpg"
     },
     "Chill surfer": {
-    "char_image": "https://i.pinimg.com/236x/78/69/2e/78692ec92ddeae0a4d83424f34f29206.jpg"
+    "ppl_image": "https://i.pinimg.com/236x/78/69/2e/78692ec92ddeae0a4d83424f34f29206.jpg"
     },
 }
-selected_char = st.selectbox("Which Y2K character are you?", ["", *char_data.keys()])
+selected_ppl = st.selectbox("Which Y2K character are you?", ["", *ppl_data.keys()])
 
-if selected_trend:
-    info2 = char_data[selected_char]
-    st.image(info2['char_image'], width=250)
+if selected_ppl:
+    info2 = ppl_data[selected_ppl]
+    st.image(info2['ppl_image'], width=250)
 # Business options and related data
 business_data = {
     "Britney Spears": {

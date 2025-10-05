@@ -15,20 +15,16 @@ Welcome! Pick a dessert below to discover a blended playlist, support a local BI
 #Q1
 business_data = {
     "Plays": {
-    "playlist": "Dancing Jelly",
-    "business_image": "https://www.tapasvalencia.com/wp-content/uploads/2017/08/Valencia-TRANSPARENT.png",
+    "business_image": "https://www.nycastings.com/wp-content/uploads/2017/05/theatre-pup.jpg",
     },
     "Musicals": {
-    "playlist": "Pastries & Strings",
-    "business_image": "https://images.squarespace-cdn.com/content/v1/652e9491cec326539e621efe/2d266898-08ee-4747-8242-8a59a020b47b/large+white+backless.png?format=1000w",
+    "business_image": "https://marvel-b1-cdn.bc0a.com/f00000000271534/musicaltheatre.missouristate.edu/_Files/MSU-MusicalTheatre-LegallyBlonde-1920x1080.jpg",
     },
     "Concerts": {
-    "playlist": "Chill J-Rock",
-    "business_image": "https://cdn.prod.website-files.com/621e6fe3c0a99283c0cc87fb/65f86e09a6e239d1ffac94dd_zakaya-Logo-black-Transparent.svg"
+    "business_image": "https://static.vecteezy.com/system/resources/thumbnails/027/104/127/small_2x/cheering-crowd-illuminated-by-vibrant-stage-lights-at-concert-photo.jpg"
     },
     "Dance": {
-    "playlist": "Reggaeton Fusions",
-    "business_image": "https://samiflorenciacatering.com/wp-content/uploads/2024/02/Florencia-logo.jpg.webp"
+    "business_image": "https://www.smu.edu/-/media/site/meadows/newsstories/2014/meadowsdanceperformance.jpg"
     },
 }
 #perform_type = ["Plays", "Musicals", "Concerts", "Dance"]
@@ -37,5 +33,4 @@ selected_perform = st.selectbox("Select a Performance:", ["", *business_data.key
 if selected_perform:
     info = business_data[selected_perform]
 
-    st.subheader(f"🎵 {info['playlist']}")
     st.image(info['business_image'], width=250)

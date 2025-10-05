@@ -31,9 +31,9 @@ business_data = {
 selected_perform = st.selectbox("Select a Performance Type:", ["", *business_data.keys()])
 
 if selected_perform:
-    info = business_data[selected_perform]
+    info1 = business_data[selected_perform]
 
-    st.image(info['business_image'], width=250)
+    st.image(info1['business_image'], width=250)
 
 #Q2
 era_options = ["Renaissance", "Medieval", "Contemporary", "Romanticism"]
@@ -57,7 +57,7 @@ place_data = {
 selected_place = st.selectbox("Select an ideal creative environment:", ["", *place_data.keys()])
 
 if selected_place:
-    info = place_data[selected_perform]
+    info2 = place_data[selected_perform]
 
-    st.image(info['place_image'], width=250)
+    st.image(info2['place_image'], width=250)
 

@@ -9,7 +9,7 @@ st.set_page_config(
 st.image("https://theworldmusicfoundation.org/wp-content/uploads/2016/11/wmf_small_logo.png.webp", width=180)
 st.title("🪞 Serene Self-Care")
 st.markdown("""
-Welcome! Pick an artistic word below to discover a blended playlist, support a local BIPOC business, and unlock a reward for sharing with others.
+Welcome! Pick an energy below to discover a blended playlist, support a local BIPOC business, and unlock a reward for sharing with others.
 """)
 
 #Q1
@@ -31,7 +31,7 @@ scent_data = {
     "scent_image": "https://www.carrementbelle.com/blog/wp-content/uploads/2020/08/sandalwood.jpg"
     },
 }
-selected_scent = st.selectbox("Select an ideal creative environment:", [*scent_data.keys()])
+selected_scent = st.selectbox("Select a scent:", [*scent_data.keys()])
 
 if selected_scent:
     info1 = scent_data[selected_scent]

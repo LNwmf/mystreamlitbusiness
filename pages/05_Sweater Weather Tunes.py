@@ -36,7 +36,7 @@ if selected_drink:
 #Q2
 film_data = {
     "Hocus Pocus": {
-    "film_image": "https://static.wikia.nocookie.net/hocuspocus/images/4/47/Hocus_Pocus_poster_2.jpg/revision/latest/scale-to-width-down/1200?cb=20220911122635",
+    "film_image": "https://lumiere-a.akamaihd.net/v1/images/p_hocuspocus_19880_e000b013.jpeg",
     },
     "Halloween": {
     "film_image": "https://images.plex.tv/photo?size=large-1280&url=https%3A%2F%2Fmetadata-static.plex.tv%2Fc%2Fgracenote%2Fc990f672e727f896bb52529043bec1c0.jpg",

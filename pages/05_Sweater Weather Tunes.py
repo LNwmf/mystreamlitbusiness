@@ -13,13 +13,49 @@ Welcome! Pick a fall activity below to discover a blended playlist, support a lo
 """)
 
 #Q1
-falldrink_options = ["Apple cider", "Pumpkin spice latte", "Chai tea", "Hot chocolate"]
+falldrink_options = ["Apple cider", "Pumpkin spice latte", "Chai", "Hot chocolate"]
 selected_fall = st.selectbox("Select a Fall Drink:", falldrink_options, index=None)
+drink_data = {
+    "Apple cider": {
+    "drink_image": "https://sallysbakingaddiction.com/wp-content/uploads/2015/09/homemade-apple-cider-1.jpg",
+    },
+    "Pumpkin spice latte": {
+    "drink_image": "https://joyfullymad.com/wp-content/uploads/2024/10/pumpkin-spice-latte-8.jpg",
+    },
+    "Chai": {
+    "drink_image": "https://www.allrecipes.com/thmb/MCdBf6nSW7JVmpdFbc8LeaxWYAQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/222513-chai-tea-latte-ddmfs-3x4-13181362-b0a92ea6efb442a4b8b7c240a7bfa9f4.jpg"
+    },
+    "Hot chocolate": {
+    "drink_image": "https://assets.epicurious.com/photos/672aa2e70dd597529f332818/4:3/w_4444,h_3333,c_limit/hot-cocoa-vs-hot-chocolate_RECIPE_V1_103124_7088_VOG_final.jpg"
+    },
+}
+selected_drink = st.selectbox("Which Halloween movie is your go-to?", ["", *drink_data.keys()])
 
+if selected_drink:
+    info1 = drink_data[selected_drink]
+
+    st.image(info1['drink_image'], width=250)
 #Q2
-film_options = ["Hocus Pocus", "Trick 'r Treat", "It", "Halloween"]
-selected_film = st.selectbox("Which movie is your go-to Halloween movie?", film_options, index=None)
+film_data = {
+    "Hocus Pocus": {
+    "film_image": "https://static.wikia.nocookie.net/hocuspocus/images/4/47/Hocus_Pocus_poster_2.jpg/revision/latest/scale-to-width-down/1200?cb=20220911122635",
+    },
+    "Halloween": {
+    "film_image": "https://images.plex.tv/photo?size=large-1280&url=https%3A%2F%2Fmetadata-static.plex.tv%2Fc%2Fgracenote%2Fc990f672e727f896bb52529043bec1c0.jpg",
+    },
+    "Trick 'r Treat": {
+    "film_image": "https://images.fathomevents.com/image/upload/w_1200,dpr_2,f_auto,q_auto/v1757097985/Events/2025/2083/Fathom%20Ticket%20Page%20Poster%20%20Press%20Kit_1000x1480%20%28No%20Text%29.png.png"
+    },
+    "IT": {
+    "film_image": "https://upload.wikimedia.org/wikipedia/en/5/5a/It_%282017%29_poster.jpg"
+    },
+}
+selected_film = st.selectbox("Which Halloween movie is your go-to?", ["", *film_data.keys()])
 
+if selected_film:
+    info2 = film_data[selected_film]
+
+    st.image(info2['film_image'], width=250)
 #Q3
 element_options = ["Falling leaves", "Long spooky nights", "Crackling fire", "Foggy skies"]
 selected_element = st.selectbox("What fall element speaks to you the most?", element_options, index=None)

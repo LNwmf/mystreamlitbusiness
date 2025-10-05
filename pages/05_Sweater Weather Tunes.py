@@ -27,7 +27,7 @@ drink_data = {
     "drink_image": "https://assets.epicurious.com/photos/672aa2e70dd597529f332818/4:3/w_4444,h_3333,c_limit/hot-cocoa-vs-hot-chocolate_RECIPE_V1_103124_7088_VOG_final.jpg"
     },
 }
-selected_drink = st.selectbox("Which Halloween movie is your go-to?", ["", *drink_data.keys()])
+selected_drink = st.selectbox("Pick a fall drink:", ["", *drink_data.keys()])
 
 if selected_drink:
     info1 = drink_data[selected_drink]

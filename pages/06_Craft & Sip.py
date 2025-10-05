@@ -61,3 +61,7 @@ if selected_place:
 
     st.image(info2['place_image'], width=250)
 
+#Q4
+object = ["Abstract", "Surreal", "Intense", "Tranquil", "Chaos"]
+selected_object = st.selectbox("If you were to describe your life in one artistic word, which one would it be?", object, index=None)
+

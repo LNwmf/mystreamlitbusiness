@@ -17,16 +17,51 @@ tech_type = ["Flip phones", "MP3 players", "Nintendo DS", "Digital cameras"]
 selected_tech = st.selectbox("What Y2K tech do you miss the most?", tech_type, index=None)
 
 #Q2
-trend_options = ["Tracksuit with rhinestones", "Chunky sunglasses", "Metallic", "Trucker hats"]
-selected_trend = st.selectbox("Pick a 2000s fashion trend:", trend_options, index=None)
+trend_data = {
+    "Tracksuit with rhinestones": {
+    "trend_image": "https://di2ponv0v5otw.cloudfront.net/posts/2025/01/26/679710d59a76ef110dc078e5/m_679710dfd3309f00594c1daf.jpg",
+    },
+    "Chunky sunglasses": {
+    "trend_image": "https://charmingcharlie.com/cdn/shop/files/C3-2_ecf75579-4d56-4c77-99b5-7a25d26bb20e.jpg?v=1719575450&width=800",
+    },
+    "Denim on denim": {
+    "trend_image": "https://finesse.us/cdn/shop/files/1_0dd49d3d-de01-4c55-a7f8-3454e02e5dcf.jpg?v=1738924628&width=1946"
+    },
+    "Trucker hats": {
+    "trend_image": "https://scene7.zumiez.com/is/image/zumiez/product_main_medium/Empyre-Y2K-Black-Trucker-Hat-_382120.jpg"
+    },
+}
+selected_trend = st.selectbox("Pick a 2000s fashion trend:", ["", *trend_data.keys()])
 
+if selected_trend:
+    info1 = trend_data[selected_trend]
+
+    st.image(info1['place_image'], width=250)
 #Q3
 movie_options = ["Mean Girls", "10 Things I Hate About You", "Lord of the Rings Trilogy", "13 Going On 30"]
 selected_movie = st.selectbox("If you were teleported into a movie, which one would you prefer to be in?", movie_options, index=None)
 
-#Q4
-animal = ["Cyber kid", "Pop princess", "TV junkie", "Chill surfer"]
-selected_animal = st.selectbox("Which Y2K spirit animal are you?", animal, index=None)
+#Q4 cyber kid, pop princess, tv junkie, chill surfer
+char_data = {
+    "Cyber kid": {
+    "char_image": "https://static.wikia.nocookie.net/aesthetics/images/0/0c/Y2K_Futurism.png/revision/latest/scale-to-width-down/1000?cb=20250831170930",
+    },
+    "Pop princess": {
+    "char_image": "https://www.lemon8-app.com/seo/image?item_id=7455214455610278443&index=8&sign=43ec144c3e2ad90e5330db38c2f0458a",
+    },
+    "Fashion icon": {
+    "char_image": "https://media.glamourmagazine.co.uk/photos/633d964a11a32370a8bb3b9e/4:3/w_1920,h_1440,c_limit/Y2K%20TRENDS%20051022%20SQUARE.jpg"
+    },
+    "Chill surfer": {
+    "char_image": "https://static.wikia.nocookie.net/aesthetics/images/b/ba/Surfer.webp/revision/latest?cb=20250515104627"
+    },
+}
+selected_char = st.selectbox("Which Y2K character are you?", ["", *char_data.keys()])
+
+if selected_trend:
+    info2 = char_data[selected_char]
+
+    st.image(info2['char_image'], width=250)
 
 # Business options and related data
 business_data = {

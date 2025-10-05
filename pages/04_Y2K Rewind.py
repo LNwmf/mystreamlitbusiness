@@ -36,7 +36,7 @@ selected_trend = st.selectbox("Pick a 2000s fashion trend:", ["", *trend_data.ke
 if selected_trend:
     info1 = trend_data[selected_trend]
 
-    st.image(info1['place_image'], width=250)
+    st.image(info1['trend_image'], width=250)
 #Q3
 movie_options = ["Mean Girls", "10 Things I Hate About You", "Lord of the Rings Trilogy", "13 Going On 30"]
 selected_movie = st.selectbox("If you were teleported into a movie, which one would you prefer to be in?", movie_options, index=None)

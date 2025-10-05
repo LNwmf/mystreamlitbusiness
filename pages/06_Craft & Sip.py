@@ -51,7 +51,7 @@ place_data = {
     "place_image": "https://media.istockphoto.com/id/1053651024/photo/wooden-chair-on-lakeside-pier.jpg?s=612x612&w=0&k=20&c=kWbMg_LrlwMeWeuaDW-OkoUjjXVybzzbpB61fHtNvRI="
     },
     "Late nights by the fire": {
-    "place_image": "https://i.pinimg.com/736x/f8/6e/5d/f86e5d0d356bbf633065e1e2454ef8c5.jpg"
+    "place_image": "https://www.arch2o.com/wp-content/uploads/2023/01/Arch2O-modern-fireplace-design-ideas.jpg"
     },
 }
 selected_place = st.selectbox("Select an ideal creative environment:", ["", *place_data.keys()])

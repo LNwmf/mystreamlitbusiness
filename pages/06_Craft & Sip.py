@@ -28,7 +28,7 @@ business_data = {
     },
 }
 #perform_type = ["Plays", "Musicals", "Concerts", "Dance"]
-selected_perform = st.selectbox("Select a Performance:", ["", *business_data.keys()])
+selected_perform = st.selectbox("Select a Performance Type:", ["", *business_data.keys()])
 
 if selected_perform:
     info = business_data[selected_perform]

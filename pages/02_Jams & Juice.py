@@ -76,12 +76,6 @@ business_data = {
 # Drink Selection
 drink_choice = st.selectbox("Pick a drink!", ["", *business_data.keys()])
 
-with st.form("drink-form"):
-    submitted = st.form_submit_button("Submit")
-    if not selected_flavor or not selected_travel or not selected_ingredient or not selected_mood or not drink_choice:
-            st.error("Please fill in all fields.")
-    else:
-            st.success("Here's your playlist!")
 if drink_choice:
     # Retrieve information about selected drink/business
     info = business_data[drink_choice]

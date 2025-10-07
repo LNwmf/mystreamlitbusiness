@@ -30,4 +30,4 @@ clicked = clickable_images(
     img_style={"margin": "5px", "height": "200px"},
 )
 
-st.markdown(f"{clicked}" if clicked > -1 else "No image clicked")
+#st.markdown(f"{clicked}" if clicked > -1 else "No image clicked")

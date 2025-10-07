@@ -1,5 +1,5 @@
 import streamlit as st
-
+from st_clickable_images import clickable_images
 st.title("Image Display based on Radio Selection")
 
 selected_option = st.radio(

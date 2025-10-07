@@ -25,9 +25,9 @@ clicked = clickable_images(
         "https://www.barleyandsage.com/wp-content/uploads/2022/03/buttermilk-chicken-tenders-1200x1200-1.jpg",
         "https://www.budgetbytes.com/wp-content/uploads/2020/05/CreamyTomatoSpinachPasta_OverheadPlated.jpg",
     ],
-    titles=[f"Image #{str(i)}" for i in range(5)],
+    titles=[f"{str(i)}" for i in range(5)],
     div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
     img_style={"margin": "5px", "height": "200px"},
 )
 
-st.markdown(f"Image #{clicked} clicked" if clicked > -1 else "No image clicked")
+st.markdown(f"{clicked}" if clicked > -1 else "No image clicked")

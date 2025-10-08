@@ -13,19 +13,19 @@ st.markdown("""
 Welcome! Pick an energy below to discover a blended playlist, support a local BIPOC business, and unlock a reward for sharing with others.
 """)
 st.write("")
-st.write("")
-#clickable images
-st.write("Pick a food:")
+
+#Q1: clickable images
+st.write("Pick a classic party food:")
 images = [
 
-        "https://www.thefoodinmybeard.com/content/taco/whitepeople/wpt10.jpg",
-        "https://www.allrecipes.com/thmb/OJ28fIFte6Pyg93ML8IM-APbu1Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-14554-sirloin-steak-with-garlic-butter-hero-4x3-d12fa79836754fcf850388e4677bbf55.jpg",
-        "https://www.recipetineats.com/tachyon/2022/09/Crispy-Fries_8.jpg?resize=500%2C500",
-        "https://www.barleyandsage.com/wp-content/uploads/2022/03/buttermilk-chicken-tenders-1200x1200-1.jpg",
-        "https://www.budgetbytes.com/wp-content/uploads/2020/05/CreamyTomatoSpinachPasta_OverheadPlated.jpg",
+        "https://assets.surlatable.com/m/15a89c2d9c6c1345/72_dpi_webp-REC-283110_Pizza.jpg", #pizza, salsa and chips, chicken wings, burger, hot dog
+        "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/12/9/0/FNK_Salsa-and-Chips_s4x3.jpg.rend.hgtvcom.1280.1280.suffix/1387411410179.webp",
+        "https://tastesbetterfromscratch.com/wp-content/uploads/2014/09/Baked-Chicken-Wings-3.jpg",
+        "https://static01.nyt.com/images/2022/06/27/dining/kc-mushroom-beef-burgers/merlin_209008674_b3fa58fa-9bb1-4cfe-a08a-40b4dda0de78-jumbo.jpg",
+        "https://www.foodandwine.com/thmb/2kinp7BXi4eE-QG8u1rLS3z_o5M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Hawaiian-Hot-Dog-FT-RECIPE0724-8b45189237284cf5bf8efb1e8ea9626c.jpeg",
 ]
 
-titles=["Tacos", "Steak", "Fries", "Chicken Tenders", "Pasta"]
+titles=["Pizza", "Salsa & chips", "Chicken wings", "Burger", "Hot dog"]
 
 clicked = clickable_images(
     images,
@@ -38,6 +38,8 @@ if clicked > -1:
     st.markdown(f"**{titles[clicked]}** selected")
 else:
     st.markdown("No image clicked")
+
+#Q2
 
 
 #st.title("Image Display based on Radio Selection")

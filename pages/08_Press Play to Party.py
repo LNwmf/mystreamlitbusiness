@@ -115,7 +115,8 @@ trick_data = {
 trick_choice = st.selectbox("What's your go-to party trick?", ["", *trick_data.keys()])
 
 if selected_genre == "Pop" and selected_complete == "Loud music":
-    result = trick_data == "Karaoke master"
+    trick_choice = "Karaoke master"
+
 if trick_choice:
     # Retrieve information about selected drink/business
     info = trick_data[trick_choice]

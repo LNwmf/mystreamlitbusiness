@@ -39,7 +39,7 @@ clicked = clickable_images(
     images,
     titles=titles,
     div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
-    img_style={"margin": "5px", "height": "170px"},
+    img_style={"margin": "5px", "height": "170px", "border": "3px solid transparent", "border-radius": "10px"},
 )
 
 if clicked > -1:

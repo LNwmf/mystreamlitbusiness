@@ -40,6 +40,10 @@ else:
     st.markdown("No image clicked")
 
 #Q2
+secret = ["Pop", "Rap/Hip-hop", "EDM", "Country", "Rock n Roll"]
+selected_secret = st.selectbox("Which music genre would you prefer?", secret, index=None)
+
+#Q3
 
 
 #st.title("Image Display based on Radio Selection")

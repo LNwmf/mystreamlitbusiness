@@ -87,7 +87,7 @@ trick_data = {
     "playlist": "Like No One's Watching",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "Dance Center of LaGrange",
-    "offer": "Get $10 off your first class!",
+    "offer": "$10 off your first class!",
     "booth_name": "Booth B",
     "website": "https://www.dclagrange.com/",
     "business_image": "https://static.wixstatic.com/media/6b5ba9_a48e15c2f68349d083a7dbbe559cdc4a~mv2.png/v1/fill/w_344,h_376,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/image1.png",
@@ -96,7 +96,7 @@ trick_data = {
     "playlist": "Now You See Me, Now You Don't",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "LaGrange Art League",
-    "offer": "Get $5 off your first class!",
+    "offer": "$5 off your first class with this screen!",
     "booth_name": "Booth C",
     "website": "https://www.lagrangeartleague.org/",
     "business_image": "https://www.lagrangeartleague.org/cdn/shop/files/LGAL_Logo-New.png?v=1738705768&width=450"

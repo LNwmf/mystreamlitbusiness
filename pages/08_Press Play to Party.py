@@ -1,6 +1,17 @@
 import streamlit as st
 from st_clickable_images import clickable_images
 
+st.set_page_config(
+    page_title="Press Play to Party",
+    page_icon="🎉",
+    layout="centered",
+)
+
+st.image("https://theworldmusicfoundation.org/wp-content/uploads/2016/11/wmf_small_logo.png.webp", width=180)
+st.title("🎉 Press Play to Party")
+st.markdown("""
+Welcome! Pick an energy below to discover a blended playlist, support a local BIPOC business, and unlock a reward for sharing with others.
+""")
 #st.title("Image Display based on Radio Selection")
 
 #selected_option = st.radio(

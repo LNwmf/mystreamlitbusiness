@@ -1,4 +1,5 @@
 import streamlit as st
+from st_clickable_images import clickable_images
 
 #streamlit run sl1.py
 
@@ -23,8 +24,28 @@ travel_options = ["Africa", "Antarctica", "Asia", "Australia", "Europe", "Latin 
 selected_travel = st.selectbox("Which place do you wish to travel to one day?", travel_options, index=None)
 
 #Q3
-ingredient_options = ["Rose", "Tamarind", "Hot Honey", "Ginger"]
-selected_ingredient = st.selectbox("Select a secret ingredient:", ingredient_options, index=None)
+st.write("Pick a secret ingredient:")
+images = [
+
+        "https://bouqs.com/blog/wp-content/uploads/2018/08/shutterstock_1662182848-min.jpg",
+        "https://assets.clevelandclinic.org/transform/809a0d11-7f04-4b7f-b5f5-bd8b47a63c9a/tamarind-fruit-snack-1432243224",
+        "https://noshingwiththenolands.com/wp-content/uploads/2023/07/Hot-Honey-IMG_8472.jpg",
+        "https://5.imimg.com/data5/SELLER/Default/2024/11/469407212/QS/ZB/WD/21684370/1kg-fresh-ginger-500x500.jpeg",
+]
+
+titles=["Rose", "Tamarind", "Hot honey", "Ginger"]
+
+clicked = clickable_images(
+    images,
+    titles=titles,
+    div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
+    img_style={"margin": "5px", "height": "170px"},
+)
+
+if clicked > -1:
+    st.markdown(f"**{titles[clicked]} selected**")
+else:
+    st.markdown("**No image selected**")
 
 #Q4
 mood = ["Hot chocolate on a chilly night", "Wine during a thunderstorm", "Fresh lemonade on the beach", "Warm apple cider in a cabin"]

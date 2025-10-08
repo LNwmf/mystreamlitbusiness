@@ -17,17 +17,25 @@ elif selected_option == "Image C":
 
 #clickable images
 
-clicked = clickable_images(
-    [
+images = [
+
         "https://www.thefoodinmybeard.com/content/taco/whitepeople/wpt10.jpg",
         "https://www.allrecipes.com/thmb/OJ28fIFte6Pyg93ML8IM-APbu1Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-14554-sirloin-steak-with-garlic-butter-hero-4x3-d12fa79836754fcf850388e4677bbf55.jpg",
         "https://www.recipetineats.com/tachyon/2022/09/Crispy-Fries_8.jpg?resize=500%2C500",
         "https://www.barleyandsage.com/wp-content/uploads/2022/03/buttermilk-chicken-tenders-1200x1200-1.jpg",
         "https://www.budgetbytes.com/wp-content/uploads/2020/05/CreamyTomatoSpinachPasta_OverheadPlated.jpg",
-    ],
-    titles=[f"Taco #{str('tacos')}" for i in range(5)],
+]
+
+titles=["Tacos", "Steak", "Fries", "Chicken Tenders", "Pasta"]
+
+clicked = clickable_images(
+    images,
+    titles=titles,
     div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
     img_style={"margin": "5px", "height": "200px"},
 )
 
-st.markdown(f"{clicked}" if clicked > -1 else "No image clicked")
+if clicked > -1:
+    st.markdown(f"**{titles[clicked]}** clicked")
+else:
+    st.markdown("No image clicked")

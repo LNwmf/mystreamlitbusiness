@@ -35,9 +35,9 @@ clicked = clickable_images(
 )
 
 if clicked > -1:
-    st.markdown(f"**{titles[clicked]}** selected")
+    st.markdown(f"**{titles[clicked]} selected**")
 else:
-    st.markdown("No image clicked")
+    st.markdown("**No image selected**")
 
 #Q2
 genre = ["Pop", "Rap/Hip-hop", "EDM", "Country", "Rock n Roll"]
@@ -64,9 +64,9 @@ clicked = clickable_images(
 )
 
 if clicked > -1:
-    st.markdown(f"**{titles[clicked]}** selected")
+    st.markdown(f"**{titles[clicked]} selected**")
 else:
-    st.markdown("No image clicked")
+    st.markdown("**No image selected**")
 
 #Q4
 complete = ["Drinks!", "Nonstop dancing", "Loud music", "A group selfie"]

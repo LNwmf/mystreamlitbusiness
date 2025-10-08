@@ -16,7 +16,7 @@ elif selected_option == "Image C":
     st.image("https://sylviawakana.com/wp-content/uploads/2022/07/Taiyaki-1.jpg", caption="This is Image C")
 
 #clickable images
-
+st.write("Pick a food:")
 images = [
 
         "https://www.thefoodinmybeard.com/content/taco/whitepeople/wpt10.jpg",
@@ -36,6 +36,6 @@ clicked = clickable_images(
 )
 
 if clicked > -1:
-    st.markdown(f"**{titles[clicked]}** clicked")
-#else:
-#    st.markdown("No image clicked")
+    st.markdown(f"**{titles[clicked]}** selected")
+else:
+    st.markdown("No image clicked")

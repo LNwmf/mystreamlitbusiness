@@ -14,3 +14,6 @@ st.image(ice_cream, caption="Ice cream", width=200)
 
 taiyaki = "https://i.imgur.com/CNre03d.jpeg"
 st.image(taiyaki, caption="Taiyaki", width=200)
+
+dancingcat = "https://i.imgur.com/J7O2RSz.gif"
+st.image(dancingcat, caption="Dancing cat", width=200)

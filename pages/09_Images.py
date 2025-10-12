@@ -1,3 +1,8 @@
+import builtins
+print("Is str still built-in?", builtins.str is str)
+
+
+
 import streamlit as st
 
 birria = "https://i.imgur.com/3ACcDlF.jpeg"

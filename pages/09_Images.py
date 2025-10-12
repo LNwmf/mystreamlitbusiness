@@ -22,8 +22,14 @@ guess = ["Piano", "Trumpet", "Clarinet", "Triangle"]
 selected_guess = st.radio("Guess the instrument!", guess, index=0)
 
 
+
 video_url = "https://i.imgur.com/6qioN0t.mp4"
-st.write("DEBUG: video_url =", video_url)
-st.write("DEBUG: type =", type(video_url))
-st.video(video_url, caption="mystery audio")
+
+# Show debug info (optional)
+st.write("Video URL:", video_url)
+st.write("Type:", type(video_url))
+
+# Try displaying video
+st.video(video_url, caption="Mystery Video with Audio")
+
 

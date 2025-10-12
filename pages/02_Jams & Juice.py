@@ -100,9 +100,14 @@ drink_choice = st.selectbox("Pick a drink!", ["", *business_data.keys()])
 #if drink_choice:
     # Retrieve information about selected drink/business
 #info = business_data["Milk Tea Boba"]
-if selected_flavor == "Sweet" and selected_travel == "Asia" and selected_mood == "Wine during a thunderstorm" and drink_choice == "Milk Tea Boba":
+if selected_flavor == "Sweet" and selected_mood == "Wine during a thunderstorm" and drink_choice == "Milk Tea Boba":
     info = business_data["Milk Tea Boba"]
-
+elif selected_flavor == "Sweet" and selected_mood == "Hot chocolate on a chilly night":
+    info = business_data["Caramel Macchiato"]
+elif selected_flavor == "Sweet" and selected_mood == "Fresh lemonade on the beach":
+    info = business_data["Chai Latte"]
+elif selected_flavor == "Sweet" and selected_mood == "Warm apple cider in a cabin":
+    info = business_data["Horchata"]
     # Display playlist and business info
     st.subheader(f"🎵 {info['playlist']}")
     st.markdown(f"[Listen Here]({info['playlist_link']})")

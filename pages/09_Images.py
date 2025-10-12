@@ -6,4 +6,4 @@ st.set_page_config(
     layout="centered",
 )
 
-st.image("https://drive.google.com/uc?export=view&id=1vHzvfjkCdA2WSqzwv-qD3fpzZq3wCIOY")
+st.image("https://drive.google.com/uc?export=view&id=15faTIUuXxjIVB8vbJ55zdYh1qvMqHrM_")

@@ -25,11 +25,6 @@ st.image(dancingcat, caption="Dancing cat", width=200)
 
 
 video_url = "https://i.imgur.com/6qioN0t.mp4"
-
-# Show debug info (optional)
-st.write("Video URL:", video_url)
-st.write("Type:", type(video_url))
-
 # Try displaying video
 st.video(video_url)
 

@@ -20,13 +20,15 @@ st.image(ice_cream, caption="Ice cream", width=200)
 taiyaki = "https://i.imgur.com/CNre03d.jpeg"
 st.image(taiyaki, caption="Taiyaki", width=200)
 
+#GIF
 dancingcat = "https://i.imgur.com/J7O2RSz.gif"
 st.image(dancingcat, caption="Dancing cat", width=200)
 
-
+#video w/ audio
 video_url = "https://i.imgur.com/6qioN0t.mp4"
-# Try displaying video
+
 st.video(video_url, width=300)
+
 guess = ["Piano", "Trumpet", "Guitar", "Clarinet"]
 selected_one = st.radio("Guess the instrument:", guess, index=None)
 

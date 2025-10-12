@@ -21,5 +21,5 @@ st.image(dancingcat, caption="Dancing cat", width=200)
 guess = ["Piano", "Trumpet", "Clarinet", "Triangle"]
 selected_guess = st.radio("Guess the instrument!", guess, index=0)
 
-guessaudio = "https://i.imgur.com/6qioN0t.mp4"
-st.video(guessaudio, caption="mystery audio")
+audio = "https://i.imgur.com/6qioN0t.mp4"
+st.video(audio, caption="mystery audio")

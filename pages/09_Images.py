@@ -31,6 +31,6 @@ st.write("Video URL:", video_url)
 st.write("Type:", type(video_url))
 
 # Try displaying video
-st.video(video_url, caption="Mystery Video with Audio")
+st.video(video_url)
 
 

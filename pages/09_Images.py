@@ -18,9 +18,6 @@ st.image(taiyaki, caption="Taiyaki", width=200)
 dancingcat = "https://i.imgur.com/J7O2RSz.gif"
 st.image(dancingcat, caption="Dancing cat", width=200)
 
-guess = ["Piano", "Trumpet", "Clarinet", "Triangle"]
-selected_guess = st.radio("Guess the instrument!", guess, index=0)
-
 
 video_url = "https://i.imgur.com/6qioN0t.mp4"
 

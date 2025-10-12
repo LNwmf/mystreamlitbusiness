@@ -22,4 +22,4 @@ guess = ["Piano", "Trumpet", "Clarinet", "Triangle"]
 selected_guess = st.radio("Guess the instrument!", guess, index=0)
 
 guessaudio = "https://i.imgur.com/6qioN0t.mp4"
-st.image(guessaudio, width=200)
+st.image(guessaudio, caption="mystery audio")

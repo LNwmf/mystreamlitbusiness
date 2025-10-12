@@ -100,7 +100,7 @@ drink_choice = st.selectbox("Pick a drink!", ["", *business_data.keys()])
 #if drink_choice:
     # Retrieve information about selected drink/business
 #info = business_data["Milk Tea Boba"]
-if selected_flavor == "Sweet" and selected_travel == "Asia" and selected_mood == "Wine during a thunderstorm" and drink_choice == "Milk tea boba":
+if selected_flavor == "Sweet" and selected_travel == "Asia" and selected_mood == "Wine during a thunderstorm" and drink_choice == "Milk Tea Boba":
     info = business_data["Milk Tea Boba"]
 
     # Display playlist and business info

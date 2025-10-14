@@ -93,6 +93,7 @@ business_data = {
     # Add other drinks and related data here
 }
 
+info = None
 
 # Drink Selection
 drink_choice = st.selectbox("Pick a drink!", ["", *business_data.keys()])
@@ -228,6 +229,7 @@ elif selected_flavor == "Sour" and selected_mood == "Warm apple cider in a cabin
 
 
     # Display playlist and business info
+if info:
     st.subheader(f"🎵 {info['playlist']}")
     st.markdown(f"[Listen Here]({info['playlist_link']})")
 

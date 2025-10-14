@@ -16,7 +16,7 @@ Welcome! Pick a drink below to discover a blended playlist, support a local BIPO
 """)
 
 #Q1
-flavor_options = ["Sweet", "Salty", "Bitter", "Sour", "Umami"]
+flavor_options = ["Sweet", "Salty", "Bitter", "Sour"]
 selected_flavor = st.selectbox("Select a Flavor:", flavor_options, index=None)
 
 #Q2
@@ -97,14 +97,136 @@ business_data = {
 # Drink Selection
 drink_choice = st.selectbox("Pick a drink!", ["", *business_data.keys()])
 
-if selected_flavor == "Sweet" and selected_mood == "Wine during a thunderstorm" and drink_choice == "Milk Tea Boba":
-    info = business_data["Milk Tea Boba"]
-elif selected_flavor == "Sweet" and selected_mood == "Hot chocolate on a chilly night":
+if selected_flavor == "Sweet" and selected_mood == "Hot chocolate on a chilly night" and drink_choice == "Caramel Macchiato":
     info = business_data["Caramel Macchiato"]
-elif selected_flavor == "Sweet" and selected_mood == "Fresh lemonade on the beach":
-    info = business_data["Chai Latte"]
-elif selected_flavor == "Sweet" and selected_mood == "Warm apple cider in a cabin":
+elif selected_flavor == "Sweet" and selected_mood == "Hot chocolate on a chilly night" and drink_choice == "Chai Latte":
     info = business_data["Horchata"]
+elif selected_flavor == "Sweet" and selected_mood == "Hot chocolate on a chilly night" and drink_choice == "Milk Tea Boba":
+    info = business_data["Milk Tea Boba"]
+elif selected_flavor == "Sweet" and selected_mood == "Hot chocolate on a chilly night" and drink_choice == "Horchata":
+    info = business_data["Caramel Macchiato"]
+elif selected_flavor == "Sweet" and selected_mood == "Wine during a thunderstorm" and drink_choice == "Caramel Macchiato":
+    info = business_data["Chai Latte"]
+elif selected_flavor == "Sweet" and selected_mood == "Wine during a thunderstorm" and drink_choice == "Chai Latte":
+    info = business_data["Horchata"]
+elif selected_flavor == "Sweet" and selected_mood == "Wine during a thunderstorm" and drink_choice == "Milk Tea Boba":
+    info = business_data["Caramel Macchiato"]
+elif selected_flavor == "Sweet" and selected_mood == "Wine during a thunderstorm" and drink_choice == "Horchata":
+    info = business_data["Chai Latte"]
+elif selected_flavor == "Sweet" and selected_mood == "Fresh lemonade on the beach" and drink_choice == "Caramel Macchiato":
+    info = business_data["Milk Tea Boba"]
+elif selected_flavor == "Sweet" and selected_mood == "Fresh lemonade on the beach" and drink_choice == "Chai Latte":
+    info = business_data["Horchata"]
+elif selected_flavor == "Sweet" and selected_mood == "Fresh lemonade on the beach" and drink_choice == "Milk Tea Boba":
+    info = business_data["Caramel Macchiato"]
+elif selected_flavor == "Sweet" and selected_mood == "Fresh lemonade on the beach" and drink_choice == "Horchata":
+    info = business_data["Chai Latte"]
+elif selected_flavor == "Sweet" and selected_mood == "Warm apple cider in a cabin" and drink_choice == "Caramel Macchiato":
+    info = business_data["Horchata"]
+elif selected_flavor == "Sweet" and selected_mood == "Warm apple cider in a cabin" and drink_choice == "Chai Latte":
+    info = business_data["Milk Tea Boba"]
+elif selected_flavor == "Sweet" and selected_mood == "Warm apple cider in a cabin" and drink_choice == "Milk Tea Boba":
+    info = business_data["Chai Latte"]
+elif selected_flavor == "Sweet" and selected_mood == "Warm apple cider in a cabin" and drink_choice == "Horchata":
+    info = business_data["Chai Latte"]
+elif selected_flavor == "Salty" and selected_mood == "Hot chocolate on a chilly night" and drink_choice == "Caramel Macchiato":
+    info = business_data["Chai Latte"]
+elif selected_flavor == "Salty" and selected_mood == "Hot chocolate on a chilly night" and drink_choice == "Chai Latte":
+    info = business_data["Horchata"]
+elif selected_flavor == "Salty" and selected_mood == "Hot chocolate on a chilly night" and drink_choice == "Milk Tea Boba":
+    info = business_data["Caramel Macchiato"]
+elif selected_flavor == "Salty" and selected_mood == "Hot chocolate on a chilly night" and drink_choice == "Horchata":
+    info = business_data["Chai Latte"]
+elif selected_flavor == "Salty" and selected_mood == "Wine during a thunderstorm" and drink_choice == "Caramel Macchiato":
+    info = business_data["Milk Tea Boba"]
+elif selected_flavor == "Salty" and selected_mood == "Wine during a thunderstorm" and drink_choice == "Chai Latte":
+    info = business_data["Caramel Macchiato"]
+elif selected_flavor == "Salty" and selected_mood == "Wine during a thunderstorm" and drink_choice == "Milk Tea Boba":
+    info = business_data["Chai Latte"]
+elif selected_flavor == "Salty" and selected_mood == "Wine during a thunderstorm" and drink_choice == "Horchata":
+    info = business_data["Chai Latte"]
+elif selected_flavor == "Salty" and selected_mood == "Fresh lemonade on the beach" and drink_choice == "Caramel Macchiato":
+    info = business_data["Horchata"]
+elif selected_flavor == "Salty" and selected_mood == "Fresh lemonade on the beach" and drink_choice == "Chai Latte":
+    info = business_data["Milk Tea Boba"]
+elif selected_flavor == "Salty" and selected_mood == "Fresh lemonade on the beach" and drink_choice == "Milk Tea Boba":
+    info = business_data["Caramel Macchiato"]
+elif selected_flavor == "Salty" and selected_mood == "Fresh lemonade on the beach" and drink_choice == "Horchata":
+    info = business_data["Chai Latte"]
+elif selected_flavor == "Salty" and selected_mood == "Warm apple cider in a cabin" and drink_choice == "Caramel Macchiato":
+    info = business_data["Caramel Macchiato"]
+elif selected_flavor == "Salty" and selected_mood == "Warm apple cider in a cabin" and drink_choice == "Chai Latte":
+    info = business_data["Milk Tea Boba"]
+elif selected_flavor == "Salty" and selected_mood == "Warm apple cider in a cabin" and drink_choice == "Milk Tea Boba":
+    info = business_data["Chai Latte"]
+elif selected_flavor == "Salty" and selected_mood == "Warm apple cider in a cabin" and drink_choice == "Horchata":
+    info = business_data["Horchata"]
+elif selected_flavor == "Bitter" and selected_mood == "Hot chocolate on a chilly night" and drink_choice == "Caramel Macchiato":
+    info = business_data["Chai Latte"]
+elif selected_flavor == "Bitter" and selected_mood == "Hot chocolate on a chilly night" and drink_choice == "Chai Latte":
+    info = business_data["Horchata"]
+elif selected_flavor == "Bitter" and selected_mood == "Hot chocolate on a chilly night" and drink_choice == "Milk Tea Boba":
+    info = business_data["Caramel Macchiato"]
+elif selected_flavor == "Bitter" and selected_mood == "Hot chocolate on a chilly night" and drink_choice == "Horchata":
+    info = business_data["Chai Latte"]
+elif selected_flavor == "Bitter" and selected_mood == "Wine during a thunderstorm" and drink_choice == "Caramel Macchiato":
+    info = business_data["Chai Latte"]
+elif selected_flavor == "Bitter" and selected_mood == "Wine during a thunderstorm" and drink_choice == "Chai Latte":
+    info = business_data["Horchata"]
+elif selected_flavor == "Bitter" and selected_mood == "Wine during a thunderstorm" and drink_choice == "Milk Tea Boba":
+    info = business_data["Chai Latte"]
+elif selected_flavor == "Bitter" and selected_mood == "Wine during a thunderstorm" and drink_choice == "Horchata":
+    info = business_data["Chai Latte"]
+elif selected_flavor == "Bitter" and selected_mood == "Fresh lemonade on the beach" and drink_choice == "Caramel Macchiato":
+    info = business_data["Horchata"]
+elif selected_flavor == "Bitter" and selected_mood == "Fresh lemonade on the beach" and drink_choice == "Chai Latte":
+    info = business_data["Caramel Macchiato"]
+elif selected_flavor == "Bitter" and selected_mood == "Fresh lemonade on the beach" and drink_choice == "Milk Tea Boba":
+    info = business_data["Chai Latte"]
+elif selected_flavor == "Bitter" and selected_mood == "Fresh lemonade on the beach" and drink_choice == "Horchata":
+    info = business_data["Milk Tea Boba"]
+elif selected_flavor == "Bitter" and selected_mood == "Warm apple cider in a cabin" and drink_choice == "Caramel Macchiato":
+    info = business_data["Milk Tea Boba"]
+elif selected_flavor == "Bitter" and selected_mood == "Warm apple cider in a cabin" and drink_choice == "Chai Latte":
+    info = business_data["Horchata"]
+elif selected_flavor == "Bitter" and selected_mood == "Warm apple cider in a cabin" and drink_choice == "Milk Tea Boba":
+    info = business_data["Caramel Macchiato"]
+elif selected_flavor == "Bitter" and selected_mood == "Warm apple cider in a cabin" and drink_choice == "Horchata":
+    info = business_data["Chai Latte"]
+elif selected_flavor == "Sour" and selected_mood == "Hot chocolate on a chilly night" and drink_choice == "Caramel Macchiato":
+    info = business_data["Horchata"]
+elif selected_flavor == "Sour" and selected_mood == "Hot chocolate on a chilly night" and drink_choice == "Chai Latte":
+    info = business_data["Caramel Macchiato"]
+elif selected_flavor == "Sour" and selected_mood == "Hot chocolate on a chilly night" and drink_choice == "Milk Tea Boba":
+    info = business_data["Milk Tea Boba"]
+elif selected_flavor == "Sour" and selected_mood == "Hot chocolate on a chilly night" and drink_choice == "Horchata":
+    info = business_data["Chai Latte"]
+elif selected_flavor == "Sour" and selected_mood == "Wine during a thunderstorm" and drink_choice == "Caramel Macchiato":
+    info = business_data["Chai Latte"]
+elif selected_flavor == "Sour" and selected_mood == "Wine during a thunderstorm" and drink_choice == "Chai Latte":
+    info = business_data["Horchata"]
+elif selected_flavor == "Sour" and selected_mood == "Wine during a thunderstorm" and drink_choice == "Milk Tea Boba":
+    info = business_data["Chai Latte"]
+elif selected_flavor == "Sour" and selected_mood == "Wine during a thunderstorm" and drink_choice == "Horchata":
+    info = business_data["Caramel Macchiato"]
+elif selected_flavor == "Sour" and selected_mood == "Fresh lemonade on the beach" and drink_choice == "Caramel Macchiato":
+    info = business_data["Milk Tea Boba"]
+elif selected_flavor == "Sour" and selected_mood == "Fresh lemonade on the beach" and drink_choice == "Chai Latte":
+    info = business_data["Horchata"]
+elif selected_flavor == "Sour" and selected_mood == "Fresh lemonade on the beach" and drink_choice == "Milk Tea Boba":
+    info = business_data["Chai Latte"]
+elif selected_flavor == "Sour" and selected_mood == "Fresh lemonade on the beach" and drink_choice == "Horchata":
+    info = business_data["Caramel Macchiato"]
+elif selected_flavor == "Sour" and selected_mood == "Warm apple cider in a cabin" and drink_choice == "Caramel Macchiato":
+    info = business_data["Caramel Macchiato"]
+elif selected_flavor == "Sour" and selected_mood == "Warm apple cider in a cabin" and drink_choice == "Chai Latte":
+    info = business_data["Milk Tea Boba"]
+elif selected_flavor == "Sour" and selected_mood == "Warm apple cider in a cabin" and drink_choice == "Milk Tea Boba":
+    info = business_data["Horchata"]
+elif selected_flavor == "Sour" and selected_mood == "Warm apple cider in a cabin" and drink_choice == "Horchata":
+    info = business_data["Chai Latte"]
+
+
     # Display playlist and business info
     st.subheader(f"🎵 {info['playlist']}")
     st.markdown(f"[Listen Here]({info['playlist_link']})")

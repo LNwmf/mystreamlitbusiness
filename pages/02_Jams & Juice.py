@@ -96,6 +96,15 @@ business_data = {
 info = None
 
 # Drink Selection
+#combination_map = {
+#    ("Sweet", "Hot chocolate on a chilly night", "Caramel Macchiato"): "Caramel Macchiato",
+#    ("Sweet", "Hot chocolate on a chilly night", "Chai Latte"): "Horchata",
+#    ...
+#}
+
+#key = (selected_flavor, selected_mood, drink_choice)
+#info = business_data[combination_map.get(key)] if combination_map.get(key) else None
+
 drink_choice = st.selectbox("Pick a drink!", ["", *business_data.keys()])
 
 if selected_flavor == "Sweet" and selected_mood == "Hot chocolate on a chilly night" and drink_choice == "Caramel Macchiato":

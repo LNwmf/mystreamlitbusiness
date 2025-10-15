@@ -67,6 +67,8 @@ if clicked > -1:
     st.markdown(f"**{titles[clicked]} selected**")
 else:
     st.markdown("**No image selected**")
+# Get the selected image title if one is clicked
+selected_theme = titles[clicked] if clicked > -1 else None
 
 #Q4
 complete = ["Drinks!", "Nonstop dancing", "Loud music", "A group selfie"]
@@ -118,23 +120,44 @@ trick_choice = st.selectbox("What's your go-to party trick?", ["", *trick_data.k
 
 combination_map = {
     ("Chaos & confetti", "Drinks!", "Karaoke master"): "Karaoke master",
-
-
-
-
-
-
-
-
+    ("Chaos & confetti", "Drinks!", "Professional breakdancer"): "Karaoke master",
+    ("Chaos & confetti", "Drinks!", "Magician"): "Magician",
+    ("Chaos & confetti", "Drinks!", "Stage comedian"): "Stage comedian",
+    ("Chaos & confetti", "Nonstop dancing", "Karaoke master"): "Professional breakdancer",
+    ("Chaos & confetti", "Nonstop dancing", "Professional breakdancer"): "Karaoke master",
+    ("Chaos & confetti", "Nonstop dancing", "Magician"): "Professional breakdancer",
+    ("Chaos & confetti", "Nonstop dancing", "Stage comedian"): "Magician",
+    ("Chaos & confetti", "Loud music", "Karaoke master"): "Karaoke master",
+    ("Chaos & confetti", "Loud music", "Professional breakdancer"): "Professional breakdancer",
+    ("Chaos & confetti", "Loud music", "Magician"): "Magician",
+    ("Chaos & confetti", "Loud music", "Stage comedian"): "Stage comedian",
+    ("Chaos & confetti", "A group selfie", "Karaoke master"): "Stage comedian",
+    ("Chaos & confetti", "A group selfie", "Professional breakdancer"): "Magician",
+    ("Chaos & confetti", "A group selfie", "Magician"): "Karaoke master",
+    ("Chaos & confetti", "A group selfie", "Stage comedian"): "Magician",
+    ("Chill rooftop", "Drinks!", "Karaoke master"): "Stage comedian",
+    ("Chill rooftop", "Drinks!", "Professional breakdancer"): "Magician",
+    ("Chill rooftop", "Drinks!", "Magician"): "Karaoke master",
+    ("Chill rooftop", "Drinks!", "Stage comedian"): "Professional breakdancer",
+    ("Chill rooftop", "Nonstop dancing", "Karaoke master"): "Stage comedian",
+    ("Chill rooftop", "Nonstop dancing", "Professional breakdancer"): "Stage comedian",
+    ("Chill rooftop", "Nonstop dancing", "Magician"): "Magician",
+    ("Chill rooftop", "Nonstop dancing", "Stage comedian"): "Karaoke master",
+    ("Chill rooftop", "Loud music", "Karaoke master"): "Magician",
+    ("Chill rooftop", "Loud music", "Professional breakdancer"): "Stage comedian",
+    ("Chill rooftop", "Loud music", "Magician"): "Stage comedian",
+    ("Chill rooftop", "Loud music", "Stage comedian"): "Karaoke master",
 
 
 }
-if selected_genre == "Pop" and selected_complete == "Loud music":
-    trick_choice = "Karaoke master"
 
-if trick_choice:
+if selected_theme and selected_complete and trick_choice:
+    user_combo = (selected_theme, selected_complete, trick_choice)
+    result_key = combination_map.get(user_combo)
+
+    if result_key:
     # Retrieve information about selected drink/business
-    info = trick_data[trick_choice]
+        info = trick_data[result_key]
 
     # Display playlist and business info
     st.subheader(f"🎵 {info['playlist']}")

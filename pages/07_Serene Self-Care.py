@@ -64,6 +64,8 @@ if selected_calm:
 
     st.image(info2['calm_image'], width=250)
 
+
+
 #Q5
 energy_data = {
     "Glowing": {
@@ -103,14 +105,91 @@ energy_data = {
     "business_image": "https://yinyangskinstudio.com/wp-content/uploads/2024/10/YIN-YANG-CHOSEN-small-31-2048x905.png"
     },
 }
-    # Dessert Selection
+
+info3 = None
+    # Energy Selection
 energy_choice = st.selectbox("How would you describe your current energy?", ["", *energy_data.keys()])
 
-if energy_choice:
+combination_map = {
+    ("Taking a warm bath", "Confidence", "Glowing"): "Glowing",
+    ("Taking a warm bath", "Confidence", "Clear"): "Soft",
+    ("Taking a warm bath", "Confidence", "Soft"): "Soft",
+    ("Taking a warm bath", "Confidence", "Reflective"): "Clear",
+    ("Taking a warm bath", "Wonder", "Glowing"): "Reflective",
+    ("Taking a warm bath", "Wonder", "Clear"): "Glowing",
+    ("Taking a warm bath", "Wonder", "Soft"): "Soft",
+    ("Taking a warm bath", "Wonder", "Reflective"): "Clear",
+    ("Taking a warm bath", "Relaxation", "Glowing"): "Clear",
+    ("Taking a warm bath", "Relaxation", "Clear"): "Glowing",
+    ("Taking a warm bath", "Relaxation", "Soft"): "Clear",
+    ("Taking a warm bath", "Relaxation", "Reflective"): "Clear",
+    ("Taking a warm bath", "Magic", "Glowing"): "Clear",
+    ("Taking a warm bath", "Magic", "Clear"): "Glowing",
+    ("Taking a warm bath", "Magic", "Soft"): "Reflective",
+    ("Taking a warm bath", "Magic", "Reflective"): "Soft",
+    ("Going on a nature walk", "Confidence", "Glowing"): "Clear",
+    ("Going on a nature walk", "Confidence", "Clear"): "Reflective",
+    ("Going on a nature walk", "Confidence", "Soft"): "Soft",
+    ("Going on a nature walk", "Confidence", "Reflective"): "Clear",
+    ("Going on a nature walk", "Wonder", "Glowing"): "Clear",
+    ("Going on a nature walk", "Wonder", "Clear"): "Soft",
+    ("Going on a nature walk", "Wonder", "Soft"): "Reflective",
+    ("Going on a nature walk", "Wonder", "Reflective"): "Soft",
+    ("Going on a nature walk", "Relaxation", "Glowing"): "Reflective",
+    ("Going on a nature walk", "Relaxation", "Clear"): "Clear",
+    ("Going on a nature walk", "Relaxation", "Soft"): "Glowing",
+    ("Going on a nature walk", "Relaxation", "Reflective"): "Soft",
+    ("Going on a nature walk", "Magic", "Glowing"): "Glowing",
+    ("Going on a nature walk", "Magic", "Clear"): "Clear",
+    ("Going on a nature walk", "Magic", "Soft"): "Reflective",
+    ("Going on a nature walk", "Magic", "Reflective"): "Clear",
+    ("Listening to music", "Confidence", "Glowing"): "Glowing",
+    ("Listening to music", "Confidence", "Clear"): "Soft",
+    ("Listening to music", "Confidence", "Soft"): "Clear",
+    ("Listening to music", "Confidence", "Reflective"): "Clear",
+    ("Listening to music", "Wonder", "Glowing"): "Soft",
+    ("Listening to music", "Wonder", "Clear"): "Soft",
+    ("Listening to music", "Wonder", "Soft"): "Reflective",
+    ("Listening to music", "Wonder", "Reflective"): "Glowing",
+    ("Listening to music", "Relaxation", "Glowing"): "Reflective",
+    ("Listening to music", "Relaxation", "Clear"): "Soft",
+    ("Listening to music", "Relaxation", "Soft"): "Glowing",
+    ("Listening to music", "Relaxation", "Reflective"): "Clear",
+    ("Listening to music", "Magic", "Glowing"): "Reflective",
+    ("Listening to music", "Magic", "Clear"): "Reflective",
+    ("Listening to music", "Magic", "Soft"): "Glowing",
+    ("Listening to music", "Magic", "Reflective"): "Clear",
+    ("Treating myself to a meal", "Confidence", "Glowing"): "Glowing",
+    ("Treating myself to a meal", "Confidence", "Clear"): "Glowing",
+    ("Treating myself to a meal", "Confidence", "Soft"): "Clear",
+    ("Treating myself to a meal", "Confidence", "Reflective"): "Soft",
+    ("Treating myself to a meal", "Wonder", "Glowing"): "Clear",
+    ("Treating myself to a meal", "Wonder", "Clear"): "Soft",
+    ("Treating myself to a meal", "Wonder", "Soft"): "Clear",
+    ("Treating myself to a meal", "Wonder", "Reflective"): "Glowing",
+    ("Treating myself to a meal", "Relaxation", "Glowing"): "Soft",
+    ("Treating myself to a meal", "Relaxation", "Clear"): "Soft",
+    ("Treating myself to a meal", "Relaxation", "Soft"): "Glowing",
+    ("Treating myself to a meal", "Relaxation", "Reflective"): "Clear",
+    ("Treating myself to a meal", "Magic", "Glowing"): "Soft",
+    ("Treating myself to a meal", "Magic", "Clear"): "Clear",
+    ("Treating myself to a meal", "Magic", "Soft"): "Glowing",
+    ("Treating myself to a meal", "Magic", "Reflective"): "Soft",
+
+}
+
+if selected_unwind and selected_secret and energy_choice:
+    key = (selected_unwind, selected_secret, energy_choice)
+    output = combination_map.get(key)
+
+#if energy_choice:
     # Retrieve information about selected drink/business
-    info3 = energy_data[energy_choice]
+#    info3 = energy_data[energy_choice]
 
     # Display playlist and business info
+    if output:
+        info3 = energy_data[output]
+
     st.subheader(f"🎵 {info3['playlist']}")
     st.markdown(f"[Listen Here]({info3['playlist_link']})")
 

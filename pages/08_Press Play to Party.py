@@ -111,9 +111,24 @@ trick_data = {
     "business_image": "https://liventertainment.co/wp-content/uploads/2024/12/Logo-transperancy.png"
     },
 }
-    # Dessert Selection
+
+info = None
+    # Trick Selection
 trick_choice = st.selectbox("What's your go-to party trick?", ["", *trick_data.keys()])
 
+combination_map = {
+    ("Chaos & confetti", "Drinks!", "Karaoke master"): "Karaoke master",
+
+
+
+
+
+
+
+
+
+
+}
 if selected_genre == "Pop" and selected_complete == "Loud music":
     trick_choice = "Karaoke master"
 

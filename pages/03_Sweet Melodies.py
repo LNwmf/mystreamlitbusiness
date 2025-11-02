@@ -13,8 +13,32 @@ Welcome! Pick a dessert below to discover a blended playlist, support a local BI
 """)
 
 #Q1
-flavor_type = ["Chocolate", "Vanilla", "Strawberry", "Coffee", "Mint"]
-selected_type = st.selectbox("Select a Flavor:", flavor_type, index=None)
+st.write("Select a flavor:")
+images = [
+
+        "https://www.thespruceeats.com/thmb/FhHcgQni8lgV0griUeDJMTAszxI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chocolate_hero1-d62e5444a8734f8d8fe91f5631d51ca5.jpg", #confetti, chill rooftop, chicken wings, burger, hot dog
+        "https://images.prismic.io/bareblends/4becbce8-cc6e-4292-a25c-93d6136a5df7_vanilla+bean+hero.jpg?auto=compress%2Cformat&width=1920&height=800&crop=center",
+        "https://clv.h-cdn.co/assets/15/22/2048x2048/square-1432664914-strawberry-facts1.jpg",
+        "https://daylighthilliard.com/wp-content/uploads/2021/04/great-coffee-bean.jpeg",
+        "https://sciencemeetsfood.org/wp-content/uploads/2018/01/mint-featured.jpg",
+]
+
+titles=["Chocolate", "Vanilla", "Strawberry", "Coffee", "Mint"]
+
+clicked = clickable_images(
+    images,
+    titles=titles,
+    div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
+    img_style={"margin": "5px", "height": "200px"},
+)
+
+if clicked > -1:
+    st.markdown(f"**{titles[clicked]} selected**")
+else:
+    st.markdown("**No image selected**")
+# Get the selected image title if one is clicked
+selected_theme = titles[clicked] if clicked > -1 else None
+
 
 #Q2
 time_options = ["After a morning run", "Late night cravings", "During special occasions", "All day, everyday"]

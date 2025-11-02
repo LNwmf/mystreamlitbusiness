@@ -1,4 +1,5 @@
 import streamlit as st
+from st_clickable_images import clickable_images
 
 st.set_page_config(
     page_title="Sweet Melodies",

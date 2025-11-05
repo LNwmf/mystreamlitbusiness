@@ -120,15 +120,74 @@ info = None
 dessert_choice = st.selectbox("Pick a dessert!", ["", *dessert_data.keys()])
 
 dessert_map = {
+("Chocolate", "Layers of experience", "Flan"): "Taiyaki",
+("Chocolate", "Layers of experience", "Souffle"): "Souffle",
+("Chocolate", "Layers of experience", "Taiyaki"): "Mandazi",
+("Chocolate", "Layers of experience", "Mandazi"): "Taiyaki",
+("Chocolate", "Bittersweet spices", "Flan"): "Mandazi",
+("Chocolate", "Bittersweet spices", "Souffle"): "Souffle",
+("Chocolate", "Bittersweet spices", "Taiyaki"): "Souffle",
+("Chocolate", "Bittersweet spices", "Mandazi"): "Flan",
+("Chocolate", "A tough shell but soft center", "Flan"): "Flan",
+("Chocolate", "A tough shell but soft center", "Souffle"): "Mandazi",
+("Chocolate", "A tough shell but soft center", "Taiyaki"): "Mandazi",
+("Chocolate", "A tough shell but soft center", "Mandazi"): "Souffle",
+("Chocolate", "Unexpected textures", "Flan"): "Taiyaki",
+("Chocolate", "Unexpected textures", "Souffle"): "Flan",
+("Chocolate", "Unexpected textures", "Taiyaki"): "Taiyaki",
+("Chocolate", "Unexpected textures", "Mandazi"): "Souffle",
 
+("Vanilla", "Layers of experience", "Flan"): "Taiyaki",
+("Vanilla", "Layers of experience", "Souffle"): "Mandazi",
+("Vanilla", "Layers of experience", "Taiyaki"): "Flan",
+("Vanilla", "Layers of experience", "Mandazi"): "Flan",
+("Vanilla", "Bittersweet spices", "Flan"): "Mandazi",
+("Vanilla", "Bittersweet spices", "Souffle"): "Flan",
+("Vanilla", "Bittersweet spices", "Taiyaki"): "Souffle",
+("Vanilla", "Bittersweet spices", "Mandazi"): "Flan",
+("Vanilla", "A tough shell but soft center", "Flan"): "Taiyaki",
+("Vanilla", "A tough shell but soft center", "Souffle"): "Flan",
+("Vanilla", "A tough shell but soft center", "Taiyaki"): "Souffle",
+("Vanilla", "A tough shell but soft center", "Mandazi"): "Flan",
+("Vanilla", "Unexpected textures", "Flan"): "Mandazi",
+("Vanilla", "Unexpected textures", "Souffle"): "Flan",
+("Vanilla", "Unexpected textures", "Taiyaki"): "Taiyaki",
+("Vanilla", "Unexpected textures", "Mandazi"): "Mandazi",
+
+("Strawberry", "Layers of experience", "Flan"): "Mandazi",
+("Strawberry", "Layers of experience", "Souffle"): "Souffle",
+("Strawberry", "Layers of experience", "Taiyaki"): "Souffle",
+("Strawberry", "Layers of experience", "Mandazi"): "Mandazi",
+("Strawberry", "Bittersweet spices", "Flan"): "Mandazi",
+("Strawberry", "Bittersweet spices", "Souffle"): "Mandazi",
+("Strawberry", "Bittersweet spices", "Taiyaki"): "Flan",
+("Strawberry", "Bittersweet spices", "Mandazi"): "Flan",
+("Strawberry", "A tough shell but soft center", "Flan"): "Taiyaki",
+("Strawberry", "A tough shell but soft center", "Souffle"): "Souffle",
+("Strawberry", "A tough shell but soft center", "Taiyaki"): "Taiyaki",
+("Strawberry", "A tough shell but soft center", "Mandazi"): "Mandazi",
+("Strawberry", "Unexpected textures", "Flan"): "Flan",
+("Strawberry", "Unexpected textures", "Souffle"): "Mandazi",
+("Strawberry", "Unexpected textures", "Taiyaki"): "Souffle",
+("Strawberry", "Unexpected textures", "Mandazi"): "Souffle",
+
+("Coffee", "Layers of experience", "Flan"): "Flan",
+("Coffee", "Layers of experience", "Souffle"): "Souffle",
+("Coffee", "Layers of experience", "Taiyaki"): "Souffle",
+("Coffee", "Layers of experience", "Mandazi"): "Mandazi",
+("Coffee", "Bittersweet spices", "Flan"): "Mandazi",
+("Coffee", "Bittersweet spices", "Souffle"): "Flan",
+("Coffee", "Bittersweet spices", "Taiyaki"): "Taiyaki",
+("Coffee", "Bittersweet spices", "Mandazi"): "Flan",
+("Coffee", "A tough shell but soft center", "Flan"): "Flan",
+("Coffee", "A tough shell but soft center", "Souffle"): "Flan",
+("Coffee", "A tough shell but soft center", "Taiyaki"): "Taiyaki",
+("Coffee", "A tough shell but soft center", "Mandazi"): "Taiyaki",
+("Coffee", "Unexpected textures", "Flan"): "Taiyaki",
+("Coffee", "Unexpected textures", "Souffle"): "Souffle",
+("Coffee", "Unexpected textures", "Taiyaki"): "Souffle",
+("Coffee", "Unexpected textures", "Mandazi"): "Flan",
 }
-
-
-
-
-
-
-
 
 
 if selected_flavor and selected_life and dessert_choice:

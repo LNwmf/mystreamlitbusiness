@@ -1,4 +1,5 @@
 import streamlit as st
+from st_clickable_images import clickable_images
 
 st.set_page_config(
     page_title="Y2K Rewind",
@@ -13,30 +14,35 @@ Welcome! Pick a 2000s music artist below to discover a blended playlist, support
 """)
 
 #Q1
-tech_type = ["Flip phones", "MP3 players", "Nintendo DS", "Digital cameras"]
-selected_tech = st.selectbox("What Y2K tech do you miss the most?", tech_type, index=None)
+st.write("What Y2K tech do you miss the most?")
+images = [
+
+        "https://m.media-amazon.com/images/I/61-mqYsNMEL.jpg",
+        "https://retrospekt.com/cdn/shop/files/MP-VR-1006_1-newphones.jpg?v=1719506839&width=3000",
+        "https://www.stuff.tv/wp-content/uploads/sites/2/2024/11/nintendo-ds_eb42ae.jpg?quality=75&w=1080",
+        "https://i.etsystatic.com/57193956/r/il/5ec242/6867084797/il_fullxfull.6867084797_ed68.jpg",
+]
+
+titles=["Flip phones", "MP3 players", "Nintendo DS", "Digital cameras"]
+
+clicked = clickable_images(
+    images,
+    titles=titles,
+    div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
+    img_style={"margin": "5px", "height": "200px"},
+)
+
+if clicked > -1:
+    st.markdown(f"**{titles[clicked]} selected**")
+else:
+    st.markdown("**No image selected**")
+# Get the selected image title if one is clicked
+selected_tech = titles[clicked] if clicked > -1 else None
 
 #Q2
-trend_data = {
-    "Tracksuit with rhinestones": {
-    "trend_image": "https://di2ponv0v5otw.cloudfront.net/posts/2025/01/26/679710d59a76ef110dc078e5/m_679710dfd3309f00594c1daf.jpg",
-    },
-    "Chunky sunglasses": {
-    "trend_image": "https://charmingcharlie.com/cdn/shop/files/C3-2_ecf75579-4d56-4c77-99b5-7a25d26bb20e.jpg?v=1719575450&width=800",
-    },
-    "Denim on denim": {
-    "trend_image": "https://finesse.us/cdn/shop/files/1_0dd49d3d-de01-4c55-a7f8-3454e02e5dcf.jpg?v=1738924628&width=1946"
-    },
-    "Trucker hats": {
-    "trend_image": "https://scene7.zumiez.com/is/image/zumiez/product_main_medium/Empyre-Y2K-Black-Trucker-Hat-_382120.jpg"
-    },
-}
-selected_trend = st.selectbox("Pick a 2000s fashion trend:", ["", *trend_data.keys()])
+trend = ["Tracksuit with rhinestones", "Chunky sunglasses", "Denim on denim", "Trucker hats"]
+selected_trend = st.selectbox("Pick a 2000s fashion trend:", trend, index=None)
 
-if selected_trend:
-    info1 = trend_data[selected_trend]
-
-    st.image(info1['trend_image'], width=250)
 #Q3
 movie_options = ["Mean Girls", "10 Things I Hate About You", "Lord of the Rings Trilogy", "13 Going On 30"]
 selected_movie = st.selectbox("If you were teleported into a movie, which one would you prefer to be in?", movie_options, index=None)

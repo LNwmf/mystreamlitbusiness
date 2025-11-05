@@ -41,26 +41,8 @@ selected_unwind = titles[clicked] if clicked > -1 else None
 
 
 #Q2
-scent_data = {
-    "Lavender": {
-    "scent_image": "https://bouqs.com/blog/wp-content/uploads/2024/08/shutterstock_2485398557-min-1080x720.jpg",
-    },
-    "Jasmine": {
-    "scent_image": "https://www.chicagobotanic.org/sites/default/files/2025/01/09/jasmine-1400x787.jpg",
-    },
-    "Eucalyptus": {
-    "scent_image": "https://mimosanurseryonline.com/cdn/shop/products/64c02307da09d05022a2eb01.png?v=1690474428"
-    },
-    "Sandalwood": {
-    "scent_image": "https://www.carrementbelle.com/blog/wp-content/uploads/2020/08/sandalwood.jpg"
-    },
-}
-selected_scent = st.selectbox("Select a scent:", ["", *scent_data.keys()])
-
-if selected_scent:
-    info1 = scent_data[selected_scent]
-
-    st.image(info1['scent_image'], width=250)
+scent = ["Lavender", "Jasmine", "Eucalyptus", "Sandalwood"]
+selected_scent = st.selectbox("Select a scent:", scent, index=None)
 
 #Q3
 secret = ["Confidence", "Wonder", "Relaxation", "Magic"]

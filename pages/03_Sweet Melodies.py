@@ -21,10 +21,9 @@ images = [
         "https://images.prismic.io/bareblends/4becbce8-cc6e-4292-a25c-93d6136a5df7_vanilla+bean+hero.jpg?auto=compress%2Cformat&width=1920&height=800&crop=center",
         "https://clv.h-cdn.co/assets/15/22/2048x2048/square-1432664914-strawberry-facts1.jpg",
         "https://daylighthilliard.com/wp-content/uploads/2021/04/great-coffee-bean.jpeg",
-        "https://sciencemeetsfood.org/wp-content/uploads/2018/01/mint-featured.jpg",
 ]
 
-titles=["Chocolate", "Vanilla", "Strawberry", "Coffee", "Mint"]
+titles=["Chocolate", "Vanilla", "Strawberry", "Coffee"]
 
 clicked = clickable_images(
     images,
@@ -38,7 +37,7 @@ if clicked > -1:
 else:
     st.markdown("**No image selected**")
 # Get the selected image title if one is clicked
-selected_theme = titles[clicked] if clicked > -1 else None
+selected_flavor = titles[clicked] if clicked > -1 else None
 
 
 #Q2
@@ -50,11 +49,34 @@ life_options = ["Layers of experience", "Bittersweet spices", "A tough shell but
 selected_life = st.selectbox("If your life were a dessert, what would it be made of?", life_options, index=None)
 
 #Q4
-season = ["Summer", "Winter", "Spring", "Autumn"]
-selected_season = st.selectbox("What season defines you?", season, index=None)
+st.write("What season defines you?")
+images = [
+
+        "https://content.thriveglobal.com/wp-content/uploads/2020/06/summer.jpg",
+        "https://watchandlearn.scholastic.com/content/dam/classroom-magazines/watchandlearn/videos/earth-and-space/seasons/signs-of-winter/english/wall-2018-signsofwintermp4.transform/content-tile-large/image.png",
+        "https://www.abc27.com/wp-content/uploads/sites/55/2022/03/GettyImages-1130636356.jpg?w=1280",
+        "https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?cs=srgb&dl=pexels-pixabay-33109.jpg&fm=jpg",
+]
+
+titles=["Summer", "Winter", "Spring", "Autumn"]
+
+clicked = clickable_images(
+    images,
+    titles=titles,
+    div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
+    img_style={"margin": "5px", "height": "200px"},
+)
+
+if clicked > -1:
+    st.markdown(f"**{titles[clicked]} selected**")
+else:
+    st.markdown("**No image selected**")
+# Get the selected image title if one is clicked
+selected_season = titles[clicked] if clicked > -1 else None
+
 
 # Business options and related data
-business_data = {
+dessert_data = {
     "Flan": {
         "playlist": "Dancing Jelly",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
@@ -92,12 +114,31 @@ business_data = {
     "business_image": "https://samiflorenciacatering.com/wp-content/uploads/2024/02/Florencia-logo.jpg.webp"
     },
 }
-    # Dessert Selection
-dessert_choice = st.selectbox("Pick a dessert!", ["", *business_data.keys()])
 
-if dessert_choice:
+info = None
+    # Dessert Selection
+dessert_choice = st.selectbox("Pick a dessert!", ["", *dessert_data.keys()])
+
+dessert_map = {
+
+}
+
+
+
+
+
+
+
+
+
+if selected_flavor and selected_life and dessert_choice:
+    user_combo = (selected_flavor, selected_life, dessert_choice)
+    result_key = dessert_map.get(user_combo)
     # Retrieve information about selected drink/business
-    info = business_data[dessert_choice]
+    if result_key:
+        info = dessert_data[result_key]
+
+
 
     # Display playlist and business info
     st.subheader(f"🎵 {info['playlist']}")

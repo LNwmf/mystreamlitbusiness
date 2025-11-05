@@ -17,7 +17,7 @@ Welcome! Pick a drink below to discover a blended playlist, support a local BIPO
 
 #Q1
 flavor_options = ["Sweet", "Salty", "Bitter", "Sour"]
-selected_flavor = st.selectbox("Select a Flavor:", flavor_options, index=None)
+selected_flavor = st.selectbox("Select a flavor:", flavor_options, index=None)
 
 #Q2
 travel_options = ["Africa", "Antarctica", "Asia", "Australia", "Europe", "Latin America", "North America"]

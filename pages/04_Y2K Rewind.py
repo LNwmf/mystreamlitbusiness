@@ -71,7 +71,7 @@ selected_movie= titles[clicked] if clicked > -1 else None
 
 #Q4
 ppl = ["Cyber kid", "Pop princess", "Fashion icon", "Chill surfer"]
-selected_ppl = st.selectbox("Which Y2K character are you?", ["", *ppl_data.keys()])
+selected_ppl = st.selectbox("Which Y2K character are you?", ppl, index=None)
 
 
 # Business options and related data
@@ -119,14 +119,73 @@ info = None
 y2k_choice = st.selectbox("Pick an artist!", ["", *y2k_data.keys()])
 
 y2k_map = {
+("Flip phones", "Mean Girls", "Britney Spears"): "Britney Spears",
+("Flip phones", "Mean Girls", "Usher"): "Usher",
+("Flip phones", "Mean Girls", "Green Day"): "Green Day",
+("Flip phones", "Mean Girls", "Destiny's Child"): "Destiny's Child",
+("Flip phones", "10 Things I Hate About You", "Britney Spears"): "Green Day",
+("Flip phones", "10 Things I Hate About You", "Usher"): "Usher",
+("Flip phones", "10 Things I Hate About You", "Green Day"): "Britney Spears",
+("Flip phones", "10 Things I Hate About You", "Destiny's Child"): "Britney Spears",
+("Flip phones", "Lord of the Rings Trilogy", "Britney Spears"): "Green Day",
+("Flip phones", "Lord of the Rings Trilogy", "Usher"): "Green Day",
+("Flip phones", "Lord of the Rings Trilogy", "Green Day"): "Britney Spears",
+("Flip phones", "Lord of the Rings Trilogy", "Destiny's Child"): "Usher",
+("Flip phones", "13 Going On 30", "Britney Spears"): "Destiny's Child",
+("Flip phones", "13 Going On 30", "Usher"): "Destiny's Child",
+("Flip phones", "13 Going On 30", "Green Day"): "Britney Spears",
+("Flip phones", "13 Going On 30", "Destiny's Child"): "Usher",
 
+("MP3 players", "Mean Girls", "Britney Spears"): "Britney Spears",
+("MP3 players", "Mean Girls", "Usher"): "Green Day",
+("MP3 players", "Mean Girls", "Green Day"): "Destiny's Child",
+("MP3 players", "Mean Girls", "Destiny's Child"): "Destiny's Child",
+("MP3 players", "10 Things I Hate About You", "Britney Spears"): "Usher",
+("MP3 players", "10 Things I Hate About You", "Usher"): "Usher",
+("MP3 players", "10 Things I Hate About You", "Green Day"): "Britney Spears",
+("MP3 players", "10 Things I Hate About You", "Destiny's Child"): "Britney Spears",
+("MP3 players", "Lord of the Rings Trilogy", "Britney Spears"): "Green Day",
+("MP3 players", "Lord of the Rings Trilogy", "Usher"): "Britney Spears",
+("MP3 players", "Lord of the Rings Trilogy", "Green Day"): "Green Day",
+("MP3 players", "Lord of the Rings Trilogy", "Destiny's Child"): "Usher",
+("MP3 players", "13 Going On 30", "Britney Spears"): "Britney Spears",
+("MP3 players", "13 Going On 30", "Usher"): "Green Day",
+("MP3 players", "13 Going On 30", "Green Day"): "Usher",
+("MP3 players", "13 Going On 30", "Destiny's Child"): "Britney Spears",
 
+("Nintendo DS", "Mean Girls", "Britney Spears"): "Usher",
+("Nintendo DS", "Mean Girls", "Usher"): "Usher",
+("Nintendo DS", "Mean Girls", "Green Day"): "Green Day",
+("Nintendo DS", "Mean Girls", "Destiny's Child"): "Destiny's Child",
+("Nintendo DS", "10 Things I Hate About You", "Britney Spears"): "Destiny's Child",
+("Nintendo DS", "10 Things I Hate About You", "Usher"): "Destiny's Child",
+("Nintendo DS", "10 Things I Hate About You", "Green Day"): "Britney Spears",
+("Nintendo DS", "10 Things I Hate About You", "Destiny's Child"): "Green Day",
+("Nintendo DS", "Lord of the Rings Trilogy", "Britney Spears"): "Usher",
+("Nintendo DS", "Lord of the Rings Trilogy", "Usher"): "Usher",
+("Nintendo DS", "Lord of the Rings Trilogy", "Green Day"): "Britney Spears",
+("Nintendo DS", "Lord of the Rings Trilogy", "Destiny's Child"): "Green Day",
+("Nintendo DS", "13 Going On 30", "Britney Spears"): "Destiny's Child",
+("Nintendo DS", "13 Going On 30", "Usher"): "Green Day",
+("Nintendo DS", "13 Going On 30", "Green Day"): "Britney Spears",
+("Nintendo DS", "13 Going On 30", "Destiny's Child"): "Usher",
 
-
-
-
-
-
+("Digital cameras", "Mean Girls", "Britney Spears"): "Britney Spears",
+("Digital cameras", "Mean Girls", "Usher"): "Usher",
+("Digital cameras", "Mean Girls", "Green Day"): "Green Day",
+("Digital cameras", "Mean Girls", "Destiny's Child"): "Destiny's Child",
+("Digital cameras", "10 Things I Hate About You", "Britney Spears"): "Usher",
+("Digital cameras", "10 Things I Hate About You", "Usher"): "Green Day",
+("Digital cameras", "10 Things I Hate About You", "Green Day"): "Green Day",
+("Digital cameras", "10 Things I Hate About You", "Destiny's Child"): "Britney Spears",
+("Digital cameras", "Lord of the Rings Trilogy", "Britney Spears"): "Green Day",
+("Digital cameras", "Lord of the Rings Trilogy", "Usher"): "Green Day",
+("Digital cameras", "Lord of the Rings Trilogy", "Green Day"): "Britney Spears",
+("Digital cameras", "Lord of the Rings Trilogy", "Destiny's Child"): "Britney Spears",
+("Digital cameras", "13 Going On 30", "Britney Spears"): "Destiny's Child",
+("Digital cameras", "13 Going On 30", "Usher"): "Destiny's Child",
+("Digital cameras", "13 Going On 30", "Green Day"): "Britney Spears",
+("Digital cameras", "13 Going On 30", "Destiny's Child"): "Green Day",
 }
 
 if selected_tech and selected_movie and y2k_choice:

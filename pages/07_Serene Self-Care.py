@@ -1,4 +1,5 @@
 import streamlit as st
+from st_clickable_images import clickable_images
 
 st.set_page_config(
     page_title="Serene Self-Care",
@@ -13,8 +14,31 @@ Welcome! Pick an energy below to discover a blended playlist, support a local BI
 """)
 
 #Q1
-unwind_options = ["Taking a warm bath", "Going on a nature walk", "Listening to music", "Treating myself to a meal"]
-selected_unwind = st.selectbox("How do you unwind after a long day?", unwind_options, index=None)
+st.write("Select a relaxing activity:")
+images = [
+
+        "https://images.squarespace-cdn.com/content/v1/5d48448a48f65e000146a3d1/1707418465705-6D8U9Z7P1FHDL1ZIU8S4/Bubble+Bath.png?format=2500w",
+        "https://www.weljii.com/wp-content/uploads/2025/03/Blog-4-3-scaled.jpg",
+        "https://ggie.berkeley.edu/wp-content/uploads/2019/09/Listening_to_Music_Mindfully_1200x630.jpg",
+        "https://travelswitherica.com/wp-content/uploads/2021/05/Depositphotos_199645174_xl-2015.jpg",
+]
+
+titles=["Taking a warm bath", "Going on a nature walk", "Listening to music", "Treating myself to a meal"]
+
+clicked = clickable_images(
+    images,
+    titles=titles,
+    div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
+    img_style={"margin": "5px", "height": "200px"},
+)
+
+if clicked > -1:
+    st.markdown(f"**{titles[clicked]} selected**")
+else:
+    st.markdown("**No image selected**")
+# Get the selected image title if one is clicked
+selected_theme = titles[clicked] if clicked > -1 else None
+
 
 #Q2
 scent_data = {

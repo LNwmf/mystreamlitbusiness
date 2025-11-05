@@ -37,7 +37,7 @@ if clicked > -1:
 else:
     st.markdown("**No image selected**")
 # Get the selected image title if one is clicked
-selected_theme = titles[clicked] if clicked > -1 else None
+selected_unwind = titles[clicked] if clicked > -1 else None
 
 
 #Q2

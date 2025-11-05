@@ -44,31 +44,38 @@ trend = ["Tracksuit with rhinestones", "Chunky sunglasses", "Denim on denim", "T
 selected_trend = st.selectbox("Pick a 2000s fashion trend:", trend, index=None)
 
 #Q3
-movie_options = ["Mean Girls", "10 Things I Hate About You", "Lord of the Rings Trilogy", "13 Going On 30"]
-selected_movie = st.selectbox("If you were teleported into a movie, which one would you prefer to be in?", movie_options, index=None)
+st.write("If you were teleported into a movie, which one would you prefer to be in?")
+images = [
+
+        "https://m.media-amazon.com/images/M/MV5BMjE1MDQ4MjI1OV5BMl5BanBnXkFtZTcwNzcwODAzMw@@._V1_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BOTQwYmRhNGQtODI2Mi00ZTRlLTk0Y2QtY2NkNjE1MGNhNTgwXkEyXkFqcGc@._V1_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_.jpg",
+        "https://upload.wikimedia.org/wikipedia/en/thumb/a/aa/13_Going_on_30_film_poster.png/250px-13_Going_on_30_film_poster.png",
+]
+
+titles=["Mean Girls", "10 Things I Hate About You", "Lord of the Rings Trilogy", "13 Going On 30"]
+
+clicked = clickable_images(
+    images,
+    titles=titles,
+    div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
+    img_style={"margin": "5px", "height": "200px"},
+)
+
+if clicked > -1:
+    st.markdown(f"**{titles[clicked]} selected**")
+else:
+    st.markdown("**No image selected**")
+# Get the selected image title if one is clicked
+selected_movie= titles[clicked] if clicked > -1 else None
 
 #Q4
-ppl_data = {
-    "Cyber kid": {
-    "ppl_image": "https://preview.redd.it/i50tlz0frw881.jpg?width=640&crop=smart&auto=webp&s=b2ca22d81b586b8af2ed79b3cbbcbabe08426749",
-    },
-    "Pop princess": {
-    "ppl_image": "https://www.lemon8-app.com/seo/image?item_id=7455214455610278443&index=8&sign=43ec144c3e2ad90e5330db38c2f0458a",
-    },
-    "Fashion icon": {
-    "ppl_image": "https://media.glamourmagazine.co.uk/photos/633d964a11a32370a8bb3b9e/4:3/w_1920,h_1440,c_limit/Y2K%20TRENDS%20051022%20SQUARE.jpg"
-    },
-    "Chill surfer": {
-    "ppl_image": "https://i.pinimg.com/236x/78/69/2e/78692ec92ddeae0a4d83424f34f29206.jpg"
-    },
-}
+ppl = ["Cyber kid", "Pop princess", "Fashion icon", "Chill surfer"]
 selected_ppl = st.selectbox("Which Y2K character are you?", ["", *ppl_data.keys()])
 
-if selected_ppl:
-    info2 = ppl_data[selected_ppl]
-    st.image(info2['ppl_image'], width=250)
+
 # Business options and related data
-business_data = {
+y2k_data = {
     "Britney Spears": {
         "playlist": "Oop...I did it again",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
@@ -106,12 +113,29 @@ business_data = {
     "business_image": "https://www.kokorokokovintage.com/cdn/shop/files/koko.LOGO_360x.jpg?v=1613785534"
     },
 }
-    # Dessert Selection
-y2k_choice = st.selectbox("Pick an artist!", ["", *business_data.keys()])
 
-if y2k_choice:
+info = None
+
+y2k_choice = st.selectbox("Pick an artist!", ["", *y2k_data.keys()])
+
+y2k_map = {
+
+
+
+
+
+
+
+
+}
+
+if selected_tech and selected_movie and y2k_choice:
+    user_combo = (selected_tech, selected_movie, y2k_choice)
+    result_key = y2k_map.get(user_combo)
     # Retrieve information about selected drink/business
-    info = business_data[y2k_choice]
+    if result_key:
+        info = y2k_data[result_key]
+
 
     # Display playlist and business info
     st.subheader(f"🎵 {info['playlist']}")

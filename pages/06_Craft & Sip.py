@@ -73,7 +73,7 @@ selected_place = titles[clicked] if clicked > -1 else None
 
 #Q4
 word = ["Abstract", "Surreal", "Intense", "Tranquil", "Chaos"]
-selected_word = st.selectbox("If you were to describe your life in one artistic word, which one would it be?", object, index=None)
+selected_word = st.selectbox("If you were to describe your life in one artistic word, which one would it be?", word, index=None)
 
 #Q5
 value_data = {

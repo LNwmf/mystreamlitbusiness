@@ -49,27 +49,8 @@ secret = ["Confidence", "Wonder", "Relaxation", "Magic"]
 selected_secret = st.selectbox("What's the secret ingredient to feeling your absolute best?", secret, index=None)
 
 #Q4
-calm_data = {
-    "Ambient beach": {
-    "calm_image": "https://www.rd.com/wp-content/uploads/2025/05/This-Stunningly-Beautiful-Beach_GettyImages-482612302_FT.jpg",
-    },
-    "Quiet mountainside": {
-    "calm_image": "https://www.dyangarrismusic.com/wp-content/uploads/edd/konigssee-2522545_1920-mountains.jpg",
-    },
-    "Bustling city": {
-    "calm_image": "https://sharedeasy.club/wp-content/uploads/blog/new-york-city-evening-NYCTG0221-52492d6ccab44f328a1c89f41ac02aea.jpg"
-    },
-    "Lush forest": {
-    "calm_image": "https://www.shutterstock.com/image-photo/beautiful-sunlight-green-forest-majestic-600nw-2458222501.jpg"
-    },
-}
-selected_calm = st.selectbox("Pick a getaway place:", ["", *calm_data.keys()])
-
-if selected_calm:
-    info2 = calm_data[selected_calm]
-
-    st.image(info2['calm_image'], width=250)
-
+calm = ["Ambient beach", "Quiet mountainside", "Bustling city", "Lush forest"]
+selected_calm = st.selectbox("Pick a getaway place:", calm, index=None)
 
 
 #Q5

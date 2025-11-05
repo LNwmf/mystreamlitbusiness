@@ -19,7 +19,7 @@ images = [
 
         "https://m.media-amazon.com/images/I/61-mqYsNMEL.jpg",
         "https://retrospekt.com/cdn/shop/files/MP-VR-1006_1-newphones.jpg?v=1719506839&width=3000",
-        "https://www.stuff.tv/wp-content/uploads/sites/2/2024/11/nintendo-ds_eb42ae.jpg?quality=75&w=1080",
+        "https://media.gameshop.se/wp-content/uploads/2019/10/01010522/37635.jpg",
         "https://i.etsystatic.com/57193956/r/il/5ec242/6867084797/il_fullxfull.6867084797_ed68.jpg",
 ]
 

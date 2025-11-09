@@ -84,11 +84,11 @@ fall_data = {
     "Pumpkin carving": {
         "playlist": "Chilly Orchards",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "business_name": "Alwatan Bakery",
+        "business_name": "Sweet Bean",
         "offer": "10% off your first order with this screen!",
         "booth_name": "Booth A",
-        "website": "https://www.alwatanbakery.com/",
-        "business_image": "",
+        "website": "https://www.sweetbeanchicago.com/",
+        "business_image": "https://static.wixstatic.com/media/60e202_65260ab6509e4ba9bea19ced8ec91ec3~mv2.png/v1/fill/w_234,h_160,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Sweet%20Bean%20logo%20-%20red.png",
     },
     "Apple picking": {
     "playlist": "Good Ol' Times",

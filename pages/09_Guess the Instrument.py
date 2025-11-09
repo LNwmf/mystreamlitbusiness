@@ -44,7 +44,7 @@ quiz = {
         "clues": [
             "Clue 1: A percussion instrument played with scraping a stick across its surface.",
             "Clue 2: This instrument is heard in all types of music genres, especially salsa and jazz.",
-            "Clue 3: Originated from the Caribbean",
+            "Clue 3: Originated from the Caribbean.",
             "Clue 4: It is traditionally made from gourds."
         ],
         "options": ["Slapstick", "Guiro", "Castanets", "Claves"],
@@ -86,31 +86,54 @@ if st.session_state.instrument and not st.session_state.game_over:
     #display audio snippet
     st.audio(instrument_data["audio"], format="audio/mp4")
 
-    #display current clue
-    #st.write("\n".join(instrument_data["clues"][:st.session_state.clue_index + 1]))
-    for i in range(st.session_state.clue_index + 1):
-        st.write(instrument_data["clues"][i])
-        st.write("")  # adds a blank line
-
+    with st.form(key="instrument_form"):
     # Display multiple-choice options
     guess = st.radio("Pick your guess:", instrument_data["options"], key="mc_guess_radio")
 
-    if st.button("Submit Guess", key="submit_guess_btn"):
-        if guess.lower() == st.session_state.instrument.lower():
-            st.success(f"🎉 Correct! The instrument is **{st.session_state.instrument}**")
+    # Form buttons
+    submit_guess = st.form_submit_button("Submit Guess")
+    show_next = st.form_submit_button("Show Next Clue")
+    give_up = st.form_submit_button("Give Up")
+
+        # Handle actions
+        if submit_guess:
+            if guess.lower() == st.session_state.instrument.lower():
+                st.success(f"🎉 Correct! The instrument is **{st.session_state.instrument}**")
+                st.session_state.game_over = True
+            else:
+                st.error("❌ Wrong guess. Try another clue!")
+
+        if show_next:
+            if st.session_state.clue_index < len(instrument_data["clues"]) - 1:
+                st.session_state.clue_index += 1
+            else:
+                st.warning("No more clues available!")
+
+        if give_up:
+            st.info(f"The instrument was **{st.session_state.instrument}**.")
             st.session_state.game_over = True
-        else:
-            st.error("❌ Wrong guess. Try another clue!")
 
-    if st.button("Show Next Clue", key="show_next_clue_btn"):
-        if st.session_state.clue_index < len(instrument_data["clues"]) - 1:
-            st.session_state.clue_index += 1
-        else:
-            st.warning("No more clues available!")
+    # Display all clues up to the current index
+    for i in range(st.session_state.clue_index + 1):
+        st.write(instrument_data["clues"][i])
+        st.write("")  # blank line between clues
 
-    if st.button("Give Up", key="give_up_btn"):
-        st.info(f"The instrument was **{st.session_state.instrument}**.")
-        st.session_state.game_over = True
+#    if st.button("Submit Guess", key="submit_guess_btn"):
+#        if guess.lower() == st.session_state.instrument.lower():
+#            st.success(f"🎉 Correct! The instrument is **{st.session_state.instrument}**")
+#            st.session_state.game_over = True
+#        else:
+#            st.error("❌ Wrong guess. Try another clue!")
+
+#    if st.button("Show Next Clue", key="show_next_clue_btn"):
+#        if st.session_state.clue_index < len(instrument_data["clues"]) - 1:
+#            st.session_state.clue_index += 1
+#        else:
+#            st.warning("No more clues available!")
+
+#    if st.button("Give Up", key="give_up_btn"):
+#        st.info(f"The instrument was **{st.session_state.instrument}**.")
+#        st.session_state.game_over = True
 
 #Questions
 #with st.form("instrument_form"):

@@ -70,7 +70,7 @@ if "clue_index" not in st.session_state:
 if "game_over" not in st.session_state:
     st.session_state.game_over = False
 
-st.title("🎵 Guess the Instrument Quiz")
+#st.title("🎵 Guess the Instrument Quiz")
 
 # --- Start New Quiz ---
 if st.button("Start New Quiz"):

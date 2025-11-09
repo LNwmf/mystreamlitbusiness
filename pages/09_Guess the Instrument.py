@@ -13,9 +13,9 @@ st.markdown("""
 Welcome! Play the audio clip below and guess the instrument. Listen and discover different types of cultural music instruments!
 """)
 
-video_url = "https://imgur.com/3ppJb3W"
+#video_url = "https://imgur.com/3ppJb3W"
 
-st.video(video_url, width=300)
+#st.video(video_url, width=300)
 
 
 # --- Quiz Data ---
@@ -73,8 +73,7 @@ if "game_over" not in st.session_state:
 #st.title("🎵 Guess the Instrument Quiz")
 
 # --- Start New Quiz ---
-start_quiz = st.button("Start New Quiz")
-if st.button("Start New Quiz"):
+if st.button("Start New Quiz", key="start_quiz_btn"):
     st.session_state.instrument = random.choice(list(quiz.keys()))
     st.session_state.clue_index = 0
     st.session_state.game_over = False
@@ -83,25 +82,30 @@ if st.button("Start New Quiz"):
 # --- Show Clue and Options ---
 if st.session_state.instrument and not st.session_state.game_over:
     instrument_data = quiz[st.session_state.instrument]
+
+    #display audio snippet
+    st.audio(instrument_data["audio"], format="audio/mp4")
+
+    #display current clue
     st.write(instrument_data["clues"][st.session_state.clue_index])
 
     # Display multiple-choice options
-    guess = st.radio("Pick your guess:", instrument_data["options"], key="mc_guess")
+    guess = st.radio("Pick your guess:", instrument_data["options"], key="mc_guess_radio")
 
-    if st.button("Submit Guess"):
+    if st.button("Submit Guess", key="submit_guess_btn"):
         if guess.lower() == st.session_state.instrument.lower():
             st.success(f"🎉 Correct! The instrument is **{st.session_state.instrument}**")
             st.session_state.game_over = True
         else:
             st.error("❌ Wrong guess. Try another clue!")
 
-    if st.button("Show Next Clue"):
+    if st.button("Show Next Clue", key="show_next_clue_btn"):
         if st.session_state.clue_index < len(instrument_data["clues"]) - 1:
             st.session_state.clue_index += 1
         else:
             st.warning("No more clues available!")
 
-    if st.button("Give Up"):
+    if st.button("Give Up", key="give_up_btn"):
         st.info(f"The instrument was **{st.session_state.instrument}**")
         st.session_state.game_over = True
 

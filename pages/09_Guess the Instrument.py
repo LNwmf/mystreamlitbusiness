@@ -106,7 +106,7 @@ if st.session_state.instrument and not st.session_state.game_over:
             st.warning("No more clues available!")
 
     if st.button("Give Up", key="give_up_btn"):
-        st.info(f"The instrument was **{st.session_state.instrument}**")
+        st.info(f"The instrument was **{st.session_state.instrument}**.")
         st.session_state.game_over = True
 
 #Questions

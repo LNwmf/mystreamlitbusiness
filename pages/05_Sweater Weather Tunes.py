@@ -1,4 +1,5 @@
 import streamlit as st
+from st_clickable_images import clickable_images
 
 st.set_page_config(
     page_title="Sweater Weather Tunes",
@@ -13,58 +14,74 @@ Welcome! Pick a fall activity below to discover a blended playlist, support a lo
 """)
 
 #Q1
-drink_data = {
-    "Apple cider": {
-    "drink_image": "https://sallysbakingaddiction.com/wp-content/uploads/2015/09/homemade-apple-cider-1.jpg",
-    },
-    "Pumpkin spice latte": {
-    "drink_image": "https://joyfullymad.com/wp-content/uploads/2024/10/pumpkin-spice-latte-8.jpg",
-    },
-    "Chai": {
-    "drink_image": "https://www.allrecipes.com/thmb/MCdBf6nSW7JVmpdFbc8LeaxWYAQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/222513-chai-tea-latte-ddmfs-3x4-13181362-b0a92ea6efb442a4b8b7c240a7bfa9f4.jpg"
-    },
-    "Hot chocolate": {
-    "drink_image": "https://assets.epicurious.com/photos/672aa2e70dd597529f332818/4:3/w_4444,h_3333,c_limit/hot-cocoa-vs-hot-chocolate_RECIPE_V1_103124_7088_VOG_final.jpg"
-    },
-}
-selected_drink = st.selectbox("Pick a fall drink:", ["", *drink_data.keys()])
+drink = ["Apple cider", "Pumpkin spice latte", "Chai", "Hot chocolate"]
+selected_drink = st.selectbox("Pick a fall drink:", drink, index=None)
 
-if selected_drink:
-    info1 = drink_data[selected_drink]
-
-    st.image(info1['drink_image'], width=250)
 #Q2
-film_data = {
-    "Hocus Pocus": {
-    "film_image": "https://lumiere-a.akamaihd.net/v1/images/p_hocuspocus_19880_e000b013.jpeg",
-    },
-    "Halloween": {
-    "film_image": "https://images.plex.tv/photo?size=large-1280&url=https%3A%2F%2Fmetadata-static.plex.tv%2Fc%2Fgracenote%2Fc990f672e727f896bb52529043bec1c0.jpg",
-    },
-    "Trick 'r Treat": {
-    "film_image": "https://images.fathomevents.com/image/upload/w_1200,dpr_2,f_auto,q_auto/v1757097985/Events/2025/2083/Fathom%20Ticket%20Page%20Poster%20%20Press%20Kit_1000x1480%20%28No%20Text%29.png.png"
-    },
-    "IT": {
-    "film_image": "https://upload.wikimedia.org/wikipedia/en/5/5a/It_%282017%29_poster.jpg"
-    },
-}
-selected_film = st.selectbox("Which Halloween movie is your go-to?", ["", *film_data.keys()])
+st.write("Which Halloween movie is your go-to?")
+images = [
 
-if selected_film:
-    info2 = film_data[selected_film]
+        "https://lumiere-a.akamaihd.net/v1/images/p_hocuspocus_19880_e000b013.jpeg",
+        "https://images.plex.tv/photo?size=large-1280&url=https%3A%2F%2Fmetadata-static.plex.tv%2Fc%2Fgracenote%2Fc990f672e727f896bb52529043bec1c0.jpg",
+        "https://images.fathomevents.com/image/upload/w_1200,dpr_2,f_auto,q_auto/v1757097985/Events/2025/2083/Fathom%20Ticket%20Page%20Poster%20%20Press%20Kit_1000x1480%20%28No%20Text%29.png.png",
+        "https://upload.wikimedia.org/wikipedia/en/5/5a/It_%282017%29_poster.jpg",
+]
 
-    st.image(info2['film_image'], width=250)
+titles=["Hocus Pocus", "Halloween", "Trick 'r Treat", "IT"]
+
+clicked = clickable_images(
+    images,
+    titles=titles,
+    div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
+    img_style={"margin": "5px", "height": "200px"},
+)
+
+if clicked > -1:
+    st.markdown(f"**{titles[clicked]} selected**")
+else:
+    st.markdown("**No image selected**")
+# Get the selected image title if one is clicked
+selected_film= titles[clicked] if clicked > -1 else None
+
+
 #Q3
 element_options = ["Falling leaves", "Long spooky nights", "Crackling fire", "Foggy skies"]
 selected_element = st.selectbox("What fall element speaks to you the most?", element_options, index=None)
 
 #Q4
-spent = ["Alone", "With family and friends", "In nature", "In love"]
+spent = ["Alone", "With family and friends", "In nature", "With lots of food"]
 selected_spent = st.selectbox("Fall is best spent...", spent, index=None)
 
+#Q5
+st.write("Pick a fall activity")
+images = [
+
+        "https://images.ctfassets.net/prxuf37q3ta2/1QXngj3Thd7Qt2EbHi2Yr0/1eca6f277d910946cbc9e3c06434db2f/Primary_Image_1200x900.jpg",
+        "https://cdn.outsideonline.com/wp-content/uploads/2022/09/apple_picking-h.jpg",
+        "https://hips.hearstapps.com/hmg-prod/images/trick-or-treat-2023-64a886178cfd1.jpg?crop=0.8893081761006288xw:1xh;center,top&resize=1200:*",
+        "https://cdn.hswstatic.com/gif/How-to-make-a-bonfire-in-your-backyard.jpg",
+]
+
+titles=["Pumpkin carving", "Apple picking", "Trick or treating", "Bonfires"]
+
+clicked = clickable_images(
+    images,
+    titles=titles,
+    div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
+    img_style={"margin": "5px", "height": "200px"},
+)
+
+if clicked > -1:
+    st.markdown(f"**{titles[clicked]} selected**")
+else:
+    st.markdown("**No image selected**")
+
+selected_fall= titles[clicked] if clicked > -1 else None
+
+
 # Business options and related data
-business_data = {
-    "Pumpkin Carving": {
+fall_data = {
+    "Pumpkin carving": {
         "playlist": "Chilly Orchards",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         "business_name": "Alwatan Bakery",
@@ -73,7 +90,7 @@ business_data = {
         "website": "https://www.alwatanbakery.com/",
         "business_image": "",
     },
-    "Apple Picking": {
+    "Apple picking": {
     "playlist": "Good Ol' Times",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "Chuck's Southern Comforts Cafe",
@@ -82,7 +99,7 @@ business_data = {
     "website": "https://chuckscafe.com/",
     "business_image": "https://d1w7312wesee68.cloudfront.net/DDMPmNmtnrUxz1PxVDTze2OFtR-QuWFhVWx-Dg15aYo/ext:webp/quality:85/preset:xxl/plain/s3://toast-sites-resources-prod/restaurantImages/1f14af1d-c8f7-4b8b-9d8a-480dbaba7333/restaurant_1592420555.png",
     },
-    "Trick or Treating": {
+    "Trick or treating": {
     "playlist": "Dark Blues",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "Patch Party Club",
@@ -92,7 +109,7 @@ business_data = {
     "business_image": "https://patchpartyclub.com/cdn/shop/files/logo_180x.png?v=1630341909"
     },
     "Bonfires": {
-    "playlist": "Jazz & Smores",
+    "playlist": "Jazz 'n Smores",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "",
     "offer": "Get 5% off a selected candle!",
@@ -101,12 +118,92 @@ business_data = {
     "business_image": "https://civinte.com/cdn/shop/files/2025_Logo_180x@2x.png?v=1747978532"
     },
 }
-    # Activity Selection
-fall_choice = st.selectbox("Pick a fall activity!", ["", *business_data.keys()])
 
-if fall_choice:
-    # Retrieve information about selected drink/business
-    info = business_data[fall_choice]
+info = None
+
+#fall_choice = st.selectbox("Pick a fall activity!", ["", *fall_data.keys()])
+
+
+fall_map = {
+("Hocus Pocus", "Falling leaves", "Pumpkin carving"): "Pumpkin carving",
+("Hocus Pocus", "Falling leaves", "Apple picking"): "Bonfires",
+("Hocus Pocus", "Falling leaves", "Trick or treating"): "Trick or treating",
+("Hocus Pocus", "Falling leaves", "Bonfires"): "Bonfires",
+("Hocus Pocus", "Long spooky nights", "Pumpkin carving"): "Trick or treating",
+("Hocus Pocus", "Long spooky nights", "Apple picking"): "Apple picking",
+("Hocus Pocus", "Long spooky nights", "Trick or treating"): "Bonfires",
+("Hocus Pocus", "Long spooky nights", "Bonfires"): "Pumpkin carving",
+("Hocus Pocus", "Crackling fire", "Pumpkin carving"): "Bonfires",
+("Hocus Pocus", "Crackling fire", "Apple picking"): "Pumpkin carving",
+("Hocus Pocus", "Crackling fire", "Trick or treating"): "Apple picking",
+("Hocus Pocus", "Crackling fire", "Bonfires"): "Pumpkin carving",
+("Hocus Pocus", "Foggy skies", "Pumpkin carving"): "Pumpkin carving",
+("Hocus Pocus", "Foggy skies", "Apple picking"): "Bonfires",
+("Hocus Pocus", "Foggy skies", "Trick or treating"): "Trick or treating",
+("Hocus Pocus", "Foggy skies", "Bonfires"): "Bonfires",
+
+("Halloween", "Falling leaves", "Pumpkin carving"): "Bonfires",
+("Halloween", "Falling leaves", "Apple picking"): "Trick or treating",
+("Halloween", "Falling leaves", "Trick or treating"): "Trick or treating",
+("Halloween", "Falling leaves", "Bonfires"): "Apple picking",
+("Halloween", "Long spooky nights", "Pumpkin carving"): "Bonfires",
+("Halloween", "Long spooky nights", "Apple picking"): "Bonfires",
+("Halloween", "Long spooky nights", "Trick or treating"): "Trick or treating",
+("Halloween", "Long spooky nights", "Bonfires"): "Pumpkin carving",
+("Halloween", "Crackling fire", "Pumpkin carving"): "Apple picking",
+("Halloween", "Crackling fire", "Apple picking"): "Apple picking",
+("Halloween", "Crackling fire", "Trick or treating"): "Bonfires",
+("Halloween", "Crackling fire", "Bonfires"): "Apple picking",
+("Halloween", "Foggy skies", "Pumpkin carving"): "Trick or treating",
+("Halloween", "Foggy skies", "Apple picking"): "Trick or treating",
+("Halloween", "Foggy skies", "Trick or treating"): "Bonfires",
+("Halloween", "Foggy skies", "Bonfires"): "Bonfires",
+
+("Trick 'r Treat", "Falling leaves", "Pumpkin carving"): "Trick or treating",
+("Trick 'r Treat", "Falling leaves", "Apple picking"): "Trick or treating",
+("Trick 'r Treat", "Falling leaves", "Trick or treating"): "Pumpkin carving",
+("Trick 'r Treat", "Falling leaves", "Bonfires"): "Bonfires",
+("Trick 'r Treat", "Long spooky nights", "Pumpkin carving"): "Pumpkin carving",
+("Trick 'r Treat", "Long spooky nights", "Apple picking"): "Apple picking",
+("Trick 'r Treat", "Long spooky nights", "Trick or treating"): "Trick or treating",
+("Trick 'r Treat", "Long spooky nights", "Bonfires"): "Trick or treating",
+("Trick 'r Treat", "Crackling fire", "Pumpkin carving"): "Bonfires",
+("Trick 'r Treat", "Crackling fire", "Apple picking"): "Pumpkin carving",
+("Trick 'r Treat", "Crackling fire", "Trick or treating"): "Pumpkin carving",
+("Trick 'r Treat", "Crackling fire", "Bonfires"): "Bonfires",
+("Trick 'r Treat", "Foggy skies", "Pumpkin carving"): "Pumpkin carving",
+("Trick 'r Treat", "Foggy skies", "Apple picking"): "Bonfires",
+("Trick 'r Treat", "Foggy skies", "Trick or treating"): "Apple picking",
+("Trick 'r Treat", "Foggy skies", "Bonfires"): "Apple picking",
+
+("IT", "Falling leaves", "Pumpkin carving"): "Apple picking",
+("IT", "Falling leaves", "Apple picking"): "Bonfires",
+("IT", "Falling leaves", "Trick or treating"): "Trick or treating",
+("IT", "Falling leaves", "Bonfires"): "Pumpkin carving",
+("IT", "Long spooky nights", "Pumpkin carving"): "Bonfires",
+("IT", "Long spooky nights", "Apple picking"): "Pumpkin carving",
+("IT", "Long spooky nights", "Trick or treating"): "Trick or treating",
+("IT", "Long spooky nights", "Bonfires"): "Trick or treating",
+("IT", "Crackling fire", "Pumpkin carving"): "Bonfires",
+("IT", "Crackling fire", "Apple picking"): "Trick or treating",
+("IT", "Crackling fire", "Trick or treating"): "Apple picking",
+("IT", "Crackling fire", "Bonfires"): "Apple picking",
+("IT", "Foggy skies", "Pumpkin carving"): "Apple picking",
+("IT", "Foggy skies", "Apple picking"): "Trick or treating",
+("IT", "Foggy skies", "Trick or treating"): "Pumpkin carving",
+("IT", "Foggy skies", "Bonfires"): "Pumpkin carving",
+
+}
+
+
+
+if selected_film and selected_element and selected_fall:
+    user_combo = (selected_film, selected_element, selected_fall)
+    result_key = fall_map.get(user_combo)
+
+    if result_key:
+        info = fall_data[result_key]
+
 
     # Display playlist and business info
     st.subheader(f"🎵 {info['playlist']}")

@@ -37,7 +37,7 @@ quiz = {
             "Clue 3: Often referred to as a thumb piano.",
             "Clue 4: It is played by plucking metal tines on a wooden board ."
         ],
-        "options": ["Mbira", "Djembe", "Harpsichord", "Carillon"]
+        "options": ["Mbira", "Djembe", "Harpsichord", "Carillon"],
         "audio": "https://i.imgur.com/KORLtbB.mp4"
     },
     "Guiro": {
@@ -47,7 +47,7 @@ quiz = {
             "Clue 3: Originated from the Caribbean",
             "Clue 4: It is traditionally made from gourds."
         ],
-        "options": ["Slapstick", "Guiro", "Castanets", "Claves"]
+        "options": ["Slapstick", "Guiro", "Castanets", "Claves"],
         "audio": "https://i.imgur.com/EuCqgr6.mp4"
     },
     "Sheng": {
@@ -57,7 +57,7 @@ quiz = {
             "Clue 3: Often played for Chinese special celebrations.",
             "Clue 4: One of the oldest instruments to use a free reed, allowing one to play multiple notes at once."
         ],
-        "options": ["Dizi", "Bagpipes", "Pan flute", "Sheng"]
+        "options": ["Dizi", "Bagpipes", "Pan flute", "Sheng"],
         "audio": "https://i.imgur.com/csz0rsf.mp4"
     }
 }

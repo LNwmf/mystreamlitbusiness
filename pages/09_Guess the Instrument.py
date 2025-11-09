@@ -73,11 +73,12 @@ if "game_over" not in st.session_state:
 #st.title("🎵 Guess the Instrument Quiz")
 
 # --- Start New Quiz ---
+start_quiz = st.button("Start New Quiz")
 if st.button("Start New Quiz"):
     st.session_state.instrument = random.choice(list(quiz.keys()))
     st.session_state.clue_index = 0
     st.session_state.game_over = False
-    st.experimental_rerun()
+    st.success("Quiz Started!")
 
 # --- Show Clue and Options ---
 if st.session_state.instrument and not st.session_state.game_over:

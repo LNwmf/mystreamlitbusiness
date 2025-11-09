@@ -49,8 +49,30 @@ secret = ["Confidence", "Wonder", "Relaxation", "Magic"]
 selected_secret = st.selectbox("What's the secret ingredient to feeling your absolute best?", secret, index=None)
 
 #Q4
-calm = ["Ambient beach", "Quiet mountainside", "Bustling city", "Lush forest"]
-selected_calm = st.selectbox("Pick a getaway place:", calm, index=None)
+st.write("Pick a getaway place:")
+images = [
+
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhY2h8ZW58MHx8MHx8fDA%3D&fm=jpg&q=60&w=3000",
+        "https://previews.123rf.com/images/ncikname/ncikname1811/ncikname181100012/117447994-beautiful-landscape-on-the-mountainside-at-sunrise-time.jpg",
+        "https://www.gladsbuy.com/media/catalog/product/cache/e32693469ddc6d481df161d4366da519/X/L/XLX-497_10X10.jpg",
+        "https://www.green.earth/hubfs/photos/shutterstock_601970732.jpg",
+]
+
+titles=["Ambient beach", "Quiet mountainside", "Bustling city", "Lush forest"]
+
+clicked = clickable_images(
+    images,
+    titles=titles,
+    div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
+    img_style={"margin": "5px", "height": "200px"},
+)
+
+if clicked > -1:
+    st.markdown(f"**{titles[clicked]} selected**")
+else:
+    st.markdown("**No image selected**")
+
+selected_calm= titles[clicked] if clicked > -1 else None
 
 
 #Q5

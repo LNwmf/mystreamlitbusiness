@@ -87,7 +87,10 @@ if st.session_state.instrument and not st.session_state.game_over:
     st.audio(instrument_data["audio"], format="audio/mp4")
 
     #display current clue
-    st.write("\n".join(instrument_data["clues"][:st.session_state.clue_index + 1]))
+    #st.write("\n".join(instrument_data["clues"][:st.session_state.clue_index + 1]))
+    for i in range(st.session_state.clue_index + 1):
+        st.write(instrument_data["clues"][i])
+        st.write("")  # adds a blank line
 
     # Display multiple-choice options
     guess = st.radio("Pick your guess:", instrument_data["options"], key="mc_guess_radio")

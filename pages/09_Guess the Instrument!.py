@@ -2,7 +2,7 @@ import streamlit as st
 import random
 
 st.set_page_config(
-    page_title="Guess the Song!",
+    page_title="Guess the Instrument!",
     page_icon="🎶",
     layout="centered",
 )

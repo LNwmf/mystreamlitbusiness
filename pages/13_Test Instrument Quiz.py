@@ -13,6 +13,9 @@ st.markdown("""
 Welcome! Play the audio clip below and guess the instrument. Listen and discover different types of cultural music instruments!
 """)
 
+import streamlit as st
+import random
+
 # --- Quiz Data ---
 quiz = {
     "Sitar": {
@@ -57,7 +60,7 @@ quiz = {
     }
 }
 
-# --- Initialize State ---
+# --- Initialize Session State ---
 if "instrument" not in st.session_state:
     st.session_state.instrument = None
 if "clue_index" not in st.session_state:
@@ -67,32 +70,50 @@ if "game_over" not in st.session_state:
 
 st.title("🎵 Guess the Instrument Quiz")
 
-# --- Start New Quiz ---
-if st.button("🎬 Start New Quiz"):
-    st.session_state.instrument = random.choice(list(quiz.keys()))
-    st.session_state.clue_index = 0
-    st.session_state.game_over = False
-    st.success("Quiz Started! 🎶")
-    st.rerun()
+# --- Start New Quiz Button (when no game is active) ---
+if not st.session_state.instrument or st.session_state.game_over:
+    if st.button("🎬 Start New Quiz"):
+        st.session_state.instrument = random.choice(list(quiz.keys()))
+        st.session_state.clue_index = 0
+        st.session_state.game_over = False
+        st.success("Quiz Started! 🎶")
+        st.rerun()
 
 # --- Main Game Logic ---
 if st.session_state.instrument and not st.session_state.game_over:
     instrument_data = quiz[st.session_state.instrument]
 
-    # --- Buttons first (so updates apply before displaying) ---
-    if st.button("Show Next Clue ➕"):
-        if st.session_state.clue_index < len(instrument_data["clues"]) - 1:
-            st.session_state.clue_index += 1
+    # --- Horizontal Buttons Row ---
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        if st.button("Show Next Clue ➕"):
+            if st.session_state.clue_index < len(instrument_data["clues"]) - 1:
+                st.session_state.clue_index += 1
+                st.rerun()
+            else:
+                st.warning("⚠️ No more clues available!")
+    with col2:
+        if st.button("Give Up 🏳️"):
+            st.info(f"The instrument was **{st.session_state.instrument}**.")
+            st.session_state.game_over = True
             st.rerun()
-        else:
-            st.warning("⚠️ No more clues available!")
+    with col3:
+        if st.button("🔁 Start New Quiz"):
+            st.session_state.instrument = random.choice(list(quiz.keys()))
+            st.session_state.clue_index = 0
+            st.session_state.game_over = False
+            st.success("New quiz started!")
+            st.rerun()
 
-    if st.button("Give Up 🏳️"):
-        st.info(f"The instrument was **{st.session_state.instrument}**.")
-        st.session_state.game_over = True
-        st.rerun()
+    # --- Audio Snippet ---
+    st.audio(instrument_data["audio"], format="audio/mp4")
 
-    # --- Guessing Section ---
+    # --- Show Clues (under audio, above options) ---
+    for i in range(st.session_state.clue_index + 1):
+        st.write(instrument_data["clues"][i])
+        st.write("")
+
+    # --- Multiple Choice Section ---
     guess = st.radio("🎧 Pick your guess:", instrument_data["options"], key="mc_guess_radio")
 
     if st.button("Submit Guess ✅"):
@@ -102,12 +123,6 @@ if st.session_state.instrument and not st.session_state.game_over:
             st.rerun()
         else:
             st.error("❌ Wrong guess. Try another clue!")
-
-    # --- Show Updated Clues ---
-    st.audio(instrument_data["audio"], format="audio/mp4")
-    for i in range(st.session_state.clue_index + 1):
-        st.write(instrument_data["clues"][i])
-        st.write("")
 
 # --- Game Over / Restart Section ---
 if st.session_state.game_over:

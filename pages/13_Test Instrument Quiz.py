@@ -68,44 +68,44 @@ if "clue_index" not in st.session_state:
 if "game_over" not in st.session_state:
     st.session_state.game_over = False
 if "message" not in st.session_state:
-    st.session_state.message = ""  # feedback message
+    st.session_state.message = ""  # feedback for correct/wrong answers
 
 
-# --- Start New Quiz Button ---
+# --- Start New Quiz (top) ---
 if not st.session_state.instrument or st.session_state.game_over:
-    if st.button("Start New Quiz"):
+    if st.button("Start New Quiz", key="start_new_top"):
         st.session_state.instrument = random.choice(list(quiz.keys()))
         st.session_state.clue_index = 0
         st.session_state.game_over = False
         st.session_state.message = ""
         st.success("Quiz Started!")
 
-# --- Main Game Logic ---
+# --- Main Game ---
 if st.session_state.instrument and not st.session_state.game_over:
     instrument_data = quiz[st.session_state.instrument]
 
-    # --- Horizontal Buttons Row ---
+    # --- Horizontal Buttons ---
     col1, col2, col3 = st.columns(3)
     with col1:
-        if st.button("Show Next Clue"):
+        if st.button("Show Next Clue", key="show_next"):
             if st.session_state.clue_index < len(instrument_data["clues"]) - 1:
                 st.session_state.clue_index += 1
-                st.rerun()
             else:
                 st.warning("No more clues available!")
+
     with col2:
-        if st.button("Give Up"):
-            st.session_state.message = f"The correct answer was **{st.session_state.instrument}**"
+        if st.button("Give Up", key="give_up"):
+            st.session_state.message = f"The correct answer was: **{st.session_state.instrument}**"
+
     with col3:
-        if st.button("Start New Quiz"):
+        if st.button("Start New Quiz", key="start_new_bottom"):
             st.session_state.instrument = random.choice(list(quiz.keys()))
             st.session_state.clue_index = 0
             st.session_state.game_over = False
             st.session_state.message = ""
             st.success("New quiz started!")
-            st.rerun()
 
-    # --- Audio Snippet ---
+    # --- Audio ---
     st.audio(instrument_data["audio"], format="audio/mp4")
 
     # --- Show Clues ---
@@ -114,29 +114,28 @@ if st.session_state.instrument and not st.session_state.game_over:
         st.write("")
 
     # --- Multiple Choice ---
-    guess = st.radio("Pick your guess:", instrument_data["options"], key="mc_guess_radio")
+    guess = st.radio("Pick your guess:", instrument_data["options"], key="mc_guess")
 
-    # --- Submit Guess Button ---
-    if st.button("Submit Guess"):
+    # --- Submit Guess ---
+    if st.button("Submit Guess", key="submit_guess"):
         if guess.lower() == st.session_state.instrument.lower():
             st.session_state.message = f"Correct! The instrument is **{st.session_state.instrument}**"
             st.session_state.game_over = True
         else:
             st.session_state.message = "Wrong guess. Try another clue!"
 
-    # --- Feedback Message ---
+    # --- Feedback ---
     if st.session_state.message:
-        if "Correct!" in st.session_state.message or "The correct answer" in st.session_state.message:
+        if "Correct!" in st.session_state.message or "correct answer" in st.session_state.message:
             st.success(st.session_state.message)
-        elif "Wrong guess" in st.session_state.message:
+        elif "Wrong" in st.session_state.message:
             st.error(st.session_state.message)
 
-# --- When Game Over ---
+# --- Game Over: Play Again button ---
 if st.session_state.game_over:
-    if st.button("Play Again"):
+    if st.button("Play Again", key="play_again"):
         st.session_state.instrument = None
         st.session_state.clue_index = 0
         st.session_state.game_over = False
         st.session_state.message = ""
-        st.rerun()
 

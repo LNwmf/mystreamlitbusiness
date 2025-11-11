@@ -83,12 +83,18 @@ if st.button("Start New Quiz", key="start_quiz_btn"):
 if st.session_state.instrument and not st.session_state.game_over:
     instrument_data = quiz[st.session_state.instrument]
 
+    if st.button("Show Next Clue"):
+        if st.session_state.clue_index < len(instrument_data["clues"]) - 1:
+            st.session_state.clue_index += 1
+        else:
+            st.warning("⚠️ No more clues available!")
+
+    if st.button("Give Up"):
+        st.info(f"The instrument was **{st.session_state.instrument}**.")
+        st.session_state.game_over = True
+
     #display audio snippet
     st.audio(instrument_data["audio"], format="audio/mp4")
-
-    for i in range(st.session_state.clue_index + 1):
-        st.write(instrument_data["clues"][i])
-        st.write("")  # blank line between clues
 
     # --- Multiple choice options ---
     guess = st.radio("Pick your guess:", instrument_data["options"], key="mc_guess_radio")
@@ -101,15 +107,10 @@ if st.session_state.instrument and not st.session_state.game_over:
         else:
             st.error("❌ Wrong guess. Try another clue!")
 
-    if st.button("Show Next Clue"):
-        if st.session_state.clue_index < len(instrument_data["clues"]) - 1:
-            st.session_state.clue_index += 1
-        else:
-            st.warning("⚠️ No more clues available!")
+    for i in range(st.session_state.clue_index + 1):
+        st.write(instrument_data["clues"][i])
+        st.write("")  # blank line between clues
 
-    if st.button("Give Up"):
-        st.info(f"The instrument was **{st.session_state.instrument}**.")
-        st.session_state.game_over = True
 
 
 

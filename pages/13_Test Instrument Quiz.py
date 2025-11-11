@@ -112,10 +112,10 @@ if new_quiz_started:
     st.markdown(
         """
         <div style="
-            background-color: #ADD8E6;  /* Blue background */
+            background-color: #A7C7E7;  /* Blue background */
             padding: 0.70em 1em;        /* Compact height */
             border-radius: 0.25em;
-            color: white;
+            color: black;
             font-weight: bold;
             margin: 0.5em 0;             /* Space above & below */
             display: block;              /* Full-width block */

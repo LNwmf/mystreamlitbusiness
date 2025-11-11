@@ -100,7 +100,11 @@ with col2:
 with col3:
     if st.button("Start New Quiz", key="start_new_top"):
         start_new_quiz()
-        st.success("New quiz started!")
+        new_quiz_started = True  # set flag to show message below
+
+# Show full-width success message outside columns
+if new_quiz_started:
+    st.success("New quiz started!")
 
 # --- Main Game (audio, clues, multiple choice) ---
 if st.session_state.instrument:

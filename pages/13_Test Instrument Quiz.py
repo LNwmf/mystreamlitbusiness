@@ -70,16 +70,14 @@ if "game_over" not in st.session_state:
 if "message" not in st.session_state:
     st.session_state.message = ""  # for showing success/error feedback
 
-st.title("🎵 Guess the Instrument Quiz")
-
 # --- Start New Quiz Button ---
 if not st.session_state.instrument or st.session_state.game_over:
-    if st.button("🎬 Start New Quiz"):
+    if st.button("Start New Quiz"):
         st.session_state.instrument = random.choice(list(quiz.keys()))
         st.session_state.clue_index = 0
         st.session_state.game_over = False
         st.session_state.message = ""
-        st.success("Quiz Started! 🎶")
+        st.success("Quiz Started!")
 
 # --- Main Game Logic ---
 if st.session_state.instrument and not st.session_state.game_over:
@@ -88,12 +86,12 @@ if st.session_state.instrument and not st.session_state.game_over:
     # --- Horizontal Buttons Row ---
     col1, col2, col3 = st.columns(3)
     with col1:
-        if st.button("Show Next Clue ➕"):
+        if st.button("Show Next Clue"):
             if st.session_state.clue_index < len(instrument_data["clues"]) - 1:
                 st.session_state.clue_index += 1
                 st.rerun()
             else:
-                st.warning("⚠️ No more clues available!")
+                st.warning("No more clues available!")
     with col2:
         if st.button("Give Up 🏳️"):
             st.session_state.message = f"✅ The correct answer was **{st.session_state.instrument}** 🎵"
@@ -123,7 +121,7 @@ if st.session_state.instrument and not st.session_state.game_over:
             st.session_state.message = f"🎉 Correct! The instrument is **{st.session_state.instrument}**"
             st.session_state.game_over = True  # end game, but don't rerun
         else:
-            st.session_state.message = "❌ Wrong guess. Try another clue!"
+            st.session_state.message = "Wrong guess. Try another clue!"
 
     # --- Feedback Message (under the Submit button) ---
     if st.session_state.message:
@@ -134,7 +132,7 @@ if st.session_state.instrument and not st.session_state.game_over:
 
 # --- When Game Over (after correct answer) ---
 if st.session_state.game_over:
-    if st.button("🔁 Play Again"):
+    if st.button("Play Again"):
         st.session_state.instrument = None
         st.session_state.clue_index = 0
         st.session_state.game_over = False

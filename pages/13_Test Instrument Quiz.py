@@ -113,7 +113,7 @@ if new_quiz_started:
         """
         <div style="
             background-color: #A7C7E7;  /* Blue background */
-            padding: 0.75em 1em;         /* Padding like st.success */
+            padding: 0.4em 0.8em;         /* Padding like st.success */
             border-radius: 0.25em;       /* Rounded corners */
             color: black;                /* White text */
             font-weight: bold;           /* Bold text */

@@ -70,17 +70,9 @@ if "game_over" not in st.session_state:
 if "message" not in st.session_state:
     st.session_state.message = ""  # feedback message
 
-# Flags for top-row buttons
-if "show_next_click" not in st.session_state:
-    st.session_state.show_next_click = False
-if "give_up_click" not in st.session_state:
-    st.session_state.give_up_click = False
-if "start_new_click" not in st.session_state:
-    st.session_state.start_new_click = False
+st.title("Guess the Instrument Quiz")
 
-
-
-# --- Start New Quiz Button (when game over or no quiz) ---
+# --- Start New Quiz ---
 if st.session_state.instrument is None or st.session_state.game_over:
     if st.button("Start New Quiz"):
         st.session_state.instrument = random.choice(list(quiz.keys()))
@@ -97,34 +89,21 @@ if st.session_state.instrument and not st.session_state.game_over:
     col1, col2, col3 = st.columns(3)
     with col1:
         if st.button("Show Next Clue"):
-            st.session_state.show_next_click = True
+            if st.session_state.clue_index < len(instrument_data["clues"]) - 1:
+                st.session_state.clue_index += 1
+            else:
+                st.warning("No more clues available!")
     with col2:
         if st.button("Give Up"):
-            st.session_state.give_up_click = True
+            st.session_state.message = f"The correct answer was **{st.session_state.instrument}**"
+            st.session_state.game_over = True
     with col3:
         if st.button("Start New Quiz"):
-            st.session_state.start_new_click = True
-
-    # --- Handle top-row button clicks safely ---
-    if st.session_state.show_next_click:
-        if st.session_state.clue_index < len(instrument_data["clues"]) - 1:
-            st.session_state.clue_index += 1
-        else:
-            st.warning("No more clues available!")
-        st.session_state.show_next_click = False  # reset click
-
-    if st.session_state.give_up_click:
-        st.session_state.message = f"The correct answer was **{st.session_state.instrument}**"
-        st.session_state.game_over = True
-        st.session_state.give_up_click = False  # reset click
-
-    if st.session_state.start_new_click:
-        st.session_state.instrument = random.choice(list(quiz.keys()))
-        st.session_state.clue_index = 0
-        st.session_state.game_over = False
-        st.session_state.message = ""
-        st.success("New quiz started!")
-        st.session_state.start_new_click = False  # reset click
+            st.session_state.instrument = random.choice(list(quiz.keys()))
+            st.session_state.clue_index = 0
+            st.session_state.game_over = False
+            st.session_state.message = ""
+            st.success("New quiz started!")
 
     # --- Audio Snippet ---
     st.audio(instrument_data["audio"], format="audio/mp4")

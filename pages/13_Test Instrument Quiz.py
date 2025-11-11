@@ -134,8 +134,10 @@ if st.session_state.instrument and not st.session_state.game_over:
 # --- Game Over: Play Again button ---
 if st.session_state.game_over:
     if st.button("Play Again", key="play_again"):
-        st.session_state.instrument = None
+        # Automatically start a new quiz
+        st.session_state.instrument = random.choice(list(quiz.keys()))
         st.session_state.clue_index = 0
         st.session_state.game_over = False
         st.session_state.message = ""
+        st.success("New quiz started!")
 

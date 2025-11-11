@@ -84,7 +84,12 @@ if st.session_state.instrument is None:
     start_new_quiz()
 
 # --- Top horizontal buttons ---
+# Initialize flag
+new_quiz_started = False  # will be True if user clicks "Start New Quiz"
+
+# --- Top horizontal buttons ---
 col1, col2, col3 = st.columns([1, 1, 1])
+
 with col1:
     if st.button("Show Next Clue", key="show_next"):
         if st.session_state.clue_index < len(quiz[st.session_state.instrument]["clues"]) - 1:
@@ -100,11 +105,11 @@ with col2:
 with col3:
     if st.button("Start New Quiz", key="start_new_top"):
         start_new_quiz()
-        new_quiz_started = True  # set flag to show message below
+        new_quiz_started = True  # set flag
 
-# Show full-width success message outside columns
-    if new_quiz_started:
-        st.success("New quiz started!")
+# Full-width success message
+if new_quiz_started:
+    st.success("New quiz started!")
 
 # --- Main Game (audio, clues, multiple choice) ---
 if st.session_state.instrument:

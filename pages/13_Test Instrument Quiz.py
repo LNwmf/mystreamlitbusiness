@@ -109,7 +109,11 @@ with col3:
 
 # Full-width success message
 if new_quiz_started:
-    st.success("New quiz started!")
+    st.markdown(
+        '<p style="color: blue; font-weight: bold; font-size:18px;">New quiz started!</p>',
+        unsafe_allow_html=True
+    )
+
 
 # --- Main Game (audio, clues, multiple choice) ---
 if st.session_state.instrument:

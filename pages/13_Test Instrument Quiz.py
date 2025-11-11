@@ -99,7 +99,7 @@ with col1:
 
 with col2:
     if st.button("Give Up", key="give_up"):
-        st.session_state.message = f"The correct answer was: **{st.session_state.instrument}**"
+        st.session_state.message = f"The correct answer was: **{st.session_state.instrument}**."
         st.session_state.game_over = True
 
 with col3:
@@ -126,7 +126,7 @@ if st.session_state.instrument:
     guess = st.radio("Pick your guess:", instrument_data["options"], key="mc_guess")
     if st.button("Submit Guess", key="submit_guess"):
         if guess.lower() == st.session_state.instrument.lower():
-            st.session_state.message = f"Correct! The instrument is **{st.session_state.instrument}**"
+            st.session_state.message = f"Correct! The instrument is **{st.session_state.instrument}**."
             st.session_state.game_over = True
         else:
             st.session_state.message = "Wrong guess. Try another clue!"

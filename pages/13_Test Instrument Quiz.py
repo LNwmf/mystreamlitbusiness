@@ -60,92 +60,71 @@ quiz = {
     }
 }
 
+# --- Initialize Session State ---
+for key in ["instrument", "clue_index", "game_over", "message"]:
+    if key not in st.session_state:
+        if key == "instrument":
+            st.session_state[key] = None
+        elif key == "clue_index":
+            st.session_state[key] = 0
+        elif key == "game_over":
+            st.session_state[key] = False
+        else:
+            st.session_state[key] = ""
+
+# --- Function to start a new quiz ---
 def start_new_quiz():
     st.session_state.instrument = random.choice(list(quiz.keys()))
     st.session_state.clue_index = 0
     st.session_state.game_over = False
     st.session_state.message = ""
 
-# --- Initialize Session State ---
-if "instrument" not in st.session_state:
-    st.session_state.instrument = None
-if "clue_index" not in st.session_state:
-    st.session_state.clue_index = 0
-if "game_over" not in st.session_state:
-    st.session_state.game_over = False
-if "message" not in st.session_state:
-    st.session_state.message = ""
-
-# --- Start New Quiz button (optional, first-time start) ---
+# --- Automatically start a quiz if none exists ---
 if st.session_state.instrument is None:
-    if st.button("Start New Quiz"):
-        start_new_quiz()
-        st.success("Quiz Started!")
-
-# --- Play Again button ---
-if st.session_state.game_over:
-    if st.button("Play Again"):
-        start_new_quiz()
-        st.success("New quiz started!")
+    start_new_quiz()
 
 # --- Main Game ---
 if st.session_state.instrument and not st.session_state.game_over:
     instrument_data = quiz[st.session_state.instrument]
 
-    # --- Horizontal Buttons ---
+    # Horizontal buttons
     col1, col2, col3 = st.columns(3)
     with col1:
-        if st.button("Show Next Clue", key="show_next"):
+        if st.button("Show Next Clue"):
             if st.session_state.clue_index < len(instrument_data["clues"]) - 1:
                 st.session_state.clue_index += 1
             else:
                 st.warning("No more clues available!")
-
     with col2:
-        if st.button("Give Up", key="give_up"):
+        if st.button("Give Up"):
             st.session_state.message = f"The correct answer was: **{st.session_state.instrument}**"
-
+            st.session_state.game_over = True
     with col3:
-        if st.button("Start New Quiz", key="start_new_bottom"):
-            st.session_state.instrument = random.choice(list(quiz.keys()))
-            st.session_state.clue_index = 0
-            st.session_state.game_over = False
-            st.session_state.message = ""
-            st.success("New quiz started!")
+        if st.button("Start New Quiz"):
+            start_new_quiz()
 
-    # --- Audio ---
+    # Audio and clues
     st.audio(instrument_data["audio"], format="audio/mp4")
-
-    # --- Show Clues ---
     for i in range(st.session_state.clue_index + 1):
         st.write(instrument_data["clues"][i])
-        st.write("")
 
-    # --- Multiple Choice ---
-    guess = st.radio("Pick your guess:", instrument_data["options"], key="mc_guess")
-
-    # --- Submit Guess ---
-    if st.button("Submit Guess", key="submit_guess"):
+    # Multiple choice
+    guess = st.radio("Pick your guess:", instrument_data["options"])
+    if st.button("Submit Guess"):
         if guess.lower() == st.session_state.instrument.lower():
             st.session_state.message = f"Correct! The instrument is **{st.session_state.instrument}**"
             st.session_state.game_over = True
         else:
             st.session_state.message = "Wrong guess. Try another clue!"
 
-    # --- Feedback ---
+    # Feedback
     if st.session_state.message:
         if "Correct!" in st.session_state.message or "correct answer" in st.session_state.message:
             st.success(st.session_state.message)
         elif "Wrong" in st.session_state.message:
             st.error(st.session_state.message)
 
-# --- Game Over: Play Again button ---
+# --- Game Over: Play Again ---
 if st.session_state.game_over:
-    if st.button("Play Again", key="play_again"):
-        # Automatically start a new quiz
-        st.session_state.instrument = random.choice(list(quiz.keys()))
-        st.session_state.clue_index = 0
-        st.session_state.game_over = False
-        st.session_state.message = ""
-        st.success("New quiz started!")
-
+    if st.button("Play Again"):
+        start_new_quiz()

@@ -60,7 +60,6 @@ quiz = {
     }
 }
 
-# --- Initialize Session State ---
 for key in ["instrument", "clue_index", "game_over", "message"]:
     if key not in st.session_state:
         if key == "instrument":
@@ -79,9 +78,10 @@ def start_new_quiz():
     st.session_state.game_over = False
     st.session_state.message = ""
 
-# --- Automatically start a quiz if none exists ---
-if st.session_state.instrument is None:
+# --- Start New Quiz button (always at top) ---
+if st.button("Start New Quiz"):
     start_new_quiz()
+    st.success("New quiz started!")
 
 # --- Main Game ---
 if st.session_state.instrument and not st.session_state.game_over:
@@ -102,6 +102,7 @@ if st.session_state.instrument and not st.session_state.game_over:
     with col3:
         if st.button("Start New Quiz"):
             start_new_quiz()
+            st.success("New quiz started!")
 
     # Audio and clues
     st.audio(instrument_data["audio"], format="audio/mp4")
@@ -117,14 +118,9 @@ if st.session_state.instrument and not st.session_state.game_over:
         else:
             st.session_state.message = "Wrong guess. Try another clue!"
 
-    # Feedback
-    if st.session_state.message:
-        if "Correct!" in st.session_state.message or "correct answer" in st.session_state.message:
-            st.success(st.session_state.message)
-        elif "Wrong" in st.session_state.message:
-            st.error(st.session_state.message)
-
-# --- Game Over: Play Again ---
-if st.session_state.game_over:
-    if st.button("Play Again"):
-        start_new_quiz()
+# --- Feedback ---
+if st.session_state.message:
+    if "Correct!" in st.session_state.message or "correct answer" in st.session_state.message:
+        st.success(st.session_state.message)
+    elif "Wrong" in st.session_state.message:
+        st.error(st.session_state.message)

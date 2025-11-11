@@ -70,7 +70,6 @@ if "game_over" not in st.session_state:
 if "message" not in st.session_state:
     st.session_state.message = ""  # feedback message
 
-st.title("Guess the Instrument Quiz")
 
 # --- Start New Quiz ---
 if st.session_state.instrument is None or st.session_state.game_over:

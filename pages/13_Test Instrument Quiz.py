@@ -13,9 +13,6 @@ st.markdown("""
 Welcome! Play the audio clip below and guess the instrument. Listen and discover different types of cultural music instruments!
 """)
 
-import streamlit as st
-import random
-
 # --- Quiz Data ---
 quiz = {
     "Sitar": {

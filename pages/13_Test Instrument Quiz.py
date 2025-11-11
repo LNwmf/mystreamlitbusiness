@@ -60,6 +60,12 @@ quiz = {
     }
 }
 
+def start_new_quiz():
+    st.session_state.instrument = random.choice(list(quiz.keys()))
+    st.session_state.clue_index = 0
+    st.session_state.game_over = False
+    st.session_state.message = ""
+
 # --- Initialize Session State ---
 if "instrument" not in st.session_state:
     st.session_state.instrument = None
@@ -68,17 +74,19 @@ if "clue_index" not in st.session_state:
 if "game_over" not in st.session_state:
     st.session_state.game_over = False
 if "message" not in st.session_state:
-    st.session_state.message = ""  # feedback for correct/wrong answers
+    st.session_state.message = ""
 
-
-# --- Start New Quiz (top) ---
-if not st.session_state.instrument or st.session_state.game_over:
-    if st.button("Start New Quiz", key="start_new_top"):
-        st.session_state.instrument = random.choice(list(quiz.keys()))
-        st.session_state.clue_index = 0
-        st.session_state.game_over = False
-        st.session_state.message = ""
+# --- Start New Quiz button (optional, first-time start) ---
+if st.session_state.instrument is None:
+    if st.button("Start New Quiz"):
+        start_new_quiz()
         st.success("Quiz Started!")
+
+# --- Play Again button ---
+if st.session_state.game_over:
+    if st.button("Play Again"):
+        start_new_quiz()
+        st.success("New quiz started!")
 
 # --- Main Game ---
 if st.session_state.instrument and not st.session_state.game_over:

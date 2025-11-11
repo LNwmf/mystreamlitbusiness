@@ -13,6 +13,9 @@ st.markdown("""
 Welcome! Play the audio clip below and guess the instrument. Listen and discover different types of cultural music instruments!
 """)
 
+import streamlit as st
+import random
+
 # --- Quiz Data ---
 quiz = {
     "Sitar": {
@@ -64,17 +67,19 @@ if "clue_index" not in st.session_state:
     st.session_state.clue_index = 0
 if "game_over" not in st.session_state:
     st.session_state.game_over = False
+if "message" not in st.session_state:
+    st.session_state.message = ""  # for showing success/error feedback
 
 st.title("🎵 Guess the Instrument Quiz")
 
-# --- Start New Quiz Button (when no game is active) ---
+# --- Start New Quiz Button ---
 if not st.session_state.instrument or st.session_state.game_over:
     if st.button("🎬 Start New Quiz"):
         st.session_state.instrument = random.choice(list(quiz.keys()))
         st.session_state.clue_index = 0
         st.session_state.game_over = False
+        st.session_state.message = ""
         st.success("Quiz Started! 🎶")
-        st.rerun()
 
 # --- Main Game Logic ---
 if st.session_state.instrument and not st.session_state.game_over:
@@ -91,32 +96,49 @@ if st.session_state.instrument and not st.session_state.game_over:
                 st.warning("⚠️ No more clues available!")
     with col2:
         if st.button("Give Up 🏳️"):
-            st.success(f"The correct answer was **{st.session_state.instrument}** 🎵")
-            # 👇 No game_over flag or rerun — just reveal the answer
+            st.session_state.message = f"✅ The correct answer was **{st.session_state.instrument}** 🎵"
     with col3:
         if st.button("🔁 Start New Quiz"):
             st.session_state.instrument = random.choice(list(quiz.keys()))
             st.session_state.clue_index = 0
             st.session_state.game_over = False
+            st.session_state.message = ""
             st.success("New quiz started!")
             st.rerun()
 
     # --- Audio Snippet ---
     st.audio(instrument_data["audio"], format="audio/mp4")
 
-    # --- Show Clues (under audio, above options) ---
+    # --- Show Clues ---
     for i in range(st.session_state.clue_index + 1):
         st.write(instrument_data["clues"][i])
         st.write("")
 
-    # --- Multiple Choice Section ---
+    # --- Multiple Choice ---
     guess = st.radio("🎧 Pick your guess:", instrument_data["options"], key="mc_guess_radio")
 
+    # --- Submit Guess Button ---
     if st.button("Submit Guess ✅"):
         if guess.lower() == st.session_state.instrument.lower():
-            st.success(f"🎉 Correct! The instrument is **{st.session_state.instrument}**")
-            st.session_state.game_over = True
-            st.rerun()
+            st.session_state.message = f"🎉 Correct! The instrument is **{st.session_state.instrument}**"
+            st.session_state.game_over = True  # end game, but don't rerun
         else:
-            st.error("❌ Wrong guess. Try another clue!")
+            st.session_state.message = "❌ Wrong guess. Try another clue!"
+
+    # --- Feedback Message (under the Submit button) ---
+    if st.session_state.message:
+        if "Correct!" in st.session_state.message or "The correct answer" in st.session_state.message:
+            st.success(st.session_state.message)
+        elif "Wrong guess" in st.session_state.message:
+            st.error(st.session_state.message)
+
+# --- When Game Over (after correct answer) ---
+if st.session_state.game_over:
+    if st.button("🔁 Play Again"):
+        st.session_state.instrument = None
+        st.session_state.clue_index = 0
+        st.session_state.game_over = False
+        st.session_state.message = ""
+        st.rerun()
+
 

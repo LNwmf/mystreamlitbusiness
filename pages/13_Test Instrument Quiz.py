@@ -91,9 +91,8 @@ if st.session_state.instrument and not st.session_state.game_over:
                 st.warning("⚠️ No more clues available!")
     with col2:
         if st.button("Give Up 🏳️"):
-            st.info(f"The instrument was **{st.session_state.instrument}**.")
-            st.session_state.game_over = True
-            st.rerun()
+            st.success(f"The correct answer was **{st.session_state.instrument}** 🎵")
+            # 👇 No game_over flag or rerun — just reveal the answer
     with col3:
         if st.button("🔁 Start New Quiz"):
             st.session_state.instrument = random.choice(list(quiz.keys()))
@@ -121,13 +120,3 @@ if st.session_state.instrument and not st.session_state.game_over:
         else:
             st.error("❌ Wrong guess. Try another clue!")
 
-# --- Game Over / Restart Section ---
-if st.session_state.game_over:
-    st.subheader("Game Over 🎮")
-    st.write(f"✅ The correct answer was: **{st.session_state.instrument}**")
-
-    if st.button("🔁 Play Again"):
-        st.session_state.instrument = None
-        st.session_state.clue_index = 0
-        st.session_state.game_over = False
-        st.rerun()

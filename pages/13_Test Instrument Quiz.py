@@ -93,10 +93,10 @@ if st.session_state.instrument and not st.session_state.game_over:
             else:
                 st.warning("No more clues available!")
     with col2:
-        if st.button("Give Up 🏳️"):
-            st.session_state.message = f"✅ The correct answer was **{st.session_state.instrument}** 🎵"
+        if st.button("Give Up"):
+            st.session_state.message = f"The correct answer was **{st.session_state.instrument}** 🎵"
     with col3:
-        if st.button("🔁 Start New Quiz"):
+        if st.button("Start New Quiz"):
             st.session_state.instrument = random.choice(list(quiz.keys()))
             st.session_state.clue_index = 0
             st.session_state.game_over = False
@@ -116,7 +116,7 @@ if st.session_state.instrument and not st.session_state.game_over:
     guess = st.radio("🎧 Pick your guess:", instrument_data["options"], key="mc_guess_radio")
 
     # --- Submit Guess Button ---
-    if st.button("Submit Guess ✅"):
+    if st.button("Submit Guess"):
         if guess.lower() == st.session_state.instrument.lower():
             st.session_state.message = f"🎉 Correct! The instrument is **{st.session_state.instrument}**"
             st.session_state.game_over = True  # end game, but don't rerun

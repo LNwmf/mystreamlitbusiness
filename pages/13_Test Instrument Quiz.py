@@ -117,6 +117,8 @@ if new_quiz_started:
             border-radius: 0.25em;       /* Rounded corners */
             color: black;                /* White text */
             font-weight: bold;           /* Bold text */
+            margin: 0.5em 0;            /* Top & bottom margin to avoid overlap */
+            display: block;             /* Ensures full-width block 
         ">
             New quiz started!
         </div>

@@ -112,13 +112,15 @@ if new_quiz_started:
     st.markdown(
         """
         <div style="
-            background-color: #A7C7E7;  /* Blue background */
-            padding: 0.4em 0.8em;         /* Padding like st.success */
-            border-radius: 0.25em;       /* Rounded corners */
-            color: black;                /* White text */
-            font-weight: bold;           /* Bold text */
-            margin: 0.5em 0;            /* Top & bottom margin to avoid overlap */
-            display: block;             /* Ensures full-width block 
+            background-color: #1E90FF;  /* Blue background */
+            padding: 0.3em 0.6em;        /* Compact height */
+            border-radius: 0.25em;
+            color: white;
+            font-weight: bold;
+            margin: 0.5em 0;             /* Space above & below */
+            display: block;              /* Full-width block */
+            width: 100%;                 /* Ensure full width */
+            box-sizing: border-box;      /* Include padding in width */
         ">
             New quiz started!
         </div>

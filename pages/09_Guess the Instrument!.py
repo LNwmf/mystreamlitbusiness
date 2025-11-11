@@ -91,20 +91,20 @@ if st.session_state.instrument and not st.session_state.game_over:
         st.write("")  # blank line between clues
 
     with st.form(key="instrument_form"):
-        guess = st.radio("Pick your guess:", instrument_data["options"], key="mc_guess_radio")
+         guess = st.radio("Pick your guess:", instrument_data["options"], key="mc_guess_radio")
 
     # Form buttons
-    submit_guess = st.form_submit_button("Submit Guess")
-    show_next = st.form_submit_button("Show Next Clue")
-    give_up = st.form_submit_button("Give Up")
+        submit_guess = st.form_submit_button("Submit Guess")
+        show_next = st.form_submit_button("Show Next Clue")
+        give_up = st.form_submit_button("Give Up")
 
-        # Handle actions
+ # Handle actions
     if submit_guess:
         if guess.lower() == st.session_state.instrument.lower():
-            st.success(f"🎉 Correct! The instrument is **{st.session_state.instrument}**")
-            st.session_state.game_over = True
-        else:
-            st.error("❌ Wrong guess. Try another clue!")
+        st.success(f"🎉 Correct! The instrument is **{st.session_state.instrument}**")
+        st.session_state.game_over = True
+    else:
+        st.error("❌ Wrong guess. Try another clue!")
 
     if show_next:
         if st.session_state.clue_index < len(instrument_data["clues"]) - 1:
@@ -116,10 +116,6 @@ if st.session_state.instrument and not st.session_state.game_over:
         st.info(f"The instrument was **{st.session_state.instrument}**.")
         st.session_state.game_over = True
 
-    # Display all clues up to the current index
-    for i in range(st.session_state.clue_index + 1):
-        st.write(instrument_data["clues"][i])
-        st.write("")  # blank line between clues
 
 #    if st.button("Submit Guess", key="submit_guess_btn"):
 #        if guess.lower() == st.session_state.instrument.lower():

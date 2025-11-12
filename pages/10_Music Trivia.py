@@ -53,6 +53,15 @@ if "user_answer" not in st.session_state:
     st.session_state.user_answer = None
 
 # ---------------------
+# HELPER FUNCTION
+# ---------------------
+def load_new_question():
+    st.session_state.question_index = random.randint(0, len(trivia_questions) - 1)
+    st.session_state.answered = False
+    st.session_state.user_answer = None
+    st.rerun()
+
+# ---------------------
 # GET CURRENT QUESTION
 # ---------------------
 question = trivia_questions[st.session_state.question_index]
@@ -67,19 +76,28 @@ st.markdown(f"### {question['question']}")
 # ANSWER INPUT
 # ---------------------
 if question["type"] == "multiple_choice":
-    st.session_state.user_answer = st.radio("Choose your answer:", question["options"], key=f"radio_{st.session_state.question_index}")
+    st.session_state.user_answer = st.radio(
+        "Choose your answer:",
+        question["options"],
+        key=f"radio_{st.session_state.question_index}"
+    )
 
 elif question["type"] == "true_false":
-    st.session_state.user_answer = st.radio("Choose:", ["True", "False"], key=f"radio_{st.session_state.question_index}")
+    st.session_state.user_answer = st.radio(
+        "Choose:",
+        ["True", "False"],
+        key=f"radio_{st.session_state.question_index}"
+    )
 
 # ---------------------
 # SUBMIT ANSWER
 # ---------------------
 if st.button("Submit Answer", disabled=st.session_state.answered):
     st.session_state.answered = True
+    st.rerun()  # Forces the display to refresh and show feedback
 
 # ---------------------
-# SHOW FEEDBACK
+# FEEDBACK SECTION
 # ---------------------
 if st.session_state.answered:
     correct = st.session_state.user_answer == question["answer"]
@@ -88,15 +106,13 @@ if st.session_state.answered:
     else:
         st.error(f"❌ Incorrect. The correct answer is **{question['answer']}**.")
 
-    # Add "Next Question" button
+    # "Next Question" button now properly loads a new one
     if st.button("Next Question"):
-        st.session_state.question_index = random.randint(0, len(trivia_questions) - 1)
-        st.session_state.answered = False
-        st.session_state.user_answer = None
-        st.rerun()
+        load_new_question()
 
 st.write("---")
 st.caption("Created with ❤️ using Streamlit")
+
 
 
 

@@ -95,25 +95,25 @@ quiz = {
         "options": ["Morinkhuur", "Ukulele", "Ardin", "Ngoni"],
         "audio": "https://i.imgur.com/of9y4pB.mp4"
     },
-    "Styrian harmonica": {
+    "Hardanger fiddle": {
         "clues": [
-            "Clue 1: Originated from Mali.",
-            "Clue 2: This is a string instrument and apart of the lute family.",
-            "Clue 3: It is made of a single, hollowed piece of wood and animal skin.",
-            "Clue 4: Significant in traditional ceremonies and festivals in West Africa."
+            "Clue 1: This is a traditional Norwegian instrument.",
+            "Clue 2: It has four primary strings.",
+            "Clue 3: Has a controversial history and sometimes banned from churches because it was thought to be associated with the devil and malevolent spirits.",
+            "Clue 4: Notable musician Ole Bull helped popularize the instrument."
         ],
-        "options": ["Accordion", "Ukulele", "Styrian harmonica", "Ngoni"],
-        "audio": "https://i.imgur.com/of9y4pB.mp4"
+        "options": ["Hardanger fiddle", "Violin", "Sitar", "Nyckelharpa"],
+        "audio": "https://i.imgur.com/rUCyalx.mp4"
     },
-    "Kachu": {
+    "Nzumari": {
         "clues": [
-            "Clue 1: Made from a cow's horn.",
-            "Clue 2: It is used to make announcements.",
-            "Clue 3: This instrument originated from Curacao.",
-            "Clue 4: Played similar to a trumpet."
+            "Clue 1: A technique called circular breathing is used to play this instrument.",
+            "Clue 2: It is traditionally only played by men and for special occasions.",
+            "Clue 3: Originated from Kenya.",
+            "Clue 4: Played similar to an oboe and includes a double reed."
         ],
-        "options": ["Accordion", "Kachu", "Styrian harmonica", "Ngoni"],
-        "audio": "https://i.imgur.com/of9y4pB.mp4"
+        "options": ["Zurna", "Nzumari", "Algaita", "Siwa"],
+        "audio": "https://i.imgur.com/AWcjohn.mp4"
     }
 }
 

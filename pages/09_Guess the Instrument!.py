@@ -54,6 +54,66 @@ quiz = {
         ],
         "options": ["Dizi", "Bagpipes", "Pan flute", "Sheng"],
         "audio": "https://i.imgur.com/csz0rsf.mp4"
+    },
+    "Valiha": {
+        "clues": [
+            "Clue 1: National instrument of Madagascar.",
+            "Clue 2: Typically used for spiritual and ceremonial ceremonies.",
+            "Clue 3: It belongs to the chordophone family and classified as a tube zither.",
+            "Clue 4: Made out of bamboo."
+        ],
+        "options": ["Didgeridoo", "Valiha", "Qanun", "Harp"],
+        "audio": "https://i.imgur.com/lEroSAB.mp4"
+    },
+    "Atumpan": {
+        "clues": [
+            "Clue 1: It is played with two L-shaped sticks or hands.",
+            "Clue 2: Referred to as a 'talking drum' due to its extensive range of sound and ability to imitate language.",
+            "Clue 3: The instrument is played in pairs, one male and female.",
+            "Clue 4: A traditional instrument of Ghana."
+        ],
+        "options": ["Steel drum", "Darbuka", "Bongo", "Bata drum"],
+        "audio": "https://i.imgur.com/jC2jK7p.mp4"
+    },
+    "Santur": {
+        "clues": [
+            "Clue 1: This has 18 bridges, each with 4 strings for a total of 72.",
+            "Clue 2: Famous artist Pandit Shivkumar Sharma popularized the instrument through classical music.",
+            "Clue 3: Two small wooden sticks are used to play it.",
+            "Clue 4: A traditional instrument of Iran."
+        ],
+        "options": ["Santur", "Yangqin", "Dutar", "Lyre"],
+        "audio": "https://i.imgur.com/O3E44tr.mp4"
+    },
+    "Ngoni": {
+        "clues": [
+            "Clue 1: Originated from Mali.",
+            "Clue 2: This is a string instrument and apart of the lute family.",
+            "Clue 3: It is made of a single, hollowed piece of wood and animal skin.",
+            "Clue 4: Significant in traditional ceremonies and festivals in West Africa."
+        ],
+        "options": ["Morinkhuur", "Ukulele", "Ardin", "Ngoni"],
+        "audio": "https://i.imgur.com/of9y4pB.mp4"
+    },
+    "Styrian harmonica": {
+        "clues": [
+            "Clue 1: Originated from Mali.",
+            "Clue 2: This is a string instrument and apart of the lute family.",
+            "Clue 3: It is made of a single, hollowed piece of wood and animal skin.",
+            "Clue 4: Significant in traditional ceremonies and festivals in West Africa."
+        ],
+        "options": ["Accordion", "Ukulele", "Styrian harmonica", "Ngoni"],
+        "audio": "https://i.imgur.com/of9y4pB.mp4"
+    },
+    "Kachu": {
+        "clues": [
+            "Clue 1: Made from a cow's horn.",
+            "Clue 2: It is used to make announcements.",
+            "Clue 3: This instrument originated from Curacao.",
+            "Clue 4: Played similar to a trumpet."
+        ],
+        "options": ["Accordion", "Kachu", "Styrian harmonica", "Ngoni"],
+        "audio": "https://i.imgur.com/of9y4pB.mp4"
     }
 }
 

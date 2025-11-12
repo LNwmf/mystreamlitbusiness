@@ -73,6 +73,4 @@ if st.button("Submit Answer"):
     else:
         st.error(f"❌ Nope! The correct answer was **{question['answer']}**.")
 
-st.write("---")
-st.caption("Created with ❤️ using Streamlit")
 

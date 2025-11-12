@@ -93,7 +93,7 @@ if st.session_state.answered:
         st.session_state.question_index = random.randint(0, len(trivia_questions) - 1)
         st.session_state.answered = False
         st.session_state.user_answer = None
-        st.experimental_rerun()
+        st.rerun()
 
 st.write("---")
 st.caption("Created with ❤️ using Streamlit")

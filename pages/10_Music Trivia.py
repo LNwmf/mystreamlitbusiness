@@ -8,7 +8,6 @@ st.set_page_config(page_title="🎶 Music Trivia Game", page_icon="🎵", layout
 
 st.title("🎶 Music Trivia Game")
 st.subheader("Test your knowledge of music history and pop culture!")
-
 st.write("---")
 
 # ---------------------
@@ -43,8 +42,20 @@ trivia_questions = [
     }
 ]
 
-# Randomly select one question
-question = random.choice(trivia_questions)
+# ---------------------
+# SESSION STATE SETUP
+# ---------------------
+if "question_index" not in st.session_state:
+    st.session_state.question_index = random.randint(0, len(trivia_questions) - 1)
+if "answered" not in st.session_state:
+    st.session_state.answered = False
+if "user_answer" not in st.session_state:
+    st.session_state.user_answer = None
+
+# ---------------------
+# GET CURRENT QUESTION
+# ---------------------
+question = trivia_questions[st.session_state.question_index]
 
 # ---------------------
 # DISPLAY QUESTION
@@ -53,24 +64,39 @@ st.image(question["image"], use_container_width=True)
 st.markdown(f"### {question['question']}")
 
 # ---------------------
-# MULTIPLE CHOICE TYPE
+# ANSWER INPUT
 # ---------------------
 if question["type"] == "multiple_choice":
-    user_answer = st.radio("Choose your answer:", question["options"])
+    st.session_state.user_answer = st.radio("Choose your answer:", question["options"], key=f"radio_{st.session_state.question_index}")
 
-# ---------------------
-# TRUE/FALSE TYPE
-# ---------------------
 elif question["type"] == "true_false":
-    user_answer = st.radio("Choose:", ["True", "False"])
+    st.session_state.user_answer = st.radio("Choose:", ["True", "False"], key=f"radio_{st.session_state.question_index}")
 
 # ---------------------
-# CHECK ANSWER
+# SUBMIT ANSWER
 # ---------------------
-if st.button("Submit Answer"):
-    if user_answer == question["answer"]:
-        st.success("✅ Correct! You really know your music!")
+if st.button("Submit Answer", disabled=st.session_state.answered):
+    st.session_state.answered = True
+
+# ---------------------
+# SHOW FEEDBACK
+# ---------------------
+if st.session_state.answered:
+    correct = st.session_state.user_answer == question["answer"]
+    if correct:
+        st.success(f"✅ Correct! The answer is **{question['answer']}**.")
     else:
-        st.error(f"❌ Nope! The correct answer was **{question['answer']}**.")
+        st.error(f"❌ Incorrect. The correct answer is **{question['answer']}**.")
+
+    # Add "Next Question" button
+    if st.button("Next Question"):
+        st.session_state.question_index = random.randint(0, len(trivia_questions) - 1)
+        st.session_state.answered = False
+        st.session_state.user_answer = None
+        st.experimental_rerun()
+
+st.write("---")
+st.caption("Created with ❤️ using Streamlit")
+
 
 

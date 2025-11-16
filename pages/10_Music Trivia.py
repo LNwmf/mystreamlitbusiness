@@ -98,7 +98,7 @@ trivia_questions = [
 # SESSION STATE SETUP
 # ---------------------
 if "question_index" not in st.session_state:
-    st.session_state.question_index = random.randint(0, len(trivia_questions) - 1)
+    st.session_state.question_index = 0
 if "answered" not in st.session_state:
     st.session_state.answered = False
 if "user_answer" not in st.session_state:
@@ -115,8 +115,6 @@ if "score" not in st.session_state:
 def load_new_question():
     # Move to the next question in order
     st.session_state.question_index += 1
-    if st.session_state.question_index >= len(trivia_questions):
-        st.session_state.question_index = 0  # restart from the first question
     st.session_state.answered = False
     st.session_state.user_answer = None
     st.session_state.question_key += 1  # ensure unique widget keys
@@ -129,7 +127,6 @@ if st.session_state.question_index >= len(trivia_questions):
     st.success(f"🎉 You completed the quiz! Your final score is **{st.session_state.score} / {len(trivia_questions)}**.")
 else:
 
-    # ---------------------
 # GET CURRENT QUESTION
 # ---------------------
 question = trivia_questions[st.session_state.question_index]
@@ -161,7 +158,12 @@ else:
 # ---------------------
 if st.button("Submit Answer", disabled=st.session_state.answered, key=f"submit_{st.session_state.question_key}"):
     st.session_state.answered = True
+
+    if st.session_state.user_answer == question["answer"]:
+        st.session_state.score += 1
     st.rerun()
+
+
 
 # ---------------------
 # FEEDBACK SECTION

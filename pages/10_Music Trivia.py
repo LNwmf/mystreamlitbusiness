@@ -138,27 +138,24 @@ else:
 # ---------------------
 # ANSWER INPUT
 # ---------------------
-if question["type"] == "multiple_choice":
-    st.session_state.user_answer = st.radio(
-        "Choose your answer:",
-        question["options"],
-        key=f"radio_{st.session_state.question_key}"
-    )
-else:
-    st.session_state.user_answer = st.radio(
-        "Choose:",
-        ["True", "False"],
-        key=f"radio_{st.session_state.question_key}"
-    )
+    if question["type"] == "multiple_choice":
+        st.session_state.user_answer = st.radio(
+            "Choose your answer:",
+            question["options"],
+            key=f"radio_{st.session_state.question_key}"
+        )
+    else:
+        st.session_state.user_answer = st.radio(
+            "Choose:",
+            ["True", "False"],
+            key=f"radio_{st.session_state.question_key}"
+        )
 
 # ---------------------
 # SUBMIT ANSWER
 # ---------------------
 if st.button("Submit Answer", disabled=st.session_state.answered, key=f"submit_{st.session_state.question_key}"):
     st.session_state.answered = True
-    st.session_state.total_answered += 1
-    if st.session_state.user_answer == question["answer"]:
-        st.session_state.score += 1
     st.rerun()
 
 
@@ -176,7 +173,11 @@ if st.session_state.answered:
 
     # Next Question button (now always works instantly)
     if st.button("Next Question", key=f"next_{st.session_state.question_key}"):
-        load_new_question()
+        st.session_state.question_index += 1
+        st.session_state.answered = False
+        st.session_state.user_answer = None
+        st.session_state.question_key += 1
+        st.rerun()
 
 
 

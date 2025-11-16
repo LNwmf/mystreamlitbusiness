@@ -132,8 +132,8 @@ else:
 # ---------------------
 # DISPLAY QUESTION
 # ---------------------
-st.image(question["image"], use_container_width=True)
-st.markdown(f"### {question['question']}")
+    st.image(question["image"], use_container_width=True)
+    st.markdown(f"### {question['question']}")
 
 # ---------------------
 # ANSWER INPUT

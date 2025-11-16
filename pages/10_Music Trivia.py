@@ -107,8 +107,7 @@ if "question_key" not in st.session_state:
     st.session_state.question_key = 0  # for unique widget keys
 if "score" not in st.session_state:
     st.session_state.score = 0
-if "total_answered" not in st.session_state:
-    st.session_state.total_answered = 0
+
 
 # ---------------------
 # HELPER FUNCTION
@@ -124,7 +123,13 @@ def load_new_question():
     st.rerun()
 
 
+# CHECK IF QUIZ IS FINISHED
 # ---------------------
+if st.session_state.question_index >= len(trivia_questions):
+    st.success(f"🎉 You completed the quiz! Your final score is **{st.session_state.score} / {len(trivia_questions)}**.")
+else:
+
+    # ---------------------
 # GET CURRENT QUESTION
 # ---------------------
 question = trivia_questions[st.session_state.question_index]
@@ -156,7 +161,7 @@ else:
 # ---------------------
 if st.button("Submit Answer", disabled=st.session_state.answered, key=f"submit_{st.session_state.question_key}"):
     st.session_state.answered = True
-    st.rerun()
+    #st.rerun()
 
 # ---------------------
 # FEEDBACK SECTION
@@ -174,16 +179,7 @@ if st.session_state.answered:
     if st.button("Next Question", key=f"next_{st.session_state.question_key}"):
         load_new_question()
 
-# RESTART QUIZ BUTTON
-# ---------------------
-if st.button("Restart Quiz"):
-    st.session_state.question_index = 0
-    st.session_state.score = 0
-    st.session_state.total_answered = 0
-    st.session_state.answered = False
-    st.session_state.user_answer = None
-    st.session_state.question_key += 1
-    st.rerun()
+
 
 
 

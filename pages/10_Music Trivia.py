@@ -10,6 +10,12 @@ st.title("🎵 Music Trivia Game")
 st.subheader("Test your knowledge of cultural music history and pop culture!")
 st.write("---")
 
+st.image("https://theworldmusicfoundation.org/wp-content/uploads/2016/11/wmf_small_logo.png.webp", width=180)
+st.title("🎶 Guess the Instrument!")
+st.markdown("""
+Welcome! Play the audio clip below and guess the instrument. Listen and discover different types of cultural music instruments!
+""")
+
 # ---------------------
 # TRIVIA QUESTIONS
 # ---------------------

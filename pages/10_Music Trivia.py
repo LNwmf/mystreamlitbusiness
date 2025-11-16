@@ -107,8 +107,8 @@ if "question_key" not in st.session_state:
     st.session_state.question_key = 0  # for unique widget keys
 if "score" not in st.session_state:
     st.session_state.score = 0
-#if "total_answered" not in st.session_state:
-#    st.session_state.total_answered = 0
+if "total_answered" not in st.session_state:
+   st.session_state.total_answered = 0
 
 # ---------------------
 # HELPER FUNCTION

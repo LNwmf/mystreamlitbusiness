@@ -174,13 +174,19 @@ if st.session_state.answered:
 
 
     # Next Question button (now always works instantly)
-    if st.button("Next Question", key=f"next_{st.session_state.question_key}"):
-        st.session_state.question_index += 1
-        st.session_state.answered = False
-        st.session_state.user_answer = None
-        st.session_state.question_key += 1
-        st.rerun()
-
+    if st.session_state.question_index < len(trivia_questions) -1:
+        if st.button("Next Question", key=f"next_{st.session_state.question_key}"):
+            st.session_state.question_index += 1
+            st.session_state.answered = False
+            st.session_state.user_answer = None
+            st.session_state.question_key += 1
+            st.rerun()
+    else:
+            # Last question: show final score and restart button
+        st.success(f"🎉 You completed the quiz! Your final score is **{st.session_state.score} / {len(trivia_questions)}**.")
+        if st.button("Restart Quiz"):
+            restart_quiz()
+            st.rerun()
 
 
 

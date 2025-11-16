@@ -76,7 +76,7 @@ if st.session_state.question_index >= len(trivia_questions):
     st.success(f"🎉 You completed the quiz! Your final score is **{st.session_state.score} / {len(trivia_questions)}**.")
     if st.button("Restart Quiz"):
         restart_quiz()
-        st.experimental_rerun()
+        st.rerun()
 else:
     # ---------------------
     # GET CURRENT QUESTION
@@ -113,7 +113,7 @@ else:
         # Check if correct and increment score
         if st.session_state.user_answer == question["answer"]:
             st.session_state.score += 1
-        st.experimental_rerun()
+        st.rerun()
 
     # ---------------------
     # FEEDBACK SECTION
@@ -131,4 +131,4 @@ else:
             st.session_state.answered = False
             st.session_state.user_answer = None
             st.session_state.question_key += 1
-            st.experimental_rerun()
+            st.rerun()

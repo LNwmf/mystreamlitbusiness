@@ -16,29 +16,75 @@ st.write("---")
 trivia_questions = [
     {
         "type": "multiple_choice",
-        "question": "Who is known as the 'King of Pop'?",
-        "options": ["Elvis Presley", "Michael Jackson", "Prince", "Freddie Mercury"],
-        "answer": "Michael Jackson",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/7/72/Michael_Jackson_in_1988.jpg"
+        "question": "This famous tango composed in Uruguay in 1916 is called...",
+        "options": ["El Choclo", "Por una cabeza", "La Cumparsita", "Libertango"],
+        "answer": "La Cumparsita",
+        "image": "https://i.ytimg.com/vi/I2kbPVQDlvM/maxresdefault.jpg"
     },
     {
         "type": "true_false",
-        "question": "The Beatles were originally from London.",
-        "answer": "False",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0d/The_Fabs.JPG"
+        "question": "Amapiano is a subgenre of house music that incorporates piano, jazz, and distinctive basslines. It originated from South Africa in the 2010s.",
+        "answer": "True",
+        "image": "https://cms.forbesafrica.com/wp-content/uploads/2021/10/Screenshot-2021-10-22-at-14.32.24-1.png"
     },
     {
         "type": "multiple_choice",
-        "question": "Which artist released the album '1989'?",
-        "options": ["Adele", "Taylor Swift", "Katy Perry", "Lorde"],
-        "answer": "Taylor Swift",
-        "image": "https://upload.wikimedia.org/wikipedia/en/f/f6/Taylor_Swift_-_1989.png"
+        "question": "In Indonesia, gamelan orchestras primarily feature which type of instruments?",
+        "options": ["String instruments", "Metallic instruments", "Brass instruments", "Wind instruments"],
+        "answer": "Metallic instruments",
+        "image": "https://study.com/cimages/multimages/16/gamelan-orchester_ethnm_berlin949695582522616000.jpg"
     },
     {
         "type": "true_false",
-        "question": "Beethoven was completely deaf when he composed his Ninth Symphony.",
+        "question": "Famous Bulgarian composer Pancho Vladigerov is best known for his work 'Balkan Suites'.",
+        "answer": "False",
+        "image": "https://operasofia.bg/uploads/people/1814.png?_=1733060649"
+    },
+    {
+        "type": "multiple_choice",
+        "question": "Which Brazilian genre is characterized by a blend of samba and smooth jazz rhythms.",
+        "options": ["Bossa Nova", "Reggaeton", "Sertanejo", "Choro"],
+        "answer": "Bossa Nova",
+        "image": "https://static01.nyt.com/images/2013/07/14/travel/14PURSUITS7/14PURSUITS7-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
+    },
+    {
+        "type": "true_false",
+        "question": "Italian composer Claudio Monteverdi is known as the 'Father of Opera'.",
+        "answer": "False",
+        "image": "https://www.kennedy-center.org/link/8851036a87e2480e921ef2c4580d3e33.aspx"
+    },
+    {
+        "type": "multiple_choice",
+        "question": "Which Lebanese artist is famous for songs like 'Enta Tani' and 'Woseltelha'?",
+        "options": ["Elissa", "Fairuz", "Nancu Ajram", "Haifa Wehbe"],
+        "answer": "Haifa Wehbe",
+        "image": "https://viberate-upload.ams3.cdn.digitaloceanspaces.com/prod/entity/artist/haifa-wehbe-8xk0u"
+    },
+    {
+        "type": "true_false",
+        "question": "'Kafi' is a classical Sufi poetic form set to music in the Sindh and Punjab region.",
         "answer": "True",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Beethoven.jpg"
+        "image": "https://i.tribune.com.pk/media/images/649674-muic-1387836794/649674-muic-1387836794.jpg"
+    },
+    {
+        "type": "multiple_choice",
+        "question": "'Ndombolo' is a Congolese subgenre of dance music from which African music style?",
+        "options": ["Soukous", "Mbalax", "Taarab", "Afrobeats"],
+        "answer": "Soukous",
+        "image": "https://culturalvibrancy.org/wp-content/uploads/2023/05/Champe-Soukous-Collective.jpg"
+    },
+    {
+        "type": "true_false",
+        "question": "A corrido is a traditional narrative ballad song style that tells stories about heroes, history, and social events.",
+        "answer": "True",
+        "image": "https://static.standard.co.uk/2024/02/01/8/53/corridos-tumbados-2%20%281%29.jpg?crop=8:5,smart&quality=75&auto=webp&width=1000"
+    },
+    {
+        "type": "multiple_choice",
+        "question": "Taqsim is a type of...",
+        "options": ["Vocal chant", "Improvised instrumental solo", "Music instrument", "Classical music genre"],
+        "answer": "Metallic instruments",
+        "image": "https://study.com/cimages/multimages/16/gamelan-orchester_ethnm_berlin949695582522616000.jpg"
     }
 ]
 

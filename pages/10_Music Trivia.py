@@ -129,7 +129,7 @@ else:
 
 # GET CURRENT QUESTION
 # ---------------------
-question = trivia_questions[st.session_state.question_index]
+    question = trivia_questions[st.session_state.question_index]
 
 # ---------------------
 # DISPLAY QUESTION

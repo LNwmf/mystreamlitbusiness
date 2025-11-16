@@ -81,10 +81,16 @@ trivia_questions = [
     },
     {
         "type": "multiple_choice",
-        "question": "Taqsim is a type of...",
+        "question": "Common in Middle Eastern, Arabic, and Turkish music, taqsim is a type of...",
         "options": ["Vocal chant", "Improvised instrumental solo", "Music instrument", "Classical music genre"],
         "answer": "Metallic instruments",
         "image": "https://study.com/cimages/multimages/16/gamelan-orchester_ethnm_berlin949695582522616000.jpg"
+    },
+    {
+        "type": "true_false",
+        "question": "Nanguan music is contemporary style of classical chamber music from Southern China.",
+        "answer": "False",
+        "image": "https://file.moc.gov.tw/001/Upload/OldFiles/AdminUploads/information/large/f3f33aaf-db02-460e-ab72-d3d2ad2e15a6.jpg"
     }
 ]
 

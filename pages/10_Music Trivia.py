@@ -56,7 +56,7 @@ trivia_questions = [
     {
         "type": "multiple_choice",
         "question": "Which Lebanese artist is famous for songs like 'Enta Tani' and 'Woseltelha'?",
-        "options": ["Elissa", "Fairuz", "Nancu Ajram", "Haifa Wehbe"],
+        "options": ["Elissa", "Fairuz", "Nancy Ajram", "Haifa Wehbe"],
         "answer": "Haifa Wehbe",
         "image": "https://viberate-upload.ams3.cdn.digitaloceanspaces.com/prod/entity/artist/haifa-wehbe-8xk0u"
     },

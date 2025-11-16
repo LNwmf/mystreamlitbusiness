@@ -58,11 +58,14 @@ if "question_key" not in st.session_state:
 # HELPER FUNCTION
 # ---------------------
 def load_new_question():
-    st.session_state.question_index = random.randint(0, len(trivia_questions) - 1)
+    previous = st.session_state.question_index
+    choices = [i for i in range(len(trivia_questions)) if i != previous]
+    st.session_state.question_index = random.choice(choices)
     st.session_state.answered = False
     st.session_state.user_answer = None
-    st.session_state.question_key += 1  # ensure fresh widget keys
+    st.session_state.question_key += 1
     st.rerun()
+
 
 # ---------------------
 # GET CURRENT QUESTION

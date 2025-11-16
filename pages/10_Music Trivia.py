@@ -6,7 +6,7 @@ import random
 # ---------------------
 st.set_page_config(page_title="Music Trivia Game", page_icon="🎵", layout="centered")
 
-st.title("Music Trivia Game")
+st.title("🎵 Music Trivia Game")
 st.subheader("Test your knowledge of cultural music history and pop culture!")
 st.write("---")
 

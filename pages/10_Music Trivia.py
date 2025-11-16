@@ -107,7 +107,8 @@ if "question_key" not in st.session_state:
     st.session_state.question_key = 0  # for unique widget keys
 if "score" not in st.session_state:
     st.session_state.score = 0
-
+if "total_answered" not in st.session_state:
+    st.session_state.total_answered = 0
 
 # ---------------------
 # HELPER FUNCTION
@@ -158,7 +159,7 @@ else:
 # ---------------------
 if st.button("Submit Answer", disabled=st.session_state.answered, key=f"submit_{st.session_state.question_key}"):
     st.session_state.answered = True
-
+    st.session_state.total_answered += 1
     if st.session_state.user_answer == question["answer"]:
         st.session_state.score += 1
     st.rerun()

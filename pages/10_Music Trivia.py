@@ -105,6 +105,10 @@ if "user_answer" not in st.session_state:
     st.session_state.user_answer = None
 if "question_key" not in st.session_state:
     st.session_state.question_key = 0  # for unique widget keys
+if "score" not in st.session_state:
+    st.session_state.score = 0
+if "total_answered" not in st.session_state:
+    st.session_state.total_answered = 0
 
 # ---------------------
 # HELPER FUNCTION
@@ -164,10 +168,22 @@ if st.session_state.answered:
     else:
         st.error(f"❌ Incorrect. The correct answer is **{question['answer']}**.")
 
+    st.info(f"Score: {st.session_state.score} / {st.session_state.total_answered}")
+
     # Next Question button (now always works instantly)
     if st.button("Next Question", key=f"next_{st.session_state.question_key}"):
         load_new_question()
 
+# RESTART QUIZ BUTTON
+# ---------------------
+if st.button("Restart Quiz"):
+    st.session_state.question_index = 0
+    st.session_state.score = 0
+    st.session_state.total_answered = 0
+    st.session_state.answered = False
+    st.session_state.user_answer = None
+    st.session_state.question_key += 1
+    st.rerun()
 
 
 

@@ -62,7 +62,7 @@ trivia_questions = [
     },
     {
         "type": "true_false",
-        "question": "'Kafi' is a classical Sufi poetic form set to music in the Sindh and Punjab region.",
+        "question": "'Kafi' is a classical Sufi poetic form of music in the Sindh and Punjab region.",
         "answer": "True",
         "image": "https://i.tribune.com.pk/media/images/649674-muic-1387836794/649674-muic-1387836794.jpg"
     },
@@ -107,8 +107,8 @@ if "question_key" not in st.session_state:
     st.session_state.question_key = 0  # for unique widget keys
 if "score" not in st.session_state:
     st.session_state.score = 0
-if "total_answered" not in st.session_state:
-    st.session_state.total_answered = 0
+#if "total_answered" not in st.session_state:
+#    st.session_state.total_answered = 0
 
 # ---------------------
 # HELPER FUNCTION
@@ -127,9 +127,6 @@ def load_new_question():
 if st.session_state.question_index >= len(trivia_questions):
     st.success(f"🎉 You completed the quiz! Your final score is **{st.session_state.score} / {len(trivia_questions)}**.")
 else:
-
-# GET CURRENT QUESTION
-# ---------------------
     question = trivia_questions[st.session_state.question_index]
 
 # ---------------------
@@ -176,7 +173,6 @@ if st.session_state.answered:
     else:
         st.error(f"❌ Incorrect. The correct answer is **{question['answer']}**.")
 
-    st.info(f"Score: {st.session_state.score} / {st.session_state.total_answered}")
 
     # Next Question button (now always works instantly)
     if st.button("Next Question", key=f"next_{st.session_state.question_key}"):

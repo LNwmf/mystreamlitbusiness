@@ -83,7 +83,7 @@ trivia_questions = [
         "type": "multiple_choice",
         "question": "Common in Middle Eastern, Arabic, and Turkish music, taqsim is a type of...",
         "options": ["Vocal chant", "Improvised instrumental solo", "Music instrument", "Classical music genre"],
-        "answer": "Metallic instruments",
+        "answer": "Improvised instrumental solo",
         "image": "https://study.com/cimages/multimages/16/gamelan-orchester_ethnm_berlin949695582522616000.jpg"
     },
     {

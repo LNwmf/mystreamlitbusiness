@@ -161,7 +161,7 @@ else:
 # ---------------------
 if st.button("Submit Answer", disabled=st.session_state.answered, key=f"submit_{st.session_state.question_key}"):
     st.session_state.answered = True
-    #st.rerun()
+    st.rerun()
 
 # ---------------------
 # FEEDBACK SECTION

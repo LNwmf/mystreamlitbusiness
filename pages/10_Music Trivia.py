@@ -4,10 +4,10 @@ import random
 # ---------------------
 # PAGE CONFIG
 # ---------------------
-st.set_page_config(page_title="🎶 Music Trivia Game", page_icon="🎵", layout="centered")
+st.set_page_config(page_title="Music Trivia Game", page_icon="🎵", layout="centered")
 
-st.title("🎶 Music Trivia Game")
-st.subheader("Test your knowledge of music history and pop culture!")
+st.title("Music Trivia Game")
+st.subheader("Test your knowledge of cultural music history and pop culture!")
 st.write("---")
 
 # ---------------------

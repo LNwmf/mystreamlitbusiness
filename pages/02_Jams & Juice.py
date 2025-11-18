@@ -39,7 +39,7 @@ clicked = clickable_images(
     images,
     titles=titles,
     div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
-    img_style={"margin": "5px", "height": "170px", "border-radius": "3px solid transparent", "border-radius": "10px"},
+    img_style={"margin": "5px", "height": "170px", "border": "3px solid transparent", "border-radius": "10px"},
 )
 
 if clicked > -1:
@@ -50,6 +50,8 @@ if clicked > -1:
             /* Target the Nth image inside clickable_images wrapper */
             .stImageContainer:nth-child({clicked+1}) img {{
                 border: 3px solid #ff4b4b !important;
+                border-radius: 10px !important;
+                box-shadow: 0 0 8px rgba(255, 75, 75, 0.6);
             }}
         </style>
         """,

@@ -47,7 +47,6 @@ if clicked > -1:
     st.markdown(
         f"""
         <style>
-            /* Target the Nth image inside clickable_images wrapper */
             .image-container:nth-child({clicked+1}) img {{
                 border: 3px solid #ff4b4b !important;
                 border-radius: 10px !important;

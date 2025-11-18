@@ -48,7 +48,7 @@ if clicked > -1:
         f"""
         <style>
             /* Target the Nth image inside clickable_images wrapper */
-            .stImageContainer:nth-child({clicked+1}) img {{
+            .image-container:nth-child({clicked+1}) img {{
                 border: 3px solid #ff4b4b !important;
                 border-radius: 10px !important;
                 box-shadow: 0 0 8px rgba(255, 75, 75, 0.6);

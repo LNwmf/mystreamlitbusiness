@@ -35,6 +35,26 @@ images = [
 
 titles=["Rose", "Tamarind", "Hot honey", "Ginger"]
 
+if "selected_index" not in st.session_state:
+    st.session_state.selected_index = -1
+
+img_styles = []
+for i in range(len(images)):
+    if i == st.session_state.selected_index:
+        img_styles.append({
+            "margin": "5px",
+            "height": "170px",
+            "border": "3px solid #ff4b4b",  # highlight selected
+            "border-radius": "10px",
+        })
+    else:
+        img_styles.append({
+            "margin": "5px",
+            "height": "170px",
+            "border": "3px solid transparent",  # normal
+            "border-radius": "10px",
+        })
+
 clicked = clickable_images(
     images,
     titles=titles,
@@ -43,19 +63,8 @@ clicked = clickable_images(
 )
 
 if clicked > -1:
+    st.session_state.selected_index = clicked
     st.markdown(f"**{titles[clicked]} selected**")
-    st.markdown(
-        f"""
-        <style>
-            .image-container:nth-child({clicked+1}) img {{
-                border: 3px solid #ff4b4b !important;
-                border-radius: 10px !important;
-                box-shadow: 0 0 8px rgba(255, 75, 75, 0.6);
-            }}
-        </style>
-        """,
-        unsafe_allow_html=True,
-    )
 else:
     st.markdown("**No image selected**")
 

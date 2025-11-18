@@ -44,22 +44,26 @@ for i in range(len(images)):
         img_styles.append({
             "margin": "5px",
             "height": "170px",
-            "border": "3px solid #ff4b4b",  # highlight selected
             "border-radius": "10px",
+            "filter": "brightness(1.2)",  # brighten selected
+            "transform": "scale(1.05)",   # slightly enlarge
+            "transition": "all 0.2s ease",
         })
     else:
         img_styles.append({
             "margin": "5px",
             "height": "170px",
-            "border": "3px solid transparent",  # normal
             "border-radius": "10px",
+            "filter": "brightness(0.8)",  # dim unselected
+            "transform": "scale(1.0)",
+            "transition": "all 0.2s ease",
         })
 
 clicked = clickable_images(
     images,
     titles=titles,
     div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
-    img_style={"margin": "5px", "height": "170px", "border": "3px solid transparent", "border-radius": "10px"},
+    img_style=img_styles,
 )
 
 if clicked > -1:

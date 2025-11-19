@@ -29,7 +29,7 @@ st.write("Double-click a button to select a secret ingredient:")
 images = [
 
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/roses.jpeg",
-        "https://assets.clevelandclinic.org/transform/809a0d11-7f04-4b7f-b5f5-bd8b47a63c9a/tamarind-fruit-snack-1432243224",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/tamarind.jpg",
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/hothoney.jpg",
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/ginger.jpg",
 ]

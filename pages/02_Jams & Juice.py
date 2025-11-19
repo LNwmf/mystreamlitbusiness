@@ -36,62 +36,61 @@ images = [
 
 titles=["Rose", "Tamarind", "Hot honey", "Ginger"]
 
-# Track selected
+import streamlit as st
+import streamlit.components.v1 as components
+
+st.write("Pick a secret ingredient:")
+
+images = [
+    "https://bouqs.com/blog/wp-content/uploads/2018/08/shutterstock_1662182848-min.jpg",
+    "https://assets.clevelandclinic.org/transform/809a0d11-7f04-4b7f-b5f5-bd8b47a63c9a/tamarind-fruit-snack-1432243224",
+    "https://noshingwiththenolands.com/wp-content/uploads/2023/07/Hot-Honey-IMG_8472.jpg",
+    "https://5.imimg.com/data5/SELLER/Default/2024/11/469407212/QS/ZB/WD/21684370/1kg-fresh-ginger-500x500.jpeg",
+]
+
+titles = ["Rose", "Tamarind", "Hot honey", "Ginger"]
+
+# Track selected image
 if "selected" not in st.session_state:
     st.session_state.selected = None
 
-# Build HTML with JS click handler
+# Build the clickable HTML grid
 html = """
-<div id="img-grid" style='display:flex; gap:20px; justify-content:center;'>
+<div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
 """
 
 for i, img in enumerate(images):
-    border = "4px solid red" if st.session_state.selected == i else "4px solid transparent"
+
+    is_selected = (st.session_state.selected == i)
+    border = "4px solid red" if is_selected else "4px solid transparent"
 
     html += f"""
-        <img 
-            src="{img}" 
-            data-index="{i}"
-            style="width:170px; border-radius:10px; border:{border}; cursor:pointer;"
-        >
+        <form action="" method="post">
+            <button name="choice" value="{i}" 
+                    style="border:none; background:none; padding:0; cursor:pointer;">
+                <img src="{img}" 
+                     style="width:170px; border-radius:10px; border:{border};">
+            </button>
+        </form>
     """
 
-html += """
-</div>
+html += "</div>"
 
-<script>
-const imgs = document.querySelectorAll("#img-grid img");
-
-imgs.forEach(img => {
-    img.onclick = () => {
-        const index = img.getAttribute("data-index");
-        window.parent.postMessage({type: "selected_image", index: index}, "*");
-    };
-});
-</script>
-"""
-
-# Render it
+# Render the HTML
 components.html(html, height=350)
 
-# Listen for selection messages
-msg = st.experimental_get_query_params()
+# Capture click result (Streamlit stores POST data in st.session_state)
+choice = st.session_state.get("choice")
+if choice is not None:
+    st.session_state.selected = int(choice)
+    st.session_state.choice = None  # clear
 
-# Handle frontend-to-backend messages
-def handle_event():
-    import json
-    from streamlit.runtime.scriptrunner import get_script_run_ctx
-
-st_js_event = st.query_params()
-
-if st_js_event and st_js_event.get("type") == "selected_image":
-    st.session_state.selected = int(st_js_event["index"])
-
-# Display selection
+# Output selection
 if st.session_state.selected is not None:
     st.markdown(f"**Selected: {titles[st.session_state.selected]}**")
 else:
     st.markdown("**No image selected**")
+
 
 #Q4
 mood = ["Hot chocolate on a chilly night", "Wine during a thunderstorm", "Fresh lemonade on the beach", "Warm apple cider in a cabin"]

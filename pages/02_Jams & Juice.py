@@ -68,10 +68,10 @@ for i, col in enumerate(cols):
         )
 
 # Display selected caption
-if st.session_state.selected is not None:
-    st.markdown(f"**Selected: {titles[st.session_state.selected]}**")
-else:
-    st.markdown("**No image selected**")
+#if st.session_state.selected is not None:
+#    st.markdown(f"**Selected: {titles[st.session_state.selected]}**")
+#else:
+#    st.markdown("**No image selected**")
 
 #Q4
 mood = ["Hot chocolate on a chilly night", "Wine during a thunderstorm", "Fresh lemonade on the beach", "Warm apple cider in a cabin"]

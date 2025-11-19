@@ -72,6 +72,8 @@ for i, col in enumerate(cols):
 #else:
 #    st.markdown("**No image selected**")
 
+st.write()
+
 #Q4
 mood = ["Hot chocolate on a chilly night", "Wine during a thunderstorm", "Fresh lemonade on the beach", "Warm apple cider in a cabin"]
 selected_mood = st.selectbox("Which scenario sounds the most enjoyable?", mood, index=None)

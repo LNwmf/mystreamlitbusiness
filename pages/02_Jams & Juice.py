@@ -50,49 +50,38 @@ images = [
 
 titles = ["Rose", "Tamarind", "Hot honey", "Ginger"]
 
-# Track selected
-if "selected" not in st.session_state:
-    st.session_state.selected = None
+options = []
+for i, img in enumerate(images):
+    options.append(f"""
+    <div style="
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        border:{'4px solid red' if st.session_state.get('selected', None) == i else '4px solid transparent'};
+        border-radius:10px;
+        padding:3px;
+        margin:5px;
+        width:170px;
+    ">
+        <img src="{img}" style="width:170px; border-radius:10px;">
+        <div style="margin-top:5px; font-weight:bold;">{titles[i]}</div>
+    </div>
+    """)
 
-cols = st.columns(4)
+# Radio button with images
+choice = st.radio(
+    "Select your ingredient:",
+    options,
+    format_func=lambda x: x,  # display raw HTML
+    index=st.session_state.get("selected", 0),
+    horizontal=True
+)
 
-for i, col in enumerate(cols):
-    with col:
-        # Create a button containing the image
-        clicked = st.button(
-            label=" ",
-            key=f"image_button_{i}",
-            help=titles[i],
-        )
+# Store selection index
+st.session_state.selected = options.index(choice)
 
-        # If clicked, update state
-        if clicked:
-            st.session_state.selected = i
-
-        # Calculate border
-        border = "4px solid red" if st.session_state.selected == i else "4px solid transparent"
-
-        # Render the image with dynamic border
-        st.markdown(
-            f"""
-            <div style="
-                border:{border};
-                border-radius:10px;
-                padding:3px;
-                text-align:center;
-            ">
-                <img src="{images[i]}" style="width:170px; border-radius:10px; cursor:pointer;">
-                <div style="margin-top:5px; font-weight:bold;">{titles[i]}</div>
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
-
-# Show selected
-if st.session_state.selected is not None:
-    st.markdown(f"**Selected: {titles[st.session_state.selected]}**")
-else:
-    st.markdown("**No image selected**")
+# Display selected title
+st.markdown(f"**Selected: {titles[st.session_state.selected]}**")
 
 #Q4
 mood = ["Hot chocolate on a chilly night", "Wine during a thunderstorm", "Fresh lemonade on the beach", "Warm apple cider in a cabin"]

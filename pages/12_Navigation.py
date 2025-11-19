@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("Navigation")
+st.title("🎵 Explore Your Pages")
 
 pages = {
     "Jams & Juice": "02_Jams_and_Juice",
@@ -15,9 +15,15 @@ pages = {
     "Images": "11_Images",
 }
 
+cols = st.columns(2)
+
+i = 0
 for label, file in pages.items():
-    if st.button(f"➡️ {label}", key=file, use_container_width=True):
-        st.switch_page(f"pages/{file}.py")
+    with cols[i % 2]:
+        if st.button(f"🎧 {label}", use_container_width=True):
+            st.switch_page(f"pages/{file}.py")
+    i += 1
+
 
 
 

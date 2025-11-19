@@ -37,43 +37,49 @@ images = [
 titles=["Rose", "Tamarind", "Hot honey", "Ginger"]
 
 
-# Track selected image
+# Track selected
 if "selected" not in st.session_state:
     st.session_state.selected = None
 
-# Layout the images in 4 columns
 cols = st.columns(4)
 
 for i, col in enumerate(cols):
     with col:
-        # Clicking the button selects this image
-        if st.button(titles[i], key=f"btn{i}"):
+        # Create a button containing the image
+        clicked = st.button(
+            label=" ",
+            key=f"image_button_{i}",
+            help=titles[i],
+        )
+
+        # If clicked, update state
+        if clicked:
             st.session_state.selected = i
 
-        # Add a red border if selected
+        # Calculate border
         border = "4px solid red" if st.session_state.selected == i else "4px solid transparent"
 
+        # Render the image with dynamic border
         st.markdown(
             f"""
             <div style="
                 border:{border};
                 border-radius:10px;
                 padding:3px;
-                display:flex;
-                justify-content:center;
+                text-align:center;
             ">
-                <img src="{images[i]}" style="width:170px; border-radius:10px;">
+                <img src="{images[i]}" style="width:170px; border-radius:10px; cursor:pointer;">
+                <div style="margin-top:5px; font-weight:bold;">{titles[i]}</div>
             </div>
             """,
             unsafe_allow_html=True,
         )
 
-# Display selected caption
+# Show selected
 if st.session_state.selected is not None:
     st.markdown(f"**Selected: {titles[st.session_state.selected]}**")
 else:
     st.markdown("**No image selected**")
-
 
 #Q4
 mood = ["Hot chocolate on a chilly night", "Wine during a thunderstorm", "Fresh lemonade on the beach", "Warm apple cider in a cabin"]

@@ -31,7 +31,7 @@ images = [
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/roses.jpeg",
         "https://assets.clevelandclinic.org/transform/809a0d11-7f04-4b7f-b5f5-bd8b47a63c9a/tamarind-fruit-snack-1432243224",
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/hothoney.jpg",
-        "https://5.imimg.com/data5/SELLER/Default/2024/11/469407212/QS/ZB/WD/21684370/1kg-fresh-ginger-500x500.jpeg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/ginger.jpg",
 ]
 
 titles=["Rose", "Tamarind", "Hot honey", "Ginger"]

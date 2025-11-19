@@ -68,7 +68,7 @@ for i, col in enumerate(cols):
         )
 
 # Capture click
-choice = st.experimental_get_query_params().get("choice")
+choice = st.query_params().get("choice")
 
 # Alternative POST handling method for Streamlit
 choice = st.session_state.get("choice")

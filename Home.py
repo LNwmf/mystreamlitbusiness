@@ -1,7 +1,17 @@
 import streamlit as st
 #streamlit run Home.py
 st.set_page_config(page_title="About Us", layout="centered")
-
+st.markdown(
+    """
+    <style>
+    /* Remove rounding from all images rendered by Streamlit */
+    img {
+        border-radius: 0 !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 st.image("https://theworldmusicfoundation.org/wp-content/uploads/2016/11/wmf_small_logo.png.webp", width=180)
 st.title("About Us")
 st.write("This app is created by the World Music Foundation to share music and uplift local businesses. Each page includes a series of questions that returns a playlist and promotes a small business. There's also a guessing and trivia game to test your musical knowledge!")

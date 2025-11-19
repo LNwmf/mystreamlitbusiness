@@ -59,7 +59,7 @@ pages = {
     "🎨 Craft & Sip": "06_Craft_and_Sip",
     "🪞 Serene Self-Care": "07_Serene_Self_Care",
     "🎉 Press Play to Party": "08_Press_Play_to_Party",
-    "🎶 Guess the Instrument": "09_Guess_the_Instrument",
+    "💭 Guess the Instrument": "09_Guess_the_Instrument",
     "❓ Music Trivia": "10_Music_Trivia",
 }
 

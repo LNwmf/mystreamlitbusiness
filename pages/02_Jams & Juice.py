@@ -35,28 +35,42 @@ images = [
 
 titles=["Rose", "Tamarind", "Hot honey", "Ginger"]
 
+# Track selected image
 if "selected" not in st.session_state:
     st.session_state.selected = None
 
+# Layout the images in 4 columns
 cols = st.columns(4)
 
 for i, col in enumerate(cols):
     with col:
-        clicked = st.button("", key=f"imgBtn{i}")
-        if clicked:
+        # Clicking the button selects this image
+        if st.button(titles[i], key=f"btn{i}"):
             st.session_state.selected = i
 
-        # enlarge if selected
-        size = 180 if st.session_state.selected == i else 160
+        # Add a red border if selected
+        border = "4px solid red" if st.session_state.selected == i else "4px solid transparent"
 
-        st.image(images[i], width=size, caption=titles[i])
+        st.markdown(
+            f"""
+            <div style="
+                border:{border};
+                border-radius:10px;
+                padding:3px;
+                display:flex;
+                justify-content:center;
+            ">
+                <img src="{images[i]}" style="width:170px; border-radius:10px;">
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
 
-# Display selected title
+# Display selected caption
 if st.session_state.selected is not None:
     st.markdown(f"**Selected: {titles[st.session_state.selected]}**")
 else:
     st.markdown("**No image selected**")
-
 #Q4
 mood = ["Hot chocolate on a chilly night", "Wine during a thunderstorm", "Fresh lemonade on the beach", "Warm apple cider in a cabin"]
 selected_mood = st.selectbox("Which scenario sounds the most enjoyable?", mood, index=None)

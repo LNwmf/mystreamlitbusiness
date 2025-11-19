@@ -31,7 +31,7 @@ images = [
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/roses.jpeg",
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/tamarind-fruit-snack-1432243224.jpeg",
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/hothoney.jpg",
-        "https://theworldmusicfoundation.org/wp-content/streamlitimages/ginger.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/freshginger.jpg",
 ]
 
 titles=["Rose", "Tamarind", "Hot honey", "Ginger"]

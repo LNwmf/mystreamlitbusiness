@@ -34,7 +34,7 @@ with st.expander("Support Us", icon=":material/store:"):
 
 st.markdown("---")
 st.write("")
-st.write("")
+#st.write("")
 
 st.header("Navigation")
 st.write("Click a page to be automatically redirected.")

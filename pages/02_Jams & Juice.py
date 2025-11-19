@@ -38,32 +38,12 @@ titles=["Rose", "Tamarind", "Hot honey", "Ginger"]
 if "selected_index" not in st.session_state:
     st.session_state.selected_index = -1
 
-img_styles = []
-for i in range(len(images)):
-    if i == st.session_state.selected_index:
-        img_styles.append({
-            "margin": "5px",
-            "height": "170px",
-            "border-radius": "10px",
-            "filter": "brightness(1.2)",  # brighten selected
-            "transform": "scale(1.05)",   # slightly enlarge
-            "transition": "all 0.2s ease",
-        })
-    else:
-        img_styles.append({
-            "margin": "5px",
-            "height": "170px",
-            "border-radius": "10px",
-            "filter": "brightness(0.8)",  # dim unselected
-            "transform": "scale(1.0)",
-            "transition": "all 0.2s ease",
-        })
 
 clicked = clickable_images(
     images,
     titles=titles,
-    div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
-    img_style=img_styles,
+    div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap", "gap": "10px"},
+    img_style={"height": "170px", "border-radius": "10px"}
 )
 
 if clicked > -1:
@@ -71,6 +51,26 @@ if clicked > -1:
     st.markdown(f"**{titles[clicked]} selected**")
 else:
     st.markdown("**No image selected**")
+
+# Inject CSS to scale the selected image container
+selected = st.session_state.selected_index
+if selected > -1:
+    st.markdown(
+        f"""
+        <style>
+            /* Add smooth animation to all containers */
+            .image-container {{
+                transition: transform 0.2s ease;
+            }}
+
+            /* Enlarge only the selected image */
+            .image-container:nth-child({selected + 1}) {{
+                transform: scale(1.08);
+            }}
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
 
 #Q4
 mood = ["Hot chocolate on a chilly night", "Wine during a thunderstorm", "Fresh lemonade on the beach", "Warm apple cider in a cabin"]

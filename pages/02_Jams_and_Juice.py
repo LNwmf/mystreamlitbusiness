@@ -5,7 +5,7 @@ import streamlit.components.v1 as components
 #streamlit run sl1.py
 
 st.set_page_config(
-    page_title="Jams & Juice",
+    page_title="Jams and Juice",
     page_icon="🍹",
     layout="centered",
 )

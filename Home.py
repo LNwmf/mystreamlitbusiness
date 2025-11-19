@@ -34,7 +34,7 @@ with st.expander("Support Us", icon=":material/store:"):
 
 st.write("")
 
-st.header("➤ Navigation")
+st.header("Navigation")
 
 pages = {
     "🍹 Jams & Juice": "02_Jams_and_Juice",

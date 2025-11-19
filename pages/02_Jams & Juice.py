@@ -1,5 +1,6 @@
 import streamlit as st
 from st_clickable_images import clickable_images
+import streamlit.components.v1 as components
 
 #streamlit run sl1.py
 

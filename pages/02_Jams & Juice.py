@@ -72,6 +72,7 @@ for i, col in enumerate(cols):
 #else:
 #    st.markdown("**No image selected**")
 
+#gap
 st.write("")
 
 #Q4

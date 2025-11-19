@@ -45,7 +45,7 @@ quiz = {
         ],
         "options": ["Mbira", "Djembe", "Harpsichord", "Carillon"],
         "audio": "https://i.imgur.com/KORLtbB.mp4",
-        "image": "https://theworldmusicfoundation.org/wp-content/instrument_images/ext.Zimbabwe_Mbira.jpg"
+        "image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/mbira.jpg"
     },
     "Guiro": {
         "clues": [
@@ -56,7 +56,7 @@ quiz = {
         ],
         "options": ["Slapstick", "Guiro", "Castanets", "Claves"],
         "audio": "https://i.imgur.com/EuCqgr6.mp4",
-        "image": ""
+        "image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/guiro.jpg"
     },
     "Sheng": {
         "clues": [
@@ -67,7 +67,7 @@ quiz = {
         ],
         "options": ["Dizi", "Bagpipes", "Pan flute", "Sheng"],
         "audio": "https://i.imgur.com/csz0rsf.mp4",
-        "image": ""
+        "image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/sheng.jpeg"
     },
     "Valiha": {
         "clues": [
@@ -78,7 +78,7 @@ quiz = {
         ],
         "options": ["Didgeridoo", "Valiha", "Qanun", "Harp"],
         "audio": "https://i.imgur.com/lEroSAB.mp4",
-        "image": ""
+        "image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/valiha.jpg"
     },
     "Atumpan": { #check accuracy of answer
         "clues": [
@@ -89,9 +89,9 @@ quiz = {
         ],
         "options": ["Steel drum", "Darbuka", "Bongo", "Bata drum"],
         "audio": "https://i.imgur.com/jC2jK7p.mp4",
-        "image": ""
+        "image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/atumpan.jpeg"
     },
-    "Santur": {
+    "Santoor": {
         "clues": [
             "Clue 1: This has 18 bridges, each with 4 strings for a total of 72.",
             "Clue 2: Famous artist Pandit Shivkumar Sharma popularized the instrument through classical music.",
@@ -100,7 +100,7 @@ quiz = {
         ],
         "options": ["Santur", "Yangqin", "Dutar", "Lyre"],
         "audio": "https://i.imgur.com/O3E44tr.mp4",
-        "image": ""
+        "image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/santoor.jpg"
     },
     "Ngoni": {
         "clues": [
@@ -111,7 +111,7 @@ quiz = {
         ],
         "options": ["Morinkhuur", "Ukulele", "Ardin", "Ngoni"],
         "audio": "https://i.imgur.com/of9y4pB.mp4",
-        "image": ""
+        "image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/ngoni.jpg"
     },
     "Hardanger fiddle": {
         "clues": [
@@ -122,7 +122,7 @@ quiz = {
         ],
         "options": ["Hardanger fiddle", "Violin", "Sitar", "Nyckelharpa"],
         "audio": "https://i.imgur.com/rUCyalx.mp4",
-        "image": ""
+        "image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/hardangerfiddle.jpg"
     },
     "Nzumari": {
         "clues": [
@@ -133,7 +133,7 @@ quiz = {
         ],
         "options": ["Zurna", "Nzumari", "Algaita", "Siwa"],
         "audio": "https://i.imgur.com/AWcjohn.mp4",
-        "image": ""
+        "image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/nzumari.jpg"
     }
 }
 

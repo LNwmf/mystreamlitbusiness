@@ -36,38 +36,56 @@ images = [
 
 titles=["Rose", "Tamarind", "Hot honey", "Ginger"]
 
-# Track selected image
+# Track selected
 if "selected" not in st.session_state:
     st.session_state.selected = None
 
-# Build HTML grid
+# Build HTML with JS click handler
 html = """
-<div style='display:flex; gap:20px; justify-content:center;'>
+<div id="img-grid" style='display:flex; gap:20px; justify-content:center;'>
 """
 
 for i, img in enumerate(images):
-    is_selected = (st.session_state.selected == i)
-    border = "4px solid red" if is_selected else "4px solid transparent"
+    border = "4px solid red" if st.session_state.selected == i else "4px solid transparent"
 
     html += f"""
-        <form action="" method="post">
-            <button name="choice" value="{i}" 
-                style="border:none; background:none; padding:0; cursor:pointer;">
-                <img src="{img}" 
-                     style="width:170px; border-radius:10px; border:{border};">
-            </button>
-        </form>
+        <img 
+            src="{img}" 
+            data-index="{i}"
+            style="width:170px; border-radius:10px; border:{border}; cursor:pointer;"
+        >
     """
 
-html += "</div>"
+html += """
+</div>
 
-# Render interactive HTML block
+<script>
+const imgs = document.querySelectorAll("#img-grid img");
+
+imgs.forEach(img => {
+    img.onclick = () => {
+        const index = img.getAttribute("data-index");
+        window.parent.postMessage({type: "selected_image", index: index}, "*");
+    };
+});
+</script>
+"""
+
+# Render it
 components.html(html, height=350)
 
-# Check for POSTed value
-if "choice" in st.session_state:
-    st.session_state.selected = int(st.session_state.choice)
-    del st.session_state["choice"]  # clear it
+# Listen for selection messages
+msg = st.experimental_get_query_params()
+
+# Handle frontend-to-backend messages
+def handle_event():
+    import json
+    from streamlit.runtime.scriptrunner import get_script_run_ctx
+
+st_js_event = st.experimental_get_javascript_event()
+
+if st_js_event and st_js_event.get("type") == "selected_image":
+    st.session_state.selected = int(st_js_event["index"])
 
 # Display selection
 if st.session_state.selected is not None:

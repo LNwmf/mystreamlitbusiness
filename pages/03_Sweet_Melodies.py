@@ -50,7 +50,7 @@ for i, col in enumerate(cols):
             st.session_state.selected = i
 
         # Add a red border if selected
-        border = "4px solid red" if st.session_state.selected == i else "4px solid transparent"
+        border = "4px solid blue" if st.session_state.selected == i else "4px solid transparent"
 
         st.markdown(
             f"""

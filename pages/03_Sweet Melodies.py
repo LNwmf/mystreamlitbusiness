@@ -7,7 +7,19 @@ st.set_page_config(
     layout="centered",
 )
 
+st.markdown(
+    """
+    <style>
+    /* Remove rounding from all images rendered by Streamlit */
+    img {
+        border-radius: 0 !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 st.image("https://theworldmusicfoundation.org/wp-content/uploads/2016/11/wmf_small_logo.png.webp", width=180)
+
 st.title("🍬 Sweet Melodies")
 st.markdown("""
 Welcome! Pick a dessert below to discover a blended playlist, support a local BIPOC business, and unlock a reward for sharing with others.

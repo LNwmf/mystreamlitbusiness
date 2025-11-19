@@ -52,6 +52,10 @@ for i, col in enumerate(cols):
         # Add a red border if selected
         border = "4px solid red" if st.session_state.selected == i else "4px solid transparent"
 
+        clicked = col.button(f"**{titles[i]}**", key=f"btn{i}")
+        if clicked:
+            st.session_state.selected = i
+
         st.markdown(
             f"""
             <div style="

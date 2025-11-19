@@ -32,6 +32,7 @@ with st.expander("Support Us", icon=":material/store:"):
     st.write()
     st.write("TikTok: https://www.tiktok.com/@theworldmusicfoundation")
 
+st.markdown("---")
 st.write("")
 st.write("")
 

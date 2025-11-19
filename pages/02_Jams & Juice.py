@@ -30,7 +30,7 @@ images = [
 
         "https://bouqs.com/blog/wp-content/uploads/2018/08/shutterstock_1662182848-min.jpg",
         "https://assets.clevelandclinic.org/transform/809a0d11-7f04-4b7f-b5f5-bd8b47a63c9a/tamarind-fruit-snack-1432243224",
-        "https://noshingwiththenolands.com/wp-content/uploads/2023/07/Hot-Honey-IMG_8472.jpg",
+        "https://garlicsaltandlime.com/wp-content/uploads/2022/03/Hot-honey-2-614x920.jpg",
         "https://5.imimg.com/data5/SELLER/Default/2024/11/469407212/QS/ZB/WD/21684370/1kg-fresh-ginger-500x500.jpeg",
 ]
 

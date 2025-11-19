@@ -1,20 +1,15 @@
+import os
 import streamlit as st
 
-st.title("Navigation")
-st.markdown("Welcome! Select a page to explore:")
+st.title("Check Page Filenames")
 
-# List of pages
-pages = [
-    "Jams & Juice",
-    "Sweet Melodies",
-    "Y2K Rewind",
-    "Sweater Weather Tunes",
-    "Craft & Sip",
-    "Serene Self-Care",
-    "Press Play to Party",
-    "Guess the Instrument!",
-    "Music Trivia"
-]
+pages_folder = "pages"
 
-for page in pages:
-    st.page_link(page, label=page)
+if os.path.exists(pages_folder):
+    st.write("Files found in `pages/` folder:")
+    for file in os.listdir(pages_folder):
+        st.write("•", file)
+else:
+    st.error("No `pages` folder found.")
+
+

@@ -50,38 +50,55 @@ images = [
 
 titles = ["Rose", "Tamarind", "Hot honey", "Ginger"]
 
-options = []
-for i, img in enumerate(images):
-    options.append(f"""
-    <div style="
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        border:{'4px solid red' if st.session_state.get('selected', None) == i else '4px solid transparent'};
-        border-radius:10px;
-        padding:3px;
-        margin:5px;
-        width:170px;
-    ">
-        <img src="{img}" style="width:170px; border-radius:10px;">
-        <div style="margin-top:5px; font-weight:bold;">{titles[i]}</div>
-    </div>
-    """)
+import streamlit as st
 
-# Radio button with images
-choice = st.radio(
-    "Select your ingredient:",
-    options,
-    format_func=lambda x: x,  # display raw HTML
-    index=st.session_state.get("selected", 0),
-    horizontal=True
-)
+st.write("Pick a secret ingredient:")
 
-# Store selection index
-st.session_state.selected = options.index(choice)
+images = [
+    "https://bouqs.com/blog/wp-content/uploads/2018/08/shutterstock_1662182848-min.jpg",
+    "https://assets.clevelandclinic.org/transform/809a0d11-7f04-4b7f-b5f5-bd8b47a63c9a/tamarind-fruit-snack-1432243224",
+    "https://noshingwiththenolands.com/wp-content/uploads/2023/07/Hot-Honey-IMG_8472.jpg",
+    "https://5.imimg.com/data5/SELLER/Default/2024/11/469407212/QS/ZB/WD/21684370/1kg-fresh-ginger-500x500.jpeg",
+]
 
-# Display selected title
-st.markdown(f"**Selected: {titles[st.session_state.selected]}**")
+titles = ["Rose", "Tamarind", "Hot honey", "Ginger"]
+
+# Track selected image
+if "selected" not in st.session_state:
+    st.session_state.selected = None
+
+# Layout the images in 4 columns
+cols = st.columns(4)
+
+for i, col in enumerate(cols):
+    with col:
+        # Clicking the button selects this image
+        if st.button(titles[i], key=f"btn{i}"):
+            st.session_state.selected = i
+
+        # Add a red border if selected
+        border = "4px solid red" if st.session_state.selected == i else "4px solid transparent"
+
+        st.markdown(
+            f"""
+            <div style="
+                border:{border};
+                border-radius:10px;
+                padding:3px;
+                display:flex;
+                justify-content:center;
+            ">
+                <img src="{images[i]}" style="width:170px; border-radius:10px;">
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+# Display selected caption
+if st.session_state.selected is not None:
+    st.markdown(f"**Selected: {titles[st.session_state.selected]}**")
+else:
+    st.markdown("**No image selected**")
 
 #Q4
 mood = ["Hot chocolate on a chilly night", "Wine during a thunderstorm", "Fresh lemonade on the beach", "Warm apple cider in a cabin"]

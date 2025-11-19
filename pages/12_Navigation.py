@@ -12,7 +12,6 @@ pages = {
     "🎉 Press Play to Party": "08_Press_Play_to_Party",
     "🎶 Guess the Instrument": "09_Guess_the_Instrument",
     "🎵 Music Trivia": "10_Music_Trivia",
-    "Images": "11_Images",
 }
 
 cols = st.columns(2)

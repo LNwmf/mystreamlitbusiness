@@ -17,7 +17,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 st.image("https://theworldmusicfoundation.org/wp-content/uploads/2016/11/wmf_small_logo.png.webp", width=180)
-st.title("🎵 Music Trivia Game")
+st.title("❓ Music Trivia Game")
 st.subheader("Test your knowledge of cultural music history and pop culture!")
 st.write("---")
 

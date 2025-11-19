@@ -82,7 +82,7 @@ def handle_event():
     import json
     from streamlit.runtime.scriptrunner import get_script_run_ctx
 
-st_js_event = st.experimental_get_javascript_event()
+st_js_event = st.query_params()
 
 if st_js_event and st_js_event.get("type") == "selected_image":
     st.session_state.selected = int(st_js_event["index"])

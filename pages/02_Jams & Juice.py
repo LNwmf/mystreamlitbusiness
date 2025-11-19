@@ -25,7 +25,7 @@ travel_options = ["Africa", "Antarctica", "Asia", "Australia", "Europe", "Latin 
 selected_travel = st.selectbox("Which place do you wish to travel to one day?", travel_options, index=None)
 
 #Q3
-st.write("Double-click a button to select a secret ingredient:")
+st.write("Pick a secret ingredient: (double-click)")
 images = [
 
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/realroses.jpg",

@@ -35,42 +35,54 @@ images = [
 
 titles=["Rose", "Tamarind", "Hot honey", "Ginger"]
 
-# Track selected image
 if "selected" not in st.session_state:
     st.session_state.selected = None
 
-# Layout the images in 4 columns
+# Create 4 columns
 cols = st.columns(4)
 
 for i, col in enumerate(cols):
     with col:
-        # Clicking the button selects this image
-        if st.button(titles[i], key=f"btn{i}"):
-            st.session_state.selected = i
-
-        # Add a red border if selected
+        # Determine border color
         border = "4px solid red" if st.session_state.selected == i else "4px solid transparent"
 
-        st.markdown(
+        # Image wrapped in an HTML form button (clickable image)
+        clicked = st.markdown(
             f"""
-            <div style="
-                border:{border};
-                border-radius:10px;
-                padding:3px;
-                display:flex;
-                justify-content:center;
-            ">
-                <img src="{images[i]}" style="width:170px; border-radius:10px;">
-            </div>
+            <form action="" method="post">
+                <button type="submit" name="choice" value="{i}"
+                    style="padding:0; border:none; background:none; cursor:pointer;">
+                    <div style="
+                        border:{border};
+                        border-radius:10px;
+                        padding:3px;
+                        display:flex;
+                        justify-content:center;
+                    ">
+                        <img src="{images[i]}" style="width:170px; border-radius:10px;">
+                    </div>
+                </button>
+            </form>
             """,
             unsafe_allow_html=True,
         )
+
+# Capture click
+choice = st.experimental_get_query_params().get("choice")
+
+# Alternative POST handling method for Streamlit
+choice = st.session_state.get("choice")
+
+if choice is not None:
+    st.session_state.selected = int(choice)
+    st.session_state.choice = None  # Reset stored choice
 
 # Display selected caption
 if st.session_state.selected is not None:
     st.markdown(f"**Selected: {titles[st.session_state.selected]}**")
 else:
     st.markdown("**No image selected**")
+
 #Q4
 mood = ["Hot chocolate on a chilly night", "Wine during a thunderstorm", "Fresh lemonade on the beach", "Warm apple cider in a cabin"]
 selected_mood = st.selectbox("Which scenario sounds the most enjoyable?", mood, index=None)

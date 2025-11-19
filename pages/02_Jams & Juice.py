@@ -37,7 +37,7 @@ images = [
 titles=["Rose", "Tamarind", "Hot honey", "Ginger"]
 
 
-# Track selected
+# Track selection
 if "selected" not in st.session_state:
     st.session_state.selected = None
 
@@ -45,37 +45,29 @@ cols = st.columns(4)
 
 for i, col in enumerate(cols):
     with col:
-        # Create a button containing the image
-        clicked = st.button(
-            label=" ",
-            key=f"image_button_{i}",
-            help=titles[i],
-        )
-
-        # If clicked, update state
-        if clicked:
-            st.session_state.selected = i
-
-        # Calculate border
+        # Determine border
         border = "4px solid red" if st.session_state.selected == i else "4px solid transparent"
 
-        # Render the image with dynamic border
-        st.markdown(
-            f"""
-            <div style="
+        # Render clickable image using st.button
+        if st.button(
+            label=f"""
+            <div style='
                 border:{border};
                 border-radius:10px;
                 padding:3px;
-                text-align:center;
-            ">
-                <img src="{images[i]}" style="width:170px; border-radius:10px; cursor:pointer;">
-                <div style="margin-top:5px; font-weight:bold;">{titles[i]}</div>
+                display:flex;
+                justify-content:center;
+            '>
+                <img src="{images[i]}" style='width:170px; border-radius:10px;'>
             </div>
             """,
-            unsafe_allow_html=True,
-        )
+            key=f"img_button_{i}",
+            help=titles[i],
+            use_container_width=False,
+        ):
+            st.session_state.selected = i
 
-# Show selected
+# Display selection text
 if st.session_state.selected is not None:
     st.markdown(f"**Selected: {titles[st.session_state.selected]}**")
 else:

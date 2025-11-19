@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("🏠 Music Hub")
+st.title("Navigation")
 st.markdown("Welcome! Select a page to explore:")
 
 # List of pages

@@ -72,7 +72,7 @@ for i, col in enumerate(cols):
 #else:
 #    st.markdown("**No image selected**")
 
-st.write()
+st.write("")
 
 #Q4
 mood = ["Hot chocolate on a chilly night", "Wine during a thunderstorm", "Fresh lemonade on the beach", "Warm apple cider in a cabin"]

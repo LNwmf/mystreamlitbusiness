@@ -41,38 +41,34 @@ titles=["Rose", "Tamarind", "Hot honey", "Ginger"]
 if "selected" not in st.session_state:
     st.session_state.selected = None
 
-# Build the clickable HTML grid
-html = """
-<div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
-"""
+# Layout the images in 4 columns
+cols = st.columns(4)
 
-for i, img in enumerate(images):
+for i, col in enumerate(cols):
+    with col:
+        # Clicking the button selects this image
+        if st.button(titles[i], key=f"btn{i}"):
+            st.session_state.selected = i
 
-    is_selected = (st.session_state.selected == i)
-    border = "4px solid red" if is_selected else "4px solid transparent"
+        # Add a red border if selected
+        border = "4px solid red" if st.session_state.selected == i else "4px solid transparent"
 
-    html += f"""
-        <form action="" method="post">
-            <button name="choice" value="{i}" 
-                    style="border:none; background:none; padding:0; cursor:pointer;">
-                <img src="{img}" 
-                     style="width:170px; border-radius:10px; border:{border};">
-            </button>
-        </form>
-    """
+        st.markdown(
+            f"""
+            <div style="
+                border:{border};
+                border-radius:10px;
+                padding:3px;
+                display:flex;
+                justify-content:center;
+            ">
+                <img src="{images[i]}" style="width:170px; border-radius:10px;">
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
 
-html += "</div>"
-
-# Render the HTML
-components.html(html, height=350)
-
-# Capture click result (Streamlit stores POST data in st.session_state)
-choice = st.session_state.get("choice")
-if choice is not None:
-    st.session_state.selected = int(choice)
-    st.session_state.choice = None  # clear
-
-# Output selection
+# Display selected caption
 if st.session_state.selected is not None:
     st.markdown(f"**Selected: {titles[st.session_state.selected]}**")
 else:

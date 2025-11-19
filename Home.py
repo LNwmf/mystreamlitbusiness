@@ -7,7 +7,7 @@ st.title("About Us")
 st.write("This app is created by the World Music Foundation to share music and uplift local businesses. Each page includes a series of questions that returns a playlist and promotes a small business. There's also a guessing and trivia game to test your musical knowledge!")
 
 
-st.markdown("---")
+#st.markdown("---")
 with st.expander("Our Purpose", icon=":material/target:"):
     st.write("The World Music Foundation is a 501(c)(3) non-profit organization dedicated to a simple mission: opening minds through Music. We believe, and research shows, that experiencing music of other cultures increases tolerance and cultural empathy in people, and everything that we do is based on effecting this social change. Racism continues to be one of the world’s greatest problems and Music is a proven armament in this fight.")
 
@@ -35,9 +35,9 @@ with st.expander("Support Us", icon=":material/store:"):
 st.write("")
 st.write("")
 
-st.subheader("Navigation")
+st.header("Navigation")
 st.write("Click a page to be automatically redirected.")
-st.markdown("---")
+#st.markdown("---")
 
 pages = {
     "🍹 Jams & Juice": "02_Jams_and_Juice",

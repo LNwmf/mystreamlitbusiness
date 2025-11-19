@@ -229,9 +229,9 @@ if st.session_state.instrument:
 if st.session_state.message:
     if "Correct!" in st.session_state.message or "correct answer" in st.session_state.message:
         st.success(st.session_state.message)
-        st.image(quiz[st.session_state.instrument]["image"], width=300)
+        st.image(quiz[st.session_state.instrument]["image"], width=400)
     elif "Wrong" in st.session_state.message:
         st.error(st.session_state.message)
     elif "The correct answer" in st.session_state.message:  # For "Give Up"
         st.warning(st.session_state.message)
-        st.image(quiz[st.session_state.instrument]["image"], width=300)
+        st.image(quiz[st.session_state.instrument]["image"], width=400)

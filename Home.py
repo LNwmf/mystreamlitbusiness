@@ -33,8 +33,11 @@ with st.expander("Support Us", icon=":material/store:"):
     st.write("TikTok: https://www.tiktok.com/@theworldmusicfoundation")
 
 st.write("")
+st.write("")
 
-st.header("Navigation")
+st.subheader("Navigation")
+st.write("Click a page to be automatically redirected.")
+st.markdown("---")
 
 pages = {
     "🍹 Jams & Juice": "02_Jams_and_Juice",

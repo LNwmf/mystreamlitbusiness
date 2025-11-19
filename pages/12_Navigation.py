@@ -1,5 +1,7 @@
 import streamlit as st
 
+st.title("🎵 Explore Your Pages")
+
 pages = {
     "Jams & Juice": "02_Jams_and_Juice",
     "Sweet Melodies": "03_Sweet_Melodies",
@@ -13,10 +15,14 @@ pages = {
     "Images": "11_Images",
 }
 
-choice = st.selectbox("Choose a page:", pages.keys())
+cols = st.columns(2)
 
-if st.button("Go"):
-    st.switch_page(f"pages/{pages[choice]}.py")
+i = 0
+for label, file in pages.items():
+    with cols[i % 2]:
+        if st.button(f"🎧 {label}", use_container_width=True):
+            st.switch_page(f"pages/{file}.py")
+    i += 1
 
 
 

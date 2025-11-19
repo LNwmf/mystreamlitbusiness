@@ -35,49 +35,40 @@ images = [
 
 titles=["Rose", "Tamarind", "Hot honey", "Ginger"]
 
+# Track selected image
 if "selected" not in st.session_state:
     st.session_state.selected = None
 
-# Create 4 columns
-cols = st.columns(4)
+# Build HTML grid
+html = """
+<div style='display:flex; gap:20px; justify-content:center;'>
+"""
 
-for i, col in enumerate(cols):
-    with col:
-        # Determine border color
-        border = "4px solid red" if st.session_state.selected == i else "4px solid transparent"
+for i, img in enumerate(images):
+    is_selected = (st.session_state.selected == i)
+    border = "4px solid red" if is_selected else "4px solid transparent"
 
-        # Image wrapped in an HTML form button (clickable image)
-        clicked = st.markdown(
-            f"""
-            <form action="" method="post">
-                <button type="submit" name="choice" value="{i}"
-                    style="padding:0; border:none; background:none; cursor:pointer;">
-                    <div style="
-                        border:{border};
-                        border-radius:10px;
-                        padding:3px;
-                        display:flex;
-                        justify-content:center;
-                    ">
-                        <img src="{images[i]}" style="width:170px; border-radius:10px;">
-                    </div>
-                </button>
-            </form>
-            """,
-            unsafe_allow_html=True,
-        )
+    html += f"""
+        <form action="" method="post">
+            <button name="choice" value="{i}" 
+                style="border:none; background:none; padding:0; cursor:pointer;">
+                <img src="{img}" 
+                     style="width:170px; border-radius:10px; border:{border};">
+            </button>
+        </form>
+    """
 
-# Capture click
-choice = st.query_params().get("choice")
+html += "</div>"
 
-# Alternative POST handling method for Streamlit
-choice = st.session_state.get("choice")
+# Render interactive HTML block
+components.html(html, height=350)
 
-if choice is not None:
-    st.session_state.selected = int(choice)
-    st.session_state.choice = None  # Reset stored choice
+# Check for POSTed value
+if "choice" in st.session_state:
+    st.session_state.selected = int(st.session_state.choice)
+    del st.session_state["choice"]  # clear it
 
-# Display selected caption
+# Display selection
 if st.session_state.selected is not None:
     st.markdown(f"**Selected: {titles[st.session_state.selected]}**")
 else:

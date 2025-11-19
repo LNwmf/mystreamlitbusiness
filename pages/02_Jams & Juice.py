@@ -35,42 +35,27 @@ images = [
 
 titles=["Rose", "Tamarind", "Hot honey", "Ginger"]
 
-if "selected_index" not in st.session_state:
-    st.session_state.selected_index = -1
+if "selected" not in st.session_state:
+    st.session_state.selected = None
 
+cols = st.columns(4)
 
-clicked = clickable_images(
-    images,
-    titles=titles,
-    div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap", "gap": "10px"},
-    img_style={"height": "170px", "border-radius": "10px"}
-)
+for i, col in enumerate(cols):
+    with col:
+        clicked = st.button("", key=f"imgBtn{i}")
+        if clicked:
+            st.session_state.selected = i
 
-if clicked > -1:
-    st.session_state.selected_index = clicked
-    st.markdown(f"**{titles[clicked]} selected**")
+        # enlarge if selected
+        size = 180 if st.session_state.selected == i else 160
+
+        st.image(images[i], width=size, caption=titles[i])
+
+# Display selected title
+if st.session_state.selected is not None:
+    st.markdown(f"**Selected: {titles[st.session_state.selected]}**")
 else:
     st.markdown("**No image selected**")
-
-# Inject CSS to scale the selected image container
-selected = st.session_state.selected_index
-if selected > -1:
-    st.markdown(
-        f"""
-        <style>
-            /* Add smooth animation to all containers */
-            .image-container {{
-                transition: transform 0.2s ease;
-            }}
-
-            /* Enlarge only the selected image */
-            .image-container:nth-child({selected + 1}) {{
-                transform: scale(1.08);
-            }}
-        </style>
-        """,
-        unsafe_allow_html=True,
-    )
 
 #Q4
 mood = ["Hot chocolate on a chilly night", "Wine during a thunderstorm", "Fresh lemonade on the beach", "Warm apple cider in a cabin"]

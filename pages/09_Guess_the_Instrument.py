@@ -33,7 +33,8 @@ quiz = {
             "Clue 4: Famous artists like Ravi Shankar, The Beatles and The Rolling Stones incorporated it into their music."
         ],
         "options": ["Cuatro", "Bouzouki", "Sitar", "Koto"],
-        "audio": "https://i.imgur.com/3ppJb3W.mp4"
+        "audio": "https://i.imgur.com/3ppJb3W.mp4",
+        "image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/guess_sitar.jpg"
     },
     "Mbira": {
         "clues": [
@@ -43,7 +44,8 @@ quiz = {
             "Clue 4: It is played by plucking metal tines on a wooden board."
         ],
         "options": ["Mbira", "Djembe", "Harpsichord", "Carillon"],
-        "audio": "https://i.imgur.com/KORLtbB.mp4"
+        "audio": "https://i.imgur.com/KORLtbB.mp4",
+        "image": "https://theworldmusicfoundation.org/wp-content/instrument_images/ext.Zimbabwe_Mbira.jpg"
     },
     "Guiro": {
         "clues": [
@@ -53,7 +55,8 @@ quiz = {
             "Clue 4: It is traditionally made from gourds."
         ],
         "options": ["Slapstick", "Guiro", "Castanets", "Claves"],
-        "audio": "https://i.imgur.com/EuCqgr6.mp4"
+        "audio": "https://i.imgur.com/EuCqgr6.mp4",
+        "image": ""
     },
     "Sheng": {
         "clues": [
@@ -63,7 +66,8 @@ quiz = {
             "Clue 4: One of the oldest instruments to use a free reed, allowing multiple notes at once."
         ],
         "options": ["Dizi", "Bagpipes", "Pan flute", "Sheng"],
-        "audio": "https://i.imgur.com/csz0rsf.mp4"
+        "audio": "https://i.imgur.com/csz0rsf.mp4",
+        "image": ""
     },
     "Valiha": {
         "clues": [
@@ -73,9 +77,10 @@ quiz = {
             "Clue 4: Made out of bamboo."
         ],
         "options": ["Didgeridoo", "Valiha", "Qanun", "Harp"],
-        "audio": "https://i.imgur.com/lEroSAB.mp4"
+        "audio": "https://i.imgur.com/lEroSAB.mp4",
+        "image": ""
     },
-    "Atumpan": {
+    "Atumpan": { #check accuracy of answer
         "clues": [
             "Clue 1: It is played with two L-shaped sticks or hands.",
             "Clue 2: Referred to as a 'talking drum' due to its extensive range of sound and ability to imitate language.",
@@ -83,7 +88,8 @@ quiz = {
             "Clue 4: A traditional instrument of Ghana."
         ],
         "options": ["Steel drum", "Darbuka", "Bongo", "Bata drum"],
-        "audio": "https://i.imgur.com/jC2jK7p.mp4"
+        "audio": "https://i.imgur.com/jC2jK7p.mp4",
+        "image": ""
     },
     "Santur": {
         "clues": [
@@ -93,7 +99,8 @@ quiz = {
             "Clue 4: A traditional instrument of Iran."
         ],
         "options": ["Santur", "Yangqin", "Dutar", "Lyre"],
-        "audio": "https://i.imgur.com/O3E44tr.mp4"
+        "audio": "https://i.imgur.com/O3E44tr.mp4",
+        "image": ""
     },
     "Ngoni": {
         "clues": [
@@ -103,7 +110,8 @@ quiz = {
             "Clue 4: Significant in traditional ceremonies and festivals in West Africa."
         ],
         "options": ["Morinkhuur", "Ukulele", "Ardin", "Ngoni"],
-        "audio": "https://i.imgur.com/of9y4pB.mp4"
+        "audio": "https://i.imgur.com/of9y4pB.mp4",
+        "image": ""
     },
     "Hardanger fiddle": {
         "clues": [
@@ -113,7 +121,8 @@ quiz = {
             "Clue 4: Notable musician Ole Bull helped popularize the instrument."
         ],
         "options": ["Hardanger fiddle", "Violin", "Sitar", "Nyckelharpa"],
-        "audio": "https://i.imgur.com/rUCyalx.mp4"
+        "audio": "https://i.imgur.com/rUCyalx.mp4",
+        "image": ""
     },
     "Nzumari": {
         "clues": [
@@ -123,7 +132,8 @@ quiz = {
             "Clue 4: Played similar to an oboe and includes a double reed."
         ],
         "options": ["Zurna", "Nzumari", "Algaita", "Siwa"],
-        "audio": "https://i.imgur.com/AWcjohn.mp4"
+        "audio": "https://i.imgur.com/AWcjohn.mp4",
+        "image": ""
     }
 }
 
@@ -219,5 +229,9 @@ if st.session_state.instrument:
 if st.session_state.message:
     if "Correct!" in st.session_state.message or "correct answer" in st.session_state.message:
         st.success(st.session_state.message)
+        st.image(quiz[st.session_state.instrument]["image"], width=300)
     elif "Wrong" in st.session_state.message:
         st.error(st.session_state.message)
+    elif "The correct answer" in st.session_state.message:  # For "Give Up"
+        st.warning(st.session_state.message)
+        st.image(quiz[st.session_state.instrument]["image"], width=300)

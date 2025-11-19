@@ -9,8 +9,22 @@ st.set_page_config(
     page_icon="🍹",
     layout="centered",
 )
+# CSS to remove rounded corners from all images
+st.markdown(
+    """
+    <style>
+    /* Remove rounding from all images rendered by Streamlit */
+    img {
+        border-radius: 0 !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
+# Now use st.image normally
 st.image("https://theworldmusicfoundation.org/wp-content/uploads/2016/11/wmf_small_logo.png.webp", width=180)
+
 st.title("🍹 Jams & Juice")
 st.markdown("""
 Welcome! Pick a drink below to discover a blended playlist, support a local BIPOC business, and unlock a reward for sharing with others.

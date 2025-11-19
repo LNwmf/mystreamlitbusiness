@@ -66,6 +66,7 @@ for i, col in enumerate(cols):
                 justify-content:center;
             ">
                 <img src="{images[i]}" style="width:170px; border-radius:10px;">
+                <div style="font-weight: bold;" margin-top:5px;">{titles[i]}</div>
             </div>
             """,
             unsafe_allow_html=True,

@@ -82,7 +82,7 @@ images = [
         "https://www.arch2o.com/wp-content/uploads/2023/01/Arch2O-modern-fireplace-design-ideas.jpg",
 ]
 
-titles=["Quiet loft studio", "Cozy cafe on a gloomy day", "Sunny lakeside dock", "Late nights by the fire"]
+titles=["Quiet loft studio", "Cozy cafe on a gloomy day", "Sunny lakeside", "Late nights by the fire"]
 
 if "selected_place" not in st.session_state:
     st.session_state.selected_place = None

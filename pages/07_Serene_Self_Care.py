@@ -1,5 +1,4 @@
 import streamlit as st
-from st_clickable_images import clickable_images
 
 st.set_page_config(
     page_title="Serene Self-Care",
@@ -9,7 +8,6 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    /* Remove rounding from all images rendered by Streamlit */
     img {
         border-radius: 0 !important;
     }
@@ -35,24 +33,47 @@ images = [
 
 titles=["Taking a warm bath", "Going on a nature walk", "Listening to music", "Treating myself to a meal"]
 
-clicked = clickable_images(
-    images,
-    titles=titles,
-    div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
-    img_style={"margin": "5px", "height": "200px"},
+if "selected_unwind" not in st.session_state:
+    st.session_state.selected_unwind = None
+
+cols = st.columns(4)
+
+for i, col in enumerate(cols):
+    with col:
+        # Clicking the button selects this image
+        if st.button(titles[i], key=f"btn_unwind_{i}"):
+            st.session_state.selected_unwind = i
+
+        # Add a red border if selected
+        border = "4px solid red" if st.session_state.selected_unwind == i else "4px solid transparent"
+
+        st.markdown(
+            f"""
+            <div style="
+                border:{border};
+                border-radius:10px;
+                padding:3px;
+                display:flex;
+                justify-content:center;
+            ">
+                <img src="{images[i]}" style="width:170px; border-radius:10px;">
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+selected_unwind = (
+    titles[st.session_state.selected_unwind]
+    if st.session_state.get("selected_unwind") is not None
+    else None
 )
 
-if clicked > -1:
-    st.markdown(f"**{titles[clicked]} selected**")
-else:
-    st.markdown("**No image selected**")
-# Get the selected image title if one is clicked
-selected_unwind = titles[clicked] if clicked > -1 else None
-
+#gap
+st.write("")
 
 #Q2
-scent = ["Lavender", "Jasmine", "Eucalyptus", "Sandalwood"]
-selected_scent = st.selectbox("Select a scent:", scent, index=None)
+act = ["Paint or draw", "Listen to music", "Journal", "Cook new recipes"]
+selected_act = st.selectbox("If you had one hour to completely relax, what activity would you do?", act, index=None)
 
 #Q3
 secret = ["Confidence", "Wonder", "Relaxation", "Magic"]

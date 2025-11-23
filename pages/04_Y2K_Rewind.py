@@ -98,7 +98,6 @@ for i, col in enumerate(cols):
         if st.button(titles[i], key=f"btn_movie_{i}"):
             st.session_state.selected_movie = i
 
-        # Add a red border if selected
         border = "4px solid red" if st.session_state.selected_movie == i else "4px solid transparent"
 
         st.markdown(
@@ -116,7 +115,7 @@ for i, col in enumerate(cols):
             unsafe_allow_html=True,
         )
 
-selected_tech = (
+selected_movie = (
     titles[st.session_state.selected_movie]
     if st.session_state.get("selected_movie") is not None
     else None
@@ -175,77 +174,90 @@ info = None
 y2k_choice = st.selectbox("Pick an artist!", ["", *y2k_data.keys()])
 
 y2k_map = {
-("Flip phones", "Mean Girls", "Britney Spears"): "Britney Spears",
-("Flip phones", "Mean Girls", "Usher"): "Usher",
-("Flip phones", "Mean Girls", "Green Day"): "Green Day",
-("Flip phones", "Mean Girls", "Destiny's Child"): "Destiny's Child",
-("Flip phones", "10 Things I Hate About You", "Britney Spears"): "Green Day",
-("Flip phones", "10 Things I Hate About You", "Usher"): "Usher",
-("Flip phones", "10 Things I Hate About You", "Green Day"): "Britney Spears",
-("Flip phones", "10 Things I Hate About You", "Destiny's Child"): "Britney Spears",
-("Flip phones", "Lord of the Rings Trilogy", "Britney Spears"): "Green Day",
-("Flip phones", "Lord of the Rings Trilogy", "Usher"): "Green Day",
-("Flip phones", "Lord of the Rings Trilogy", "Green Day"): "Britney Spears",
-("Flip phones", "Lord of the Rings Trilogy", "Destiny's Child"): "Usher",
-("Flip phones", "13 Going On 30", "Britney Spears"): "Destiny's Child",
-("Flip phones", "13 Going On 30", "Usher"): "Destiny's Child",
-("Flip phones", "13 Going On 30", "Green Day"): "Britney Spears",
-("Flip phones", "13 Going On 30", "Destiny's Child"): "Usher",
+("Flip phones", "Mean Girls", "Cyber kid"): "Green Day",
+("Flip phones", "Mean Girls", "Pop princess"): "Britney Spears",
+("Flip phones", "Mean Girls", "Fashion icon"): "Destiny's Child",
+("Flip phones", "Mean Girls", "Chill surfer"): "Usher",
 
-("MP3 players", "Mean Girls", "Britney Spears"): "Britney Spears",
-("MP3 players", "Mean Girls", "Usher"): "Green Day",
-("MP3 players", "Mean Girls", "Green Day"): "Destiny's Child",
-("MP3 players", "Mean Girls", "Destiny's Child"): "Destiny's Child",
-("MP3 players", "10 Things I Hate About You", "Britney Spears"): "Usher",
-("MP3 players", "10 Things I Hate About You", "Usher"): "Usher",
-("MP3 players", "10 Things I Hate About You", "Green Day"): "Britney Spears",
-("MP3 players", "10 Things I Hate About You", "Destiny's Child"): "Britney Spears",
-("MP3 players", "Lord of the Rings Trilogy", "Britney Spears"): "Green Day",
-("MP3 players", "Lord of the Rings Trilogy", "Usher"): "Britney Spears",
-("MP3 players", "Lord of the Rings Trilogy", "Green Day"): "Green Day",
-("MP3 players", "Lord of the Rings Trilogy", "Destiny's Child"): "Usher",
-("MP3 players", "13 Going On 30", "Britney Spears"): "Britney Spears",
-("MP3 players", "13 Going On 30", "Usher"): "Green Day",
-("MP3 players", "13 Going On 30", "Green Day"): "Usher",
-("MP3 players", "13 Going On 30", "Destiny's Child"): "Britney Spears",
+("Flip phones", "10 Things I Hate About You", "Cyber kid"): "Destiny's Child",
+("Flip phones", "10 Things I Hate About You", "Pop princess"): "Britney Spears",
+("Flip phones", "10 Things I Hate About You", "Fashion icon"): "Britney Spears",
+("Flip phones", "10 Things I Hate About You", "Chill surfer"): "Green Day",
 
-("Nintendo DS", "Mean Girls", "Britney Spears"): "Usher",
-("Nintendo DS", "Mean Girls", "Usher"): "Usher",
-("Nintendo DS", "Mean Girls", "Green Day"): "Green Day",
-("Nintendo DS", "Mean Girls", "Destiny's Child"): "Destiny's Child",
-("Nintendo DS", "10 Things I Hate About You", "Britney Spears"): "Destiny's Child",
-("Nintendo DS", "10 Things I Hate About You", "Usher"): "Destiny's Child",
-("Nintendo DS", "10 Things I Hate About You", "Green Day"): "Britney Spears",
-("Nintendo DS", "10 Things I Hate About You", "Destiny's Child"): "Green Day",
-("Nintendo DS", "Lord of the Rings Trilogy", "Britney Spears"): "Usher",
-("Nintendo DS", "Lord of the Rings Trilogy", "Usher"): "Usher",
-("Nintendo DS", "Lord of the Rings Trilogy", "Green Day"): "Britney Spears",
-("Nintendo DS", "Lord of the Rings Trilogy", "Destiny's Child"): "Green Day",
-("Nintendo DS", "13 Going On 30", "Britney Spears"): "Destiny's Child",
-("Nintendo DS", "13 Going On 30", "Usher"): "Green Day",
-("Nintendo DS", "13 Going On 30", "Green Day"): "Britney Spears",
-("Nintendo DS", "13 Going On 30", "Destiny's Child"): "Usher",
+("Flip phones", "Lord of the Rings Trilogy", "Cyber kid"): "Green Day",
+("Flip phones", "Lord of the Rings Trilogy", "Pop princess"): "Destiny's Child",
+("Flip phones", "Lord of the Rings Trilogy", "Fashion icon"): "Destiny's Child",
+("Flip phones", "Lord of the Rings Trilogy", "Chill surfer"): "Usher",
 
-("Digital cameras", "Mean Girls", "Britney Spears"): "Britney Spears",
-("Digital cameras", "Mean Girls", "Usher"): "Usher",
-("Digital cameras", "Mean Girls", "Green Day"): "Green Day",
-("Digital cameras", "Mean Girls", "Destiny's Child"): "Destiny's Child",
-("Digital cameras", "10 Things I Hate About You", "Britney Spears"): "Usher",
-("Digital cameras", "10 Things I Hate About You", "Usher"): "Green Day",
-("Digital cameras", "10 Things I Hate About You", "Green Day"): "Green Day",
-("Digital cameras", "10 Things I Hate About You", "Destiny's Child"): "Britney Spears",
-("Digital cameras", "Lord of the Rings Trilogy", "Britney Spears"): "Green Day",
-("Digital cameras", "Lord of the Rings Trilogy", "Usher"): "Green Day",
-("Digital cameras", "Lord of the Rings Trilogy", "Green Day"): "Britney Spears",
-("Digital cameras", "Lord of the Rings Trilogy", "Destiny's Child"): "Britney Spears",
-("Digital cameras", "13 Going On 30", "Britney Spears"): "Destiny's Child",
-("Digital cameras", "13 Going On 30", "Usher"): "Destiny's Child",
-("Digital cameras", "13 Going On 30", "Green Day"): "Britney Spears",
-("Digital cameras", "13 Going On 30", "Destiny's Child"): "Green Day",
+("Flip phones", "13 Going On 30", "Cyber kid"): "Destiny's Child",
+("Flip phones", "13 Going On 30", "Pop princess"): "Usher",
+("Flip phones", "13 Going On 30", "Fashion icon"): "Usher",
+("Flip phones", "13 Going On 30", "Chill surfer"): "Destiny's Child",
+
+("MP3 players", "Mean Girls", "Cyber kid"): "Green Day",
+("MP3 players", "Mean Girls", "Pop princess"): "Green Day",
+("MP3 players", "Mean Girls", "Fashion icon"): "Britney Spears",
+("MP3 players", "Mean Girls", "Chill surfer"): "Britney Spears",
+
+("MP3 players", "10 Things I Hate About You", "Cyber kid"): "Destiny's Child",
+("MP3 players", "10 Things I Hate About You", "Pop princess"): "Usher",
+("MP3 players", "10 Things I Hate About You", "Fashion icon"): "Usher",
+("MP3 players", "10 Things I Hate About You", "Chill surfer"): "Green Day",
+
+("MP3 players", "Lord of the Rings Trilogy", "Cyber kid"): "Britney Spears",
+("MP3 players", "Lord of the Rings Trilogy", "Pop princess"): "Destiny's Child",
+("MP3 players", "Lord of the Rings Trilogy", "Fashion icon"): "Green Day",
+("MP3 players", "Lord of the Rings Trilogy", "Chill surfer"): "Green Day",
+
+("MP3 players", "13 Going On 30", "Cyber kid"): "Destiny's Child",
+("MP3 players", "13 Going On 30", "Pop princess"): "Usher",
+("MP3 players", "13 Going On 30", "Fashion icon"): "Destiny's Child",
+("MP3 players", "13 Going On 30", "Chill surfer"): "Usher",
+
+("Nintendo DS", "Mean Girls", "Cyber kid"): "Green Day",
+("Nintendo DS", "Mean Girls", "Pop princess"): "Destiny's Child",
+("Nintendo DS", "Mean Girls", "Fashion icon"): "Usher",
+("Nintendo DS", "Mean Girls", "Chill surfer"): "Green Day",
+
+("Nintendo DS", "10 Things I Hate About You", "Cyber kid"): "Usher",
+("Nintendo DS", "10 Things I Hate About You", "Pop princess"): "Usher",
+("Nintendo DS", "10 Things I Hate About You", "Fashion icon"): "Green Day",
+("Nintendo DS", "10 Things I Hate About You", "Chill surfer"): "Britney Spears",
+
+("Nintendo DS", "Lord of the Rings Trilogy", "Cyber kid"): "Britney Spears",
+("Nintendo DS", "Lord of the Rings Trilogy", "Pop princess"): "Green Day",
+("Nintendo DS", "Lord of the Rings Trilogy", "Fashion icon"): "Britney Spears",
+("Nintendo DS", "Lord of the Rings Trilogy", "Chill surfer"): "Usher",
+
+("Nintendo DS", "13 Going On 30", "Cyber kid"): "Destiny's Child",
+("Nintendo DS", "13 Going On 30", "Pop princess"): "Destiny's Child",
+("Nintendo DS", "13 Going On 30", "Fashion icon"): "Usher",
+("Nintendo DS", "13 Going On 30", "Chill surfer"): "Green Day",
+
+("Digital cameras", "Mean Girls", "Cyber kid"): "Green Day",
+("Digital cameras", "Mean Girls", "Pop princess"): "Destiny's Child",
+("Digital cameras", "Mean Girls", "Fashion icon"): "Green Day",
+("Digital cameras", "Mean Girls", "Chill surfer"): "Destiny's Child",
+
+("Digital cameras", "10 Things I Hate About You", "Cyber kid"): "Green Day",
+("Digital cameras", "10 Things I Hate About You", "Pop princess"): "Green Day",
+("Digital cameras", "10 Things I Hate About You", "Fashion icon"): "Usher",
+("Digital cameras", "10 Things I Hate About You", "Chill surfer"): "Destiny's Child",
+
+("Digital cameras", "Lord of the Rings Trilogy", "Cyber kid"): "Britney Spears",
+("Digital cameras", "Lord of the Rings Trilogy", "Pop princess"): "Usher",
+("Digital cameras", "Lord of the Rings Trilogy", "Fashion icon"): "Green Day",
+("Digital cameras", "Lord of the Rings Trilogy", "Chill surfer"): "Britney Spears",
+
+("Digital cameras", "13 Going On 30", "Cyber kid"): "Destiny's Child",
+("Digital cameras", "13 Going On 30", "Pop princess"): "Green Day",
+("Digital cameras", "13 Going On 30", "Fashion icon"): "Destiny's Child",
+("Digital cameras", "13 Going On 30", "Chill surfer"): "Usher",
+
 }
 
-if selected_tech and selected_movie and y2k_choice:
-    user_combo = (selected_tech, selected_movie, y2k_choice)
+if selected_tech and selected_movie and selected_ppl and y2k_choice:
+    user_combo = (selected_tech, selected_movie, selected_ppl)
     result_key = y2k_map.get(user_combo)
     # Retrieve information about selected drink/business
     if result_key:
@@ -269,5 +281,5 @@ if selected_tech and selected_movie and y2k_choice:
         if shared_count >= 3:
             st.balloons()  # Add some confetti for fun
             st.success(f"🎁 You unlocked a reward! Show this screen at {info['booth_name']} to claim your prize!")
-        else:
+    else:
             st.warning("⏳ Share your playlist with at least 3 people to unlock your reward!")

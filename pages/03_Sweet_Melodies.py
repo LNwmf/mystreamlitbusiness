@@ -49,7 +49,7 @@ for i, col in enumerate(cols):
             st.session_state.selected_flavor = i
 
         # Add a red border if selected
-        border = "4px solid red" if st.session_state.selected == i else "4px solid transparent"
+        border = "4px solid red" if st.session_state.selected_flavor == i else "4px solid transparent"
 
         st.markdown(
             f"""
@@ -101,7 +101,7 @@ for i, col in enumerate(cols):
             st.session_state.selected_season = i
 
         # Add a red border if selected
-        border = "4px solid red" if st.session_state.selected == i else "4px solid transparent"
+        border = "4px solid red" if st.session_state.selected_season == i else "4px solid transparent"
 
         st.markdown(
             f"""

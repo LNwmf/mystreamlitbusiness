@@ -175,7 +175,6 @@ fall_data = {
 
 info = None
 
-fall_choice = st.selectbox("Pick a fall activity!", ["", *fall_data.keys()])
 
 
 fall_map = {
@@ -251,7 +250,7 @@ fall_map = {
 
 
 
-if selected_film and selected_element and selected_fall and fall_choice:
+if selected_film and selected_element and selected_fall:
     user_combo = (selected_film, selected_element, selected_fall)
     result_key = fall_map.get(user_combo)
 

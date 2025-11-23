@@ -85,10 +85,10 @@ selected_life = st.selectbox("If your life were a dessert, what would it be made
 st.write("What season defines you?")
 images = [
 
-        "https://content.thriveglobal.com/wp-content/uploads/2020/06/summer.jpg",
-        "https://watchandlearn.scholastic.com/content/dam/classroom-magazines/watchandlearn/videos/earth-and-space/seasons/signs-of-winter/english/wall-2018-signsofwintermp4.transform/content-tile-large/image.png",
-        "https://www.abc27.com/wp-content/uploads/sites/55/2022/03/GettyImages-1130636356.jpg?w=1280",
-        "https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?cs=srgb&dl=pexels-pixabay-33109.jpg&fm=jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/summer.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/winter.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/spring.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/autumn.jpg",
 ]
 
 titles=["Summer", "Winter", "Spring", "Autumn"]

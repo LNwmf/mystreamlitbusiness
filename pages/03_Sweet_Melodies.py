@@ -46,7 +46,7 @@ cols = st.columns(4)
 for i, col in enumerate(cols):
     with col:
         # Clicking the button selects this image
-        if st.button(titles[i], key=f"btn{i}"):
+        if st.button(titles[i], key=f"btn_flavor_{i}"):
             st.session_state.selected = i
 
         # Add a red border if selected
@@ -99,7 +99,7 @@ cols = st.columns(4)
 for i, col in enumerate(cols):
     with col:
         # Clicking the button selects this image
-        if st.button(titles[i], key=f"btn{i}"):
+        if st.button(titles[i], key=f"btn_season_{i}"):
             st.session_state.selected = i
 
         # Add a red border if selected

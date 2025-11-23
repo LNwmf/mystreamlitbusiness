@@ -1,5 +1,5 @@
 import streamlit as st
-from st_clickable_images import clickable_images
+
 
 st.set_page_config(
     page_title="Y2K Rewind",
@@ -9,7 +9,6 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    /* Remove rounding from all images rendered by Streamlit */
     img {
         border-radius: 0 !important;
     }
@@ -35,20 +34,19 @@ images = [
 
 titles=["Flip phones", "MP3 players", "Nintendo DS", "Digital cameras"]
 
-if "selected" not in st.session_state:
-    st.session_state.selected = None
+if "selected_tech" not in st.session_state:
+    st.session_state.selected_tech = None
 
-# Layout the images in 4 columns
 cols = st.columns(4)
 
 for i, col in enumerate(cols):
     with col:
         # Clicking the button selects this image
-        if st.button(titles[i], key=f"btn{i}"):
-            st.session_state.selected = i
+        if st.button(titles[i], key=f"btn_tech_{i}"):
+            st.session_state.selected_tech = i
 
         # Add a red border if selected
-        border = "4px solid red" if st.session_state.selected == i else "4px solid transparent"
+        border = "4px solid red" if st.session_state.selected_tech == i else "4px solid transparent"
 
         st.markdown(
             f"""
@@ -65,6 +63,11 @@ for i, col in enumerate(cols):
             unsafe_allow_html=True,
         )
 
+selected_tech = (
+    titles[st.session_state.selected_tech]
+    if st.session_state.get("selected_tech") is not None
+    else None
+)
 #gap
 st.write("")
 
@@ -84,19 +87,43 @@ images = [
 
 titles=["Mean Girls", "10 Things I Hate About You", "Lord of the Rings Trilogy", "13 Going On 30"]
 
-clicked = clickable_images(
-    images,
-    titles=titles,
-    div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
-    img_style={"margin": "5px", "height": "200px"},
+if "selected_movie" not in st.session_state:
+    st.session_state.selected_movie = None
+
+cols = st.columns(4)
+
+for i, col in enumerate(cols):
+    with col:
+        # Clicking the button selects this image
+        if st.button(titles[i], key=f"btn_movie_{i}"):
+            st.session_state.selected_movie = i
+
+        # Add a red border if selected
+        border = "4px solid red" if st.session_state.selected_movie == i else "4px solid transparent"
+
+        st.markdown(
+            f"""
+            <div style="
+                border:{border};
+                border-radius:10px;
+                padding:3px;
+                display:flex;
+                justify-content:center;
+            ">
+                <img src="{images[i]}" style="width:170px; border-radius:10px;">
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+selected_tech = (
+    titles[st.session_state.selected_movie]
+    if st.session_state.get("selected_movie") is not None
+    else None
 )
 
-if clicked > -1:
-    st.markdown(f"**{titles[clicked]} selected**")
-else:
-    st.markdown("**No image selected**")
-# Get the selected image title if one is clicked
-selected_movie= titles[clicked] if clicked > -1 else None
+#gap
+st.write("")
 
 #Q4
 ppl = ["Cyber kid", "Pop princess", "Fashion icon", "Chill surfer"]

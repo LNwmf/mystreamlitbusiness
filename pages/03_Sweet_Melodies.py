@@ -9,7 +9,6 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    /* Remove rounding from all images rendered by Streamlit */
     img {
         border-radius: 0 !important;
     }
@@ -174,7 +173,7 @@ info = None
 dessert_choice = st.selectbox("Pick a dessert!", ["", *dessert_data.keys()])
 
 dessert_map = {
-    # Chocolate
+    # Chocolate #
     ("Chocolate", "After a morning run", "Layers of experience", "Summer"): "Taiyaki",
     ("Chocolate", "After a morning run", "Layers of experience", "Winter"): "Souffle",
     ("Chocolate", "After a morning run", "Layers of experience", "Spring"): "Mandazi",
@@ -255,10 +254,8 @@ dessert_map = {
     ("Chocolate", "All day, everyday", "Unexpected textures", "Spring"): "Souffle",
     ("Chocolate", "All day, everyday", "Unexpected textures", "Autumn"): "Flan",
 
+    # Vanilla #
 
-    # -----------------------------------------
-    # Vanilla (same structure)
-    # -----------------------------------------
     ("Vanilla", "After a morning run", "Layers of experience", "Summer"): "Flan",
     ("Vanilla", "After a morning run", "Layers of experience", "Winter"): "Souffle",
     ("Vanilla", "After a morning run", "Layers of experience", "Spring"): "Taiyaki",
@@ -339,10 +336,8 @@ dessert_map = {
     ("Vanilla", "All day, everyday", "Unexpected textures", "Spring"): "Taiyaki",
     ("Vanilla", "All day, everyday", "Unexpected textures", "Autumn"): "Souffle",
 
+    # Strawberry #
 
-    # -----------------------------------------
-    # Strawberry
-    # -----------------------------------------
     ("Strawberry", "After a morning run", "Layers of experience", "Summer"): "Taiyaki",
     ("Strawberry", "After a morning run", "Layers of experience", "Winter"): "Taiyaki",
     ("Strawberry", "After a morning run", "Layers of experience", "Spring"): "Flan",
@@ -423,10 +418,8 @@ dessert_map = {
     ("Strawberry", "All day, everyday", "Unexpected textures", "Spring"): "Souffle",
     ("Strawberry", "All day, everyday", "Unexpected textures", "Autumn"): "Taiyaki",
 
+    # Coffee #
 
-    # -----------------------------------------
-    # Coffee
-    # -----------------------------------------
     ("Coffee", "After a morning run", "Layers of experience", "Summer"): "Flan",
     ("Coffee", "After a morning run", "Layers of experience", "Winter"): "Mandazi",
     ("Coffee", "After a morning run", "Layers of experience", "Spring"): "Flan",

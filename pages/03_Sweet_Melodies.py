@@ -510,7 +510,7 @@ dessert_map = {
 }
 
 
-if selected_flavor and selected_time and selected_life and selected_season:
+if selected_flavor and selected_time and selected_life and selected_season and dessert_choice:
     user_combo = (selected_flavor, selected_time, selected_life, selected_season)
     result_key = dessert_map.get(user_combo)
 

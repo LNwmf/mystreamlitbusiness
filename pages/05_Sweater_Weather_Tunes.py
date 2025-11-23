@@ -175,8 +175,6 @@ fall_data = {
 
 info = None
 
-
-
 fall_map = {
 ("Hocus Pocus", "Falling leaves", "Pumpkin carving"): "Pumpkin carving",
 ("Hocus Pocus", "Falling leaves", "Apple picking"): "Bonfires",
@@ -245,9 +243,7 @@ fall_map = {
 ("IT", "Foggy skies", "Apple picking"): "Trick or treating",
 ("IT", "Foggy skies", "Trick or treating"): "Pumpkin carving",
 ("IT", "Foggy skies", "Bonfires"): "Pumpkin carving",
-
 }
-
 
 
 if selected_film and selected_element and selected_fall:
@@ -263,7 +259,7 @@ if selected_film and selected_element and selected_fall:
     st.markdown(f"[Listen Here]({info['playlist_link']})")
 
     # Business info display
-    st.image(info['business_image'], width=250)  # Show business image (if available)
+    st.image(info['business_image'], width=250)
     st.write(f"💼 **Business Name:** {info['business_name']}")
     st.write(f"🌐 [Visit Website]({info['website']})")
     st.write(f"🎁 **Special Offer:** {info['offer']}")
@@ -273,7 +269,7 @@ if selected_film and selected_element and selected_fall:
 
     if st.button("Check Reward Status"):
         if shared_count >= 3:
-            st.balloons()  # Add some confetti for fun
+            st.balloons()
             st.success(f"🎁 You unlocked a reward! Show this screen at {info['booth_name']} to claim your prize!")
         else:
             st.warning("⏳ Share your playlist with at least 3 people to unlock your reward!")

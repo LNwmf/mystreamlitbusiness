@@ -1,5 +1,4 @@
 import streamlit as st
-from st_clickable_images import clickable_images
 
 st.set_page_config(
     page_title="Craft & Sip",
@@ -9,7 +8,6 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    /* Remove rounding from all images rendered by Streamlit */
     img {
         border-radius: 0 !important;
     }
@@ -35,20 +33,40 @@ images = [
 
 titles=["Plays", "Musicals", "Concerts", "Dance"]
 
-clicked = clickable_images(
-    images,
-    titles=titles,
-    div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
-    img_style={"margin": "5px", "height": "200px"},
+if "selected_perform" not in st.session_state:
+    st.session_state.selected_perform = None
+
+cols = st.columns(4)
+
+for i, col in enumerate(cols):
+    with col:
+        if st.button(titles[i], key=f"btn_perform_{i}"):
+            st.session_state.selected_perform = i
+
+        border = "4px solid red" if st.session_state.selected_perform == i else "4px solid transparent"
+
+        st.markdown(
+            f"""
+            <div style="
+                border:{border};
+                border-radius:10px;
+                padding:3px;
+                display:flex;
+                justify-content:center;
+            ">
+                <img src="{images[i]}" style="width:170px; border-radius:10px;">
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+selected_perform = (
+    titles[st.session_state.selected_perform]
+    if st.session_state.get("selected_perform") is not None
+    else None
 )
-
-if clicked > -1:
-    st.markdown(f"**{titles[clicked]} selected**")
-else:
-    st.markdown("**No image selected**")
-# Get the selected image title if one is clicked
-selected_perform = titles[clicked] if clicked > -1 else None
-
+#gap
+st.write("")
 
 #Q2
 era_options = ["Renaissance", "Medieval", "Contemporary", "Romanticism"]
@@ -58,7 +76,7 @@ selected_era = st.selectbox("Which art era do you resonate with most?", era_opti
 st.write("Select an ideal creative environment:")
 images = [
 
-        "https://cielcreativespace.com/wp-content/uploads/2021/05/CIEL_EDIT3_-75-scaled.jpg", #confetti, chill rooftop, chicken wings, burger, hot dog
+        "https://cielcreativespace.com/wp-content/uploads/2021/05/CIEL_EDIT3_-75-scaled.jpg",
         "https://img.bucketlisters.com/image_uploads/1712007681349.png",
         "https://media.istockphoto.com/id/1053651024/photo/wooden-chair-on-lakeside-pier.jpg?s=612x612&w=0&k=20&c=kWbMg_LrlwMeWeuaDW-OkoUjjXVybzzbpB61fHtNvRI=",
         "https://www.arch2o.com/wp-content/uploads/2023/01/Arch2O-modern-fireplace-design-ideas.jpg",
@@ -66,23 +84,43 @@ images = [
 
 titles=["Quiet loft studio", "Cozy cafe on a gloomy day", "Sunny lakeside dock", "Late nights by the fire"]
 
-clicked = clickable_images(
-    images,
-    titles=titles,
-    div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
-    img_style={"margin": "5px", "height": "200px"},
+if "selected_place" not in st.session_state:
+    st.session_state.selected_place = None
+
+cols = st.columns(4)
+
+for i, col in enumerate(cols):
+    with col:
+        if st.button(titles[i], key=f"btn_place_{i}"):
+            st.session_state.selected_place = i
+
+        border = "4px solid red" if st.session_state.selected_place == i else "4px solid transparent"
+
+        st.markdown(
+            f"""
+            <div style="
+                border:{border};
+                border-radius:10px;
+                padding:3px;
+                display:flex;
+                justify-content:center;
+            ">
+                <img src="{images[i]}" style="width:170px; border-radius:10px;">
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+selected_place = (
+    titles[st.session_state.selected_place]
+    if st.session_state.get("selected_place") is not None
+    else None
 )
-
-if clicked > -1:
-    st.markdown(f"**{titles[clicked]} selected**")
-else:
-    st.markdown("**No image selected**")
-# Get the selected image title if one is clicked
-selected_place = titles[clicked] if clicked > -1 else None
-
+#gap
+st.write("")
 
 #Q4
-word = ["Abstract", "Surreal", "Intense", "Tranquil", "Chaos"]
+word = ["Abstract", "Surreal", "Intense", "Tranquil"]
 selected_word = st.selectbox("If you were to describe your life in one artistic word, which one would it be?", word, index=None)
 
 #Q5
@@ -130,73 +168,70 @@ info3 = None
 value_choice = st.selectbox("What do you value most in your world?", ["", *value_data.keys()])
 
 craft_map = {
-    ("Plays", "Quiet loft studio", "Emotion"): "Emotion",
-    ("Plays", "Quiet loft studio", "Color"): "Texture",
-    ("Plays", "Quiet loft studio", "Texture"): "Emotion",
-    ("Plays", "Quiet loft studio", "Storytelling"): "Color",
-    ("Plays", "Cozy cafe on a gloomy day", "Emotion"): "Storytelling",
-    ("Plays", "Cozy cafe on a gloomy day", "Color"): "Texture",
-    ("Plays", "Cozy cafe on a gloomy day", "Texture"): "Emotion",
-    ("Plays", "Cozy cafe on a gloomy day", "Storytelling"): "Storytelling",
-    ("Plays", "Sunny lakeside dock", "Emotion"): "Color",
-    ("Plays", "Sunny lakeside dock", "Color"): "Emotion",
-    ("Plays", "Sunny lakeside dock", "Texture"): "Texture",
-    ("Plays", "Sunny lakeside dock", "Storytelling"): "Emotion",
-    ("Plays", "Late nights by the fire", "Emotion"): "Storytelling",
-    ("Plays", "Late nights by the fire", "Color"): "Color",
-    ("Plays", "Late nights by the fire", "Texture"): "Texture",
-    ("Plays", "Late nights by the fire", "Storytelling"): "Texture",
-
-    ("Musicals", "Quiet loft studio", "Emotion"): "Color",
-    ("Musicals", "Quiet loft studio", "Color"): "Color",
-    ("Musicals", "Quiet loft studio", "Texture"): "Emotion",
-    ("Musicals", "Quiet loft studio", "Storytelling"): "Color",
-    ("Musicals", "Cozy cafe on a gloomy day", "Emotion"): "Emotion",
-    ("Musicals", "Cozy cafe on a gloomy day", "Color"): "Emotion",
-    ("Musicals", "Cozy cafe on a gloomy day", "Texture"): "Storytelling",
-    ("Musicals", "Cozy cafe on a gloomy day", "Storytelling"): "Color",
-    ("Musicals", "Sunny lakeside dock", "Emotion"): "Texture",
-    ("Musicals", "Sunny lakeside dock", "Color"): "Storytelling",
-    ("Musicals", "Sunny lakeside dock", "Texture"): "Color",
-    ("Musicals", "Sunny lakeside dock", "Storytelling"): "Emotion",
-    ("Musicals", "Late nights by the fire", "Emotion"): "Storytelling",
-    ("Musicals", "Late nights by the fire", "Color"): "Storytelling",
-    ("Musicals", "Late nights by the fire", "Texture"): "Texture",
-    ("Musicals", "Late nights by the fire", "Storytelling"): "Color",
-
-    ("Concerts", "Quiet loft studio", "Emotion"): "Color",
-    ("Concerts", "Quiet loft studio", "Color"): "Texture",
-    ("Concerts", "Quiet loft studio", "Texture"): "Texture",
-    ("Concerts", "Quiet loft studio", "Storytelling"): "Emotion",
-    ("Concerts", "Cozy cafe on a gloomy day", "Emotion"): "Emotion",
-    ("Concerts", "Cozy cafe on a gloomy day", "Color"): "Color",
-    ("Concerts", "Cozy cafe on a gloomy day", "Texture"): "Emotion",
-    ("Concerts", "Cozy cafe on a gloomy day", "Storytelling"): "Texture",
-    ("Concerts", "Sunny lakeside dock", "Emotion"): "Color",
-    ("Concerts", "Sunny lakeside dock", "Color"): "Color",
-    ("Concerts", "Sunny lakeside dock", "Texture"): "Emotion",
-    ("Concerts", "Sunny lakeside dock", "Storytelling"): "Emotion",
-    ("Concerts", "Late nights by the fire", "Emotion"): "Texture",
-    ("Concerts", "Late nights by the fire", "Color"): "Storytelling",
-    ("Concerts", "Late nights by the fire", "Texture"): "Storytelling",
-    ("Concerts", "Late nights by the fire", "Storytelling"): "Color",
-
-    ("Dance", "Quiet loft studio", "Emotion"): "Emotion",
-    ("Dance", "Quiet loft studio", "Color"): "Emotion",
-    ("Dance", "Quiet loft studio", "Texture"): "Storytelling",
-    ("Dance", "Quiet loft studio", "Storytelling"): "Emotion",
-    ("Dance", "Cozy cafe on a gloomy day", "Emotion"): "Texture",
-    ("Dance", "Cozy cafe on a gloomy day", "Color"): "Emotion",
-    ("Dance", "Cozy cafe on a gloomy day", "Texture"): "Emotion",
-    ("Dance", "Cozy cafe on a gloomy day", "Storytelling"): "Color",
-    ("Dance", "Sunny lakeside dock", "Emotion"): "Storytelling",
-    ("Dance", "Sunny lakeside dock", "Color"): "Storytelling",
-    ("Dance", "Sunny lakeside dock", "Texture"): "Color",
-    ("Dance", "Sunny lakeside dock", "Storytelling"): "Texture",
-    ("Dance", "Late nights by the fire", "Emotion"): "Storytelling",
-    ("Dance", "Late nights by the fire", "Color"): "Emotion",
-    ("Dance", "Late nights by the fire", "Texture"): "Emotion",
-    ("Dance", "Late nights by the fire", "Storytelling"): "Storytelling",
+    ("Quiet loft studio", "Abstract", "Emotion"): "",
+    ("Quiet loft studio", "Abstract", "Color"): "",
+    ("Quiet loft studio", "Abstract", "Texture"): "",
+    ("Quiet loft studio", "Abstract", "Storytelling"): "",
+    ("Quiet loft studio", "Surreal", "Emotion"): "",
+    ("Quiet loft studio", "Surreal", "Color"): "",
+    ("Quiet loft studio", "Surreal", "Texture"): "",
+    ("Quiet loft studio", "Surreal", "Storytelling"): "",
+    ("Quiet loft studio", "Intense", "Emotion"): "",
+    ("Quiet loft studio", "Intense", "Color"): "",
+    ("Quiet loft studio", "Intense", "Texture"): "",
+    ("Quiet loft studio", "Intense", "Storytelling"): "",
+    ("Quiet loft studio", "Tranquil", "Emotion"): "",
+    ("Quiet loft studio", "Tranquil", "Color"): "",
+    ("Quiet loft studio", "Tranquil", "Texture"): "",
+    ("Quiet loft studio", "Tranquil", "Storytelling"): "",
+    ("Cozy cafe on a gloomy day", "Abstract", "Emotion"): "",
+    ("Cozy cafe on a gloomy day", "Abstract", "Color"): "",
+    ("Cozy cafe on a gloomy day", "Abstract", "Texture"): "",
+    ("Cozy cafe on a gloomy day", "Abstract", "Storytelling"): "",
+    ("Cozy cafe on a gloomy day", "Surreal", "Emotion"): "",
+    ("Cozy cafe on a gloomy day", "Surreal", "Color"): "",
+    ("Cozy cafe on a gloomy day", "Surreal", "Texture"): "",
+    ("Cozy cafe on a gloomy day", "Surreal", "Storytelling"): "",
+    ("Cozy cafe on a gloomy day", "Intense", "Emotion"): "",
+    ("Cozy cafe on a gloomy day", "Intense", "Color"): "",
+    ("Cozy cafe on a gloomy day", "Intense", "Texture"): "",
+    ("Cozy cafe on a gloomy day", "Intense", "Storytelling"): "",
+    ("Cozy cafe on a gloomy day", "Tranquil", "Emotion"): "",
+    ("Cozy cafe on a gloomy day", "Tranquil", "Color"): "",
+    ("Cozy cafe on a gloomy day", "Tranquil", "Texture"): "",
+    ("Cozy cafe on a gloomy day", "Tranquil", "Storytelling"): "",
+    ("Sunny lakeside", "Abstract", "Emotion"): "",
+    ("Sunny lakeside", "Abstract", "Color"): "",
+    ("Sunny lakeside", "Abstract", "Texture"): "",
+    ("Sunny lakeside", "Abstract", "Storytelling"): "",
+    ("Sunny lakeside", "Surreal", "Emotion"): "",
+    ("Sunny lakeside", "Surreal", "Color"): "",
+    ("Sunny lakeside", "Surreal", "Texture"): "",
+    ("Sunny lakeside", "Surreal", "Storytelling"): "",
+    ("Sunny lakeside", "Intense", "Emotion"): "",
+    ("Sunny lakeside", "Intense", "Color"): "",
+    ("Sunny lakeside", "Intense", "Texture"): "",
+    ("Sunny lakeside", "Intense", "Storytelling"): "",
+    ("Sunny lakeside", "Tranquil", "Emotion"): "",
+    ("Sunny lakeside", "Tranquil", "Color"): "",
+    ("Sunny lakeside", "Tranquil", "Texture"): "",
+    ("Sunny lakeside", "Tranquil", "Storytelling"): "",
+    ("Late nights by the fire", "Abstract", "Emotion"): "",
+    ("Late nights by the fire", "Abstract", "Color"): "",
+    ("Late nights by the fire", "Abstract", "Texture"): "",
+    ("Late nights by the fire", "Abstract", "Storytelling"): "",
+    ("Late nights by the fire", "Surreal", "Emotion"): "",
+    ("Late nights by the fire", "Surreal", "Color"): "",
+    ("Late nights by the fire", "Surreal", "Texture"): "",
+    ("Late nights by the fire", "Surreal", "Storytelling"): "",
+    ("Late nights by the fire", "Intense", "Emotion"): "",
+    ("Late nights by the fire", "Intense", "Color"): "",
+    ("Late nights by the fire", "Intense", "Texture"): "",
+    ("Late nights by the fire", "Intense", "Storytelling"): "",
+    ("Late nights by the fire", "Tranquil", "Emotion"): "",
+    ("Late nights by the fire", "Tranquil", "Color"): "",
+    ("Late nights by the fire", "Tranquil", "Texture"): "",
+    ("Late nights by the fire", "Tranquil", "Storytelling"): "",
 }
 
 if selected_perform and selected_place and value_choice:

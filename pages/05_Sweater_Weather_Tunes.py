@@ -95,19 +95,42 @@ images = [
 
 titles=["Pumpkin carving", "Apple picking", "Trick or treating", "Bonfires"]
 
-clicked = clickable_images(
-    images,
-    titles=titles,
-    div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
-    img_style={"margin": "5px", "height": "200px"},
+if "selected_fall" not in st.session_state:
+    st.session_state.selected_fall = None
+
+cols = st.columns(4)
+
+for i, col in enumerate(cols):
+    with col:
+        # Clicking the button selects this image
+        if st.button(titles[i], key=f"btn_fall_{i}"):
+            st.session_state.selected_fall = i
+
+        # Add a red border if selected
+        border = "4px solid red" if st.session_state.selected_fall == i else "4px solid transparent"
+
+        st.markdown(
+            f"""
+            <div style="
+                border:{border};
+                border-radius:10px;
+                padding:3px;
+                display:flex;
+                justify-content:center;
+            ">
+                <img src="{images[i]}" style="width:170px; border-radius:10px;">
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+selected_fall = (
+    titles[st.session_state.selected_fall]
+    if st.session_state.get("selected_fall") is not None
+    else None
 )
-
-if clicked > -1:
-    st.markdown(f"**{titles[clicked]} selected**")
-else:
-    st.markdown("**No image selected**")
-
-selected_fall= titles[clicked] if clicked > -1 else None
+#gap
+st.write("")
 
 
 # Business options and related data
@@ -152,7 +175,7 @@ fall_data = {
 
 info = None
 
-#fall_choice = st.selectbox("Pick a fall activity!", ["", *fall_data.keys()])
+fall_choice = st.selectbox("Pick a fall activity!", ["", *fall_data.keys()])
 
 
 fall_map = {
@@ -228,7 +251,7 @@ fall_map = {
 
 
 
-if selected_film and selected_element and selected_fall:
+if selected_film and selected_element and selected_fall and fall_choice:
     user_combo = (selected_film, selected_element, selected_fall)
     result_key = fall_map.get(user_combo)
 

@@ -1,5 +1,4 @@
 import streamlit as st
-from st_clickable_images import clickable_images
 
 st.set_page_config(
     page_title="Sweater Weather Tunes",
@@ -9,7 +8,6 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    /* Remove rounding from all images rendered by Streamlit */
     img {
         border-radius: 0 !important;
     }
@@ -39,19 +37,42 @@ images = [
 
 titles=["Hocus Pocus", "Halloween", "Trick 'r Treat", "IT"]
 
-clicked = clickable_images(
-    images,
-    titles=titles,
-    div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
-    img_style={"margin": "5px", "height": "200px"},
-)
+if "selected_film" not in st.session_state:
+    st.session_state.selected_film = None
 
-if clicked > -1:
-    st.markdown(f"**{titles[clicked]} selected**")
-else:
-    st.markdown("**No image selected**")
-# Get the selected image title if one is clicked
-selected_film= titles[clicked] if clicked > -1 else None
+cols = st.columns(4)
+
+for i, col in enumerate(cols):
+    with col:
+        # Clicking the button selects this image
+        if st.button(titles[i], key=f"btn_film_{i}"):
+            st.session_state.selected_film = i
+
+        # Add a red border if selected
+        border = "4px solid red" if st.session_state.selected_film == i else "4px solid transparent"
+
+        st.markdown(
+            f"""
+            <div style="
+                border:{border};
+                border-radius:10px;
+                padding:3px;
+                display:flex;
+                justify-content:center;
+            ">
+                <img src="{images[i]}" style="width:170px; border-radius:10px;">
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+selected_film = (
+    titles[st.session_state.selected_film]
+    if st.session_state.get("selected_film") is not None
+    else None
+)
+#gap
+st.write("")
 
 
 #Q3

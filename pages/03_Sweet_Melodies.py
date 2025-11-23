@@ -127,6 +127,8 @@ selected_season = (
     if st.session_state.get("selected_season") is not None
     else None
 )
+#gap
+st.write("")
 
 # Business options and related data
 dessert_data = {

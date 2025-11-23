@@ -234,7 +234,7 @@ craft_map = {
     ("Late nights by the fire", "Tranquil", "Storytelling"): "Color",
 }
 
-if selected_place and selected_word and value_choice:
+if selected_perform and selected_era and selected_place and selected_word and value_choice:
     user_combo = (selected_place, selected_word, value_choice)
     result_key = craft_map.get(user_combo)
     # Retrieve information about selected drink/business

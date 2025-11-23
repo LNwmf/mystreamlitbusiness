@@ -24,7 +24,7 @@ Welcome! Pick a dessert below to discover a blended playlist, support a local BI
 """)
 
 #Q1
-st.write("Select a flavor:")
+st.write("Select a flavor: (double-click button)")
 images = [
 
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/chocolate.jpg",
@@ -82,7 +82,7 @@ life_options = ["Layers of experience", "Bittersweet spices", "A tough shell but
 selected_life = st.selectbox("If your life were a dessert, what would it be made of?", life_options, index=None)
 
 #Q4
-st.write("What season defines you?")
+st.write("What season defines you? (double-click button)")
 images = [
 
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/summer.jpg",

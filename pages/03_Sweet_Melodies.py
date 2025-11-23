@@ -27,10 +27,10 @@ Welcome! Pick a dessert below to discover a blended playlist, support a local BI
 st.write("Select a flavor:")
 images = [
 
-        "https://www.thespruceeats.com/thmb/FhHcgQni8lgV0griUeDJMTAszxI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chocolate_hero1-d62e5444a8734f8d8fe91f5631d51ca5.jpg", #confetti, chill rooftop, chicken wings, burger, hot dog
-        "https://images.prismic.io/bareblends/4becbce8-cc6e-4292-a25c-93d6136a5df7_vanilla+bean+hero.jpg?auto=compress%2Cformat&width=1920&height=800&crop=center",
-        "https://clv.h-cdn.co/assets/15/22/2048x2048/square-1432664914-strawberry-facts1.jpg",
-        "https://daylighthilliard.com/wp-content/uploads/2021/04/great-coffee-bean.jpeg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/chocolate.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/vanilla.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/strawberry.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/coffee.jpeg",
 ]
 
 titles=["Chocolate", "Vanilla", "Strawberry", "Coffee"]

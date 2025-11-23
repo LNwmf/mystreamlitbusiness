@@ -66,6 +66,12 @@ for i, col in enumerate(cols):
             unsafe_allow_html=True,
         )
 
+selected_flavor = (
+    titles[st.session_state.selected_flavor]
+    if st.session_state.get("selected_flavor") is not None
+    else None
+)
+
 #gap
 st.write("")
 
@@ -89,7 +95,7 @@ images = [
 
 titles=["Summer", "Winter", "Spring", "Autumn"]
 
-if "selected" not in st.session_state:
+if "selected_season" not in st.session_state:
     st.session_state.selected_season = None
 
 cols = st.columns(4)
@@ -117,6 +123,12 @@ for i, col in enumerate(cols):
             """,
             unsafe_allow_html=True,
         )
+
+selected_season = (
+    titles[st.session_state.selected_season]
+    if st.session_state.get("selected_season") is not None
+    else None
+)
 
 # Business options and related data
 dessert_data = {
@@ -163,84 +175,347 @@ info = None
 dessert_choice = st.selectbox("Pick a dessert!", ["", *dessert_data.keys()])
 
 dessert_map = {
-("Chocolate", "Layers of experience", "Flan"): "Taiyaki",
-("Chocolate", "Layers of experience", "Souffle"): "Souffle",
-("Chocolate", "Layers of experience", "Taiyaki"): "Mandazi",
-("Chocolate", "Layers of experience", "Mandazi"): "Taiyaki",
-("Chocolate", "Bittersweet spices", "Flan"): "Mandazi",
-("Chocolate", "Bittersweet spices", "Souffle"): "Souffle",
-("Chocolate", "Bittersweet spices", "Taiyaki"): "Souffle",
-("Chocolate", "Bittersweet spices", "Mandazi"): "Flan",
-("Chocolate", "A tough shell but soft center", "Flan"): "Flan",
-("Chocolate", "A tough shell but soft center", "Souffle"): "Mandazi",
-("Chocolate", "A tough shell but soft center", "Taiyaki"): "Mandazi",
-("Chocolate", "A tough shell but soft center", "Mandazi"): "Souffle",
-("Chocolate", "Unexpected textures", "Flan"): "Taiyaki",
-("Chocolate", "Unexpected textures", "Souffle"): "Flan",
-("Chocolate", "Unexpected textures", "Taiyaki"): "Taiyaki",
-("Chocolate", "Unexpected textures", "Mandazi"): "Souffle",
+    # Chocolate
+    ("Chocolate", "After a morning run", "Layers of experience", "Summer"): "Taiyaki",
+    ("Chocolate", "After a morning run", "Layers of experience", "Winter"): "Souffle",
+    ("Chocolate", "After a morning run", "Layers of experience", "Spring"): "Mandazi",
+    ("Chocolate", "After a morning run", "Layers of experience", "Autumn"): "Taiyaki",
 
-("Vanilla", "Layers of experience", "Flan"): "Taiyaki",
-("Vanilla", "Layers of experience", "Souffle"): "Mandazi",
-("Vanilla", "Layers of experience", "Taiyaki"): "Flan",
-("Vanilla", "Layers of experience", "Mandazi"): "Flan",
-("Vanilla", "Bittersweet spices", "Flan"): "Mandazi",
-("Vanilla", "Bittersweet spices", "Souffle"): "Flan",
-("Vanilla", "Bittersweet spices", "Taiyaki"): "Souffle",
-("Vanilla", "Bittersweet spices", "Mandazi"): "Flan",
-("Vanilla", "A tough shell but soft center", "Flan"): "Taiyaki",
-("Vanilla", "A tough shell but soft center", "Souffle"): "Flan",
-("Vanilla", "A tough shell but soft center", "Taiyaki"): "Souffle",
-("Vanilla", "A tough shell but soft center", "Mandazi"): "Flan",
-("Vanilla", "Unexpected textures", "Flan"): "Mandazi",
-("Vanilla", "Unexpected textures", "Souffle"): "Flan",
-("Vanilla", "Unexpected textures", "Taiyaki"): "Taiyaki",
-("Vanilla", "Unexpected textures", "Mandazi"): "Mandazi",
+    ("Chocolate", "After a morning run", "Bittersweet spices", "Summer"): "Flan",
+    ("Chocolate", "After a morning run", "Bittersweet spices", "Winter"): "Souffle",
+    ("Chocolate", "After a morning run", "Bittersweet spices", "Spring"): "Mandazi",
+    ("Chocolate", "After a morning run", "Bittersweet spices", "Autumn"): "Mandazi",
 
-("Strawberry", "Layers of experience", "Flan"): "Mandazi",
-("Strawberry", "Layers of experience", "Souffle"): "Souffle",
-("Strawberry", "Layers of experience", "Taiyaki"): "Souffle",
-("Strawberry", "Layers of experience", "Mandazi"): "Mandazi",
-("Strawberry", "Bittersweet spices", "Flan"): "Mandazi",
-("Strawberry", "Bittersweet spices", "Souffle"): "Mandazi",
-("Strawberry", "Bittersweet spices", "Taiyaki"): "Flan",
-("Strawberry", "Bittersweet spices", "Mandazi"): "Flan",
-("Strawberry", "A tough shell but soft center", "Flan"): "Taiyaki",
-("Strawberry", "A tough shell but soft center", "Souffle"): "Souffle",
-("Strawberry", "A tough shell but soft center", "Taiyaki"): "Taiyaki",
-("Strawberry", "A tough shell but soft center", "Mandazi"): "Mandazi",
-("Strawberry", "Unexpected textures", "Flan"): "Flan",
-("Strawberry", "Unexpected textures", "Souffle"): "Mandazi",
-("Strawberry", "Unexpected textures", "Taiyaki"): "Souffle",
-("Strawberry", "Unexpected textures", "Mandazi"): "Souffle",
+    ("Chocolate", "After a morning run", "A tough shell but soft center", "Summer"): "Mandazi",
+    ("Chocolate", "After a morning run", "A tough shell but soft center", "Winter"): "Souffle",
+    ("Chocolate", "After a morning run", "A tough shell but soft center", "Spring"): "Mandazi",
+    ("Chocolate", "After a morning run", "A tough shell but soft center", "Autumn"): "Flan",
 
-("Coffee", "Layers of experience", "Flan"): "Flan",
-("Coffee", "Layers of experience", "Souffle"): "Souffle",
-("Coffee", "Layers of experience", "Taiyaki"): "Souffle",
-("Coffee", "Layers of experience", "Mandazi"): "Mandazi",
-("Coffee", "Bittersweet spices", "Flan"): "Mandazi",
-("Coffee", "Bittersweet spices", "Souffle"): "Flan",
-("Coffee", "Bittersweet spices", "Taiyaki"): "Taiyaki",
-("Coffee", "Bittersweet spices", "Mandazi"): "Flan",
-("Coffee", "A tough shell but soft center", "Flan"): "Flan",
-("Coffee", "A tough shell but soft center", "Souffle"): "Flan",
-("Coffee", "A tough shell but soft center", "Taiyaki"): "Taiyaki",
-("Coffee", "A tough shell but soft center", "Mandazi"): "Taiyaki",
-("Coffee", "Unexpected textures", "Flan"): "Taiyaki",
-("Coffee", "Unexpected textures", "Souffle"): "Souffle",
-("Coffee", "Unexpected textures", "Taiyaki"): "Souffle",
-("Coffee", "Unexpected textures", "Mandazi"): "Flan",
+    ("Chocolate", "After a morning run", "Unexpected textures", "Summer"): "Taiyaki",
+    ("Chocolate", "After a morning run", "Unexpected textures", "Winter"): "Flan",
+    ("Chocolate", "After a morning run", "Unexpected textures", "Spring"): "Taiyaki",
+    ("Chocolate", "After a morning run", "Unexpected textures", "Autumn"): "Souffle",
+
+    ("Chocolate", "Late night cravings", "Layers of experience", "Summer"): "Flan",
+    ("Chocolate", "Late night cravings", "Layers of experience", "Winter"): "Souffle",
+    ("Chocolate", "Late night cravings", "Layers of experience", "Spring"): "Souffle",
+    ("Chocolate", "Late night cravings", "Layers of experience", "Autumn"): "Mandazi",
+
+    ("Chocolate", "Late night cravings", "Bittersweet spices", "Summer"): "Mandazi",
+    ("Chocolate", "Late night cravings", "Bittersweet spices", "Winter"): "Flan",
+    ("Chocolate", "Late night cravings", "Bittersweet spices", "Spring"): "Flan",
+    ("Chocolate", "Late night cravings", "Bittersweet spices", "Autumn"): "Mandazi",
+
+    ("Chocolate", "Late night cravings", "A tough shell but soft center", "Summer"): "Souffle",
+    ("Chocolate", "Late night cravings", "A tough shell but soft center", "Winter"): "Taiyaki",
+    ("Chocolate", "Late night cravings", "A tough shell but soft center", "Spring"): "Flan",
+    ("Chocolate", "Late night cravings", "A tough shell but soft center", "Autumn"): "Taiyaki",
+
+    ("Chocolate", "Late night cravings", "Unexpected textures", "Summer"): "Flan",
+    ("Chocolate", "Late night cravings", "Unexpected textures", "Winter"): "Mandazi",
+    ("Chocolate", "Late night cravings", "Unexpected textures", "Spring"): "Souffle",
+    ("Chocolate", "Late night cravings", "Unexpected textures", "Autumn"): "Taiyaki",
+
+    ("Chocolate", "During special occasions", "Layers of experience", "Summer"): "Flan",
+    ("Chocolate", "During special occasions", "Layers of experience", "Winter"): "Taiyaki",
+    ("Chocolate", "During special occasions", "Layers of experience", "Spring"): "Flan",
+    ("Chocolate", "During special occasions", "Layers of experience", "Autumn"): "Taiyaki",
+
+    ("Chocolate", "During special occasions", "Bittersweet spices", "Summer"): "Flan",
+    ("Chocolate", "During special occasions", "Bittersweet spices", "Winter"): "Mandazi",
+    ("Chocolate", "During special occasions", "Bittersweet spices", "Spring"): "Flan",
+    ("Chocolate", "During special occasions", "Bittersweet spices", "Autumn"): "Souffle",
+
+    ("Chocolate", "During special occasions", "A tough shell but soft center", "Summer"): "Souffle",
+    ("Chocolate", "During special occasions", "A tough shell but soft center", "Winter"): "Taiyaki",
+    ("Chocolate", "During special occasions", "A tough shell but soft center", "Spring"): "Taiyaki",
+    ("Chocolate", "During special occasions", "A tough shell but soft center", "Autumn"): "Flan",
+
+    ("Chocolate", "During special occasions", "Unexpected textures", "Summer"): "Flan",
+    ("Chocolate", "During special occasions", "Unexpected textures", "Winter"): "Souffle",
+    ("Chocolate", "During special occasions", "Unexpected textures", "Spring"): "Flan",
+    ("Chocolate", "During special occasions", "Unexpected textures", "Autumn"): "Mandazi",
+
+    ("Chocolate", "All day, everyday", "Layers of experience", "Summer"): "Souffle",
+    ("Chocolate", "All day, everyday", "Layers of experience", "Winter"): "Flan",
+    ("Chocolate", "All day, everyday", "Layers of experience", "Spring"): "Flan",
+    ("Chocolate", "All day, everyday", "Layers of experience", "Autumn"): "Mandazi",
+
+    ("Chocolate", "All day, everyday", "Bittersweet spices", "Summer"): "Flan",
+    ("Chocolate", "All day, everyday", "Bittersweet spices", "Winter"): "Taiyaki",
+    ("Chocolate", "All day, everyday", "Bittersweet spices", "Spring"): "Taiyaki",
+    ("Chocolate", "All day, everyday", "Bittersweet spices", "Autumn"): "Mandazi",
+
+    ("Chocolate", "All day, everyday", "A tough shell but soft center", "Summer"): "Mandazi",
+    ("Chocolate", "All day, everyday", "A tough shell but soft center", "Winter"): "Mandazi",
+    ("Chocolate", "All day, everyday", "A tough shell but soft center", "Spring"): "Taiyaki",
+    ("Chocolate", "All day, everyday", "A tough shell but soft center", "Autumn"): "Taiyaki",
+
+    ("Chocolate", "All day, everyday", "Unexpected textures", "Summer"): "Souffle",
+    ("Chocolate", "All day, everyday", "Unexpected textures", "Winter"): "Flan",
+    ("Chocolate", "All day, everyday", "Unexpected textures", "Spring"): "Souffle",
+    ("Chocolate", "All day, everyday", "Unexpected textures", "Autumn"): "Flan",
+
+
+    # -----------------------------------------
+    # Vanilla (same structure)
+    # -----------------------------------------
+    ("Vanilla", "After a morning run", "Layers of experience", "Summer"): "Flan",
+    ("Vanilla", "After a morning run", "Layers of experience", "Winter"): "Souffle",
+    ("Vanilla", "After a morning run", "Layers of experience", "Spring"): "Taiyaki",
+    ("Vanilla", "After a morning run", "Layers of experience", "Autumn"): "Mandazi",
+
+    ("Vanilla", "After a morning run", "Bittersweet spices", "Summer"): "Mandazi",
+    ("Vanilla", "After a morning run", "Bittersweet spices", "Winter"): "Flan",
+    ("Vanilla", "After a morning run", "Bittersweet spices", "Spring"): "Flan",
+    ("Vanilla", "After a morning run", "Bittersweet spices", "Autumn"): "Mandazi",
+
+    ("Vanilla", "After a morning run", "A tough shell but soft center", "Summer"): "Flan",
+    ("Vanilla", "After a morning run", "A tough shell but soft center", "Winter"): "Mandazi",
+    ("Vanilla", "After a morning run", "A tough shell but soft center", "Spring"): "Taiyaki",
+    ("Vanilla", "After a morning run", "A tough shell but soft center", "Autumn"): "Souffle",
+
+    ("Vanilla", "After a morning run", "Unexpected textures", "Summer"): "Taiyaki",
+    ("Vanilla", "After a morning run", "Unexpected textures", "Winter"): "Flan",
+    ("Vanilla", "After a morning run", "Unexpected textures", "Spring"): "Flan",
+    ("Vanilla", "After a morning run", "Unexpected textures", "Autumn"): "Flan",
+
+    ("Vanilla", "Late night cravings", "Layers of experience", "Summer"): "Souffle",
+    ("Vanilla", "Late night cravings", "Layers of experience", "Winter"): "Taiyaki",
+    ("Vanilla", "Late night cravings", "Layers of experience", "Spring"): "Taiyaki",
+    ("Vanilla", "Late night cravings", "Layers of experience", "Autumn"): "Souffle",
+
+    ("Vanilla", "Late night cravings", "Bittersweet spices", "Summer"): "Taiyaki",
+    ("Vanilla", "Late night cravings", "Bittersweet spices", "Winter"): "Mandazi",
+    ("Vanilla", "Late night cravings", "Bittersweet spices", "Spring"): "Taiyaki",
+    ("Vanilla", "Late night cravings", "Bittersweet spices", "Autumn"): "Mandazi",
+
+    ("Vanilla", "Late night cravings", "A tough shell but soft center", "Summer"): "Taiyaki",
+    ("Vanilla", "Late night cravings", "A tough shell but soft center", "Winter"): "Flan",
+    ("Vanilla", "Late night cravings", "A tough shell but soft center", "Spring"): "Souffle",
+    ("Vanilla", "Late night cravings", "A tough shell but soft center", "Autumn"): "Souffle",
+
+    ("Vanilla", "Late night cravings", "Unexpected textures", "Summer"): "Taiyaki",
+    ("Vanilla", "Late night cravings", "Unexpected textures", "Winter"): "Flan",
+    ("Vanilla", "Late night cravings", "Unexpected textures", "Spring"): "Taiyaki",
+    ("Vanilla", "Late night cravings", "Unexpected textures", "Autumn"): "Flan",
+
+    ("Vanilla", "During special occasions", "Layers of experience", "Summer"): "Mandazi",
+    ("Vanilla", "During special occasions", "Layers of experience", "Winter"): "Flan",
+    ("Vanilla", "During special occasions", "Layers of experience", "Spring"): "Flan",
+    ("Vanilla", "During special occasions", "Layers of experience", "Autumn"): "Souffle",
+
+    ("Vanilla", "During special occasions", "Bittersweet spices", "Summer"): "Souffle",
+    ("Vanilla", "During special occasions", "Bittersweet spices", "Winter"): "Souffle",
+    ("Vanilla", "During special occasions", "Bittersweet spices", "Spring"): "Mandazi",
+    ("Vanilla", "During special occasions", "Bittersweet spices", "Autumn"): "Mandazi",
+
+    ("Vanilla", "During special occasions", "A tough shell but soft center", "Summer"): "Souffle",
+    ("Vanilla", "During special occasions", "A tough shell but soft center", "Winter"): "Taiyaki",
+    ("Vanilla", "During special occasions", "A tough shell but soft center", "Spring"): "Taiyaki",
+    ("Vanilla", "During special occasions", "A tough shell but soft center", "Autumn"): "Flan",
+
+    ("Vanilla", "During special occasions", "Unexpected textures", "Summer"): "Souffle",
+    ("Vanilla", "During special occasions", "Unexpected textures", "Winter"): "Mandazi",
+    ("Vanilla", "During special occasions", "Unexpected textures", "Spring"): "Mandazi",
+    ("Vanilla", "During special occasions", "Unexpected textures", "Autumn"): "Taiyaki",
+
+    ("Vanilla", "All day, everyday", "Layers of experience", "Summer"): "Souffle",
+    ("Vanilla", "All day, everyday", "Layers of experience", "Winter"): "Souffle",
+    ("Vanilla", "All day, everyday", "Layers of experience", "Spring"): "Flan",
+    ("Vanilla", "All day, everyday", "Layers of experience", "Autumn"): "Taiyaki",
+
+    ("Vanilla", "All day, everyday", "Bittersweet spices", "Summer"): "Mandazi",
+    ("Vanilla", "All day, everyday", "Bittersweet spices", "Winter"): "Taiyaki",
+    ("Vanilla", "All day, everyday", "Bittersweet spices", "Spring"): "Mandazi",
+    ("Vanilla", "All day, everyday", "Bittersweet spices", "Autumn"): "Taiyaki",
+
+    ("Vanilla", "All day, everyday", "A tough shell but soft center", "Summer"): "Flan",
+    ("Vanilla", "All day, everyday", "A tough shell but soft center", "Winter"): "Mandazi",
+    ("Vanilla", "All day, everyday", "A tough shell but soft center", "Spring"): "Mandazi",
+    ("Vanilla", "All day, everyday", "A tough shell but soft center", "Autumn"): "Flan",
+
+    ("Vanilla", "All day, everyday", "Unexpected textures", "Summer"): "Souffle",
+    ("Vanilla", "All day, everyday", "Unexpected textures", "Winter"): "Taiyaki",
+    ("Vanilla", "All day, everyday", "Unexpected textures", "Spring"): "Taiyaki",
+    ("Vanilla", "All day, everyday", "Unexpected textures", "Autumn"): "Souffle",
+
+
+    # -----------------------------------------
+    # Strawberry
+    # -----------------------------------------
+    ("Strawberry", "After a morning run", "Layers of experience", "Summer"): "Taiyaki",
+    ("Strawberry", "After a morning run", "Layers of experience", "Winter"): "Taiyaki",
+    ("Strawberry", "After a morning run", "Layers of experience", "Spring"): "Flan",
+    ("Strawberry", "After a morning run", "Layers of experience", "Autumn"): "Flan",
+
+    ("Strawberry", "After a morning run", "Bittersweet spices", "Summer"): "Mandazi",
+    ("Strawberry", "After a morning run", "Bittersweet spices", "Winter"): "Flan",
+    ("Strawberry", "After a morning run", "Bittersweet spices", "Spring"): "Mandazi",
+    ("Strawberry", "After a morning run", "Bittersweet spices", "Autumn"): "Souffle",
+
+    ("Strawberry", "After a morning run", "A tough shell but soft center", "Summer"): "Taiyaki",
+    ("Strawberry", "After a morning run", "A tough shell but soft center", "Winter"): "Taiyaki",
+    ("Strawberry", "After a morning run", "A tough shell but soft center", "Spring"): "Flan",
+    ("Strawberry", "After a morning run", "A tough shell but soft center", "Autumn"): "Souffle",
+
+    ("Strawberry", "After a morning run", "Unexpected textures", "Summer"): "Taiyaki",
+    ("Strawberry", "After a morning run", "Unexpected textures", "Winter"): "Flan",
+    ("Strawberry", "After a morning run", "Unexpected textures", "Spring"): "Flan",
+    ("Strawberry", "After a morning run", "Unexpected textures", "Autumn"): "Mandazi",
+
+    ("Strawberry", "Late night cravings", "Layers of experience", "Summer"): "Taiyaki",
+    ("Strawberry", "Late night cravings", "Layers of experience", "Winter"): "Mandazi",
+    ("Strawberry", "Late night cravings", "Layers of experience", "Spring"): "Mandazi",
+    ("Strawberry", "Late night cravings", "Layers of experience", "Autumn"): "Mandazi",
+
+    ("Strawberry", "Late night cravings", "Bittersweet spices", "Summer"): "Souffle",
+    ("Strawberry", "Late night cravings", "Bittersweet spices", "Winter"): "Souffle",
+    ("Strawberry", "Late night cravings", "Bittersweet spices", "Spring"): "Flan",
+    ("Strawberry", "Late night cravings", "Bittersweet spices", "Autumn"): "Mandazi",
+
+    ("Strawberry", "Late night cravings", "A tough shell but soft center", "Summer"): "Souffle",
+    ("Strawberry", "Late night cravings", "A tough shell but soft center", "Winter"): "Taiyaki",
+    ("Strawberry", "Late night cravings", "A tough shell but soft center", "Spring"): "Souffle",
+    ("Strawberry", "Late night cravings", "A tough shell but soft center", "Autumn"): "Taiyaki",
+
+    ("Strawberry", "Late night cravings", "Unexpected textures", "Summer"): "Mandazi",
+    ("Strawberry", "Late night cravings", "Unexpected textures", "Winter"): "Souffle",
+    ("Strawberry", "Late night cravings", "Unexpected textures", "Spring"): "Taiyaki",
+    ("Strawberry", "Late night cravings", "Unexpected textures", "Autumn"): "Taiyaki",
+
+    ("Strawberry", "During special occasions", "Layers of experience", "Summer"): "Flan",
+    ("Strawberry", "During special occasions", "Layers of experience", "Winter"): "Mandazi",
+    ("Strawberry", "During special occasions", "Layers of experience", "Spring"): "Taiyaki",
+    ("Strawberry", "During special occasions", "Layers of experience", "Autumn"): "Flan",
+
+    ("Strawberry", "During special occasions", "Bittersweet spices", "Summer"): "Flan",
+    ("Strawberry", "During special occasions", "Bittersweet spices", "Winter"): "Souffle",
+    ("Strawberry", "During special occasions", "Bittersweet spices", "Spring"): "Mandazi",
+    ("Strawberry", "During special occasions", "Bittersweet spices", "Autumn"): "Souffle",
+
+    ("Strawberry", "During special occasions", "A tough shell but soft center", "Summer"): "Taiyaki",
+    ("Strawberry", "During special occasions", "A tough shell but soft center", "Winter"): "Taiyaki",
+    ("Strawberry", "During special occasions", "A tough shell but soft center", "Spring"): "Flan",
+    ("Strawberry", "During special occasions", "A tough shell but soft center", "Autumn"): "Mandazi",
+
+    ("Strawberry", "During special occasions", "Unexpected textures", "Summer"): "Taiyaki",
+    ("Strawberry", "During special occasions", "Unexpected textures", "Winter"): "Mandazi",
+    ("Strawberry", "During special occasions", "Unexpected textures", "Spring"): "Flan",
+    ("Strawberry", "During special occasions", "Unexpected textures", "Autumn"): "Flan",
+
+    ("Strawberry", "All day, everyday", "Layers of experience", "Summer"): "Flan",
+    ("Strawberry", "All day, everyday", "Layers of experience", "Winter"): "Taiyaki",
+    ("Strawberry", "All day, everyday", "Layers of experience", "Spring"): "Taiyaki",
+    ("Strawberry", "All day, everyday", "Layers of experience", "Autumn"): "Mandazi",
+
+    ("Strawberry", "All day, everyday", "Bittersweet spices", "Summer"): "Mandazi",
+    ("Strawberry", "All day, everyday", "Bittersweet spices", "Winter"): "Souffle",
+    ("Strawberry", "All day, everyday", "Bittersweet spices", "Spring"): "Taiyaki",
+    ("Strawberry", "All day, everyday", "Bittersweet spices", "Autumn"): "Mandazi",
+
+    ("Strawberry", "All day, everyday", "A tough shell but soft center", "Summer"): "Mandazi",
+    ("Strawberry", "All day, everyday", "A tough shell but soft center", "Winter"): "Taiyaki",
+    ("Strawberry", "All day, everyday", "A tough shell but soft center", "Spring"): "Mandazi",
+    ("Strawberry", "All day, everyday", "A tough shell but soft center", "Autumn"): "Taiyaki",
+
+    ("Strawberry", "All day, everyday", "Unexpected textures", "Summer"): "Flan",
+    ("Strawberry", "All day, everyday", "Unexpected textures", "Winter"): "Souffle",
+    ("Strawberry", "All day, everyday", "Unexpected textures", "Spring"): "Souffle",
+    ("Strawberry", "All day, everyday", "Unexpected textures", "Autumn"): "Taiyaki",
+
+
+    # -----------------------------------------
+    # Coffee
+    # -----------------------------------------
+    ("Coffee", "After a morning run", "Layers of experience", "Summer"): "Flan",
+    ("Coffee", "After a morning run", "Layers of experience", "Winter"): "Mandazi",
+    ("Coffee", "After a morning run", "Layers of experience", "Spring"): "Flan",
+    ("Coffee", "After a morning run", "Layers of experience", "Autumn"): "Mandazi",
+
+    ("Coffee", "After a morning run", "Bittersweet spices", "Summer"): "Mandazi",
+    ("Coffee", "After a morning run", "Bittersweet spices", "Winter"): "Mandazi",
+    ("Coffee", "After a morning run", "Bittersweet spices", "Spring"): "Taiyaki",
+    ("Coffee", "After a morning run", "Bittersweet spices", "Autumn"): "Taiyaki",
+
+    ("Coffee", "After a morning run", "A tough shell but soft center", "Summer"): "Taiyaki",
+    ("Coffee", "After a morning run", "A tough shell but soft center", "Winter"): "Souffle",
+    ("Coffee", "After a morning run", "A tough shell but soft center", "Spring"): "Mandazi",
+    ("Coffee", "After a morning run", "A tough shell but soft center", "Autumn"): "Souffle",
+
+    ("Coffee", "After a morning run", "Unexpected textures", "Summer"): "Flan",
+    ("Coffee", "After a morning run", "Unexpected textures", "Winter"): "Taiyaki",
+    ("Coffee", "After a morning run", "Unexpected textures", "Spring"): "Flan",
+    ("Coffee", "After a morning run", "Unexpected textures", "Autumn"): "Mandazi",
+
+    ("Coffee", "Late night cravings", "Layers of experience", "Summer"): "Mandazi",
+    ("Coffee", "Late night cravings", "Layers of experience", "Winter"): "Mandazi",
+    ("Coffee", "Late night cravings", "Layers of experience", "Spring"): "Flan",
+    ("Coffee", "Late night cravings", "Layers of experience", "Autumn"): "Taiyaki",
+
+    ("Coffee", "Late night cravings", "Bittersweet spices", "Summer"): "Souffle",
+    ("Coffee", "Late night cravings", "Bittersweet spices", "Winter"): "Taiyaki",
+    ("Coffee", "Late night cravings", "Bittersweet spices", "Spring"): "Souffle",
+    ("Coffee", "Late night cravings", "Bittersweet spices", "Autumn"): "Mandazi",
+
+    ("Coffee", "Late night cravings", "A tough shell but soft center", "Summer"): "Mandazi",
+    ("Coffee", "Late night cravings", "A tough shell but soft center", "Winter"): "Souffle",
+    ("Coffee", "Late night cravings", "A tough shell but soft center", "Spring"): "Mandazi",
+    ("Coffee", "Late night cravings", "A tough shell but soft center", "Autumn"): "Souffle",
+
+    ("Coffee", "Late night cravings", "Unexpected textures", "Summer"): "Taiyaki",
+    ("Coffee", "Late night cravings", "Unexpected textures", "Winter"): "Taiyaki",
+    ("Coffee", "Late night cravings", "Unexpected textures", "Spring"): "Mandazi",
+    ("Coffee", "Late night cravings", "Unexpected textures", "Autumn"): "Souffle",
+
+    ("Coffee", "During special occasions", "Layers of experience", "Summer"): "Flan",
+    ("Coffee", "During special occasions", "Layers of experience", "Winter"): "Flan",
+    ("Coffee", "During special occasions", "Layers of experience", "Spring"): "Mandazi",
+    ("Coffee", "During special occasions", "Layers of experience", "Autumn"): "Mandazi",
+
+    ("Coffee", "During special occasions", "Bittersweet spices", "Summer"): "Mandazi",
+    ("Coffee", "During special occasions", "Bittersweet spices", "Winter"): "Taiyaki",
+    ("Coffee", "During special occasions", "Bittersweet spices", "Spring"): "Souffle",
+    ("Coffee", "During special occasions", "Bittersweet spices", "Autumn"): "Souffle",
+
+    ("Coffee", "During special occasions", "A tough shell but soft center", "Summer"): "Flan",
+    ("Coffee", "During special occasions", "A tough shell but soft center", "Winter"): "Taiyaki",
+    ("Coffee", "During special occasions", "A tough shell but soft center", "Spring"): "Flan",
+    ("Coffee", "During special occasions", "A tough shell but soft center", "Autumn"): "Mandazi",
+
+    ("Coffee", "During special occasions", "Unexpected textures", "Summer"): "Mandazi",
+    ("Coffee", "During special occasions", "Unexpected textures", "Winter"): "Souffle",
+    ("Coffee", "During special occasions", "Unexpected textures", "Spring"): "Taiyaki",
+    ("Coffee", "During special occasions", "Unexpected textures", "Autumn"): "Souffle",
+
+    ("Coffee", "All day, everyday", "Layers of experience", "Summer"): "Souffle",
+    ("Coffee", "All day, everyday", "Layers of experience", "Winter"): "Flan",
+    ("Coffee", "All day, everyday", "Layers of experience", "Spring"): "Mandazi",
+    ("Coffee", "All day, everyday", "Layers of experience", "Autumn"): "Taiyaki",
+
+    ("Coffee", "All day, everyday", "Bittersweet spices", "Summer"): "Mandazi",
+    ("Coffee", "All day, everyday", "Bittersweet spices", "Winter"): "Taiyaki",
+    ("Coffee", "All day, everyday", "Bittersweet spices", "Spring"): "Souffle",
+    ("Coffee", "All day, everyday", "Bittersweet spices", "Autumn"): "Taiyaki",
+
+    ("Coffee", "All day, everyday", "A tough shell but soft center", "Summer"): "Mandazi",
+    ("Coffee", "All day, everyday", "A tough shell but soft center", "Winter"): "Mandazi",
+    ("Coffee", "All day, everyday", "A tough shell but soft center", "Spring"): "Souffle",
+    ("Coffee", "All day, everyday", "A tough shell but soft center", "Autumn"): "Taiyaki",
+
+    ("Coffee", "All day, everyday", "Unexpected textures", "Summer"): "Souffle",
+    ("Coffee", "All day, everyday", "Unexpected textures", "Winter"): "Flan",
+    ("Coffee", "All day, everyday", "Unexpected textures", "Spring"): "Mandazi",
+    ("Coffee", "All day, everyday", "Unexpected textures", "Autumn"): "Flan",
 }
 
 
-if selected_flavor and selected_life and dessert_choice:
-    user_combo = (selected_flavor, selected_life, dessert_choice)
+if selected_flavor and selected_time and selected_life and selected_season:
+    user_combo = (selected_flavor, selected_time, selected_life, selected_season)
     result_key = dessert_map.get(user_combo)
-    # Retrieve information about selected drink/business
+
     if result_key:
         info = dessert_data[result_key]
-
-
 
     # Display playlist and business info
     st.subheader(f"🎵 {info['playlist']}")
@@ -259,5 +534,5 @@ if selected_flavor and selected_life and dessert_choice:
         if shared_count >= 3:
             st.balloons()  # Add some confetti for fun
             st.success(f"🎁 You unlocked a reward! Show this screen at {info['booth_name']} to claim your prize!")
-        else:
+    else:
             st.warning("⏳ Share your playlist with at least 3 people to unlock your reward!")

@@ -91,20 +91,43 @@ images = [
 
 titles=["Ambient beach", "Quiet mountainside", "Bustling city", "Lush forest"]
 
-clicked = clickable_images(
-    images,
-    titles=titles,
-    div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
-    img_style={"margin": "5px", "height": "200px"},
+if "selected_getaway" not in st.session_state:
+    st.session_state.selected_getaway= None
+
+cols = st.columns(4)
+
+for i, col in enumerate(cols):
+    with col:
+        # Clicking the button selects this image
+        if st.button(titles[i], key=f"btn_getaway_{i}"):
+            st.session_state.selected_getaway = i
+
+        # Add a red border if selected
+        border = "4px solid red" if st.session_state.selected_getaway == i else "4px solid transparent"
+
+        st.markdown(
+            f"""
+            <div style="
+                border:{border};
+                border-radius:10px;
+                padding:3px;
+                display:flex;
+                justify-content:center;
+            ">
+                <img src="{images[i]}" style="width:170px; border-radius:10px;">
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+selected_getaway = (
+    titles[st.session_state.selected_getaway]
+    if st.session_state.get("selected_getaway") is not None
+    else None
 )
 
-if clicked > -1:
-    st.markdown(f"**{titles[clicked]} selected**")
-else:
-    st.markdown("**No image selected**")
-
-selected_calm= titles[clicked] if clicked > -1 else None
-
+#gap
+st.write("")
 
 #Q5
 energy_data = {

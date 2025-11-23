@@ -31,7 +31,7 @@ images = [
         "https://travelswitherica.com/wp-content/uploads/2021/05/Depositphotos_199645174_xl-2015.jpg",
 ]
 
-titles=["Take a warm bath", "Go on a nature walk", "Shop at the mall", "Eat a delicious dinner"]
+titles=["Take a warm bath", "Go on a nature walk", "Shop at the mall", "Eat a delicious meal"]
 
 if "selected_unwind" not in st.session_state:
     st.session_state.selected_unwind = None
@@ -241,13 +241,9 @@ combination_map = {
 
 }
 
-if selected_unwind and selected_secret and energy_choice:
-    key = (selected_unwind, selected_secret, energy_choice)
+if selected_unwind and selected_act and selected_secret and selected_getaway and energy_choice:
+    key = (selected_unwind, selected_secret, selected_getaway, energy_choice)
     output = combination_map.get(key)
-
-#if energy_choice:
-    # Retrieve information about selected drink/business
-#    info3 = energy_data[energy_choice]
 
     # Display playlist and business info
     if output:

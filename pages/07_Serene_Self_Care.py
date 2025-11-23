@@ -22,7 +22,7 @@ Welcome! Pick an energy below to discover a blended playlist, support a local BI
 """)
 
 #Q1
-st.write("Select a relaxing activity:")
+st.write("Deciding to treat yourself after a long day, you...")
 images = [
 
         "https://images.squarespace-cdn.com/content/v1/5d48448a48f65e000146a3d1/1707418465705-6D8U9Z7P1FHDL1ZIU8S4/Bubble+Bath.png?format=2500w",
@@ -31,7 +31,7 @@ images = [
         "https://travelswitherica.com/wp-content/uploads/2021/05/Depositphotos_199645174_xl-2015.jpg",
 ]
 
-titles=["Taking a warm bath", "Going on a nature walk", "Listening to music", "Treating myself to a meal"]
+titles=["Take a warm bath", "Go on a nature walk", "Shop at the mall", "Eat a delicious dinner"]
 
 if "selected_unwind" not in st.session_state:
     st.session_state.selected_unwind = None

@@ -37,17 +37,16 @@ images = [
 
 titles=["Chocolate", "Vanilla", "Strawberry", "Coffee"]
 
-if "selected" not in st.session_state:
-    st.session_state.selected = None
+if "selected_flavor" not in st.session_state:
+    st.session_state.selected_flavor = None
 
-# Layout the images in 4 columns
 cols = st.columns(4)
 
 for i, col in enumerate(cols):
     with col:
         # Clicking the button selects this image
         if st.button(titles[i], key=f"btn_flavor_{i}"):
-            st.session_state.selected = i
+            st.session_state.selected_flavor = i
 
         # Add a red border if selected
         border = "4px solid red" if st.session_state.selected == i else "4px solid transparent"
@@ -91,16 +90,15 @@ images = [
 titles=["Summer", "Winter", "Spring", "Autumn"]
 
 if "selected" not in st.session_state:
-    st.session_state.selected = None
+    st.session_state.selected_season = None
 
-# Layout the images in 4 columns
 cols = st.columns(4)
 
 for i, col in enumerate(cols):
     with col:
         # Clicking the button selects this image
         if st.button(titles[i], key=f"btn_season_{i}"):
-            st.session_state.selected = i
+            st.session_state.selected_season = i
 
         # Add a red border if selected
         border = "4px solid red" if st.session_state.selected == i else "4px solid transparent"

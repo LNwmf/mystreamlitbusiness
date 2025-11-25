@@ -25,10 +25,10 @@ Welcome! Pick an energy below to discover a blended playlist, support a local BI
 st.write("Deciding to treat yourself after a long day, you...")
 images = [
 
-        "https://images.squarespace-cdn.com/content/v1/5d48448a48f65e000146a3d1/1707418465705-6D8U9Z7P1FHDL1ZIU8S4/Bubble+Bath.png?format=2500w",
-        "https://www.weljii.com/wp-content/uploads/2025/03/Blog-4-3-scaled.jpg",
-        "https://cdn.vox-cdn.com/thumbor/USWpDJAcNwhQQ6e0r-9ZYyCguDU=/0x0:7360x4912/1200x800/filters:focal(3092x1868:4268x3044)/cdn.vox-cdn.com/uploads/chorus_image/image/60114163/shoppingbags.0.jpg",
-        "https://travelswitherica.com/wp-content/uploads/2021/05/Depositphotos_199645174_xl-2015.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/bath.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/naturewalk.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/shopping.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/dinner.jpg",
 ]
 
 titles=["Take a warm bath", "Go on a nature walk", "Shop at the mall", "Eat a delicious meal"]

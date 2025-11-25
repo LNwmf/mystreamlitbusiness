@@ -1,5 +1,4 @@
 import streamlit as st
-from st_clickable_images import clickable_images
 
 st.set_page_config(
     page_title="Press Play to Party",
@@ -24,8 +23,8 @@ Welcome! Pick a party trick below to discover a blended playlist, support a loca
 """)
 st.write("")
 
-#Q1: clickable images
-st.write("Pick a classic party food:")
+#Q1
+st.write("Pick a classic party food: (double-click button)")
 images = [
 
         "https://assets.surlatable.com/m/15a89c2d9c6c1345/72_dpi_webp-REC-283110_Pizza.jpg", #pizza, salsa and chips, chicken wings, burger, hot dog
@@ -37,21 +36,45 @@ images = [
 
 titles=["Pizza", "Salsa & chips", "Chicken wings", "Burger", "Hot dog"]
 
-clicked = clickable_images(
-    images,
-    titles=titles,
-    div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
-    img_style={"margin": "5px", "height": "200px"},
+if "selected_food" not in st.session_state:
+    st.session_state.selected_food = None
+
+cols = st.columns(4)
+
+for i, col in enumerate(cols):
+    with col:
+        if st.button(titles[i], key=f"btn_food_{i}"):
+            st.session_state.selected_food = i
+
+        border = "4px solid red" if st.session_state.selected_food == i else "4px solid transparent"
+
+        st.markdown(
+            f"""
+            <div style="
+                border:{border};
+                border-radius:10px;
+                padding:3px;
+                display:flex;
+                justify-content:center;
+            ">
+                <img src="{images[i]}" style="width:170px; border-radius:10px;">
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+selected_food = (
+    titles[st.session_state.selected_food]
+    if st.session_state.get("selected_food") is not None
+    else None
 )
 
-if clicked > -1:
-    st.markdown(f"**{titles[clicked]} selected**")
-else:
-    st.markdown("**No image selected**")
+#gap
+st.write("")
 
 #Q2
 genre = ["Pop", "Rap/Hip-hop", "EDM", "Country", "Rock n Roll"]
-selected_genre = st.selectbox("Which music genre would you prefer?", genre, index=None)
+selected_genre = st.selectbox("Which music genre do you prefer?", genre, index=None)
 
 #Q3
 st.write("Pick a theme for the night:")
@@ -66,19 +89,40 @@ images = [
 
 titles=["Chaos & confetti", "Chill rooftop", "Holiday fun", "Family gathering", "Formal makeover"]
 
-clicked = clickable_images(
-    images,
-    titles=titles,
-    div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
-    img_style={"margin": "5px", "height": "200px"},
-)
+if "selected_theme" not in st.session_state:
+    st.session_state.selected_theme = None
 
-if clicked > -1:
-    st.markdown(f"**{titles[clicked]} selected**")
-else:
-    st.markdown("**No image selected**")
-# Get the selected image title if one is clicked
-selected_theme = titles[clicked] if clicked > -1 else None
+cols = st.columns(4)
+
+for i, col in enumerate(cols):
+    with col:
+        if st.button(titles[i], key=f"btn_theme_{i}"):
+            st.session_state.selected_theme = i
+
+        border = "4px solid red" if st.session_state.selected_theme == i else "4px solid transparent"
+
+        st.markdown(
+            f"""
+            <div style="
+                border:{border};
+                border-radius:10px;
+                padding:3px;
+                display:flex;
+                justify-content:center;
+            ">
+                <img src="{images[i]}" style="width:170px; border-radius:10px;">
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+selected_theme = (
+    titles[st.session_state.selected_theme]
+    if st.session_state.get("selected_theme") is not None
+    else None
+)
+#gap
+st.write("")
 
 #Q4
 complete = ["Drinks!", "Nonstop dancing", "Loud music", "A group selfie"]
@@ -128,7 +172,7 @@ info = None
     # Trick Selection
 trick_choice = st.selectbox("What's your go-to party trick?", ["", *trick_data.keys()])
 
-combination_map = {
+party_map = {
     ("Chaos & confetti", "Drinks!", "Karaoke master"): "Karaoke master",
     ("Chaos & confetti", "Drinks!", "Professional breakdancer"): "Karaoke master",
     ("Chaos & confetti", "Drinks!", "Magician"): "Magician",
@@ -211,12 +255,11 @@ combination_map = {
     ("Formal makeover", "A group selfie", "Stage comedian"): "Karaoke master",
 }
 
-if selected_theme and selected_complete and trick_choice:
-    user_combo = (selected_theme, selected_complete, trick_choice)
-    result_key = combination_map.get(user_combo)
+if selected_food and selected_genre and selected_theme and selected_complete and trick_choice:
+    user_combo = (selected_genre, selected_theme, trick_choice)
+    result_key = party_map.get(user_combo)
 
     if result_key:
-    # Retrieve information about selected drink/business
         info = trick_data[result_key]
 
     # Display playlist and business info
@@ -239,18 +282,3 @@ if selected_theme and selected_complete and trick_choice:
         else:
             st.warning("⏳ Share your playlist with at least 3 people to unlock your reward!")
 
-#st.title("Image Display based on Radio Selection")
-
-#selected_option = st.radio(
-#    "Choose an image:",
-#    options=["Image A", "Image B", "Image C"]
-#)
-
-#if selected_option == "Image A":
-#    st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJvbABjR5D8Ja6B51Y55dbqqL0VMW85XdV6w&s", caption="This is Image A")
-#elif selected_option == "Image B":
-#    st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwBNHTvWu7XJyqeE2yDf3n4ezQAHThGfxjeQ&s", caption="This is Image B")
-#elif selected_option == "Image C":
-#    st.image("https://sylviawakana.com/wp-content/uploads/2022/07/Taiyaki-1.jpg", caption="This is Image C")
-
-#clickable images

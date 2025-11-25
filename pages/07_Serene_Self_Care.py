@@ -22,7 +22,7 @@ Welcome! Pick an energy below to discover a blended playlist, support a local BI
 """)
 
 #Q1
-st.write("Deciding to treat yourself after a long day, you...")
+st.write("Deciding to treat yourself after a long day, you... (double-click button)")
 images = [
 
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/bath.jpg",

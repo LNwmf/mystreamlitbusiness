@@ -173,7 +173,7 @@ info3 = None
     # Energy Selection
 energy_choice = st.selectbox("How would you describe your current energy?", ["", *energy_data.keys()])
 
-combination_map = {
+energy_map = {
     ("Take a warm bath", "Confidence", "Ambient beach", "Glowing"): "Glowing",
     ("Take a warm bath", "Confidence", "Ambient beach", "Clear"): "Clear",
     ("Take a warm bath", "Confidence", "Ambient beach", "Soft"): "Soft",
@@ -437,7 +437,7 @@ combination_map = {
 
 if selected_unwind and selected_act and selected_secret and selected_getaway and energy_choice:
     key = (selected_unwind, selected_secret, selected_getaway, energy_choice)
-    output = combination_map.get(key)
+    output = energy_map.get(key)
 
     # Display playlist and business info
     if output:

@@ -134,7 +134,7 @@ st.write("")
 
 # Business options and related data
 drink_data = {
-    "Caramel Macchiato": {
+    "Caramel macchiato": {
         "playlist": "Maqamat Rhythms",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         "business_name": "Melt n Dip",
@@ -143,7 +143,7 @@ drink_data = {
         "website": "https://meltndip.com/",
         "business_image": "https://meltndip.com/wp-content/uploads/2019/06/meltndip_logo.png",  # Insert real image URL or file path
     },
-    "Chai Latte": {
+    "Chai latte": {
         "playlist": "World Country Beats",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         "business_name": "Hangry Cluck",
@@ -152,7 +152,7 @@ drink_data = {
         "website": "https://www.hangryclucks.com/",
         "business_image": "https://static.wixstatic.com/media/16edcb_02bad294e43540c883ab0178e1a8833a~mv2.jpg/v1/fill/w_161,h_114,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5f478e3d-f953-4e49-878b-842c22c4e9d2.jpg",  # Insert real image URL or file path
     },
-    "Milk Tea Boba": {
+    "Milk tea boba": {
         "playlist": "Sweet Mellow Blues",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         "business_name": "Tea yard",
@@ -177,14 +177,75 @@ info = None
 drink_choice = st.selectbox("Pick a drink!", ["", *drink_data.keys()])
 
 drink_map = {
+    ("Sweet", "Rose", "Hot chocolate on a chilly night"): "Milk tea boba",
+    ("Sweet", "Rose", "Wine during a thunderstorm"): "Chai latte",
+    ("Sweet", "Rose", "Fresh lemonade on the beach"): "Horchata",
+    ("Sweet", "Rose", "Warm apple cider in a cabin"): "Caramel macchiato",
+    ("Sweet", "Tamarind", "Hot chocolate on a chilly night"): "Horchata",
+    ("Sweet", "Tamarind", "Wine during a thunderstorm"): "Chai latte",
+    ("Sweet", "Tamarind", "Fresh lemonade on the beach"): "Milk tea boba",
+    ("Sweet", "Tamarind", "Warm apple cider in a cabin"): "Caramel macchiato",
+    ("Sweet", "Hot honey", "Hot chocolate on a chilly night"): "Chai latte",
+    ("Sweet", "Hot honey", "Wine during a thunderstorm"): "Caramel macchiato",
+    ("Sweet", "Hot honey", "Fresh lemonade on the beach"): "Horchata",
+    ("Sweet", "Hot honey", "Warm apple cider in a cabin"): "Milk tea boba",
+    ("Sweet", "Ginger", "Hot chocolate on a chilly night"): "Horchata",
+    ("Sweet", "Ginger", "Wine during a thunderstorm"): "Horchata",
+    ("Sweet", "Ginger", "Fresh lemonade on the beach"): "Milk tea boba",
+    ("Sweet", "Ginger", "Warm apple cider in a cabin"): "Chai latte",
 
+    ("Salty", "Rose", "Hot chocolate on a chilly night"): "Chai latte",
+    ("Salty", "Rose", "Wine during a thunderstorm"): "Horchata",
+    ("Salty", "Rose", "Fresh lemonade on the beach"): "Milk tea boba",
+    ("Salty", "Rose", "Warm apple cider in a cabin"): "Caramel macchiato",
+    ("Salty", "Tamarind", "Hot chocolate on a chilly night"): "Caramel macchiato",
+    ("Salty", "Tamarind", "Wine during a thunderstorm"): "Horchata",
+    ("Salty", "Tamarind", "Fresh lemonade on the beach"): "Chai latte",
+    ("Salty", "Tamarind", "Warm apple cider in a cabin"): "Milk tea boba",
+    ("Salty", "Hot honey", "Hot chocolate on a chilly night"): "Horchata",
+    ("Salty", "Hot honey", "Wine during a thunderstorm"): "Milk tea boba",
+    ("Salty", "Hot honey", "Fresh lemonade on the beach"): "Chai latte",
+    ("Salty", "Hot honey", "Warm apple cider in a cabin"): "Caramel macchiato",
+    ("Salty", "Ginger", "Hot chocolate on a chilly night"): "Caramel macchiato",
+    ("Salty", "Ginger", "Wine during a thunderstorm"): "Chai latte",
+    ("Salty", "Ginger", "Fresh lemonade on the beach"): "Horchata",
+    ("Salty", "Ginger", "Warm apple cider in a cabin"): "Horchata",
 
+    ("Bitter", "Rose", "Hot chocolate on a chilly night"): "Horchata",
+    ("Bitter", "Rose", "Wine during a thunderstorm"): "Horchata",
+    ("Bitter", "Rose", "Fresh lemonade on the beach"): "Chai latte",
+    ("Bitter", "Rose", "Warm apple cider in a cabin"): "Chai latte",
+    ("Bitter", "Tamarind", "Hot chocolate on a chilly night"): "Milk tea boba",
+    ("Bitter", "Tamarind", "Wine during a thunderstorm"): "Horchata",
+    ("Bitter", "Tamarind", "Fresh lemonade on the beach"): "Caramel macchiato",
+    ("Bitter", "Tamarind", "Warm apple cider in a cabin"): "Chai latte",
+    ("Bitter", "Hot honey", "Hot chocolate on a chilly night"): "Chai latte",
+    ("Bitter", "Hot honey", "Wine during a thunderstorm"): "Caramel macchiato",
+    ("Bitter", "Hot honey", "Fresh lemonade on the beach"): "Milk tea boba",
+    ("Bitter", "Hot honey", "Warm apple cider in a cabin"): "Horchata",
+    ("Bitter", "Ginger", "Hot chocolate on a chilly night"): "Horchata",
+    ("Bitter", "Ginger", "Wine during a thunderstorm"): "Chai latte",
+    ("Bitter", "Ginger", "Fresh lemonade on the beach"): "Chai latte",
+    ("Bitter", "Ginger", "Warm apple cider in a cabin"): "Caramel macchiato",
 
-
-
-
-
+    ("Sour", "Rose", "Hot chocolate on a chilly night"): "Chai latte",
+    ("Sour", "Rose", "Wine during a thunderstorm"): "Horchata",
+    ("Sour", "Rose", "Fresh lemonade on the beach"): "Chai latte",
+    ("Sour", "Rose", "Warm apple cider in a cabin"): "Milk tea boba",
+    ("Sour", "Tamarind", "Hot chocolate on a chilly night"): "Caramel macchiato",
+    ("Sour", "Tamarind", "Wine during a thunderstorm"): "Milk tea boba",
+    ("Sour", "Tamarind", "Fresh lemonade on the beach"): "Horchata",
+    ("Sour", "Tamarind", "Warm apple cider in a cabin"): "Chai latte",
+    ("Sour", "Hot honey", "Hot chocolate on a chilly night"): "Milk tea boba",
+    ("Sour", "Hot honey", "Wine during a thunderstorm"): "Horchata",
+    ("Sour", "Hot honey", "Fresh lemonade on the beach"): "Caramel macchiato",
+    ("Sour", "Hot honey", "Warm apple cider in a cabin"): "Chai latte",
+    ("Sour", "Ginger", "Hot chocolate on a chilly night"): "Caramel macchiato",
+    ("Sour", "Ginger", "Wine during a thunderstorm"): "Horchata",
+    ("Sour", "Ginger", "Fresh lemonade on the beach"): "Caramel macchiato",
+    ("Sour", "Ginger", "Warm apple cider in a cabin"): "Milk tea boba",
 }
+
 
 if selected_flavor and selected_travel and selected_ingredient and selected_mood and drink_choice:
     user_combo = (selected_flavor, selected_travel, selected_ingredient, selected_mood)

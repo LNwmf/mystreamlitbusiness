@@ -87,8 +87,48 @@ for i, col in enumerate(cols):
 st.write("")
 
 #Q4
-mood = ["Hot chocolate on a chilly night", "Wine during a thunderstorm", "Fresh lemonade on the beach", "Warm apple cider in a cabin"]
 selected_mood = st.selectbox("Which scenario sounds the most enjoyable?", mood, index=None)
+
+st.write("Which scenario sounds the most enjoyable? (double-click button)")
+images = [
+
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/hotchocolate.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/wine.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/lemonade.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/applecider.jpg",
+]
+
+titles=["Hot chocolate on a chilly night", "Wine during a thunderstorm", "Fresh lemonade on the beach", "Warm apple cider in a cabin"]
+
+if "selected_mood" not in st.session_state:
+    st.session_state.selected_mood = None
+
+# Layout the images in 4 columns
+cols = st.columns(4)
+
+for i, col in enumerate(cols):
+    with col:
+        # Clicking the button selects this image
+        if st.button(titles[i], key=f"btn_mood_{i}"):
+            st.session_state.selected_mood = i
+
+        # Add a red border if selected
+        border = "4px solid red" if st.session_state.selected_mood == i else "4px solid transparent"
+
+        st.markdown(
+            f"""
+            <div style="
+                border:{border};
+                border-radius:10px;
+                padding:3px;
+                display:flex;
+                justify-content:center;
+            ">
+                <img src="{images[i]}" style="width:170px; border-radius:10px;">
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
 
 # Business options and related data
 business_data = {

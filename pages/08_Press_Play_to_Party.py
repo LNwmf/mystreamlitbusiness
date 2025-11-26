@@ -79,11 +79,11 @@ selected_genre = st.selectbox("Which music genre would you prefer?", genre, inde
 st.write("Pick a theme for the night: (double-click button)")
 images = [
 
-        "", #confetti, chill rooftop, chicken wings, burger, hot dog
-        "https://images.stockcake.com/public/c/e/1/ce1b2237-6357-4c04-a757-f6482dfb2acc_large/evening-rooftop-party-stockcake.jpg",
-        "https://www.gigsalad.com/blog/wp-content/uploads/2022/12/iStock-539471504.jpg",
-        "https://koa.com/blog/images/family-at-the-grill.jpg?preset=heroimagecropped",
-        "https://cdn.shopify.com/s/files/1/0042/0390/5136/files/elegant-people.jpg?v=1697615969",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/confettichaos.jpg",
+        "",
+        "",
+        "",
+        "",
 ]
 
 titles=["Chaos & confetti", "Chill rooftop", "Holiday fun", "Family gathering", "Formal makeover"]

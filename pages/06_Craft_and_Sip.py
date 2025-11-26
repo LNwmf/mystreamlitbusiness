@@ -25,10 +25,10 @@ Welcome! Pick an artistic value below to discover a blended playlist, support a 
 st.write("Select a performance type:")
 images = [
 
-        "https://www.nycastings.com/wp-content/uploads/2017/05/theatre-pup.jpg",
-        "https://marvel-b1-cdn.bc0a.com/f00000000271534/musicaltheatre.missouristate.edu/_Files/MSU-MusicalTheatre-LegallyBlonde-1920x1080.jpg",
-        "https://static.vecteezy.com/system/resources/thumbnails/027/104/127/small_2x/cheering-crowd-illuminated-by-vibrant-stage-lights-at-concert-photo.jpg",
-        "https://www.smu.edu/-/media/site/meadows/newsstories/2014/meadowsdanceperformance.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/play.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/musical.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/concert.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/dance.jpg",
 ]
 
 titles=["Plays", "Musicals", "Concerts", "Dance"]

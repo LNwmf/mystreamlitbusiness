@@ -27,11 +27,11 @@ st.write("")
 st.write("Pick a classic party food: (double-click button)")
 images = [
 
-        "https://assets.surlatable.com/m/15a89c2d9c6c1345/72_dpi_webp-REC-283110_Pizza.jpg", #pizza, salsa and chips, chicken wings, burger, hot dog
-        "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/12/9/0/FNK_Salsa-and-Chips_s4x3.jpg.rend.hgtvcom.1280.1280.suffix/1387411410179.webp",
-        "https://tastesbetterfromscratch.com/wp-content/uploads/2014/09/Baked-Chicken-Wings-3.jpg",
-        "https://static01.nyt.com/images/2022/06/27/dining/kc-mushroom-beef-burgers/merlin_209008674_b3fa58fa-9bb1-4cfe-a08a-40b4dda0de78-jumbo.jpg",
-        "https://www.foodandwine.com/thmb/2kinp7BXi4eE-QG8u1rLS3z_o5M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Hawaiian-Hot-Dog-FT-RECIPE0724-8b45189237284cf5bf8efb1e8ea9626c.jpeg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/pizza.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/salsaandchips.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/chickenwings.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/burger.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/hotdog.jpeg",
 ]
 
 titles=["Pizza", "Salsa & chips", "Chicken wings", "Burger", "Hot dog"]

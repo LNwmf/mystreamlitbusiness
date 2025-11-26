@@ -73,8 +73,8 @@ selected_food = (
 st.write("")
 
 #Q2
-genre = ["Pop", "Rap/Hip-hop", "EDM", "Country", "Rock n Roll"]
-selected_genre = st.selectbox("Which music genre do you prefer?", genre, index=None)
+genre = ["Reggae", "Carnatic", "Bachata", "Blues"]
+selected_genre = st.selectbox("Which music genre would you prefer?", genre, index=None)
 
 #Q3
 st.write("Pick a theme for the night:")

@@ -90,7 +90,7 @@ images = [
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/pumpkincarving.jpg",
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/applepicking.jpg",
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/tricktreating.jpg",
-        "https://theworldmusicfoundation.org/wp-content/streamlitimages/bonfire.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/bonfires.jpg",
 ]
 
 titles=["Pumpkin carving", "Apple picking", "Trick or treating", "Bonfires"]

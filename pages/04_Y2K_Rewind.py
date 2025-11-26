@@ -27,9 +27,9 @@ st.write("What Y2K tech do you miss the most?")
 images = [
 
         "https://m.media-amazon.com/images/I/61-mqYsNMEL.jpg",
-        "https://retrospekt.com/cdn/shop/files/MP-VR-1006_1-newphones.jpg?v=1719506839&width=3000",
-        "https://media.gameshop.se/wp-content/uploads/2019/10/01010522/37635.jpg",
-        "https://i.etsystatic.com/57193956/r/il/5ec242/6867084797/il_fullxfull.6867084797_ed68.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/mp3.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/nintendo.jpeg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/digitalcamera.png",
 ]
 
 titles=["Flip phones", "MP3 players", "Nintendo DS", "Digital cameras"]

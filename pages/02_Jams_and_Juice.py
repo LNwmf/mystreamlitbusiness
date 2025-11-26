@@ -1,7 +1,4 @@
 import streamlit as st
-from st_clickable_images import clickable_images
-import streamlit.components.v1 as components
-
 #streamlit run sl1.py
 
 st.set_page_config(
@@ -131,21 +128,9 @@ business_data = {
         "website": "https://lacocinademama.info/#e850eae8-0ae1-47ef-b319-d9414f8fa562",
         "business_image": "https://img1.wsimg.com/isteam/ip/48776d13-0db9-455e-8e2c-79b6ef95f77b/9B4F57B4-DAC7-44B6-9866-0965466D36F5.png/:/rs=w:588,h:202,cg:true,m/cr=w:588,h:202/qt=q:95"
     }
-
-    # Add other drinks and related data here
 }
 
 info = None
-
-# Drink Selection
-#combination_map = {
-#    ("Sweet", "Hot chocolate on a chilly night", "Caramel Macchiato"): "Caramel Macchiato",
-#    ("Sweet", "Hot chocolate on a chilly night", "Chai Latte"): "Horchata",
-#    ...
-#}
-
-#key = (selected_flavor, selected_mood, drink_choice)
-#info = business_data[combination_map.get(key)] if combination_map.get(key) else None
 
 drink_choice = st.selectbox("Pick a drink!", ["", *business_data.keys()])
 

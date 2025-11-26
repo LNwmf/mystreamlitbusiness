@@ -27,14 +27,13 @@ st.write("")
 st.write("Pick a classic party food: (double-click button)")
 images = [
 
-        "https://theworldmusicfoundation.org/wp-content/streamlitimages/pizza.jpg",
-        "https://theworldmusicfoundation.org/wp-content/streamlitimages/salsaandchips.jpg",
-        "https://theworldmusicfoundation.org/wp-content/streamlitimages/chickenwings.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/pizza1.png",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/salsachips.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/chicken.jpg",
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/burger1.jpg",
-        "https://theworldmusicfoundation.org/wp-content/streamlitimages/hotdog.jpeg",
 ]
 
-titles=["Pizza", "Salsa & chips", "Chicken wings", "Burger", "Hot dog"]
+titles=["Pizza", "Salsa & chips", "Chicken wings", "Burger"]
 
 if "selected_food" not in st.session_state:
     st.session_state.selected_food = None

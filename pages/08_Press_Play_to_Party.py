@@ -76,10 +76,10 @@ genre = ["Reggae", "Carnatic", "Bachata", "Blues"]
 selected_genre = st.selectbox("Which music genre would you prefer?", genre, index=None)
 
 #Q3
-st.write("Pick a theme for the night:")
+st.write("Pick a theme for the night: (double-click button)")
 images = [
 
-        "https://thumbs.dreamstime.com/b/young-party-cheerful-people-showered-confetti-club-31137048.jpg", #confetti, chill rooftop, chicken wings, burger, hot dog
+        "", #confetti, chill rooftop, chicken wings, burger, hot dog
         "https://images.stockcake.com/public/c/e/1/ce1b2237-6357-4c04-a757-f6482dfb2acc_large/evening-rooftop-party-stockcake.jpg",
         "https://www.gigsalad.com/blog/wp-content/uploads/2022/12/iStock-539471504.jpg",
         "https://koa.com/blog/images/family-at-the-grill.jpg?preset=heroimagecropped",

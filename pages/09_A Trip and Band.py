@@ -22,3 +22,7 @@ st.title("✈️ Plan a Trip!")
 st.markdown("""
 Welcome! You're preparing for a dream vacation in the summer. Based on your preferences, you'll be matched with a traditional band around the world!
 """)
+
+#Q1
+destinations = ["Vibrant Tanzanian coastal city", "Cozy Irish village with lots of music", "Japanese countryside dotted with hot springs", "Bustling Mexican town with many celebrations"]
+selected_destination = st.selectbox("Choose a destination:", destinations, index=None)

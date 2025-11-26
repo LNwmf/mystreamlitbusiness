@@ -81,12 +81,12 @@ images = [
 
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/confettichaos.jpg",
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/rooftopparty.jpg",
-        "https://theworldmusicfoundation.org/wp-content/streamlitimages/holidayparty.jpg",
+        #"https://theworldmusicfoundation.org/wp-content/streamlitimages/holidayparty.jpg",
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/familyparty.jpg",
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/formalparty.png",
 ]
 
-titles=["Chaos & confetti", "Chill rooftop", "Holiday fun", "Family gathering", "Formal makeover"]
+titles=["Chaos & confetti", "Chill rooftop", "Family gathering", "Formal makeover"]
 
 if "selected_theme" not in st.session_state:
     st.session_state.selected_theme = None

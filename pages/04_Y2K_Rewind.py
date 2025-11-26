@@ -79,9 +79,9 @@ selected_trend = st.selectbox("Pick a 2000s fashion trend:", trend, index=None)
 st.write("If you were teleported into a movie, which one would you prefer to be in?")
 images = [
 
-        "https://m.media-amazon.com/images/M/MV5BMjE1MDQ4MjI1OV5BMl5BanBnXkFtZTcwNzcwODAzMw@@._V1_.jpg",
-        "https://m.media-amazon.com/images/M/MV5BOTQwYmRhNGQtODI2Mi00ZTRlLTk0Y2QtY2NkNjE1MGNhNTgwXkEyXkFqcGc@._V1_.jpg",
-        "https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/meangirls.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/10tihay.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/lordoftherings.jpg",
         "https://upload.wikimedia.org/wikipedia/en/thumb/a/aa/13_Going_on_30_film_poster.png/250px-13_Going_on_30_film_poster.png",
 ]
 

@@ -80,10 +80,10 @@ st.write("Pick a theme for the night: (double-click button)")
 images = [
 
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/confettichaos.jpg",
-        "",
-        "",
-        "",
-        "",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/rooftopparty.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/holidayparty.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/familyparty.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/formalparty.png",
 ]
 
 titles=["Chaos & confetti", "Chill rooftop", "Holiday fun", "Family gathering", "Formal makeover"]

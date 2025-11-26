@@ -30,7 +30,7 @@ images = [
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/pizza.jpg",
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/salsaandchips.jpg",
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/chickenwings.jpg",
-        "https://theworldmusicfoundation.org/wp-content/streamlitimages/motion-array-1639683-HYrEmlVAOJ-high_0012.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/burger1.jpg",
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/hotdog.jpeg",
 ]
 

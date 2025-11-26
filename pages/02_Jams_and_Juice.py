@@ -248,7 +248,7 @@ drink_map = {
 
 
 if selected_flavor and selected_travel and selected_ingredient and selected_mood and drink_choice:
-    user_combo = (selected_flavor, selected_travel, selected_ingredient, selected_mood)
+    user_combo = (selected_flavor, selected_ingredient, selected_mood)
     result_key = drink_map.get(user_combo)
 
     if result_key:

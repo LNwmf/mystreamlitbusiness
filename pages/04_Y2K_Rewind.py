@@ -26,7 +26,7 @@ Welcome! Pick a 2000s music artist below to discover a blended playlist, support
 st.write("What Y2K tech do you miss the most?")
 images = [
 
-        "https://m.media-amazon.com/images/I/61-mqYsNMEL.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/flipphone.jpeg",
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/mp3.jpg",
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/nintendo.jpeg",
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/digitalcamera.png",

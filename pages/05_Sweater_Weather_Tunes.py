@@ -87,10 +87,10 @@ selected_spent = st.selectbox("Fall is best spent...", spent, index=None)
 st.write("Pick a fall activity")
 images = [
 
-        "https://images.ctfassets.net/prxuf37q3ta2/1QXngj3Thd7Qt2EbHi2Yr0/1eca6f277d910946cbc9e3c06434db2f/Primary_Image_1200x900.jpg",
-        "https://cdn.outsideonline.com/wp-content/uploads/2022/09/apple_picking-h.jpg",
-        "https://hips.hearstapps.com/hmg-prod/images/trick-or-treat-2023-64a886178cfd1.jpg?crop=0.8893081761006288xw:1xh;center,top&resize=1200:*",
-        "https://cdn.hswstatic.com/gif/How-to-make-a-bonfire-in-your-backyard.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/pumpkincarving.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/applepicking.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/tricktreating.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/bonfire.jpg",
 ]
 
 titles=["Pumpkin carving", "Apple picking", "Trick or treating", "Bonfires"]

@@ -76,10 +76,10 @@ selected_era = st.selectbox("Which art era do you resonate with most?", era_opti
 st.write("Select an ideal creative environment:")
 images = [
 
-        "https://cielcreativespace.com/wp-content/uploads/2021/05/CIEL_EDIT3_-75-scaled.jpg",
-        "https://img.bucketlisters.com/image_uploads/1712007681349.png",
-        "https://media.istockphoto.com/id/1053651024/photo/wooden-chair-on-lakeside-pier.jpg?s=612x612&w=0&k=20&c=kWbMg_LrlwMeWeuaDW-OkoUjjXVybzzbpB61fHtNvRI=",
-        "https://www.arch2o.com/wp-content/uploads/2023/01/Arch2O-modern-fireplace-design-ideas.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/loft.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/cafe.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/lakeside.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/fireplace.jpg",
 ]
 
 titles=["Quiet loft studio", "Cozy cafe on a gloomy day", "Sunny lakeside", "Late nights by the fire"]

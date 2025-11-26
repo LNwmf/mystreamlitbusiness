@@ -87,7 +87,7 @@ selected_spent = st.selectbox("Fall is best spent...", spent, index=None)
 st.write("Pick a fall activity")
 images = [
 
-        "https://theworldmusicfoundation.org/wp-content/streamlitimages/pumpkincarving.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/pumpkin.jpg",
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/applepicking.jpg",
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/tricktreating.jpg",
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/bonfire1.jpg",

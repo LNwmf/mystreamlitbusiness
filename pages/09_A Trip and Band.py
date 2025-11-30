@@ -84,3 +84,12 @@ selected_meal = (
 )
 #gap
 st.write("")
+
+#Q4
+stumble = ["A sheep traffic jam on a vacant road", #ireland
+           "A sea turtle casually joining you while snorkeling", #caribbean
+           "A zebra photobombing your selfie during a safari tour", #tanzania
+           "Encountering a bunch of friendly cats while on a stroll in a village", #japan
+           "Stumbling into a hidden cenote behind a jungle trail", #mexico
+           "A secluded cafe serving spice-rich and warm coffees and teas"] #middle east
+selected_stumble = st.selectbox("What's the most unexpected thing you'd be excited to stumble upon?", stumble, index=None)

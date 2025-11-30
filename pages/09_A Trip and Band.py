@@ -124,7 +124,7 @@ moment = ["In front of the Pyramids of Giza while the sun rises", #middle east
         "Engulfed by cherry blossoms in Hirosaki Park in the spring", #japan
         "Drifting through Harrison's Cave on an eco-adventure", #caribbean
         "Lost in the Blarney Castle in the summertime", #irish
-        "Safari tour in Tarangire National Park surrounded by wildlife "] #tanzania
+        "Safari tour in Tarangire National Park surrounded by wildlife"] #tanzania
 selected_moment = st.selectbox("If you could teleport to one picture-perfect moment, where would it be?", moment, index=None)
 
 #Q6
@@ -201,3 +201,10 @@ selected_activity = (
 st.write("")
 
 #Q7
+day = ["Lanterns transform into different shapes in the sky", #japan
+        "Flowers bloom on trees as you walk past", #tanzania
+        "Red foxes start walking backwards in a grassland", #irish
+        "Desert sand shimmers like gold at night", #middle east
+        "Ocean waves grow and fall like they're breathing", #caribbean
+        "Murals animate and dance to tell stories"] #mexico
+selected_day = st.selectbox("If your day suddenly became surreal, what would happen?", day, index=None)

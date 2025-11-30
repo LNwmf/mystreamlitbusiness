@@ -24,5 +24,10 @@ You're preparing for a dream vacation in the summer. Based on your preferences, 
 """)
 
 #Q1
-destinations = ["Vibrant Tanzanian coastal city", "Cozy Irish village with lots of music", "Japanese countryside dotted with hot springs", "Bustling Mexican town with thrilling celebrations"]
+destinations = ["Vibrant Tanzanian coastal city full of wildlife",
+                "Cozy Irish village infused with lively music",
+                "Japanese countryside dotted with hot springs",
+                "Bustling Mexican town with thrilling celebrations",
+                "Refreshing waters of the tropical Caribbean islands",
+                "Vast monuments and arts of a Middle Eastern city"]
 selected_destination = st.selectbox("Choose a destination:", destinations, index=None)

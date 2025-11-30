@@ -48,7 +48,7 @@ images = [
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/doublemeals.jpg",
 ]
 
-titles=["Ulster Fry", "Chipsi Mayai", "Tabbouleh", "Chilaquiles", "Hiyayakko", "Doubles"] #ireland, tanzania, middle east, mexico, japan, caribbean
+titles=["1", "2", "3", "4", "5", "6"] #ireland-Ulster Fry, tanzania-Chipsi Mayai, middle east-Tabbouleh, mexico-Chilaquiles, japan-Hiyayakko, caribbean-Doubles
 
 if "selected_meal" not in st.session_state:
     st.session_state.selected_meal = None

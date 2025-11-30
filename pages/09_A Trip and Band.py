@@ -53,15 +53,14 @@ titles=[" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 "] #ireland-Ulster Fry, tanzania-
 if "selected_meal" not in st.session_state:
     st.session_state.selected_meal = None
 
-cols = st.columns(6)
-
+# ------ FIRST ROW (items 0,1,2) ------
+cols = st.columns(3)
 for i, col in enumerate(cols):
     with col:
         if st.button(titles[i], key=f"btn_meal_{i}"):
             st.session_state.selected_meal = i
 
         border = "4px solid red" if st.session_state.selected_meal == i else "4px solid transparent"
-
         st.markdown(
             f"""
             <div style="
@@ -72,6 +71,31 @@ for i, col in enumerate(cols):
                 justify-content:center;
             ">
                 <img src="{images[i]}" style="width:170px; border-radius:10px;">
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+#gap
+st.write("")
+
+# ------ SECOND ROW (items 3,4,5) ------
+cols = st.columns(3)
+for idx, col in enumerate(cols, start=3):
+    with col:
+        if st.button(titles[idx], key=f"btn_meal_{idx}"):
+            st.session_state.selected_meal = idx
+
+        border = "4px solid red" if st.session_state.selected_meal == idx else "4px solid transparent"
+        st.markdown(
+            f"""
+            <div style="
+                border:{border};
+                border-radius:10px;
+                padding:3px;
+                display:flex;
+                justify-content:center;
+            ">
+                <img src="{images[idx]}" style="width:170px; border-radius:10px;">
             </div>
             """,
             unsafe_allow_html=True,

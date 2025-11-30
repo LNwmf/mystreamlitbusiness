@@ -107,15 +107,15 @@ selected_moment = st.selectbox("If you could teleport to one picture-perfect mom
 st.write("What activity do you look most forward to? (double-click button)")
 images = [
 
-        "https://theworldmusicfoundation.org/wp-content/streamlitimages/ulsterfry.jpg",
-        "https://theworldmusicfoundation.org/wp-content/streamlitimages/chipsimayai.jpg",
-        "https://theworldmusicfoundation.org/wp-content/streamlitimages/tabbouleh.jpg",
-        "https://theworldmusicfoundation.org/wp-content/streamlitimages/chilaquiles.jpg",
-        "https://theworldmusicfoundation.org/wp-content/streamlitimages/hiyayakkomeals.jpg",
-        "https://theworldmusicfoundation.org/wp-content/streamlitimages/doublemeals.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/culinarytour.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/hikingtanzania.jpeg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/snorkeling.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/ancientruins.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/japanfestival.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/sightseeing.jpg",
 ]
 
-titles=[" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 "] #mexico-culinary tour, tanzania-hiking, caribbean-snorkeling/diving, middle east-explore ancient sites, japan-visit festivals, ireland-scenic drive
+titles=[" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 "] #mexico-culinary tour, tanzania-hiking, caribbean-snorkeling/diving, middle east-explore ancient sites, japan-visit festivals, ireland-scenic drive/sightseeing
 
 if "selected_activity" not in st.session_state:
     st.session_state.selected_activity = None

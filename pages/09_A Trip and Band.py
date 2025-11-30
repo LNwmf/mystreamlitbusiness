@@ -31,3 +31,7 @@ destinations = ["Vibrant Tanzanian coastal city full of wildlife",
                 "Refreshing waters of the tropical Caribbean islands",
                 "Vast monuments and arts of a Middle Eastern city"]
 selected_destination = st.selectbox("Choose a destination:", destinations, index=None)
+
+#Q2
+vibe = ["Dynamic and spontaneous", "Beachy and tranquil", "Nostalgic but homey", "Abundant and soulful", "Scenic and spirited", "Timeless yet therapeutic"] #mariachi, caribbean, irish, middle east, tanzania, japanese
+selected_vibe = st.selectbox("What's the vibe of your trip?", vibe, index=None)

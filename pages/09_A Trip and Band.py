@@ -104,3 +104,52 @@ moment = ["In front of the Pyramids of Giza while the sun rises", #middle east
 selected_moment = st.selectbox("If you could teleport to one picture-perfect moment, where would it be?", moment, index=None)
 
 #Q6
+st.write("What activity do you look most forward to? (double-click button)")
+images = [
+
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/ulsterfry.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/chipsimayai.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/tabbouleh.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/chilaquiles.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/hiyayakkomeals.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/doublemeals.jpg",
+]
+
+titles=[" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 "] #mexico-culinary tour, tanzania-hiking, caribbean-snorkeling/diving, middle east-explore ancient sites, japan-visit festivals, ireland-scenic drive
+
+if "selected_activity" not in st.session_state:
+    st.session_state.selected_activity = None
+
+cols = st.columns(6)
+
+for i, col in enumerate(cols):
+    with col:
+        if st.button(titles[i], key=f"btn_activity_{i}"):
+            st.session_state.selected_activity = i
+
+        border = "4px solid red" if st.session_state.selected_activity == i else "4px solid transparent"
+
+        st.markdown(
+            f"""
+            <div style="
+                border:{border};
+                border-radius:10px;
+                padding:3px;
+                display:flex;
+                justify-content:center;
+            ">
+                <img src="{images[i]}" style="width:170px; border-radius:10px;">
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+selected_meal = (
+    titles[st.session_state.selected_activity]
+    if st.session_state.get("selected_activity") is not None
+    else None
+)
+#gap
+st.write("")
+
+#Q7

@@ -143,6 +143,7 @@ for i, col in enumerate(cols):
             unsafe_allow_html=True,
         )
 
+st.write("")
 # ------ SECOND ROW (items 3,4,5) ------
 cols = st.columns(3)
 for idx, col in enumerate(cols, start=3):

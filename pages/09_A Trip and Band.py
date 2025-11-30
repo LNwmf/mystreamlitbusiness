@@ -20,7 +20,7 @@ st.image("https://theworldmusicfoundation.org/wp-content/uploads/2016/11/wmf_sma
 
 st.title("✈️ Plan a Trip!")
 st.markdown("""
-Welcome! You're preparing for a dream vacation in the summer. Based on your preferences, you'll be matched with a traditional band around the world!
+You're preparing for a dream vacation in the summer. Based on your preferences, you'll be matched with a traditional band around the world!
 """)
 
 #Q1

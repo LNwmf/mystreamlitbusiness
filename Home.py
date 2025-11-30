@@ -14,7 +14,7 @@ st.markdown(
 )
 st.image("https://theworldmusicfoundation.org/wp-content/uploads/2016/11/wmf_small_logo.png.webp", width=180)
 st.title("About Us")
-st.write("This app is created by the World Music Foundation to share music and uplift local businesses. Each page includes a series of questions that returns a playlist and promotes a small business. There's also a guessing and trivia game to test your musical knowledge!")
+st.write("Welcome! This app is created by the World Music Foundation to share music and uplift local businesses. Each page includes a series of questions that returns a playlist and promotes a small business. There's also a guessing and trivia game to test your musical knowledge!")
 
 
 #st.markdown("---")

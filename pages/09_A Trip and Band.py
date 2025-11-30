@@ -108,7 +108,7 @@ st.write("What activity do you look most forward to? (double-click button)")
 images = [
 
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/culinarytour.jpg",
-        "https://theworldmusicfoundation.org/wp-content/streamlitimages/hikingtanzania.jpeg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/hikingtanzania.jpg",
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/snorkeling.jpg",
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/ancientruins.jpg",
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/japanfestival.jpg",

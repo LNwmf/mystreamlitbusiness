@@ -208,3 +208,76 @@ day = ["Lanterns transform into different shapes in the sky", #japan
         "Ocean waves grow and fall like they're breathing", #caribbean
         "Murals animate and dance to tell stories"] #mexico
 selected_day = st.selectbox("If your day suddenly became surreal, what would happen?", day, index=None)
+
+#Q8
+st.write("Pick a souvenir to tell your vacation journey: (double-click button)")
+images = [
+
+        "Aran sweater that smells like the vast landscapes and cliffs", #middle east
+        "Mini ngoma drum that plays catchy rhythms", #tanzania
+        "A jarrito to represent the deep artistry and culture", #mexico
+        "", #caribbean
+        "", #japan
+        "", #ireland
+]
+
+titles=["Culinary tour", "Hiking", "Snorkeling", "Exploring ancient ruins", "Visiting festivals", "Scenic drive"] #mexico-culinary tour, tanzania-hiking, caribbean-snorkeling/diving, middle east-explore ancient sites, japan-visit festivals, ireland-scenic drive/sightseeing
+
+if "selected_activity" not in st.session_state:
+    st.session_state.selected_activity = None
+
+# ------ FIRST ROW (items 0,1,2) ------
+cols = st.columns(3)
+for i, col in enumerate(cols):
+    with col:
+        if st.button(titles[i], key=f"btn_activity_{i}"):
+            st.session_state.selected_activity = i
+
+        border = "4px solid red" if st.session_state.selected_activity == i else "4px solid transparent"
+        st.markdown(
+            f"""
+            <div style="
+                border:{border};
+                border-radius:10px;
+                padding:3px;
+                display:flex;
+                justify-content:center;
+            ">
+                <img src="{images[i]}" style="width:170px; border-radius:10px;">
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+#gap
+st.write("")
+
+# ------ SECOND ROW (items 3,4,5) ------
+cols = st.columns(3)
+for idx, col in enumerate(cols, start=3):
+    with col:
+        if st.button(titles[idx], key=f"btn_activity_{idx}"):
+            st.session_state.selected_activity = idx
+
+        border = "4px solid red" if st.session_state.selected_activity == idx else "4px solid transparent"
+        st.markdown(
+            f"""
+            <div style="
+                border:{border};
+                border-radius:10px;
+                padding:3px;
+                display:flex;
+                justify-content:center;
+            ">
+                <img src="{images[idx]}" style="width:170px; border-radius:10px;">
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+selected_activity = (
+    titles[st.session_state.selected_activity]
+    if st.session_state.get("selected_activity") is not None
+    else None
+)
+#gap
+st.write("")

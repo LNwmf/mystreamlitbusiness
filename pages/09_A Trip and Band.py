@@ -35,3 +35,52 @@ selected_destination = st.selectbox("Choose a destination:", destinations, index
 #Q2
 vibe = ["Dynamic and spontaneous", "Beachy and tranquil", "Nostalgic but homey", "Abundant and soulful", "Scenic and spirited", "Timeless yet therapeutic"] #mariachi, caribbean, irish, middle east, tanzania, japanese
 selected_vibe = st.selectbox("What's the vibe of your trip?", vibe, index=None)
+
+#Q3
+st.write("What are you craving when you land? (double-click button)")
+images = [
+
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/ulsterfry.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/chipsimayai.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/tabbouleh.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/chilaquiles.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/hiyayakkomeals.jpg",
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/doublemeals.jpg",
+]
+
+titles=["Ulster Fry", "Chipsi Mayai", "Tabbouleh", "Chilaquiles", "Hiyayakko", "Doubles"] #ireland, tanzania, middle east, mexico, japan, caribbean
+
+if "selected_meal" not in st.session_state:
+    st.session_state.selected_meal = None
+
+cols = st.columns(6)
+
+for i, col in enumerate(cols):
+    with col:
+        if st.button(titles[i], key=f"btn_meal_{i}"):
+            st.session_state.selected_meal = i
+
+        border = "4px solid red" if st.session_state.selected_meal == i else "4px solid transparent"
+
+        st.markdown(
+            f"""
+            <div style="
+                border:{border};
+                border-radius:10px;
+                padding:3px;
+                display:flex;
+                justify-content:center;
+            ">
+                <img src="{images[i]}" style="width:170px; border-radius:10px;">
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+selected_meal = (
+    titles[st.session_state.selected_meal]
+    if st.session_state.get("selected_meal") is not None
+    else None
+)
+#gap
+st.write("")

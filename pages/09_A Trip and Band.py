@@ -93,3 +93,14 @@ stumble = ["A sheep traffic jam on a vacant road", #ireland
            "Stumbling into a hidden cenote behind a jungle trail", #mexico
            "A secluded cafe serving rich, warm coffees and teas"] #middle east
 selected_stumble = st.selectbox("What's the most unexpected thing you'd be excited to stumble upon?", stumble, index=None)
+
+#Q5
+moment = ["In front of the Pyramids of Giza while the sun rises", #middle east
+        "Underneath the Arch of Cabo San Lucas during the sunset", #mexico
+        "Engulfed by cherry blossoms in Hirosaki Park in the spring", #japan
+        "Drifting through Harrison's Cave on an eco-adventure", #caribbean
+        "Lost in the Blarney Castle in the summertime", #irish
+        "Safari tour in Tarangire National Park surrounded by wildlife "] #tanzania
+selected_moment = st.selectbox("If you could teleport to one picture-perfect moment, where would it be?", moment, index=None)
+
+#Q6

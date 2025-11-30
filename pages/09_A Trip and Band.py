@@ -115,7 +115,7 @@ images = [
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/sightseeing.jpg",
 ]
 
-titles=[" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 "] #mexico-culinary tour, tanzania-hiking, caribbean-snorkeling/diving, middle east-explore ancient sites, japan-visit festivals, ireland-scenic drive/sightseeing
+titles=["Culinary tour", "Hiking", "Snorkeling", "Exploring ancient ruins", "Visit festivals", "Scenic drive"] #mexico-culinary tour, tanzania-hiking, caribbean-snorkeling/diving, middle east-explore ancient sites, japan-visit festivals, ireland-scenic drive/sightseeing
 
 if "selected_activity" not in st.session_state:
     st.session_state.selected_activity = None

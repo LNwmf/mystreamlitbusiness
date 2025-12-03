@@ -213,27 +213,27 @@ selected_day = st.selectbox("If your day suddenly became surreal, what would hap
 st.write("Pick a souvenir to tell your vacation journey: (double-click button)")
 images = [
 
-        "Aran sweater that smells like the vast landscapes and cliffs", #middle east
-        "Mini ngoma drum that plays catchy rhythms", #tanzania
-        "A jarrito to represent the deep artistry and culture", #mexico
-        "", #caribbean
-        "", #japan
-        "", #ireland
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/aransweater.jpg", #ireland-Aran sweater that smells like the vast landscapes and cliffs
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/miningomadrum.jpg", #tanzania-Mini ngoma drum that plays catchy rhythms
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/jarrito.jpg", #mexico-A jarrito to represent the deep artistry and culture
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/molas.jpg", #caribbean-Molas that depict the strong Guna identity and freedom
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/omamori.png", #japan-An omamori that provides good luck and protection in life
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/maamoul.png", #middle east-Maamouls to remember the hospitality and rich heritage
 ]
 
-titles=["Culinary tour", "Hiking", "Snorkeling", "Exploring ancient ruins", "Visiting festivals", "Scenic drive"] #mexico-culinary tour, tanzania-hiking, caribbean-snorkeling/diving, middle east-explore ancient sites, japan-visit festivals, ireland-scenic drive/sightseeing
+titles=["Aran sweater", "Mini ngoma drum", "Jarrito", "Molas", "Omamori", "Maamouls"]
 
-if "selected_activity" not in st.session_state:
-    st.session_state.selected_activity = None
+if "selected_souvenir" not in st.session_state:
+    st.session_state.selected_souvenir = None
 
 # ------ FIRST ROW (items 0,1,2) ------
 cols = st.columns(3)
 for i, col in enumerate(cols):
     with col:
-        if st.button(titles[i], key=f"btn_activity_{i}"):
-            st.session_state.selected_activity = i
+        if st.button(titles[i], key=f"btn_souvenir_{i}"):
+            st.session_state.selected_souvenir = i
 
-        border = "4px solid red" if st.session_state.selected_activity == i else "4px solid transparent"
+        border = "4px solid red" if st.session_state.selected_souvenir == i else "4px solid transparent"
         st.markdown(
             f"""
             <div style="
@@ -255,10 +255,10 @@ st.write("")
 cols = st.columns(3)
 for idx, col in enumerate(cols, start=3):
     with col:
-        if st.button(titles[idx], key=f"btn_activity_{idx}"):
-            st.session_state.selected_activity = idx
+        if st.button(titles[idx], key=f"btn_souvenir_{idx}"):
+            st.session_state.selected_souvenir = idx
 
-        border = "4px solid red" if st.session_state.selected_activity == idx else "4px solid transparent"
+        border = "4px solid red" if st.session_state.selected_souvenir == idx else "4px solid transparent"
         st.markdown(
             f"""
             <div style="
@@ -275,8 +275,8 @@ for idx, col in enumerate(cols, start=3):
         )
 
 selected_activity = (
-    titles[st.session_state.selected_activity]
-    if st.session_state.get("selected_activity") is not None
+    titles[st.session_state.selected_souvenir]
+    if st.session_state.get("selected_souvenir") is not None
     else None
 )
 #gap

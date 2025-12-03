@@ -281,3 +281,53 @@ selected_activity = (
 )
 #gap
 st.write("")
+
+logic_data = {
+    "Flan": {
+        "join": "You should join a...",
+        "band": "",
+        "fun_fact": "",
+        "music": "",
+        "band_image": "",
+    },
+
+    "Souffle": {
+    "join": "You should join a...",
+    "band": "",
+    "fun_fact": "",
+    "music": "",
+    "band_image": "",
+    },
+
+    "Taiyaki": {
+    "join": "You should join a...",
+    "band": "",
+    "fun_fact": "",
+    "music": "",
+    "band_image": "",
+    },
+
+    "Mandazi": {
+    "join": "You should join a...",
+    "band": "",
+    "fun_fact": "",
+    "music": "",
+    "band_image": "",
+    },
+
+    "Mandazi": {
+        "join": "You should join a...",
+        "band": "",
+        "fun_fact": "",
+        "music": "",
+        "band_image": "",
+    },
+
+    "Mandazi": {
+        "join": "You should join a...",
+        "band": "",
+        "fun_fact": "",
+        "music": "",
+        "band_image": "",
+    },
+}

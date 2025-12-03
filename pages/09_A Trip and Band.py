@@ -331,3 +331,15 @@ logic_data = {
         "band_image": "",
     },
 }
+
+
+logic_map = {
+
+
+
+
+
+
+
+
+}

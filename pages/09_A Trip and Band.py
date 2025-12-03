@@ -274,7 +274,7 @@ for idx, col in enumerate(cols, start=3):
             unsafe_allow_html=True,
         )
 
-selected_activity = (
+selected_souvenir = (
     titles[st.session_state.selected_souvenir]
     if st.session_state.get("selected_souvenir") is not None
     else None
@@ -283,63 +283,122 @@ selected_activity = (
 st.write("")
 
 logic_data = {
-    "Flan": {
+    "Folk": {
         "join": "You should join a...",
-        "band": "",
+        "band": "Celtic Folk Band",
+        "fun_fact": "Traditional Irish folk music was passed down through oral tradition in informal pubs 'sessions'. Today, people continue to gather and learn tunes from each other, usually by ear.",
+        "music": "https://youtu.be/tcYx62F6FVM?si=L5ebSR0x-tpsZqLT",
+        "band_image": "https://media.npr.org/assets/img/2012/02/13/thechieftains_barrymccall_20111216_145918_20120207_124436_wide-ae2303a257619d7a375c9777fc77d093943ebf4d.jpg",
+    },
+
+    "Mariachi": {
+    "join": "You should join a...",
+    "band": "Mariachi Band",
+    "fun_fact": "There's no lead singer in mariachi music. Each musician take turns singing and playing for songs. They are expected to be both skilled singers and instrumentalists.",
+    "music": "",
+    "band_image": "",
+    },
+
+    "Taiko": {
+    "join": "You should join a...",
+    "band": "Taiko Ensemble",
+    "fun_fact": "Taiko drumming combines athleticism, dance, and art. It requires great physical and mental stamina to play and memorize rhythms.",
+    "music": "",
+    "band_image": "",
+    },
+
+    "Taarab": {
+    "join": "You should join a...",
+    "band": "Taarab Ensemble",
+    "fun_fact": "",
+    "music": "",
+    "band_image": "",
+    },
+
+    "Calypso": {
+        "join": "You should join a...",
+        "band": "Calypso Band",
         "fun_fact": "",
         "music": "",
         "band_image": "",
     },
 
-    "Souffle": {
-    "join": "You should join a...",
-    "band": "",
-    "fun_fact": "",
-    "music": "",
-    "band_image": "",
-    },
-
-    "Taiyaki": {
-    "join": "You should join a...",
-    "band": "",
-    "fun_fact": "",
-    "music": "",
-    "band_image": "",
-    },
-
-    "Mandazi": {
-    "join": "You should join a...",
-    "band": "",
-    "fun_fact": "",
-    "music": "",
-    "band_image": "",
-    },
-
-    "Mandazi": {
+    "Takht": {
         "join": "You should join a...",
-        "band": "",
-        "fun_fact": "",
-        "music": "",
-        "band_image": "",
-    },
-
-    "Mandazi": {
-        "join": "You should join a...",
-        "band": "",
+        "band": "Takht Ensemble",
         "fun_fact": "",
         "music": "",
         "band_image": "",
     },
 }
 
+if selected_destination == "" and selected_vibe == "" and selected_meal == "" and selected_stumble == "" and selected_moment == "":
+elif selected_destination == "" and selected_vibe == "" and selected_meal == "" and selected_stumble == "" and selected_activity == "":
+elif selected_destination == "" and selected_vibe == "" and selected_meal == "" and selected_stumble == "" and selected_day == "":
+elif selected_destination == "" and selected_vibe == "" and selected_meal == "" and selected_stumble == "" and selected_souvenir == "":
+elif selected_destination == "" and selected_vibe == "" and selected_meal == "" and selected_moment == "" and selected_activity == "":
+elif selected_destination == "" and selected_vibe == "" and selected_meal == "" and selected_moment == "" and selected_day == "":
+elif selected_destination == "" and selected_vibe == "" and selected_meal == "" and selected_moment == "" and selected_souvenir == "":
+elif selected_destination == "" and selected_vibe == "" and selected_meal == "" and selected_activity == "" and selected_day == "":
+elif selected_destination == "" and selected_vibe == "" and selected_meal == "" and selected_activity == "" and selected_souvenir == "":
+elif selected_destination == "" and selected_vibe == "" and selected_meal == "" and selected_day == "" and selected_souvenir == "":
+elif selected_destination == "" and selected_vibe == "" and selected_stumble == "" and selected_moment == "" and selected_activity == "":
+elif selected_destination == "" and selected_vibe == "" and selected_stumble == "" and selected_moment == "" and selected_day == "":
+elif selected_destination == "" and selected_vibe == "" and selected_stumble == "" and selected_moment == "" and selected_souvenir == "":
+elif selected_destination == "" and selected_vibe == "" and selected_stumble == "" and selected_activity == "" and selected_day == "":
+elif selected_destination == "" and selected_vibe == "" and selected_stumble == "" and selected_activity == "" and selected_souvenir == "":
+elif selected_destination == "" and selected_vibe == "" and selected_stumble == "" and selected_day == "" and selected_souvenir == "":
+elif selected_destination == "" and selected_vibe == "" and selected_moment == "" and selected_activity == "" and selected_day == "":
+elif selected_destination == "" and selected_vibe == "" and selected_moment == "" and selected_activity == "" and selected_souvenir == "":
+elif selected_destination == "" and selected_vibe == "" and selected_moment == "" and selected_day == "" and selected_souvenir == "":
+elif selected_destination == "" and selected_vibe == "" and selected_activity == "" and selected_day == "" and selected_souvenir == "":
+elif selected_destination == "" and selected_meal == "" and selected_stumble == "" and selected_moment == "" and selected_activity == "":
+elif selected_destination == "" and selected_meal == "" and selected_stumble == "" and selected_moment == "" and selected_day == "":
+elif selected_destination == "" and selected_meal == "" and selected_stumble == "" and selected_moment == "" and selected_souvenir == "":
+elif selected_destination == "" and selected_meal == "" and selected_stumble == "" and selected_activity == "" and selected_day == "":
+elif selected_destination == "" and selected_meal == "" and selected_stumble == "" and selected_activity == "" and selected_souvenir == "":
+elif selected_destination == "" and selected_meal == "" and selected_stumble == "" and selected_day == "" and selected_souvenir == "":
+elif selected_destination == "" and selected_meal == "" and selected_moment == "" and selected_activity == "" and selected_day == "":
+elif selected_destination == "" and selected_meal == "" and selected_moment == "" and selected_activity == "" and selected_souvenir == "":
+elif selected_destination == "" and selected_meal == "" and selected_moment == "" and selected_day == "" and selected_souvenir == "":
+elif selected_destination == "" and selected_meal == "" and selected_activity == "" and selected_day == "" and selected_souvenir == "":
+elif selected_destination == "" and selected_stumble == "" and selected_moment == "" and selected_activity == "" and selected_day == "":
+elif selected_destination == "" and selected_stumble == "" and selected_moment == "" and selected_activity == "" and selected_souvenir == "":
+elif selected_destination == "" and selected_stumble == "" and selected_moment == "" and selected_day == "" and selected_souvenir == "":
+elif selected_destination == "" and selected_stumble == "" and selected_activity == "" and selected_day == "" and selected_souvenir == "":
+elif selected_destination == "" and selected_moment == "" and selected_activity == "" and selected_day == "" and selected_souvenir == "":
+elif selected_vibe == "" and selected_meal == "" and selected_stumble == "" and selected_moment == "" and selected_activity == "":
+elif selected_vibe == "" and selected_meal == "" and selected_stumble == "" and selected_moment == "" and selected_day == "":
+elif selected_vibe == "" and selected_meal == "" and selected_stumble == "" and selected_moment == "" and selected_souvenir == "":
+elif selected_vibe == "" and selected_meal == "" and selected_stumble == "" and selected_activity == "" and selected_day == "":
+elif selected_vibe == "" and selected_meal == "" and selected_stumble == "" and selected_activity == "" and selected_souvenir == "":
+elif selected_vibe == "" and selected_meal == "" and selected_stumble == "" and selected_day == "" and selected_souvenir == "":
+elif selected_vibe == "" and selected_meal == "" and selected_moment == "" and selected_activity == "" and selected_day == "":
+elif selected_vibe == "" and selected_meal == "" and selected_moment == "" and selected_activity == "" and selected_souvenir == "":
+elif selected_vibe == "" and selected_meal == "" and selected_moment == "" and selected_day == "" and selected_souvenir == "":
+elif selected_vibe == "" and selected_meal == "" and selected_activity == "" and selected_day == "" and selected_souvenir == "":
+elif selected_vibe == "" and selected_stumble == "" and selected_moment == "" and selected_activity == "" and selected_day == "":
+elif selected_vibe == "" and selected_stumble == "" and selected_moment == "" and selected_activity == "" and selected_souvenir == "":
+elif selected_vibe == "" and selected_stumble == "" and selected_moment == "" and selected_day == "" and selected_souvenir == "":
+elif selected_vibe == "" and selected_stumble == "" and selected_activity == "" and selected_day == "" and selected_souvenir == "":
+elif selected_vibe == "" and selected_moment == "" and selected_activity == "" and selected_day == "" and selected_souvenir == "":
+elif selected_meal == "" and selected_stumble == "" and selected_moment == "" and selected_activity == "" and selected_day == "":
+elif selected_meal == "" and selected_stumble == "" and selected_moment == "" and selected_activity == "" and selected_souvenir == "":
+elif selected_meal == "" and selected_stumble == "" and selected_moment == "" and selected_day == "" and selected_souvenir == "":
+elif selected_meal == "" and selected_stumble == "" and selected_activity == "" and selected_day == "" and selected_souvenir == "":
+elif selected_meal == "" and selected_moment == "" and selected_activity == "" and selected_day == "" and selected_souvenir == "":
+elif selected_stumble == "" and selected_moment == "" and selected_activity == "" and selected_day == "" and selected_souvenir == "":
 
-logic_map = {
 
 
 
 
+if q2 == "B" and q4 == "C" and q6 == "A":
+    return logic_data_result_1
 
+elif q1 in ["A", "C"] and q5 == "F":
+    return logic_data_result_2
 
+elif q3 == "D" and q7 in ["E", "F"]:
+    return logic_data_result_3
 
-
-}

@@ -213,7 +213,7 @@ selected_day = st.selectbox("If your day suddenly became surreal, what would hap
 st.write("Pick a souvenir to tell your vacation journey: (double-click button)")
 images = [
 
-        "https://theworldmusicfoundation.org/wp-content/streamlitimages/aransweater.jpg", #ireland-Aran sweater that smells like the vast landscapes and cliffs
+        "https://theworldmusicfoundation.org/wp-content/streamlitimages/sweater1.jpg", #ireland-Aran sweater that smells like the vast landscapes and cliffs
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/miningomadrum.jpg", #tanzania-Mini ngoma drum that plays catchy rhythms
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/jarrito.jpg", #mexico-A jarrito to represent the deep artistry and culture
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/molas.jpg", #caribbean-Molas that depict the strong Guna identity and freedom

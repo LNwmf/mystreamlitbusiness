@@ -332,41 +332,41 @@ logic_data = {
     },
 }
 
-if selected_destination == "" and selected_vibe == "" and selected_meal == "" and selected_stumble == "" and selected_moment == "":
-elif selected_destination == "" and selected_vibe == "" and selected_meal == "" and selected_stumble == "" and selected_activity == "":
-elif selected_destination == "" and selected_vibe == "" and selected_meal == "" and selected_stumble == "" and selected_day == "":
-elif selected_destination == "" and selected_vibe == "" and selected_meal == "" and selected_stumble == "" and selected_souvenir == "":
-elif selected_destination == "" and selected_vibe == "" and selected_meal == "" and selected_moment == "" and selected_activity == "":
-elif selected_destination == "" and selected_vibe == "" and selected_meal == "" and selected_moment == "" and selected_day == "":
-elif selected_destination == "" and selected_vibe == "" and selected_meal == "" and selected_moment == "" and selected_souvenir == "":
-elif selected_destination == "" and selected_vibe == "" and selected_meal == "" and selected_activity == "" and selected_day == "":
-elif selected_destination == "" and selected_vibe == "" and selected_meal == "" and selected_activity == "" and selected_souvenir == "":
-elif selected_destination == "" and selected_vibe == "" and selected_meal == "" and selected_day == "" and selected_souvenir == "":
-elif selected_destination == "" and selected_vibe == "" and selected_stumble == "" and selected_moment == "" and selected_activity == "":
-elif selected_destination == "" and selected_vibe == "" and selected_stumble == "" and selected_moment == "" and selected_day == "":
-elif selected_destination == "" and selected_vibe == "" and selected_stumble == "" and selected_moment == "" and selected_souvenir == "":
-elif selected_destination == "" and selected_vibe == "" and selected_stumble == "" and selected_activity == "" and selected_day == "":
-elif selected_destination == "" and selected_vibe == "" and selected_stumble == "" and selected_activity == "" and selected_souvenir == "":
-elif selected_destination == "" and selected_vibe == "" and selected_stumble == "" and selected_day == "" and selected_souvenir == "":
-elif selected_destination == "" and selected_vibe == "" and selected_moment == "" and selected_activity == "" and selected_day == "":
-elif selected_destination == "" and selected_vibe == "" and selected_moment == "" and selected_activity == "" and selected_souvenir == "":
-elif selected_destination == "" and selected_vibe == "" and selected_moment == "" and selected_day == "" and selected_souvenir == "":
-elif selected_destination == "" and selected_vibe == "" and selected_activity == "" and selected_day == "" and selected_souvenir == "":
-elif selected_destination == "" and selected_meal == "" and selected_stumble == "" and selected_moment == "" and selected_activity == "":
-elif selected_destination == "" and selected_meal == "" and selected_stumble == "" and selected_moment == "" and selected_day == "":
-elif selected_destination == "" and selected_meal == "" and selected_stumble == "" and selected_moment == "" and selected_souvenir == "":
-elif selected_destination == "" and selected_meal == "" and selected_stumble == "" and selected_activity == "" and selected_day == "":
-elif selected_destination == "" and selected_meal == "" and selected_stumble == "" and selected_activity == "" and selected_souvenir == "":
-elif selected_destination == "" and selected_meal == "" and selected_stumble == "" and selected_day == "" and selected_souvenir == "":
-elif selected_destination == "" and selected_meal == "" and selected_moment == "" and selected_activity == "" and selected_day == "":
-elif selected_destination == "" and selected_meal == "" and selected_moment == "" and selected_activity == "" and selected_souvenir == "":
-elif selected_destination == "" and selected_meal == "" and selected_moment == "" and selected_day == "" and selected_souvenir == "":
-elif selected_destination == "" and selected_meal == "" and selected_activity == "" and selected_day == "" and selected_souvenir == "":
-elif selected_destination == "" and selected_stumble == "" and selected_moment == "" and selected_activity == "" and selected_day == "":
-elif selected_destination == "" and selected_stumble == "" and selected_moment == "" and selected_activity == "" and selected_souvenir == "":
-elif selected_destination == "" and selected_stumble == "" and selected_moment == "" and selected_day == "" and selected_souvenir == "":
-elif selected_destination == "" and selected_stumble == "" and selected_activity == "" and selected_day == "" and selected_souvenir == "":
-elif selected_destination == "" and selected_moment == "" and selected_activity == "" and selected_day == "" and selected_souvenir == "":
+if selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "" and selected_meal == "" and selected_stumble == "" and selected_moment == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "" and selected_meal == "" and selected_stumble == "" and selected_activity == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "" and selected_meal == "" and selected_stumble == "" and selected_day == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "" and selected_meal == "" and selected_stumble == "" and selected_souvenir == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "" and selected_meal == "" and selected_moment == "" and selected_activity == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "" and selected_meal == "" and selected_moment == "" and selected_day == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "" and selected_meal == "" and selected_moment == "" and selected_souvenir == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "" and selected_meal == "" and selected_activity == "" and selected_day == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "" and selected_meal == "" and selected_activity == "" and selected_souvenir == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "" and selected_meal == "" and selected_day == "" and selected_souvenir == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "" and selected_stumble == "" and selected_moment == "" and selected_activity == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "" and selected_stumble == "" and selected_moment == "" and selected_day == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "" and selected_stumble == "" and selected_moment == "" and selected_souvenir == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "" and selected_stumble == "" and selected_activity == "" and selected_day == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "" and selected_stumble == "" and selected_activity == "" and selected_souvenir == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "" and selected_stumble == "" and selected_day == "" and selected_souvenir == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "" and selected_moment == "" and selected_activity == "" and selected_day == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "" and selected_moment == "" and selected_activity == "" and selected_souvenir == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "" and selected_moment == "" and selected_day == "" and selected_souvenir == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "" and selected_activity == "" and selected_day == "" and selected_souvenir == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_meal == "" and selected_stumble == "" and selected_moment == "" and selected_activity == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_meal == "" and selected_stumble == "" and selected_moment == "" and selected_day == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_meal == "" and selected_stumble == "" and selected_moment == "" and selected_souvenir == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_meal == "" and selected_stumble == "" and selected_activity == "" and selected_day == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_meal == "" and selected_stumble == "" and selected_activity == "" and selected_souvenir == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_meal == "" and selected_stumble == "" and selected_day == "" and selected_souvenir == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_meal == "" and selected_moment == "" and selected_activity == "" and selected_day == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_meal == "" and selected_moment == "" and selected_activity == "" and selected_souvenir == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_meal == "" and selected_moment == "" and selected_day == "" and selected_souvenir == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_meal == "" and selected_activity == "" and selected_day == "" and selected_souvenir == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_stumble == "" and selected_moment == "" and selected_activity == "" and selected_day == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_stumble == "" and selected_moment == "" and selected_activity == "" and selected_souvenir == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_stumble == "" and selected_moment == "" and selected_day == "" and selected_souvenir == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_stumble == "" and selected_activity == "" and selected_day == "" and selected_souvenir == "":
+elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_moment == "" and selected_activity == "" and selected_day == "" and selected_souvenir == "":
 elif selected_vibe == "" and selected_meal == "" and selected_stumble == "" and selected_moment == "" and selected_activity == "":
 elif selected_vibe == "" and selected_meal == "" and selected_stumble == "" and selected_moment == "" and selected_day == "":
 elif selected_vibe == "" and selected_meal == "" and selected_stumble == "" and selected_moment == "" and selected_souvenir == "":

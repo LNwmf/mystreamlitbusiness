@@ -284,6 +284,8 @@ selected_souvenir = (
 )
 #gap
 st.write("")
+st.write("")
+st.write("")
 
 logic_data = {
     "Folk": {

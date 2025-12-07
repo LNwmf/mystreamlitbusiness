@@ -332,15 +332,72 @@ logic_data = {
     },
 }
 
-taarab_answers = {
-    "Vibrant Tanzanian coastal city full of wildlife",
-    "Scenic and spirited",
-    "Chipsi Mayai",
-    "A zebra photobombing your selfie during a safari tour",
-    "Safari tour in Tarangire National Park surrounded by wildlife",
-    "Hiking",
-    "Flowers bloom on trees as you walk past",
-    "Mini ngoma drum",
+band_answer_map = {
+    "Folk": {
+        "Cozy Irish village infused with lively music",
+        "Nostalgic but homey",
+        "Ulster Fry",
+        "A sheep traffic jam on a vacant road",
+        "Lost in the Blarney Castle in the summertime",
+        "Scenic drive",
+        "Red foxes start walking backwards in a grassland",
+        "Aran sweater",
+    },
+
+    "Mariachi": {
+        "Bustling Mexican town with thrilling celebrations",
+        "Dynamic and spontaneous",
+        "Chilaquiles",
+        "Stumbling into a hidden cenote behind a jungle trail",
+        "Underneath the Arch of Cabo San Luis during the sunset",
+        "Culinary tour",
+        "Murals animate and dance to tell stories",
+        "Jarrito",
+    },
+
+    "Taiko": {
+        "Japanese countryside dotted with hot springs",
+        "Timeless yet therapeutic",
+        "Hiyayakko",
+        "Encountering a bunch of friendly cats while on a stroll in a village",
+        "Engulfed by cherry blossoms in Hirosaki Park in the spring",
+        "Visiting festivals",
+        "Lanterns transform into different shapes in the sky",
+        "Omamori",
+    },
+
+    "Taarab": {
+        "Vibrant Tanzanian coastal city full of wildlife",
+        "Scenic and spirited",
+        "Chipsi Mayai",
+        "A zebra photobombing your selfie during a safari tour",
+        "Safari tour in Tarangire National Park surrounded by wildlife",
+        "Hiking",
+        "Flowers bloom on trees as you walk past",
+        "Mini ngoma drum",
+    },
+
+    "Calypso": {
+        "Refreshing waters of the tropical Caribbean islands",
+        "Beachy and tranquil",
+        "Doubles",
+        "A sea turtle casually joining you while snorkeling",
+        "Drifting through Harrison's Cave on an eco-adventure",
+        "Snorkeling",
+        "Ocean waves grow and fall like they're breathing",
+        "Molas",
+    },
+
+    "Takht": {
+        "Vast monuments and arts of a Middle Eastern city",
+        "Abundant and soulful",
+        "Tabbouleh",
+        "A secluded cafe serving rich, warm coffees and teas",
+        "In front of the Pyramids of Giza while the sun rises",
+        "Exploring ancient ruins",
+        "Desert sand shimmers like gold at night",
+        "Maamouls",
+    },
 }
 
 user_answers = {

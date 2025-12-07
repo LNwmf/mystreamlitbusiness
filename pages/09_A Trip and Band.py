@@ -431,7 +431,7 @@ if result:
     if result["band_image"]:
         st.image(result["band_image"])
     if result["music"]:
-        st.markdown(f"[Listen here]({result['music']})")
+        st.markdown(f"[Music recommendation]({result['music']})")
 
 
 

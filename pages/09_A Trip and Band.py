@@ -332,73 +332,48 @@ logic_data = {
     },
 }
 
-if selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "Scenic and spirited" and selected_meal == "Chipsi Mayai" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "Scenic and spirited" and selected_meal == "Chipsi Mayai" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_activity == "Hiking":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "Scenic and spirited" and selected_meal == "Chipsi Mayai" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_day == "Flowers bloom on trees as you walk past":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "Scenic and spirited" and selected_meal == "Chipsi Mayai" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_souvenir == "Mini ngoma drum":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "Scenic and spirited" and selected_meal == "Chipsi Mayai" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_activity == "Hiking":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "Scenic and spirited" and selected_meal == "Chipsi Mayai" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_day == "Flowers bloom on trees as you walk past":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "Scenic and spirited" and selected_meal == "Chipsi Mayai" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_souvenir == "Mini ngoma drum":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "Scenic and spirited" and selected_meal == "Chipsi Mayai" and selected_activity == "Hiking" and selected_day == "Flowers bloom on trees as you walk past":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "Scenic and spirited" and selected_meal == "Chipsi Mayai" and selected_activity == "Hiking" and selected_souvenir == "Mini ngoma drum":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "Scenic and spirited" and selected_meal == "Chipsi Mayai" and selected_day == "Flowers bloom on trees as you walk past" and selected_souvenir == "Mini ngoma drum":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "Scenic and spirited" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_activity == "Hiking":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "Scenic and spirited" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_day == "Flowers bloom on trees as you walk past":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "Scenic and spirited" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_souvenir == "Mini ngoma drum":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "Scenic and spirited" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_activity == "Hiking" and selected_day == "Flowers bloom on trees as you walk past":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "Scenic and spirited" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_activity == "Hiking" and selected_souvenir == "Mini ngoma drum":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "Scenic and spirited" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_day == "Flowers bloom on trees as you walk past" and selected_souvenir == "Mini ngoma drum":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "Scenic and spirited" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_activity == "Hiking" and selected_day == "Flowers bloom on trees as you walk past":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "Scenic and spirited" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_activity == "Hiking" and selected_souvenir == "Mini ngoma drum":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "Scenic and spirited" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_day == "Flowers bloom on trees as you walk past" and selected_souvenir == "Mini ngoma drum":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_vibe == "Scenic and spirited" and selected_activity == "Hiking" and selected_day == "Flowers bloom on trees as you walk past" and selected_souvenir == "Mini ngoma drum":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_meal == "Chipsi Mayai" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_activity == "Hiking":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_meal == "Chipsi Mayai" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_day == "Flowers bloom on trees as you walk past":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_meal == "Chipsi Mayai" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_souvenir == "Mini ngoma drum":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_meal == "Chipsi Mayai" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_activity == "Hiking" and selected_day == "Flowers bloom on trees as you walk past":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_meal == "Chipsi Mayai" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_activity == "Hiking" and selected_souvenir == "Mini ngoma drum":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_meal == "Chipsi Mayai" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_day == "Flowers bloom on trees as you walk past" and selected_souvenir == "Mini ngoma drum":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_meal == "Chipsi Mayai" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_activity == "Hiking" and selected_day == "Flowers bloom on trees as you walk past":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_meal == "Chipsi Mayai" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_activity == "Hiking" and selected_souvenir == "Mini ngoma drum":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_meal == "Chipsi Mayai" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_day == "Flowers bloom on trees as you walk past" and selected_souvenir == "Mini ngoma drum":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_meal == "Chipsi Mayai" and selected_activity == "Hiking" and selected_day == "Flowers bloom on trees as you walk past" and selected_souvenir == "Mini ngoma drum":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_activity == "Hiking" and selected_day == "Flowers bloom on trees as you walk past":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_activity == "Hiking" and selected_souvenir == "Mini ngoma drum":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_day == "Flowers bloom on trees as you walk past" and selected_souvenir == "Mini ngoma drum":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_activity == "" and selected_day == "Flowers bloom on trees as you walk past" and selected_souvenir == "Mini ngoma drum":
-elif selected_destination == "Vibrant Tanzanian coastal city full of wildlife" and selected_moment == "" and selected_activity == "Hiking" and selected_day == "Flowers bloom on trees as you walk past" and selected_souvenir == "Mini ngoma drum":
-elif selected_vibe == "Scenic and spirited" and selected_meal == "Chipsi Mayai" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_activity == "Hiking":
-elif selected_vibe == "Scenic and spirited" and selected_meal == "Chipsi Mayai" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_day == "Flowers bloom on trees as you walk past":
-elif selected_vibe == "Scenic and spirited" and selected_meal == "Chipsi Mayai" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_souvenir == "Mini ngoma drum":
-elif selected_vibe == "Scenic and spirited" and selected_meal == "Chipsi Mayai" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_activity == "Hiking" and selected_day == "Flowers bloom on trees as you walk past":
-elif selected_vibe == "Scenic and spirited" and selected_meal == "Chipsi Mayai" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_activity == "Hiking" and selected_souvenir == "Mini ngoma drum":
-elif selected_vibe == "Scenic and spirited" and selected_meal == "Chipsi Mayai" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_day == "Flowers bloom on trees as you walk past" and selected_souvenir == "Mini ngoma drum":
-elif selected_vibe == "Scenic and spirited" and selected_meal == "Chipsi Mayai" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_activity == "Hiking" and selected_day == "Flowers bloom on trees as you walk past":
-elif selected_vibe == "Scenic and spirited" and selected_meal == "Chipsi Mayai" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_activity == "Hiking" and selected_souvenir == "Mini ngoma drum":
-elif selected_vibe == "Scenic and spirited" and selected_meal == "Chipsi Mayai" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_day == "Flowers bloom on trees as you walk past" and selected_souvenir == "Mini ngoma drum":
-elif selected_vibe == "Scenic and spirited" and selected_meal == "Chipsi Mayai" and selected_activity == "Hiking" and selected_day == "Flowers bloom on trees as you walk past" and selected_souvenir == "Mini ngoma drum":
-elif selected_vibe == "Scenic and spirited" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_activity == "Hiking" and selected_day == "Flowers bloom on trees as you walk past":
-elif selected_vibe == "Scenic and spirited" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_activity == "Hiking" and selected_souvenir == "Mini ngoma drum":
-elif selected_vibe == "Scenic and spirited" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_day == "Flowers bloom on trees as you walk past" and selected_souvenir == "Mini ngoma drum":
-elif selected_vibe == "Scenic and spirited" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_activity == "" and selected_day == "Flowers bloom on trees as you walk past" and selected_souvenir == "Mini ngoma drum":
-elif selected_vibe == "Scenic and spirited" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_activity == "" and selected_day == "Flowers bloom on trees as you walk past" and selected_souvenir == "Mini ngoma drum":
-elif selected_meal == "Chipsi Mayai" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_activity == "Hiking" and selected_day == "Flowers bloom on trees as you walk past":
-elif selected_meal == "Chipsi Mayai" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_activity == "Hiking" and selected_souvenir == "Mini ngoma drum":
-elif selected_meal == "Chipsi Mayai" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_day == "Flowers bloom on trees as you walk past" and selected_souvenir == "Mini ngoma drum":
-elif selected_meal == "Chipsi Mayai" and selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_activity == "Hiking" and selected_day == "Flowers bloom on trees as you walk past" and selected_souvenir == "Mini ngoma drum":
-elif selected_meal == "Chipsi Mayai" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_activity == "Hiking" and selected_day == "Flowers bloom on trees as you walk past" and selected_souvenir == "Mini ngoma drum":
-elif selected_stumble == "A zebra photobombing your selfie during a safari tour" and selected_moment == "Safari tour in Tarangire National Park surrounded by wildlife" and selected_activity == "Hiking" and selected_day == "Flowers bloom on trees as you walk past" and selected_souvenir == "Mini ngoma drum":
+taarab_answers = {
+    "Vibrant Tanzanian coastal city full of wildlife",
+    "Scenic and spirited",
+    "Chipsi Mayai",
+    "A zebra photobombing your selfie during a safari tour",
+    "Safari tour in Tarangire National Park surrounded by wildlife",
+    "Hiking",
+    "Flowers bloom on trees as you walk past",
+    "Mini ngoma drum",
+}
 
+user_answers = {
+    selected_destination,
+    selected_vibe,
+    selected_meal,
+    selected_stumble,
+    selected_moment,
+    selected_activity,
+    selected_day,
+    selected_souvenir,
+}
 
+matches = user_answers & taarab_answers
 
+if len(matches) >= 5:
+    result = logic_data["Taarab"]
+else:
+    result = None
 
+if result:
+    st.write(result["join"])
+    st.write(result["band"])
+    st.write(result["fun_fact"])
+    st.image(result["band_image"])
+    st.write(result["music"])
 
-if q2 == "B" and q4 == "C" and q6 == "A":
-    return logic_data_result_1
+#if q2 == "B" and q4 == "C" and q6 == "A":
+#    return logic_data_result_1
 
-elif q1 in ["A", "C"] and q5 == "F":
-    return logic_data_result_2
+#elif q1 in ["A", "C"] and q5 == "F":
+#    return logic_data_result_2
 
-elif q3 == "D" and q7 in ["E", "F"]:
-    return logic_data_result_3
+#elif q3 == "D" and q7 in ["E", "F"]:
+#    return logic_data_result_3
 

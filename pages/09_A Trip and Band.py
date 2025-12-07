@@ -291,31 +291,31 @@ logic_data = {
         "band": "Celtic Folk Band",
         "fun_fact": "Traditional Irish folk music was passed down through oral tradition in informal pubs 'sessions'. Today, people continue to gather and learn tunes from each other, usually by ear.",
         "music": "https://youtu.be/tcYx62F6FVM?si=L5ebSR0x-tpsZqLT",
-        "band_image": "https://media.npr.org/assets/img/2012/02/13/thechieftains_barrymccall_20111216_145918_20120207_124436_wide-ae2303a257619d7a375c9777fc77d093943ebf4d.jpg",
+        "band_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/thechieftains.jpg",
     },
 
     "Mariachi": {
     "join": "You should join a...",
     "band": "Mariachi Band",
     "fun_fact": "There's no lead singer in mariachi music. Each musician take turns singing and playing for songs. They are expected to be both skilled singers and instrumentalists.",
-    "music": "",
-    "band_image": "",
+    "music": "https://youtu.be/XxBAwr_FkoQ?si=ZutpTUIFUIulwzvt",
+    "band_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/mariachisoldemexico.jpg",
     },
 
     "Taiko": {
     "join": "You should join a...",
     "band": "Taiko Ensemble",
-    "fun_fact": "Taiko drumming combines athleticism, dance, and art. It requires great physical and mental stamina to play and memorize rhythms.",
-    "music": "",
-    "band_image": "",
+    "fun_fact": "Taiko drumming combines athleticism, dance, and art. It requires great physical and mental stamina to play, memorize, and coordinate rhythms.",
+    "music": "https://youtu.be/kcQt0W72o-M?si=TaRLytXLJgZgnljw",
+    "band_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/taikotsukasa.jpg",
     },
 
     "Taarab": {
     "join": "You should join a...",
     "band": "Taarab Ensemble",
-    "fun_fact": "",
-    "music": "",
-    "band_image": "",
+    "fun_fact": "Having roots in Zanzibar, taarab music often consists of poetic lyrics about love, politics, and social issues. It helps communities express their hopes and dreams.",
+    "music": "https://youtu.be/NO014wZWFNA?si=f_vvBsd9L4JDeMpV",
+    "band_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/taarab.jpg",
     },
 
     "Calypso": {

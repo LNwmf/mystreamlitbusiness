@@ -141,7 +141,8 @@ images = [
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/sightseeing.jpg",
 ]
 
-titles=["Culinary tour", "Hiking", "Snorkeling", "Exploring ancient ruins", "Visiting festivals", "Scenic drive"] #mexico-culinary tour, tanzania-hiking, caribbean-snorkeling/diving, middle east-explore ancient sites, japan-visit festivals, ireland-scenic drive/sightseeing
+titles=["Culinary tour", "Hiking", "Snorkeling", "Exploring ancient ruins", "Visiting festivals", "Scenic drive"]
+#mexico-culinary tour, tanzania-hiking, caribbean-snorkeling/diving, middle east-explore ancient sites, japan-visit festivals, ireland-scenic drive/sightseeing
 
 if "selected_activity" not in st.session_state:
     st.session_state.selected_activity = None
@@ -413,19 +414,27 @@ user_answers = {
     selected_souvenir,
 }
 
-matches = user_answers & taarab_answers
 
-if len(matches) >= 5:
-    result = logic_data["Taarab"]
+band_scores = {}
+for band, answers in band_answer_map.items():
+    band_scores[band] = len(user_answers & answers)
+
+# --- Pick best match ---
+best_band = max(band_scores, key=band_scores.get)
+
+if band_scores[best_band] >= 5:
+    result = logic_data[best_band]
 else:
     result = None
 
 if result:
-    st.write(result["join"])
-    st.write(result["band"])
+    st.subheader(result["join"])
+    st.header(result["band"])
     st.write(result["fun_fact"])
-    st.image(result["band_image"])
-    st.write(result["music"])
+    if result["band_image"]:
+        st.image(result["band_image"])
+    if result["music"]:
+        st.markdown(f"[Listen here]({result['music']})")
 
 #if q2 == "B" and q4 == "C" and q6 == "A":
 #    return logic_data_result_1

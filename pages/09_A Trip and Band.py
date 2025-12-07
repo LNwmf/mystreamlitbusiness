@@ -322,8 +322,8 @@ logic_data = {
         "join": "You should join a...",
         "band": "Calypso Band",
         "fun_fact": "Calypso music addressed social and political issues in witty, satirical lyrics, making it a powerful tool for free speech. Competing in calypso tents, calypsonians battle for the best songs during the Carnival season.",
-        "music": "",
-        "band_image": "",
+        "music": "https://youtu.be/l-j-tPbOfYQ?si=KAErgz3_cVrJzg80",
+        "band_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/kawecalypso.jpg",
     },
 
     "Takht": {

@@ -329,9 +329,9 @@ logic_data = {
     "Takht": {
         "join": "You should join a...",
         "band": "Takht Ensemble",
-        "fun_fact": "",
-        "music": "",
-        "band_image": "",
+        "fun_fact": "Typically, a takht is comprised of 6 instruments: the oud, ney, qanun, riq, kamancheh, and darbuka.",
+        "music": "https://youtu.be/ET2bgLiqjaY?si=Hj7gqbRgvwxyah6E",
+        "band_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/takht.jpg",
     },
 }
 

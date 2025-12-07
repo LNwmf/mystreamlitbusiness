@@ -33,7 +33,8 @@ destinations = ["Vibrant Tanzanian coastal city full of wildlife",
 selected_destination = st.selectbox("Choose a destination:", destinations, index=None)
 
 #Q2
-vibe = ["Dynamic and spontaneous", "Beachy and tranquil", "Nostalgic but homey", "Abundant and soulful", "Scenic and spirited", "Timeless yet therapeutic"] #mariachi, caribbean, irish, middle east, tanzania, japanese
+vibe = ["Dynamic and spontaneous", "Beachy and tranquil", "Nostalgic but homey", "Abundant and soulful", "Scenic and spirited", "Timeless yet therapeutic"]
+#mariachi, caribbean, irish, middle east, tanzania, japanese
 selected_vibe = st.selectbox("What's the vibe of your trip?", vibe, index=None)
 
 #Q3
@@ -48,7 +49,8 @@ images = [
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/doublemeals.jpg",
 ]
 
-titles=["Ulster Fry", "Chipsi Mayai", "Tabbouleh", "Chilaquiles", "Hiyayakko", "Doubles"] #ireland-Ulster Fry, tanzania-Chipsi Mayai, middle east-Tabbouleh, mexico-Chilaquiles, japan-Hiyayakko, caribbean-Doubles
+titles=["Ulster Fry", "Chipsi Mayai", "Tabbouleh", "Chilaquiles", "Hiyayakko", "Doubles"]
+#ireland-Ulster Fry, tanzania-Chipsi Mayai, middle east-Tabbouleh, mexico-Chilaquiles, japan-Hiyayakko, caribbean-Doubles
 
 if "selected_meal" not in st.session_state:
     st.session_state.selected_meal = None
@@ -349,7 +351,7 @@ band_answer_map = {
         "Dynamic and spontaneous",
         "Chilaquiles",
         "Stumbling into a hidden cenote behind a jungle trail",
-        "Underneath the Arch of Cabo San Luis during the sunset",
+        "Underneath the Arch of Cabo San Lucas during the sunset",
         "Culinary tour",
         "Murals animate and dance to tell stories",
         "Jarrito",

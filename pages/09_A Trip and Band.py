@@ -431,7 +431,7 @@ if result:
     st.header(result["band"])
     st.write(result["fun_fact"])
     if result["band_image"]:
-        st.image(result["band_image"])
+        st.image(result["band_image"], width=600)
     if result["music"]:
         st.markdown(f"[Music recommendation]({result['music']})")
 

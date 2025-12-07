@@ -415,17 +415,14 @@ user_answers = {
 }
 
 
-band_scores = {}
-for band, answers in band_answer_map.items():
-    band_scores[band] = len(user_answers & answers)
+band_scores = {
+    band: len(user_answers & answers)
+    for band, answers in band_answer_map.items()
+}
 
-# --- Pick best match ---
 best_band = max(band_scores, key=band_scores.get)
 
-if band_scores[best_band] >= 5:
-    result = logic_data[best_band]
-else:
-    result = None
+result = logic_data[best_band]
 
 if result:
     st.subheader(result["join"])

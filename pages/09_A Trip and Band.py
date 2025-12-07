@@ -433,12 +433,5 @@ if result:
     if result["music"]:
         st.markdown(f"[Listen here]({result['music']})")
 
-#if q2 == "B" and q4 == "C" and q6 == "A":
-#    return logic_data_result_1
 
-#elif q1 in ["A", "C"] and q5 == "F":
-#    return logic_data_result_2
-
-#elif q3 == "D" and q7 in ["E", "F"]:
-#    return logic_data_result_3
 

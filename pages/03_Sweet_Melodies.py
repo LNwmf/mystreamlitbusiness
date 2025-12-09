@@ -461,6 +461,9 @@ if selected_flavor and selected_time and selected_life and selected_season and d
     st.write(f"🌐 [Visit Website]({info['website']})")
     st.write(f"🎁 **Special Offer:** {info['offer']}")
 
+    st.write("")
+    st.subheader("Share your playlist!", divider="grey")
+    st.write("")
     st.write("👥 How many people did you share your playlist with?")
     shared_count = st.number_input("Number of people:", min_value=0, step=1)
 

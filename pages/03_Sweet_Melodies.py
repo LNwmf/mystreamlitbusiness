@@ -137,25 +137,22 @@ dessert_data = {
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         "business_name": "Tapas Valencia",
         "offer": "10% off your first order with this screen!",
-        "booth_name": "Booth A",
-        "website": "https://www.tapasvalencia.com/",
-        "business_image": "https://www.tapasvalencia.com/wp-content/uploads/2017/08/Valencia-TRANSPARENT.png",
+        "website": "https://elrincondefabiollc.net/",
+        "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/elrincondefabio.png",
     },
     "Souffle": {
     "playlist": "Pastries & Strings",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "Petite Vie Brasserie",
     "offer": "Buy 1 Combo, Get 1 Free Chicken Sandwich with this screen.",
-    "booth_name": "Booth B",
-    "website": "https://www.petite-vie.com/",
-    "business_image": "https://images.squarespace-cdn.com/content/v1/652e9491cec326539e621efe/2d266898-08ee-4747-8242-8a59a020b47b/large+white+backless.png?format=1000w",
+    "website": "https://3mrestaurant.com/",
+    "business_image": "https://3mrestaurant.com/wp-content/uploads/2023/02/3M-LOGO.png",
     },
     "Taiyaki": {
     "playlist": "Chill J-Rock",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "Izakaya",
     "offer": "5% off your drink order!",
-    "booth_name": "Booth C",
     "website": "https://www.momotarochicago.com/izakaya",
     "business_image": "https://cdn.prod.website-files.com/621e6fe3c0a99283c0cc87fb/65f86e09a6e239d1ffac94dd_zakaya-Logo-black-Transparent.svg"
     },
@@ -164,7 +161,6 @@ dessert_data = {
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "SAMIFLORENCIA AFRICAN CUISINE",
     "offer": "Get 1 free appetizer with your order!",
-    "booth_name": "Booth D",
     "website": "https://samiflorenciacatering.com/",
     "business_image": "https://samiflorenciacatering.com/wp-content/uploads/2024/02/Florencia-logo.jpg.webp"
     },
@@ -470,6 +466,6 @@ if selected_flavor and selected_time and selected_life and selected_season and d
     if st.button("Check Reward Status"):
         if shared_count >= 3:
             st.balloons()  # Add some confetti for fun
-            st.success(f"🎁 You unlocked a reward! Show this screen at {info['booth_name']} to claim your prize!")
+            st.success(f"🎁 You unlocked a reward!")
     else:
             st.warning("⏳ Share your playlist with at least 3 people to unlock your reward!")

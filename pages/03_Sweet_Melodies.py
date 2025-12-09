@@ -455,7 +455,7 @@ if selected_flavor and selected_time and selected_life and selected_season and d
     st.image(info['business_image'], width=250)
     st.write(f"💼 **Business Name:** {info['business_name']}")
     st.write(f"🌐 [Visit Website]({info['website']})")
-    st.write(f"🎁 **Special Offer:** {info['location']}")
+    st.write(f"📍 **Address:** {info['location']}")
 
     st.write("")
     st.subheader("Share your playlist!", divider="grey")

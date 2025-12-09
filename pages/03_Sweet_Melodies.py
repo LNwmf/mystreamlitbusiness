@@ -154,7 +154,7 @@ dessert_data = {
     "business_name": "Sayuri Sushi Bar",
     "location": "1553 W Devon Ave, Chicago, IL 60660",
     "website": "https://sayurichicago.com/",
-    "business_image": "https://sayurichicago.com/assets/images/M_logo.png"
+    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/sayurisushi.jpeg"
     },
     "Mandazi": {
     "playlist": "Reggaeton Fusions",

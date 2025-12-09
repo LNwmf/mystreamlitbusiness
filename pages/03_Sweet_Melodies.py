@@ -143,8 +143,8 @@ dessert_data = {
     "Souffle": {
     "playlist": "Pastries & Strings",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Petite Vie Brasserie",
-    "offer": "Buy 1 Combo, Get 1 Free Chicken Sandwich with this screen.",
+    "business_name": "BUREK SHOP 3M Restaurant",
+    "location": "5910 N Clark St Chicago, IL 60660",
     "website": "https://3mrestaurant.com/",
     "business_image": "https://3mrestaurant.com/wp-content/uploads/2023/02/3M-LOGO.png",
     },
@@ -152,7 +152,7 @@ dessert_data = {
     "playlist": "Chill J-Rock",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "Izakaya",
-    "offer": "5% off your drink order!",
+    "location": "5% off your drink order!",
     "website": "https://www.momotarochicago.com/izakaya",
     "business_image": "https://cdn.prod.website-files.com/621e6fe3c0a99283c0cc87fb/65f86e09a6e239d1ffac94dd_zakaya-Logo-black-Transparent.svg"
     },
@@ -160,7 +160,7 @@ dessert_data = {
     "playlist": "Reggaeton Fusions",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "SAMIFLORENCIA AFRICAN CUISINE",
-    "offer": "Get 1 free appetizer with your order!",
+    "location": "Get 1 free appetizer with your order!",
     "website": "https://samiflorenciacatering.com/",
     "business_image": "https://samiflorenciacatering.com/wp-content/uploads/2024/02/Florencia-logo.jpg.webp"
     },
@@ -455,7 +455,7 @@ if selected_flavor and selected_time and selected_life and selected_season and d
     st.image(info['business_image'], width=250)  # Show business image (if available)
     st.write(f"💼 **Business Name:** {info['business_name']}")
     st.write(f"🌐 [Visit Website]({info['website']})")
-    st.write(f"🎁 **Special Offer:** {info['offer']}")
+    st.write(f"🎁 **Special Offer:** {info['location']}")
 
     st.write("")
     st.subheader("Share your playlist!", divider="grey")

@@ -159,10 +159,10 @@ dessert_data = {
     "Mandazi": {
     "playlist": "Reggaeton Fusions",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "SAMIFLORENCIA AFRICAN CUISINE",
-    "location": "Get 1 free appetizer with your order!",
-    "website": "https://samiflorenciacatering.com/",
-    "business_image": "https://samiflorenciacatering.com/wp-content/uploads/2024/02/Florencia-logo.jpg.webp"
+    "business_name": "Afro Taste Cuisine",
+    "location": "1010 W Argyle St, Chicago, IL 60640",
+    "website": "https://www.afrotastecuisine.com/",
+    "business_image": "https://ik.imagekit.io/awwybhhmo/assets/favicons/African/botanic__1_.svg?tr="
     },
 }
 

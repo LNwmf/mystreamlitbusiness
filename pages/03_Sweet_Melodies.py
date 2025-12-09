@@ -151,10 +151,10 @@ dessert_data = {
     "Taiyaki": {
     "playlist": "Chill J-Rock",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Izakaya",
-    "location": "5% off your drink order!",
-    "website": "https://www.momotarochicago.com/izakaya",
-    "business_image": "https://cdn.prod.website-files.com/621e6fe3c0a99283c0cc87fb/65f86e09a6e239d1ffac94dd_zakaya-Logo-black-Transparent.svg"
+    "business_name": "Sayuri Sushi Bar",
+    "location": "1553 W Devon Ave, Chicago, IL 60660",
+    "website": "https://sayurichicago.com/",
+    "business_image": "https://sayurichicago.com/assets/images/M_logo.png"
     },
     "Mandazi": {
     "playlist": "Reggaeton Fusions",
@@ -452,7 +452,7 @@ if selected_flavor and selected_time and selected_life and selected_season and d
     st.markdown(f"[Listen Here]({info['playlist_link']})")
 
     # Business info display
-    st.image(info['business_image'], width=250)  # Show business image (if available)
+    st.image(info['business_image'], width=250)
     st.write(f"💼 **Business Name:** {info['business_name']}")
     st.write(f"🌐 [Visit Website]({info['website']})")
     st.write(f"🎁 **Special Offer:** {info['location']}")
@@ -465,7 +465,7 @@ if selected_flavor and selected_time and selected_life and selected_season and d
 
     if st.button("Check Reward Status"):
         if shared_count >= 3:
-            st.balloons()  # Add some confetti for fun
+            st.balloons()
             st.success(f"🎁 You unlocked a reward!")
     else:
             st.warning("⏳ Share your playlist with at least 3 people to unlock your reward!")

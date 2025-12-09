@@ -252,6 +252,9 @@ if selected_perform and selected_era and selected_place and selected_word and va
     st.write(f"🌐 [Visit Website]({info3['website']})")
     st.write(f"🎁 **Special Offer:** {info3['offer']}")
 
+    st.write("")
+    st.subheader("Share your playlist!", divider="grey")
+    st.write("")
     st.write("👥 How many people did you share your playlist with?")
     shared_count = st.number_input("Number of people:", min_value=0, step=1)
 

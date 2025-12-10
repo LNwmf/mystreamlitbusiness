@@ -258,7 +258,7 @@ if selected_film and selected_element and selected_fall:
     st.image(info['business_image'], width=250)
     st.write(f"🏷️ **Business Name:** {info['business_name']}")
     st.write(f"🌐 [Visit Website]({info['website']})")
-    st.write(f"📍 **Address:** {info['offer']}")
+    st.write(f"📍 **Address:** {info['location']}")
 
     st.write("")
     st.subheader("Share your playlist!", divider="grey")

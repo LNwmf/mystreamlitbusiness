@@ -144,7 +144,7 @@ dessert_data = {
     "playlist": "Pastries & Strings",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "BUREK SHOP 3M Restaurant",
-    "location": "5910 N Clark St Chicago, IL 60660",
+    "location": "5910 N Clark St, Chicago, IL 60660",
     "website": "https://3mrestaurant.com/",
     "business_image": "https://3mrestaurant.com/wp-content/uploads/2023/02/3M-LOGO.png",
     },

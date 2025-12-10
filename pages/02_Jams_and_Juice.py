@@ -145,10 +145,10 @@ drink_data = {
     "Chai latte": {
         "playlist": "World Country Beats",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "business_name": "",
-        "location": "",
-        "website": "",
-        "business_image": "",
+        "business_name": "Beard & Belly",
+        "location": "6157 N Broadway, Chicago, IL 60660",
+        "website": "https://www.beardandbellychicago.com/",
+        "business_image": "https://images.squarespace-cdn.com/content/v1/66a90d2ffe304301d3a007b6/cdcc438e-eb22-4e69-a2cd-511e15dfee52/BeardAndBelly_Logo_Circle_WhiteTransparent.png?format=1500w",
     },
     "Milk tea boba": {
         "playlist": "Sweet Mellow Blues",

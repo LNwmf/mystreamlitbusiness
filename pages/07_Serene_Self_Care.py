@@ -158,10 +158,10 @@ energy_data = {
     "Reflective": {
     "playlist": "Nostalgic Strings",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Yin Yang Skin Studio",
-    "location": "Get a 5% discount!",
-    "website": "https://yinyangskinstudio.com/",
-    "business_image": "https://yinyangskinstudio.com/wp-content/uploads/2024/10/YIN-YANG-CHOSEN-small-31-2048x905.png"
+    "business_name": "Freestyle Ceramics & Tufting",
+    "location": "5127 N Clark St, Chicago, IL 60640",
+    "website": "https://www.freestyletufting.com/",
+    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/freestyleceramicsandtufting.png"
     },
 }
 

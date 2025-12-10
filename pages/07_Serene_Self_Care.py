@@ -150,10 +150,10 @@ energy_data = {
     "Soft": {
     "playlist": "Bubbles & Wine",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Scratch Goods",
-    "location": "Buy one, get one 5% off!",
-    "website": "https://www.scratchgoods.com/",
-    "business_image": "https://www.scratchgoods.com/cdn/shop/files/horizontal_logo_290x@2x.png?v=1732846781"
+    "business_name": "AMK Massage",
+    "location": "5347 N Clark St #2, Chicago, Illinois 60640",
+    "website": "https://www.amkmassage.com/",
+    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/massage.png"
     },
     "Reflective": {
     "playlist": "Nostalgic Strings",

@@ -135,8 +135,7 @@ energy_data = {
         "playlist": "Mood: Dewy",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         "business_name": "DNA Beauty Supply",
-        "offer": "5% off your first purchase with this screen!",
-        "booth_name": "Booth A",
+        "location": "5% off your first purchase with this screen!",
         "website": "https://www.facebook.com/people/DNA-Beauty-Supply/100057497137026/",
         "business_image": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/384267987_785169260076305_2783627709022071207_n.png?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=AstFGP_v9DMQ7kNvwHoQWnf&_nc_oc=AdltzZ0X8GSFxfbQ0SH-pfABYxT09p-s9__zt1aO1Sl-LsfiNIrPqiXOM3n7Wb6mCgYw5Xjz1bCGtMMadGoLv7J1&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=zfCdymUeFbj-kSw49LKJRw&oh=00_AffkftEEO_9FaTrYh4OUPTg8_ZuK_RVY1eodY5y-pAFj4g&oe=68E8DCE2",
     },
@@ -144,8 +143,7 @@ energy_data = {
     "playlist": "Drifting in the Sun",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "BIOCARE LABS",
-    "offer": "Get $10 off your first purchase!",
-    "booth_name": "Booth B",
+    "location": "Get $10 off your first purchase!",
     "website": "https://www.biocarelabs.com/",
     "business_image": "https://www.biocarelabs.com/cdn/shop/files/biocare-logo-black-340x125_096f22c6-3c73-46b7-86d8-d6d48a15e66a.png?v=1641779618&width=240",
     },
@@ -153,8 +151,7 @@ energy_data = {
     "playlist": "Bubbles & Wine",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "Scratch Goods",
-    "offer": "Buy one, get one 5% off!",
-    "booth_name": "Booth C",
+    "location": "Buy one, get one 5% off!",
     "website": "https://www.scratchgoods.com/",
     "business_image": "https://www.scratchgoods.com/cdn/shop/files/horizontal_logo_290x@2x.png?v=1732846781"
     },
@@ -162,8 +159,7 @@ energy_data = {
     "playlist": "Nostalgic Strings",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "Yin Yang Skin Studio",
-    "offer": "Get a 5% discount!",
-    "booth_name": "Booth D",
+    "location": "Get a 5% discount!",
     "website": "https://yinyangskinstudio.com/",
     "business_image": "https://yinyangskinstudio.com/wp-content/uploads/2024/10/YIN-YANG-CHOSEN-small-31-2048x905.png"
     },
@@ -447,20 +443,20 @@ if selected_unwind and selected_act and selected_secret and selected_getaway and
     st.markdown(f"[Listen Here]({info3['playlist_link']})")
 
     # Business info display
-    st.image(info3['business_image'], width=250)  # Show business image (if available)
-    st.write(f"💼 **Business Name:** {info3['business_name']}")
+    st.image(info3['business_image'], width=250)
+    st.write(f"🏷️ **Business Name:** {info3['business_name']}")
     st.write(f"🌐 [Visit Website]({info3['website']})")
-    st.write(f"🎁 **Special Offer:** {info3['offer']}")
+    st.write(f"📍 **Address:** {info3['location']}")
 
     st.write("")
     st.subheader("Share your playlist!", divider="grey")
     st.write("")
-    st.write("👥 How many people did you share your playlist with?")
+    st.write("How many people did you share your playlist with?")
     shared_count = st.number_input("Number of people:", min_value=0, step=1)
 
     if st.button("Check Reward Status"):
         if shared_count >= 3:
-            st.balloons()  # Add some confetti for fun
-            st.success(f"🎁 You unlocked a reward! Show this screen at {info3['booth_name']} to claim your prize!")
+            st.balloons()
+            st.success(f"🎁 You unlocked a reward!")
         else:
             st.warning("⏳ Share your playlist with at least 3 people to unlock your reward!")

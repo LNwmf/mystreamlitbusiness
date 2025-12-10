@@ -144,10 +144,10 @@ value_data = {
     "Texture": {
     "playlist": "Velvet Tunes",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "David Leonardis Gallery",
-    "location": "Receive exclusive access to collections!",
-    "website": "https://dlgalleries.com/",
-    "business_image": "https://dlgalleries.com/wp-content/uploads/2025/01/IMG_9449-scaled.jpg"
+    "business_name": "Mercantile M",
+    "location": "5409 1/2 N Clark St, Chicago, Illinois 60640",
+    "website": "https://www.facebook.com/MercantileM//",
+    "business_image": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/481456667_1206271091507885_307276287281734569_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&cb2=99be929b-a592a72f&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=Wp8qF0hBKD0Q7kNvwHj3DOh&_nc_oc=AdlgUbQ_a0EZXUU2IGiiTJsHP-OEP144byk1RVnJ1JzX3vQBmtp3_2n-gPKHs61yiQoDi7JdtbPW9AtWcLbJf7b3&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=3TjdTHii2bu4_VLUV8Cxug&oh=00_AfmKRCTfM1SU0m_VTOpU-J3wvpfExUk8CSIQEIro8kwIkA&oe=693E92CA"
     },
     "Storytelling": {
     "playlist": "Memory Lane",

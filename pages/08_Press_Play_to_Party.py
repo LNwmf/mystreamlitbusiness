@@ -133,8 +133,7 @@ trick_data = {
         "playlist": "Throwback Classics",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         "business_name": "Birdies Sports Bar & Grill",
-        "offer": "$5 off your drinks!",
-        "booth_name": "Booth A",
+        "location": "$5 off your drinks!",
         "website": "https://www.birdies111.com/",
         "business_image": "https://lirp.cdn-website.com/a1e30411/dms3rep/multi/opt/birdies-logo-199w.png",
     },
@@ -142,8 +141,7 @@ trick_data = {
     "playlist": "Like No One's Watching",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "Dance Center of LaGrange",
-    "offer": "$10 off your first class!",
-    "booth_name": "Booth B",
+    "location": "$10 off your first class!",
     "website": "https://www.dclagrange.com/",
     "business_image": "https://static.wixstatic.com/media/6b5ba9_a48e15c2f68349d083a7dbbe559cdc4a~mv2.png/v1/fill/w_344,h_376,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/image1.png",
     },
@@ -151,8 +149,7 @@ trick_data = {
     "playlist": "Now You See Me, Now You Don't",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "LaGrange Art League",
-    "offer": "$5 off your first class with this screen!",
-    "booth_name": "Booth C",
+    "location": "$5 off your first class with this screen!",
     "website": "https://www.lagrangeartleague.org/",
     "business_image": "https://www.lagrangeartleague.org/cdn/shop/files/LGAL_Logo-New.png?v=1738705768&width=450"
     },
@@ -160,8 +157,7 @@ trick_data = {
     "playlist": "Turn Up the Vibes!",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "LIV Entertainment",
-    "offer": "Get a 5% discount off your first booking!",
-    "booth_name": "Booth D",
+    "location": "Get a 5% discount off your first booking!",
     "website": "https://liventertainment.co/",
     "business_image": "https://liventertainment.co/wp-content/uploads/2024/12/Logo-transperancy.png"
     },
@@ -253,21 +249,21 @@ if selected_food and selected_genre and selected_theme and selected_complete and
     st.markdown(f"[Listen Here]({info['playlist_link']})")
 
     # Business info display
-    st.image(info['business_image'], width=250)  # Show business image (if available)
-    st.write(f"💼 **Business Name:** {info['business_name']}")
+    st.image(info['business_image'], width=250)
+    st.write(f"🏷️ **Business Name:** {info['business_name']}")
     st.write(f"🌐 [Visit Website]({info['website']})")
-    st.write(f"🎁 **Special Offer:** {info['offer']}")
+    st.write(f"📍 **Address:** {info['location']}")
 
     st.write("")
     st.subheader("Share your playlist!", divider="grey")
     st.write("")
-    st.write("👥 How many people did you share your playlist with?")
+    st.write("How many people did you share your playlist with?")
     shared_count = st.number_input("Number of people:", min_value=0, step=1)
 
     if st.button("Check Reward Status"):
         if shared_count >= 3:
-            st.balloons()  # Add some confetti for fun
-            st.success(f"🎁 You unlocked a reward! Show this screen at {info['booth_name']} to claim your prize!")
+            st.balloons()
+            st.success(f"🎁 You unlocked a reward!")
         else:
             st.warning("⏳ Share your playlist with at least 3 people to unlock your reward!")
 

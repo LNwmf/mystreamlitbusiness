@@ -158,10 +158,10 @@ y2k_data = {
     "Destiny's Child": {
     "playlist": "Off the Charts Pop",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Kokorokoko",
-    "location": "Get 10% discount with your purchase!",
-    "website": "https://www.kokorokokovintage.com/",
-    "business_image": ""
+    "business_name": "Five Elements Home",
+    "location": "5239 N Clark St, Chicago, IL 60640",
+    "website": "https://www.fiveelementshome.com/",
+    "business_image": "https://www.fiveelementshome.com/cdn/shop/t/55/assets/logo.png?v=63601364107164957311456001943"
     },
 }
 

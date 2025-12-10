@@ -132,34 +132,34 @@ trick_data = {
     "Karaoke master": {
         "playlist": "Throwback Classics",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "business_name": "Birdies Sports Bar & Grill",
-        "location": "$5 off your drinks!",
-        "website": "https://www.birdies111.com/",
-        "business_image": "https://lirp.cdn-website.com/a1e30411/dms3rep/multi/opt/birdies-logo-199w.png",
+        "business_name": "La Pharmacie",
+        "location": "5557 N Sheridan Rd, Chicago, IL 60640",
+        "website": "https://www.lapharmaciechicago.com/",
+        "business_image": "https://images.squarespace-cdn.com/content/v1/5eccae01b8a2b27107146b93/04a22998-c1fd-49e2-ad82-a4a893fd7b9f/La%2BPharmacie%2BLogo%2Bno%2Bbackground.jpg?format=1500w",
     },
     "Professional breakdancer": {
     "playlist": "Like No One's Watching",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Dance Center of LaGrange",
-    "location": "$10 off your first class!",
-    "website": "https://www.dclagrange.com/",
-    "business_image": "https://static.wixstatic.com/media/6b5ba9_a48e15c2f68349d083a7dbbe559cdc4a~mv2.png/v1/fill/w_344,h_376,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/image1.png",
+    "business_name": "Fiya",
+    "location": "5419 N Clark St, Chicago, IL 60640",
+    "website": "https://www.fiyarestaurant.com/",
+    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/fiya.png",
     },
     "Magician": {
     "playlist": "Now You See Me, Now You Don't",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "LaGrange Art League",
-    "location": "$5 off your first class with this screen!",
-    "website": "https://www.lagrangeartleague.org/",
-    "business_image": "https://www.lagrangeartleague.org/cdn/shop/files/LGAL_Logo-New.png?v=1738705768&width=450"
+    "business_name": "Chicago Magic Lounge",
+    "location": "5050 N Clark St, Chicago, IL 60640",
+    "website": "https://www.chicagomagiclounge.com/",
+    "business_image": "https://images.squarespace-cdn.com/content/v1/54aab93ae4b0fbd5ffc9f050/1531771582354-T4W5OUJJOD6L9QF6XLAW/CML_logo.png?format=500w"
     },
     "Stage comedian": {
     "playlist": "Turn Up the Vibes!",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "LIV Entertainment",
-    "location": "Get a 5% discount off your first booking!",
-    "website": "https://liventertainment.co/",
-    "business_image": "https://liventertainment.co/wp-content/uploads/2024/12/Logo-transperancy.png"
+    "business_name": "Le Piano",
+    "location": "6970 N Glenwood Ave, Chicago, IL 60626",
+    "website": "https://www.lepianochicago.com/",
+    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/lepiano.png"
     },
 }
 

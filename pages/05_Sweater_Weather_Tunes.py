@@ -141,7 +141,7 @@ fall_data = {
         "business_name": "pHlour Bakery & Cafe",
         "location": "1138 W Bryn Mawr Ave, Chicago, IL 60660",
         "website": "https://www.phlour.com/",
-        "business_image": "https://images.squarespace-cdn.com/content/v1/588d34d29f74563ea5464ddb/1488673065674-SU96PLZ67ICDKNSBWE2T/phlourlogo-white.png?format=1500w",
+        "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/phlour.png",
     },
     "Apple picking": {
     "playlist": "Good Ol' Times",

@@ -138,38 +138,34 @@ fall_data = {
     "Pumpkin carving": {
         "playlist": "Chilly Orchards",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "business_name": "Sweet Bean",
-        "offer": "10% off your first order with this screen!",
-        "booth_name": "Booth A",
-        "website": "https://www.sweetbeanchicago.com/",
-        "business_image": "https://static.wixstatic.com/media/60e202_65260ab6509e4ba9bea19ced8ec91ec3~mv2.png/v1/fill/w_234,h_160,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Sweet%20Bean%20logo%20-%20red.png",
+        "business_name": "pHlour Bakery & Cafe",
+        "location": "1138 W Bryn Mawr Ave, Chicago, IL 60660",
+        "website": "https://www.phlour.com/",
+        "business_image": "https://images.squarespace-cdn.com/content/v1/588d34d29f74563ea5464ddb/1488673065674-SU96PLZ67ICDKNSBWE2T/phlourlogo-white.png?format=1500w",
     },
     "Apple picking": {
     "playlist": "Good Ol' Times",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Chuck's Southern Comforts Cafe",
-    "offer": "Buy 1 Combo, Get 1 Free Appetizer with this screen.",
-    "booth_name": "Booth B",
-    "website": "https://chuckscafe.com/",
-    "business_image": "https://d1w7312wesee68.cloudfront.net/DDMPmNmtnrUxz1PxVDTze2OFtR-QuWFhVWx-Dg15aYo/ext:webp/quality:85/preset:xxl/plain/s3://toast-sites-resources-prod/restaurantImages/1f14af1d-c8f7-4b8b-9d8a-480dbaba7333/restaurant_1592420555.png",
+    "business_name": "Eli Tea Bar",
+    "location": "5507 N Clark St, Chicago, IL 60640",
+    "website": "https://www.eliteabar.com/pages/chicago?srsltid=AfmBOoqZ9MveNUGO0oLPMFnIerXvvwttDi_PocAmQXuax6clgCdgzJp7",
+    "business_image": "https://cdn.shopify.com/s/files/1/0171/0582/t/12/assets/andersonville-circle-logo-white-1632947388908.jpg?v=1632947390",
     },
     "Trick or treating": {
     "playlist": "Dark Blues",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Patch Party Club",
-    "offer": "5% off your purchase!",
-    "booth_name": "Booth C",
-    "website": "https://patchpartyclub.com/",
-    "business_image": "https://patchpartyclub.com/cdn/shop/files/logo_180x.png?v=1630341909"
+    "business_name": "Loaves and Witches",
+    "location": "6034 N Broadway, Chicago, IL 60660",
+    "website": "https://loavesandwitches.com/",
+    "business_image": "https://static.spotapps.co/website_images/ab_websites/307737_website_v1/logo.png"
     },
     "Bonfires": {
     "playlist": "Jazz 'n Smores",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "",
-    "offer": "Get 5% off a selected candle!",
-    "booth_name": "Booth D",
-    "website": "https://civinte.com/",
-    "business_image": "https://civinte.com/cdn/shop/files/2025_Logo_180x@2x.png?v=1747978532"
+    "business_name": "Isabella Bakery",
+    "location": "1659 W Foster Ave, Chicago, IL 60640",
+    "website": "https://www.yelp.com/biz/isabella-bakery-chicago-2",
+    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/isabellabakery.png"
     },
 }
 
@@ -260,19 +256,19 @@ if selected_film and selected_element and selected_fall:
 
     # Business info display
     st.image(info['business_image'], width=250)
-    st.write(f"💼 **Business Name:** {info['business_name']}")
+    st.write(f"🏷️ **Business Name:** {info['business_name']}")
     st.write(f"🌐 [Visit Website]({info['website']})")
-    st.write(f"🎁 **Special Offer:** {info['offer']}")
+    st.write(f"📍 **Address:** {info['offer']}")
 
     st.write("")
     st.subheader("Share your playlist!", divider="grey")
     st.write("")
-    st.write("👥 How many people did you share your playlist with?")
+    st.write("How many people did you share your playlist with?")
     shared_count = st.number_input("Number of people:", min_value=0, step=1)
 
     if st.button("Check Reward Status"):
         if shared_count >= 3:
             st.balloons()
-            st.success(f"🎁 You unlocked a reward! Show this screen at {info['booth_name']} to claim your prize!")
+            st.success(f"🎁 You unlocked a reward!")
         else:
             st.warning("⏳ Share your playlist with at least 3 people to unlock your reward!")

@@ -142,10 +142,10 @@ y2k_data = {
     "Usher": {
     "playlist": "Smooth Grooves",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Soule to Soule",
-    "location": "Get 5% off a selected entree with this screen.",
-    "website": "https://www.souletosoule.com/",
-    "business_image": "",
+    "business_name": "Ándale Market",
+    "location": "5232 N Clark St, Chicago, IL 60640",
+    "website": "https://andalemarket.com/",
+    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/andalemarket.png",
     },
     "Green Day": {
     "playlist": "Amped Up",

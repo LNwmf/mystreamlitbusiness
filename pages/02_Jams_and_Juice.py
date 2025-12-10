@@ -153,10 +153,10 @@ drink_data = {
     "Milk tea boba": {
         "playlist": "Sweet Mellow Blues",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "business_name": "",
-        "location": "",
-        "website": "",
-        "business_image": ""
+        "business_name": "Little Vietnam",
+        "location": "1132 W Bryn Mawr Ave, Chicago, IL 60660",
+        "website": "https://orderlittlevietnam.com/",
+        "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/littlevietnam.png"
     },
     "Horchata": {
         "playlist": "Reggaeton Fusions",

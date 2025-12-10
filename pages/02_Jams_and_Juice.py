@@ -136,7 +136,7 @@ st.write("")
 drink_data = {
     "Caramel macchiato": {
         "playlist": "Maqamat Rhythms",
-        "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "playlist_link": "https://open.spotify.com/playlist/6v1R5ZRQFn9m1JhD3WMAcV?si=q8KTnYuFTZyc7aVaYQxojQ",
         "business_name": "Turkish Doner",
         "location": "1007 W Argyle St, Chicago, IL 60640",
         "website": "https://www.facebook.com/profile.php?id=61579383426862",
@@ -152,7 +152,7 @@ drink_data = {
     },
     "Milk tea boba": {
         "playlist": "Sweet Mellow Blues",
-        "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "playlist_link": "https://open.spotify.com/playlist/3CpxGMwxThdLq76N98iqkP?si=rMhgl1S0S5SWnY1AmyW1jg",
         "business_name": "Little Vietnam",
         "location": "1132 W Bryn Mawr Ave, Chicago, IL 60660",
         "website": "https://orderlittlevietnam.com/",

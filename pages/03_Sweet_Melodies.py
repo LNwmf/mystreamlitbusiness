@@ -135,7 +135,7 @@ dessert_data = {
     "Flan": {
         "playlist": "Dancing Jelly",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "business_name": "El Rincon de Fabio",
+        "business_name": "El Rincón de Fabio",
         "location": "1002 W Argyle St, Chicago, IL 60640",
         "website": "https://elrincondefabiollc.net/",
         "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/elrincondefabio.png",

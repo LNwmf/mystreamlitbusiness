@@ -134,10 +134,10 @@ y2k_data = {
     "Britney Spears": {
         "playlist": "Oop...I did it again",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "business_name": "Sugar Bliss",
-        "location": "10% off your first order with this screen!",
-        "website": "https://www.sugarblisscakes.com/",
-        "business_image": "",
+        "business_name": "Edgewater Candles",
+        "location": "1050 W Bryn Mawr Ave, Chicago, IL 60660",
+        "website": "https://edgewatercandles.com/?srsltid=AfmBOooOnjGXBIqXVBK-zps-K3C05oH3rcqn72f7BYUijz8L_CN4TsrP",
+        "business_image": "https://edgewatercandles.com/cdn/shop/files/EC_Logo_BW.png?v=1706025877&width=220",
     },
     "Usher": {
     "playlist": "Smooth Grooves",

@@ -129,8 +129,7 @@ value_data = {
         "playlist": "Happy Accidents",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         "business_name": "The Wasteshed",
-        "offer": "10% off your first purchase with this screen!",
-        "booth_name": "Booth A",
+        "location": "10% off your first purchase with this screen!",
         "website": "https://www.thewasteshed.com/",
         "business_image": "https://images.squarespace-cdn.com/content/v1/5462e7eae4b047a3e78ccc67/d681968b-111a-4180-9fed-c22e228f3773/general-brandmark-white-wider.png?format=1500w",
     },
@@ -138,8 +137,7 @@ value_data = {
     "playlist": "Palette Pop",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "Ancestry Moon Art Studio",
-    "offer": "Get $10 off your first class!",
-    "booth_name": "Booth B",
+    "location": "Get $10 off your first class!",
     "website": "https://www.facebook.com/AmMoon103",
     "business_image": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/476198914_1106877391451064_5406431294276183812_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=Hz-pOZ2KOtoQ7kNvwEl-RT3&_nc_oc=Adn0Gl9SANmYu6nLfQxT0F-27vQ4I5-wn6vZaguWWWt0ZKbMahL6Kepv948zfvXdUSvuMpzaVOvrZqHJ7FsG1uVf&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=Y-DW2ZLnLbwIaQ63Bjpv9w&oh=00_AfdHxO8trkyJtFnEYdyYv6mUCDHhKQWSRGt1Z1X8w2dGuA&oe=68E8C29A",
     },
@@ -147,8 +145,7 @@ value_data = {
     "playlist": "Velvet Tunes",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "David Leonardis Gallery",
-    "offer": "Receive exclusive access to collections!",
-    "booth_name": "Booth C",
+    "location": "Receive exclusive access to collections!",
     "website": "https://dlgalleries.com/",
     "business_image": "https://dlgalleries.com/wp-content/uploads/2025/01/IMG_9449-scaled.jpg"
     },
@@ -156,8 +153,7 @@ value_data = {
     "playlist": "Memory Lane",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "Art & Company",
-    "offer": "Get a 5% discount with your first order!",
-    "booth_name": "Booth D",
+    "location": "Get a 5% discount with your first order!",
     "website": "https://www.artandcompany.net/#/",
     "business_image": "https://www.artandcompany.net/uploads/9/3/5/2/9352723/1427560359.png"
     },
@@ -237,7 +233,6 @@ craft_map = {
 if selected_perform and selected_era and selected_place and selected_word and value_choice:
     user_combo = (selected_place, selected_word, value_choice)
     result_key = craft_map.get(user_combo)
-    # Retrieve information about selected drink/business
 
     if result_key:
         info3 = value_data[result_key]
@@ -247,20 +242,20 @@ if selected_perform and selected_era and selected_place and selected_word and va
     st.markdown(f"[Listen Here]({info3['playlist_link']})")
 
     # Business info display
-    st.image(info3['business_image'], width=250)  # Show business image (if available)
-    st.write(f"💼 **Business Name:** {info3['business_name']}")
+    st.image(info3['business_image'], width=250)
+    st.write(f"🏷️ **Business Name:** {info3['business_name']}")
     st.write(f"🌐 [Visit Website]({info3['website']})")
-    st.write(f"🎁 **Special Offer:** {info3['offer']}")
+    st.write(f"📍 **Address:** {info3['offer']}")
 
     st.write("")
     st.subheader("Share your playlist!", divider="grey")
     st.write("")
-    st.write("👥 How many people did you share your playlist with?")
+    st.write("How many people did you share your playlist with?")
     shared_count = st.number_input("Number of people:", min_value=0, step=1)
 
     if st.button("Check Reward Status"):
         if shared_count >= 3:
-            st.balloons()  # Add some confetti for fun
-            st.success(f"🎁 You unlocked a reward! Show this screen at {info3['booth_name']} to claim your prize!")
+            st.balloons()
+            st.success(f"🎁 You unlocked a reward!")
         else:
             st.warning("⏳ Share your playlist with at least 3 people to unlock your reward!")

@@ -133,7 +133,6 @@ selected_fall = (
 st.write("")
 
 
-# Business options and related data
 fall_data = {
     "Pumpkin carving": {
         "playlist": "Chilly Orchards",

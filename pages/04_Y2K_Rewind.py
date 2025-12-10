@@ -137,7 +137,7 @@ y2k_data = {
         "business_name": "Sugar Bliss",
         "location": "10% off your first order with this screen!",
         "website": "https://www.sugarblisscakes.com/",
-        "business_image": "https://static.wixstatic.com/media/2859e8_d08aa804763e451fa31e64108db79992~mv2.jpg/v1/fill/w_352,h_110,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/%20Brand%20Guide%20(8_edited.jpg",
+        "business_image": "",
     },
     "Usher": {
     "playlist": "Smooth Grooves",
@@ -145,7 +145,7 @@ y2k_data = {
     "business_name": "Soule to Soule",
     "location": "Get 5% off a selected entree with this screen.",
     "website": "https://www.souletosoule.com/",
-    "business_image": "https://images.squarespace-cdn.com/content/v1/64bf276689b7b563702a2634/f03ab85d-0add-4844-a07f-58b2deca1264/Soule-To-Soule-Logo_gold-.png?format=2500w",
+    "business_image": "",
     },
     "Green Day": {
     "playlist": "Amped Up",
@@ -153,7 +153,7 @@ y2k_data = {
     "business_name": "Hecky's",
     "location": "5% off your order!",
     "website": "https://www.heckys.com/",
-    "business_image": "https://static.spotapps.co/website_images/ab_websites/88743_website/logo.png"
+    "business_image": ""
     },
     "Destiny's Child": {
     "playlist": "Off the Charts Pop",
@@ -161,7 +161,7 @@ y2k_data = {
     "business_name": "Kokorokoko",
     "location": "Get 10% discount with your purchase!",
     "website": "https://www.kokorokokovintage.com/",
-    "business_image": "https://www.kokorokokovintage.com/cdn/shop/files/koko.LOGO_360x.jpg?v=1613785534"
+    "business_image": ""
     },
 }
 

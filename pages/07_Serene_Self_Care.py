@@ -142,10 +142,10 @@ energy_data = {
     "Clear": {
     "playlist": "Drifting in the Sun",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "BIOCARE LABS",
-    "location": "Get $10 off your first purchase!",
-    "website": "https://www.biocarelabs.com/",
-    "business_image": "https://www.biocarelabs.com/cdn/shop/files/biocare-logo-black-340x125_096f22c6-3c73-46b7-86d8-d6d48a15e66a.png?v=1641779618&width=240",
+    "business_name": "105F Hot Yoga, Pilates, & Wellness",
+    "location": "5715 N Clark St, Chicago, IL 60660",
+    "website": "https://105f.com/classes/",
+    "business_image": "https://105f.com/wp-content/uploads/2020/01/105f_logo_without-Background-1.gif",
     },
     "Soft": {
     "playlist": "Bubbles & Wine",

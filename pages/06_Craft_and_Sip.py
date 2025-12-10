@@ -128,10 +128,10 @@ value_data = {
     "Emotion": {
         "playlist": "Happy Accidents",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "business_name": "The Wasteshed",
-        "location": "10% off your first purchase with this screen!",
-        "website": "https://www.thewasteshed.com/",
-        "business_image": "https://images.squarespace-cdn.com/content/v1/5462e7eae4b047a3e78ccc67/d681968b-111a-4180-9fed-c22e228f3773/general-brandmark-white-wider.png?format=1500w",
+        "business_name": "Paper and Pencil",
+        "location": "1480 W Berwyn Ave, Chicago, IL 60640",
+        "website": "https://paperandpencilchicago.com/",
+        "business_image": "https://paperandpencilchicago.com/cdn/shop/files/Primary_1.png?v=1680104637&width=500",
     },
     "Color": {
     "playlist": "Palette Pop",

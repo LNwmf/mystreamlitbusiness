@@ -134,10 +134,10 @@ energy_data = {
     "Glowing": {
         "playlist": "Mood: Dewy",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "business_name": "DNA Beauty Supply",
-        "location": "5% off your first purchase with this screen!",
-        "website": "https://www.facebook.com/people/DNA-Beauty-Supply/100057497137026/",
-        "business_image": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/384267987_785169260076305_2783627709022071207_n.png?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=AstFGP_v9DMQ7kNvwHoQWnf&_nc_oc=AdltzZ0X8GSFxfbQ0SH-pfABYxT09p-s9__zt1aO1Sl-LsfiNIrPqiXOM3n7Wb6mCgYw5Xjz1bCGtMMadGoLv7J1&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=zfCdymUeFbj-kSw49LKJRw&oh=00_AffkftEEO_9FaTrYh4OUPTg8_ZuK_RVY1eodY5y-pAFj4g&oe=68E8DCE2",
+        "business_name": "Apothecary EO",
+        "location": "5601 N Clark St, Chicago, IL 60660",
+        "website": "https://www.apothecaryeo.com/",
+        "business_image": "https://static.wixstatic.com/media/d5bbda_fd6fbc09537f4e1480e3a6b0bcb91d1a~mv2.png/v1/fill/w_788,h_328,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Apothecary%20EO.png",
     },
     "Clear": {
     "playlist": "Drifting in the Sun",

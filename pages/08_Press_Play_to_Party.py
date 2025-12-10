@@ -244,11 +244,11 @@ if selected_food and selected_genre and selected_theme and selected_complete and
     if result_key:
         info = trick_data[result_key]
 
-    # Display playlist and business info
+
     st.subheader(f"🎵 {info['playlist']}")
     st.markdown(f"[Listen Here]({info['playlist_link']})")
 
-    # Business info display
+
     st.image(info['business_image'], width=250)
     st.write(f"🏷️ **Business Name:** {info['business_name']}")
     st.write(f"🌐 [Visit Website]({info['website']})")

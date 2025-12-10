@@ -157,7 +157,7 @@ dessert_data = {
     "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/sayurisushi.jpeg"
     },
     "Mandazi": {
-    "playlist": "Reggaeton Fusions",
+    "playlist": "Bongo Flava Blends",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "Afro Taste Cuisine",
     "location": "1010 W Argyle St, Chicago, IL 60640",

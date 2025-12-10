@@ -152,10 +152,10 @@ value_data = {
     "Storytelling": {
     "playlist": "Memory Lane",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Art & Company",
-    "location": "Get a 5% discount with your first order!",
-    "website": "https://www.artandcompany.net/#/",
-    "business_image": "https://www.artandcompany.net/uploads/9/3/5/2/9352723/1427560359.png"
+    "business_name": "Andersonville Galleria",
+    "location": "5247 N Clark St, Chicago, IL 60640",
+    "website": "https://andersonvillegalleria.com/",
+    "business_image": "https://andersonvillegalleria.com/wp-content/uploads/2024/03/AG-Logo-1.png"
     },
 }
 

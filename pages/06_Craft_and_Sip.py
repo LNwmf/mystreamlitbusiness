@@ -136,10 +136,10 @@ value_data = {
     "Color": {
     "playlist": "Palette Pop",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Ancestry Moon Art Studio",
-    "location": "Get $10 off your first class!",
-    "website": "https://www.facebook.com/AmMoon103",
-    "business_image": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/476198914_1106877391451064_5406431294276183812_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=Hz-pOZ2KOtoQ7kNvwEl-RT3&_nc_oc=Adn0Gl9SANmYu6nLfQxT0F-27vQ4I5-wn6vZaguWWWt0ZKbMahL6Kepv948zfvXdUSvuMpzaVOvrZqHJ7FsG1uVf&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=Y-DW2ZLnLbwIaQ63Bjpv9w&oh=00_AfdHxO8trkyJtFnEYdyYv6mUCDHhKQWSRGt1Z1X8w2dGuA&oe=68E8C29A",
+    "business_name": "Foursided",
+    "location": "5061 N Clark St, Chicago, IL 60640",
+    "website": "https://foursided.com/",
+    "business_image": "https://foursided.com/cdn/shop/files/foursided_2025_holiday_logo_trans_trimmed_290x@2x.png?v=1763072139",
     },
     "Texture": {
     "playlist": "Velvet Tunes",

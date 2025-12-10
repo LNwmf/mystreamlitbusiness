@@ -245,7 +245,7 @@ if selected_perform and selected_era and selected_place and selected_word and va
     st.image(info3['business_image'], width=250)
     st.write(f"🏷️ **Business Name:** {info3['business_name']}")
     st.write(f"🌐 [Visit Website]({info3['website']})")
-    st.write(f"📍 **Address:** {info3['offer']}")
+    st.write(f"📍 **Address:** {info3['location']}")
 
     st.write("")
     st.subheader("Share your playlist!", divider="grey")

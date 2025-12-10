@@ -135,8 +135,7 @@ y2k_data = {
         "playlist": "Oop...I did it again",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         "business_name": "Sugar Bliss",
-        "offer": "10% off your first order with this screen!",
-        "booth_name": "Booth A",
+        "location": "10% off your first order with this screen!",
         "website": "https://www.sugarblisscakes.com/",
         "business_image": "https://static.wixstatic.com/media/2859e8_d08aa804763e451fa31e64108db79992~mv2.jpg/v1/fill/w_352,h_110,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/%20Brand%20Guide%20(8_edited.jpg",
     },
@@ -144,8 +143,7 @@ y2k_data = {
     "playlist": "Smooth Grooves",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "Soule to Soule",
-    "offer": "Get 5% off a selected entree with this screen.",
-    "booth_name": "Booth B",
+    "location": "Get 5% off a selected entree with this screen.",
     "website": "https://www.souletosoule.com/",
     "business_image": "https://images.squarespace-cdn.com/content/v1/64bf276689b7b563702a2634/f03ab85d-0add-4844-a07f-58b2deca1264/Soule-To-Soule-Logo_gold-.png?format=2500w",
     },
@@ -153,8 +151,7 @@ y2k_data = {
     "playlist": "Amped Up",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "Hecky's",
-    "offer": "5% off your order!",
-    "booth_name": "Booth C",
+    "location": "5% off your order!",
     "website": "https://www.heckys.com/",
     "business_image": "https://static.spotapps.co/website_images/ab_websites/88743_website/logo.png"
     },
@@ -162,8 +159,7 @@ y2k_data = {
     "playlist": "Off the Charts Pop",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "Kokorokoko",
-    "offer": "Get 10% discount with your purchase!",
-    "booth_name": "Booth D",
+    "location": "Get 10% discount with your purchase!",
     "website": "https://www.kokorokokovintage.com/",
     "business_image": "https://www.kokorokokovintage.com/cdn/shop/files/koko.LOGO_360x.jpg?v=1613785534"
     },
@@ -259,7 +255,6 @@ y2k_map = {
 if selected_tech and selected_movie and selected_ppl and y2k_choice:
     user_combo = (selected_tech, selected_movie, selected_ppl)
     result_key = y2k_map.get(user_combo)
-    # Retrieve information about selected drink/business
     if result_key:
         info = y2k_data[result_key]
 
@@ -269,20 +264,20 @@ if selected_tech and selected_movie and selected_ppl and y2k_choice:
     st.markdown(f"[Listen Here]({info['playlist_link']})")
 
     # Business info display
-    st.image(info['business_image'], width=250)  # Show business image (if available)
-    st.write(f"💼 **Business Name:** {info['business_name']}")
+    st.image(info['business_image'], width=250)
+    st.write(f"🏷️ **Business Name:** {info['business_name']}")
     st.write(f"🌐 [Visit Website]({info['website']})")
-    st.write(f"🎁 **Special Offer:** {info['offer']}")
+    st.write(f"📍 **Address:** {info['location']}")
 
     st.write("")
     st.subheader("Share your playlist!", divider="grey")
     st.write("")
-    st.write("👥 How many people did you share your playlist with?")
+    st.write("How many people did you share your playlist with?")
     shared_count = st.number_input("Number of people:", min_value=0, step=1)
 
     if st.button("Check Reward Status"):
         if shared_count >= 3:
-            st.balloons()  # Add some confetti for fun
-            st.success(f"🎁 You unlocked a reward! Show this screen at {info['booth_name']} to claim your prize!")
+            st.balloons()
+            st.success(f"🎁 You unlocked a reward!")
     else:
             st.warning("⏳ Share your playlist with at least 3 people to unlock your reward!")

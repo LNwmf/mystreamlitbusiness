@@ -139,7 +139,7 @@ value_data = {
     "business_name": "Foursided",
     "location": "5061 N Clark St, Chicago, IL 60640",
     "website": "https://foursided.com/",
-    "business_image": "https://foursided.com/cdn/shop/files/foursided_2025_holiday_logo_trans_trimmed_290x@2x.png?v=1763072139",
+    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/foursided.png",
     },
     "Texture": {
     "playlist": "Velvet Tunes",

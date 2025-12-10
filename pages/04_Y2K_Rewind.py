@@ -150,10 +150,10 @@ y2k_data = {
     "Green Day": {
     "playlist": "Amped Up",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Hecky's",
-    "location": "5% off your order!",
-    "website": "https://www.heckys.com/",
-    "business_image": ""
+    "business_name": "AlleyCat Comics",
+    "location": "",
+    "website": "https://www.alleycatcomics.com/",
+    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/alleycatcomics.png"
     },
     "Destiny's Child": {
     "playlist": "Off the Charts Pop",

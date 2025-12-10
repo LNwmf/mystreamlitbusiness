@@ -151,7 +151,7 @@ y2k_data = {
     "playlist": "Amped Up",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "AlleyCat Comics",
-    "location": "",
+    "location": "5304 N Clark St, Chicago, IL 60640",
     "website": "https://www.alleycatcomics.com/",
     "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/alleycatcomics.png"
     },

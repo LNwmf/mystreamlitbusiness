@@ -161,10 +161,10 @@ drink_data = {
     "Horchata": {
         "playlist": "Reggaeton Fusions",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "business_name": "Mahi's Kitchen",
-        "location": "4749 N Pulaski Rd, Chicago, IL 60630",
-       # "website": "",
-        "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/kababking.png"
+        "business_name": "Curry Kitchen",
+        "location": "5304 W Devon Ave, Chicago, IL 60646",
+        "website": "https://currykitchenchicago.com/",
+        "business_image": "https://currykitchenchicago.com/wp-content/uploads/2024/08/logo.jpg"
     }
 }
 

@@ -468,6 +468,6 @@ if selected_flavor and selected_time and selected_life and selected_season and d
         if shared_count >= 3:
             st.balloons()
             st.success(f"🎊 Surprise!")
-            st.image(pianocat, width=200)
+            st.image(pianocat, width=300)
     else:
             st.warning("⏳ Share your playlist with at least 3 people to unlock your reward!")

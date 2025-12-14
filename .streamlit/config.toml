@@ -8,5 +8,3 @@ font="sans-serif"
 headingFont="serif"
 codeFont="monospace"
 baseFontSize=17
-[theme.sidebar]
-font = "serif"

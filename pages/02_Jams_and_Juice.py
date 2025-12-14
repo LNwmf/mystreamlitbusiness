@@ -161,9 +161,9 @@ drink_data = {
     "Horchata": {
         "playlist": "Reggaeton Fusions",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "business_name": "Kabab King Grill",
-        "location": "2305 W Devon Ave, Chicago, IL 60659",
-        "website": "https://www.kababkinggrill.com/",
+        "business_name": "Mahi's Kitchen",
+        "location": "4749 N Pulaski Rd, Chicago, IL 60630",
+       # "website": "",
         "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/kababking.png"
     }
 }

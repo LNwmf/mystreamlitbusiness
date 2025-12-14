@@ -267,11 +267,13 @@ if selected_flavor and selected_travel and selected_ingredient and selected_mood
     # Share Playlist with Others
     st.write("How many people did you share your playlist with?")
     shared_count = st.number_input("Number of people:", min_value=0, step=1)
+    pianocat = "https://i.imgur.com/zZgJvo5.gif"
 
     if st.button("Check Reward Status"):
         if shared_count >= 3:
             st.balloons()
             st.success(f"🎁 Surprise!")
+            st.image(pianocat,width=200)
         else:
             st.warning("⏳ Share your playlist with at least 3 people to unlock your reward!")
 

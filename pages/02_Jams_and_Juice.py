@@ -144,7 +144,7 @@ drink_data = {
     },
     "Chai latte": {
         "playlist": "World Country Beats",
-        "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "playlist_link": "https://open.spotify.com/playlist/1KREbVZKOsE1T6vHuPbyrD?si=IwKmga-dSpaTogbSML0bqw",
         "business_name": "Roggenart European Bakery, Bistro & Cafe",
         "location": "3500 N Halsted St, Chicago, IL 60657",
         "website": "https://roggenart.com/",
@@ -160,7 +160,7 @@ drink_data = {
     },
     "Horchata": {
         "playlist": "Reggaeton Fusions",
-        "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "playlist_link": "https://open.spotify.com/playlist/34kBrKBySt0SqcP5YpvZM9?si=wbQYA-0hQtu9oCfVOP0abw",
         "business_name": "Curry Kitchen",
         "location": "5304 W Devon Ave, Chicago, IL 60646",
         "website": "https://currykitchenchicago.com/",

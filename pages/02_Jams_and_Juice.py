@@ -145,10 +145,10 @@ drink_data = {
     "Chai latte": {
         "playlist": "World Country Beats",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "business_name": "Beard & Belly",
-        "location": "6157 N Broadway, Chicago, IL 60660",
-        "website": "https://www.beardandbellychicago.com/",
-        "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/beardandbelly.png",
+        "business_name": "Roggenart European Bakery, Bistro & Cafe",
+        "location": "3500 N Halsted St, Chicago, IL 60657",
+        "website": "https://roggenart.com/",
+        "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/roggenart.png",
     },
     "Milk tea boba": {
         "playlist": "Sweet Mellow Blues",
@@ -264,7 +264,7 @@ if selected_flavor and selected_travel and selected_ingredient and selected_mood
     st.subheader("Share your playlist!", divider="grey")
     st.write("")
 
-    # Share Playlist with Others (social sharing feature)
+    # Share Playlist with Others
     st.write("How many people did you share your playlist with?")
     shared_count = st.number_input("Number of people:", min_value=0, step=1)
 

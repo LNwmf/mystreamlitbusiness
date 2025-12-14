@@ -272,7 +272,7 @@ if selected_flavor and selected_travel and selected_ingredient and selected_mood
     if st.button("Check Reward Status"):
         if shared_count >= 3:
             st.balloons()
-            st.success(f"🎁 Surprise!")
+            st.success(f"🎊 Surprise!")
             st.image(pianocat,width=200)
         else:
             st.warning("⏳ Share your playlist with at least 3 people to unlock your reward!")

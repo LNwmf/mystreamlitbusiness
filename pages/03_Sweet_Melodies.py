@@ -134,7 +134,7 @@ st.write("")
 dessert_data = {
     "Flan": {
         "playlist": "Dancing Jelly",
-        "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "playlist_link": "https://open.spotify.com/playlist/6fYffbVT904xvzDT6irTdU?si=csdoxPo9RY-xZi1GFCHWug",
         "business_name": "El Rincón de Fabio",
         "location": "1002 W Argyle St, Chicago, IL 60640",
         "website": "https://elrincondefabiollc.net/",
@@ -142,7 +142,7 @@ dessert_data = {
     },
     "Souffle": {
     "playlist": "Pastries & Strings",
-    "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "playlist_link": "https://open.spotify.com/playlist/6Q3HvhgG8wMriOzsskGGKe?si=h210zMrdQ5WUDDQqDvL8uQ",
     "business_name": "BUREK SHOP 3M Restaurant",
     "location": "5910 N Clark St, Chicago, IL 60660",
     "website": "https://3mrestaurant.com/",
@@ -150,7 +150,7 @@ dessert_data = {
     },
     "Taiyaki": {
     "playlist": "Chill J-Rock",
-    "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "playlist_link": "https://open.spotify.com/playlist/6bwKvzWbyYgjILrBZctfXC?si=6eTaIJ0HRHGffHBs6YX56g",
     "business_name": "Sayuri Sushi Bar",
     "location": "1553 W Devon Ave, Chicago, IL 60660",
     "website": "https://sayurichicago.com/",
@@ -158,7 +158,7 @@ dessert_data = {
     },
     "Mandazi": {
     "playlist": "Bongo Flava Blends",
-    "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "playlist_link": "https://open.spotify.com/playlist/1mg4qAKKFiOYuelShVU1z0?si=EqYt0bVVTfGGy6QI8FHnAA",
     "business_name": "Afro Taste Cuisine",
     "location": "1010 W Argyle St, Chicago, IL 60640",
     "website": "https://www.afrotastecuisine.com/",

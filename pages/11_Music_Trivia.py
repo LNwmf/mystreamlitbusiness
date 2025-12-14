@@ -1,9 +1,6 @@
 import streamlit as st
 
 
-# ---------------------
-# PAGE CONFIG
-# ---------------------
 st.set_page_config(page_title="Music Trivia Game", page_icon="🎵", layout="centered")
 st.markdown(
     """

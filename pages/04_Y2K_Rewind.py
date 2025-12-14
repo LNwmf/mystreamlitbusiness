@@ -274,10 +274,12 @@ if selected_tech and selected_movie and selected_ppl and y2k_choice:
     st.write("")
     st.write("How many people did you share your playlist with?")
     shared_count = st.number_input("Number of people:", min_value=0, step=1)
+    pianocat = "https://i.imgur.com/zZgJvo5.gif"
 
     if st.button("Check Reward Status"):
         if shared_count >= 3:
             st.balloons()
-            st.success(f"🎁 You unlocked a reward!")
+            st.success(f"🎊 Surprise!")
+            st.image(pianocat,width=300)
     else:
             st.warning("⏳ Share your playlist with at least 3 people to unlock your reward!")

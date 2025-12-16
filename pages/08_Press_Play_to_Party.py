@@ -245,7 +245,7 @@ if selected_food and selected_genre and selected_theme and selected_complete and
         info = trick_data[result_key]
 
 
-    st.subheader(f"🎵 {info['playlist']}")
+    st.subheader(f"🎵 Your playlist is {info['playlist']}!")
     st.markdown(f"[Listen Here]({info['playlist_link']})")
 
 

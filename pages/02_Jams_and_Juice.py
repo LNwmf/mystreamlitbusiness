@@ -253,27 +253,26 @@ if selected_flavor and selected_travel and selected_ingredient and selected_mood
         info = drink_data[result_key]
 
     # Display playlist and business info
+    st.subheader(f"🎵 Your playlist is {info['playlist']}!")
+    playlist_link = info["playlist_link"]
 
-        st.subheader(f"🎵 Your playlist is {info['playlist']}!")
-        playlist_link = info["playlist_link"]
+    # Create two columns: one wider for the link, one narrower for the button
+    col1, col2 = st.columns([0.2, 1])
 
-        # Create two columns: one wider for the link, one narrower for the button
-        col1, col2 = st.columns([0.2, 1])
+    # Put the hyperlink in the first column
+    with col1:
+        st.markdown(
+            f"""
+                    <a href="{playlist_link}" target="_blank" style="font-size:20px; font-weight:bold;">
+                        Listen Here
+                    </a>
+                    """,
+            unsafe_allow_html=True
+        )
 
-        # Put the hyperlink in the first column
-        with col1:
-            st.markdown(
-                f"""
-                      <a href="{playlist_link}" target="_blank" style="font-size:20px; font-weight:bold;">
-                          Listen Here
-                      </a>
-                      """,
-                unsafe_allow_html=True
-            )
-
-        # Put the copy button in the second column
-        with col2:
-            copy_button(playlist_link)
+    # Put the copy button in the second column
+    with col2:
+        copy_button(playlist_link)
 
 
     # Business info display

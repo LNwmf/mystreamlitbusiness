@@ -135,34 +135,34 @@ dessert_data = {
     "Flan": {
         "playlist": "Dancing Jelly",
         "playlist_link": "https://open.spotify.com/playlist/6fYffbVT904xvzDT6irTdU?si=csdoxPo9RY-xZi1GFCHWug",
-        "business_name": "El Rincón de Fabio",
-        "location": "1002 W Argyle St, Chicago, IL 60640",
-        "website": "https://elrincondefabiollc.net/",
-        "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/elrincondefabio.png",
+#        "business_name": "El Rincón de Fabio",
+#        "location": "1002 W Argyle St, Chicago, IL 60640",
+#        "website": "https://elrincondefabiollc.net/",
+#        "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/elrincondefabio.png",
     },
     "Souffle": {
     "playlist": "Pastries & Strings",
     "playlist_link": "https://open.spotify.com/playlist/6Q3HvhgG8wMriOzsskGGKe?si=h210zMrdQ5WUDDQqDvL8uQ",
-    "business_name": "BUREK SHOP 3M Restaurant",
-    "location": "5910 N Clark St, Chicago, IL 60660",
-    "website": "https://3mrestaurant.com/",
-    "business_image": "https://3mrestaurant.com/wp-content/uploads/2023/02/3M-LOGO.png",
+#    "business_name": "BUREK SHOP 3M Restaurant",
+#    "location": "5910 N Clark St, Chicago, IL 60660",
+#    "website": "https://3mrestaurant.com/",
+#    "business_image": "https://3mrestaurant.com/wp-content/uploads/2023/02/3M-LOGO.png",
     },
     "Taiyaki": {
     "playlist": "Chill J-Rock",
     "playlist_link": "https://open.spotify.com/playlist/6bwKvzWbyYgjILrBZctfXC?si=6eTaIJ0HRHGffHBs6YX56g",
-    "business_name": "Sayuri Sushi Bar",
-    "location": "1553 W Devon Ave, Chicago, IL 60660",
-    "website": "https://sayurichicago.com/",
-    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/sayurisushi.jpeg"
+#    "business_name": "Sayuri Sushi Bar",
+#    "location": "1553 W Devon Ave, Chicago, IL 60660",
+#    "website": "https://sayurichicago.com/",
+#    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/sayurisushi.jpeg"
     },
     "Mandazi": {
     "playlist": "Bongo Flava Blends",
     "playlist_link": "https://open.spotify.com/playlist/1mg4qAKKFiOYuelShVU1z0?si=EqYt0bVVTfGGy6QI8FHnAA",
-    "business_name": "Afro Taste Cuisine",
-    "location": "1010 W Argyle St, Chicago, IL 60640",
-    "website": "https://www.afrotastecuisine.com/",
-    "business_image": "https://ik.imagekit.io/awwybhhmo/assets/favicons/African/botanic__1_.svg?tr="
+#    "business_name": "Afro Taste Cuisine",
+#    "location": "1010 W Argyle St, Chicago, IL 60640",
+#    "website": "https://www.afrotastecuisine.com/",
+#    "business_image": "https://ik.imagekit.io/awwybhhmo/assets/favicons/African/botanic__1_.svg?tr="
     },
 }
 
@@ -452,10 +452,10 @@ if selected_flavor and selected_time and selected_life and selected_season and d
     st.markdown(f"[Listen Here]({info['playlist_link']})")
 
     # Business info display
-    st.image(info['business_image'], width=250)
-    st.write(f"🏷️ **Business Name:** {info['business_name']}")
-    st.write(f"🌐 [Visit Website]({info['website']})")
-    st.write(f"📍 **Address:** {info['location']}")
+#    st.image(info['business_image'], width=250)
+#    st.write(f"🏷️ **Business Name:** {info['business_name']}")
+#    st.write(f"🌐 [Visit Website]({info['website']})")
+#    st.write(f"📍 **Address:** {info['location']}")
 
     st.write("")
     st.subheader("Share your playlist!", divider="grey")

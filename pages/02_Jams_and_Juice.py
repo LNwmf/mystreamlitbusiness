@@ -1,4 +1,5 @@
 import streamlit as st
+from st_copy import copy_button
 #streamlit run sl1.py
 
 st.set_page_config(
@@ -253,6 +254,10 @@ if selected_flavor and selected_travel and selected_ingredient and selected_mood
     # Display playlist and business info
     st.subheader(f"🎵 Your playlist is {info['playlist']}!")
 
+    playlist_link = info["playlist_link"]
+
+    st.markdown(f"🎧 [Listen on Spotify]({playlist_link})")
+    copy_button(playlist_link, tooltip="Copy playlist link", copied_label="Copied!")
 
     # Business info display
 #    st.image(info['business_image'], width=250)  # Show business image (if available)

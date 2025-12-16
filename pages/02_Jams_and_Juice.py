@@ -260,8 +260,9 @@ if selected_flavor and selected_travel and selected_ingredient and selected_mood
 
     copy_button(
         playlist_link,
-        tooltip="Copy playlist link",
-        copied_label="Copied!"
+        label="📋 Copy link",
+        tooltip="Click to copy playlist link",
+        copied_label="✅ Copied!"
     )
 
     # Business info display

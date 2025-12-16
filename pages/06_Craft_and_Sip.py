@@ -238,7 +238,7 @@ if selected_perform and selected_era and selected_place and selected_word and va
         info3 = value_data[result_key]
 
     # Display playlist and business info
-    st.subheader(f"🎵 {info3['playlist']}")
+    st.subheader(f"🎵 Your playlist is {info3['playlist']}!")
     st.markdown(f"[Listen Here]({info3['playlist_link']})")
 
     # Business info display

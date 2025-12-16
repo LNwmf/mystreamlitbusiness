@@ -1,5 +1,6 @@
-import streamlit as st
 from st_copy import copy_button
+import streamlit as st
+
 #streamlit run sl1.py
 
 st.set_page_config(

@@ -137,34 +137,34 @@ drink_data = {
     "Caramel macchiato": {
         "playlist": "Maqamat Rhythms",
         "playlist_link": "https://open.spotify.com/playlist/6v1R5ZRQFn9m1JhD3WMAcV?si=q8KTnYuFTZyc7aVaYQxojQ",
-        "business_name": "Turkish Doner",
-        "location": "1007 W Argyle St, Chicago, IL 60640",
-        "website": "https://www.facebook.com/profile.php?id=61579383426862",
-        "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/turkishdoner.png",
+#        "business_name": "Turkish Doner",
+#        "location": "1007 W Argyle St, Chicago, IL 60640",
+#        "website": "https://www.facebook.com/profile.php?id=61579383426862",
+#        "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/turkishdoner.png",
     },
     "Chai latte": {
         "playlist": "World Country Beats",
         "playlist_link": "https://open.spotify.com/playlist/1KREbVZKOsE1T6vHuPbyrD?si=IwKmga-dSpaTogbSML0bqw",
-        "business_name": "Roggenart European Bakery, Bistro & Cafe",
-        "location": "3500 N Halsted St, Chicago, IL 60657",
-        "website": "https://roggenart.com/",
-        "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/roggenart.png",
+#        "business_name": "Roggenart European Bakery, Bistro & Cafe",
+#        "location": "3500 N Halsted St, Chicago, IL 60657",
+#        "website": "https://roggenart.com/",
+#        "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/roggenart.png",
     },
     "Milk tea boba": {
         "playlist": "Sweet Mellow Blues",
         "playlist_link": "https://open.spotify.com/playlist/3CpxGMwxThdLq76N98iqkP?si=rMhgl1S0S5SWnY1AmyW1jg",
-        "business_name": "Little Vietnam",
-        "location": "1132 W Bryn Mawr Ave, Chicago, IL 60660",
-        "website": "https://orderlittlevietnam.com/",
-        "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/littlevietnam.png"
+#        "business_name": "Little Vietnam",
+#        "location": "1132 W Bryn Mawr Ave, Chicago, IL 60660",
+#        "website": "https://orderlittlevietnam.com/",
+#        "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/littlevietnam.png"
     },
     "Horchata": {
         "playlist": "Reggaeton Fusions",
         "playlist_link": "https://open.spotify.com/playlist/34kBrKBySt0SqcP5YpvZM9?si=wbQYA-0hQtu9oCfVOP0abw",
-        "business_name": "Curry Kitchen",
-        "location": "5304 W Devon Ave, Chicago, IL 60646",
-        "website": "https://currykitchenchicago.com/",
-        "business_image": "https://currykitchenchicago.com/wp-content/uploads/2024/08/logo.jpg"
+#        "business_name": "Curry Kitchen",
+#        "location": "5304 W Devon Ave, Chicago, IL 60646",
+#        "website": "https://currykitchenchicago.com/",
+#        "business_image": "https://currykitchenchicago.com/wp-content/uploads/2024/08/logo.jpg"
     }
 }
 

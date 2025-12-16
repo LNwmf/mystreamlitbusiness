@@ -253,11 +253,17 @@ if selected_flavor and selected_travel and selected_ingredient and selected_mood
     # Display playlist and business info
     st.subheader(f"🎵 Your playlist is {info['playlist']}!")
     st.markdown(
-        f"## 🎧 [Listen on Spotify]({info['playlist_link']})"
-    )
+        f"""
+        <h2>🎧 <a href="{info['playlist_link']}" target="_blank">
+            Listen on Spotify
+        </a></h2>
 
-    st.caption("Copy link")
-    st.code(info["playlist_link"], language="text")
+        <button onclick="navigator.clipboard.writeText('{info['playlist_link']}')">
+            📋 Copy link
+        </button>
+        """,
+        unsafe_allow_html=True
+    )
 
     # Business info display
 #    st.image(info['business_image'], width=250)  # Show business image (if available)

@@ -252,13 +252,18 @@ if selected_flavor and selected_travel and selected_ingredient and selected_mood
 
     # Display playlist and business info
     st.subheader(f"🎵 Your playlist is {info['playlist']}!")
-    st.markdown(f"[Listen Here]({info['playlist_link']})")
+    st.link_button(
+        "▶️ Listen on Spotify",
+        info["playlist_link"]
+    )
+
+    st.code(info["playlist_link"], language="text")
 
     # Business info display
-    st.image(info['business_image'], width=250)  # Show business image (if available)
-    st.write(f"🏷️ **Business Name:** {info['business_name']}")
-    st.write(f"🌐 [Visit Website]({info['website']})")
-    st.write(f"📍 **Address:** {info['location']}")
+#    st.image(info['business_image'], width=250)  # Show business image (if available)
+#    st.write(f"🏷️ **Business Name:** {info['business_name']}")
+#    st.write(f"🌐 [Visit Website]({info['website']})")
+#    st.write(f"📍 **Address:** {info['location']}")
 
     st.write("")
     st.subheader("Share your playlist!", divider="grey")

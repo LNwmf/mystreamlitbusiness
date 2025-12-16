@@ -255,11 +255,19 @@ if selected_flavor and selected_travel and selected_ingredient and selected_mood
     # Display playlist and business info
 
         st.subheader(f"🎵 Your playlist is {info['playlist']}!")
-        st.markdown(f"[Listen Here]({info['playlist_link']})")
-
         playlist_link = info["playlist_link"]
 
-        copy_button(playlist_link)
+        # Create two columns: one wider for the link, one narrower for the button
+        col1, col2 = st.columns([4, 1])
+
+        # Put the hyperlink in the first column
+        with col1:
+            st.markdown(f"[Listen Here]({playlist_link})")
+
+        # Put the copy button in the second column
+        with col2:
+            copy_button(playlist_link)
+
 
     # Business info display
 #    st.image(info['business_image'], width=250)  # Show business image (if available)

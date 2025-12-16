@@ -1,3 +1,4 @@
+from st_copy import copy_button
 import streamlit as st
 
 st.set_page_config(
@@ -18,11 +19,11 @@ st.markdown(
 st.image("https://theworldmusicfoundation.org/wp-content/uploads/2016/11/wmf_small_logo.png.webp", width=180)
 st.title("🎨 Craft & Sip")
 st.markdown("""
-Welcome! Pick an artistic value below to discover a blended playlist, support a local BIPOC business, and unlock a reward for sharing with others.
+Welcome! Pick an artistic value below to discover a blended playlist and unlock a surprise for sharing with others.
 """)
 
 #Q1
-st.write("Select a performance type:")
+st.write("Select a performance type: (double-click button)")
 images = [
 
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/play.jpg",
@@ -73,7 +74,7 @@ era_options = ["Renaissance", "Medieval", "Contemporary", "Romanticism"]
 selected_era = st.selectbox("Which art era do you resonate with most?", era_options, index=None)
 
 #Q3
-st.write("Select an ideal creative environment:")
+st.write("Select an ideal creative environment: (double-click button)")
 images = [
 
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/loft.jpg",

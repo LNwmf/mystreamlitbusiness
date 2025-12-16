@@ -128,34 +128,34 @@ value_data = {
     "Emotion": {
         "playlist": "Happy Accidents",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "business_name": "Paper and Pencil",
-        "location": "1480 W Berwyn Ave, Chicago, IL 60640",
-        "website": "https://paperandpencilchicago.com/",
-        "business_image": "https://paperandpencilchicago.com/cdn/shop/files/Primary_1.png?v=1680104637&width=500",
+#        "business_name": "Paper and Pencil",
+#        "location": "1480 W Berwyn Ave, Chicago, IL 60640",
+#        "website": "https://paperandpencilchicago.com/",
+#        "business_image": "https://paperandpencilchicago.com/cdn/shop/files/Primary_1.png?v=1680104637&width=500",
     },
     "Color": {
     "playlist": "Palette Pop",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Foursided",
-    "location": "5061 N Clark St, Chicago, IL 60640",
-    "website": "https://foursided.com/",
-    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/foursided.png",
+#    "business_name": "Foursided",
+#    "location": "5061 N Clark St, Chicago, IL 60640",
+#    "website": "https://foursided.com/",
+#    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/foursided.png",
     },
     "Texture": {
     "playlist": "Velvet Tunes",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Mercantile M",
-    "location": "5409 1/2 N Clark St, Chicago, Illinois 60640",
-    "website": "https://www.facebook.com/MercantileM//",
-    "business_image": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/481456667_1206271091507885_307276287281734569_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&cb2=99be929b-a592a72f&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=Wp8qF0hBKD0Q7kNvwHj3DOh&_nc_oc=AdlgUbQ_a0EZXUU2IGiiTJsHP-OEP144byk1RVnJ1JzX3vQBmtp3_2n-gPKHs61yiQoDi7JdtbPW9AtWcLbJf7b3&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=3TjdTHii2bu4_VLUV8Cxug&oh=00_AfmKRCTfM1SU0m_VTOpU-J3wvpfExUk8CSIQEIro8kwIkA&oe=693E92CA"
+#    "business_name": "Mercantile M",
+#    "location": "5409 1/2 N Clark St, Chicago, Illinois 60640",
+#    "website": "https://www.facebook.com/MercantileM//",
+#    "business_image": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/481456667_1206271091507885_307276287281734569_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&cb2=99be929b-a592a72f&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=Wp8qF0hBKD0Q7kNvwHj3DOh&_nc_oc=AdlgUbQ_a0EZXUU2IGiiTJsHP-OEP144byk1RVnJ1JzX3vQBmtp3_2n-gPKHs61yiQoDi7JdtbPW9AtWcLbJf7b3&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=3TjdTHii2bu4_VLUV8Cxug&oh=00_AfmKRCTfM1SU0m_VTOpU-J3wvpfExUk8CSIQEIro8kwIkA&oe=693E92CA"
     },
     "Storytelling": {
     "playlist": "Memory Lane",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Andersonville Galleria",
-    "location": "5247 N Clark St, Chicago, IL 60640",
-    "website": "https://andersonvillegalleria.com/",
-    "business_image": "https://andersonvillegalleria.com/wp-content/uploads/2024/03/AG-Logo-1.png"
+#    "business_name": "Andersonville Galleria",
+#    "location": "5247 N Clark St, Chicago, IL 60640",
+#    "website": "https://andersonvillegalleria.com/",
+#    "business_image": "https://andersonvillegalleria.com/wp-content/uploads/2024/03/AG-Logo-1.png"
     },
 }
 
@@ -242,10 +242,10 @@ if selected_perform and selected_era and selected_place and selected_word and va
     st.markdown(f"[Listen Here]({info3['playlist_link']})")
 
     # Business info display
-    st.image(info3['business_image'], width=250)
-    st.write(f"🏷️ **Business Name:** {info3['business_name']}")
-    st.write(f"🌐 [Visit Website]({info3['website']})")
-    st.write(f"📍 **Address:** {info3['location']}")
+#    st.image(info3['business_image'], width=250)
+#    st.write(f"🏷️ **Business Name:** {info3['business_name']}")
+#    st.write(f"🌐 [Visit Website]({info3['website']})")
+#    st.write(f"📍 **Address:** {info3['location']}")
 
     st.write("")
     st.subheader("Share your playlist!", divider="grey")

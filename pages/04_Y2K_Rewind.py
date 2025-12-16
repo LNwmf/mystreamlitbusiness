@@ -1,3 +1,4 @@
+from st_copy import copy_button
 import streamlit as st
 
 
@@ -19,11 +20,11 @@ st.markdown(
 st.image("https://theworldmusicfoundation.org/wp-content/uploads/2016/11/wmf_small_logo.png.webp", width=180)
 st.title("💿 Y2K Rewind")
 st.markdown("""
-Welcome! Pick a 2000s music artist below to discover a blended playlist, support a local BIPOC business, and unlock a reward for sharing with others.
+Welcome! Pick a 2000s music artist below to discover a blended playlist and unlock a surprise for sharing with others.
 """)
 
 #Q1
-st.write("What Y2K tech do you miss the most?")
+st.write("What Y2K tech do you miss the most? (double-click button)")
 images = [
 
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/flipphone.jpeg",
@@ -76,7 +77,7 @@ trend = ["Tracksuit with rhinestones", "Chunky sunglasses", "Denim on denim", "T
 selected_trend = st.selectbox("Pick a 2000s fashion trend:", trend, index=None)
 
 #Q3
-st.write("If you were teleported into a movie, which one would you prefer to be in?")
+st.write("If you were teleported into a movie, which one would you prefer to be in? (double-click button)")
 images = [
 
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/meangirls.jpg",
@@ -261,7 +262,25 @@ if selected_tech and selected_movie and selected_ppl and y2k_choice:
 
     # Display playlist and business info
     st.subheader(f"🎵 Your playlist is {info['playlist']}!")
-    st.markdown(f"[Listen Here]({info['playlist_link']})")
+    playlist_link = info["playlist_link"]
+
+    # Create two columns: one wider for the link, one narrower for the button
+    col1, col2 = st.columns([0.2, 1])
+
+    # Put the hyperlink in the first column
+    with col1:
+        st.markdown(
+            f"""
+                        <a href="{playlist_link}" target="_blank" style="font-size:20px; font-weight:bold;">
+                            Listen Here
+                        </a>
+                        """,
+            unsafe_allow_html=True
+        )
+
+    # Put the copy button in the second column
+    with col2:
+        copy_button(playlist_link)
 
     # Business info display
 #    st.image(info['business_image'], width=250)

@@ -132,34 +132,34 @@ trick_data = {
     "Karaoke master": {
         "playlist": "Throwback Classics",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "business_name": "La Pharmacie",
-        "location": "5557 N Sheridan Rd, Chicago, IL 60640",
-        "website": "https://www.lapharmaciechicago.com/",
-        "business_image": "https://images.squarespace-cdn.com/content/v1/5eccae01b8a2b27107146b93/04a22998-c1fd-49e2-ad82-a4a893fd7b9f/La%2BPharmacie%2BLogo%2Bno%2Bbackground.jpg?format=1500w",
+#        "business_name": "La Pharmacie",
+#        "location": "5557 N Sheridan Rd, Chicago, IL 60640",
+#        "website": "https://www.lapharmaciechicago.com/",
+#        "business_image": "https://images.squarespace-cdn.com/content/v1/5eccae01b8a2b27107146b93/04a22998-c1fd-49e2-ad82-a4a893fd7b9f/La%2BPharmacie%2BLogo%2Bno%2Bbackground.jpg?format=1500w",
     },
     "Professional breakdancer": {
-    "playlist": "Like No One's Watching",
-    "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Fiya",
-    "location": "5419 N Clark St, Chicago, IL 60640",
-    "website": "https://www.fiyarestaurant.com/",
-    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/fiya.png",
+        "playlist": "Like No One's Watching",
+        "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+#        "business_name": "Fiya",
+#        "location": "5419 N Clark St, Chicago, IL 60640",
+#        "website": "https://www.fiyarestaurant.com/",
+#        "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/fiya.png",
     },
     "Magician": {
-    "playlist": "Now You See Me, Now You Don't",
-    "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Chicago Magic Lounge",
-    "location": "5050 N Clark St, Chicago, IL 60640",
-    "website": "https://www.chicagomagiclounge.com/",
-    "business_image": "https://images.squarespace-cdn.com/content/v1/54aab93ae4b0fbd5ffc9f050/1531771582354-T4W5OUJJOD6L9QF6XLAW/CML_logo.png?format=500w"
+        "playlist": "Now You See Me, Now You Don't",
+        "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+#        "business_name": "Chicago Magic Lounge",
+#        "location": "5050 N Clark St, Chicago, IL 60640",
+#        "website": "https://www.chicagomagiclounge.com/",
+#        "business_image": "https://images.squarespace-cdn.com/content/v1/54aab93ae4b0fbd5ffc9f050/1531771582354-T4W5OUJJOD6L9QF6XLAW/CML_logo.png?format=500w"
     },
     "Stage comedian": {
-    "playlist": "Turn Up the Vibes",
-    "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Le Piano",
-    "location": "6970 N Glenwood Ave, Chicago, IL 60626",
-    "website": "https://www.lepianochicago.com/",
-    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/lepiano.png"
+        "playlist": "Turn Up the Vibes",
+        "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+#        "business_name": "Le Piano",
+#        "location": "6970 N Glenwood Ave, Chicago, IL 60626",
+#        "website": "https://www.lepianochicago.com/",
+#        "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/lepiano.png"
     },
 }
 
@@ -249,10 +249,10 @@ if selected_food and selected_genre and selected_theme and selected_complete and
     st.markdown(f"[Listen Here]({info['playlist_link']})")
 
 
-    st.image(info['business_image'], width=250)
-    st.write(f"🏷️ **Business Name:** {info['business_name']}")
-    st.write(f"🌐 [Visit Website]({info['website']})")
-    st.write(f"📍 **Address:** {info['location']}")
+#    st.image(info['business_image'], width=250)
+#    st.write(f"🏷️ **Business Name:** {info['business_name']}")
+#    st.write(f"🌐 [Visit Website]({info['website']})")
+#    st.write(f"📍 **Address:** {info['location']}")
 
     st.write("")
     st.subheader("Share your playlist!", divider="grey")

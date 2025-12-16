@@ -134,34 +134,34 @@ y2k_data = {
     "Britney Spears": {
         "playlist": "Oop...I did it again",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "business_name": "Edgewater Candles",
-        "location": "1050 W Bryn Mawr Ave, Chicago, IL 60660",
-        "website": "https://edgewatercandles.com/?srsltid=AfmBOooOnjGXBIqXVBK-zps-K3C05oH3rcqn72f7BYUijz8L_CN4TsrP",
-        "business_image": "https://edgewatercandles.com/cdn/shop/files/EC_Logo_BW.png?v=1706025877&width=220",
+#        "business_name": "Edgewater Candles",
+#        "location": "1050 W Bryn Mawr Ave, Chicago, IL 60660",
+#        "website": "https://edgewatercandles.com/?srsltid=AfmBOooOnjGXBIqXVBK-zps-K3C05oH3rcqn72f7BYUijz8L_CN4TsrP",
+#        "business_image": "https://edgewatercandles.com/cdn/shop/files/EC_Logo_BW.png?v=1706025877&width=220",
     },
     "Usher": {
     "playlist": "Smooth Grooves",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Ándale Market",
-    "location": "5232 N Clark St, Chicago, IL 60640",
-    "website": "https://andalemarket.com/",
-    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/andalemarket.png",
+#    "business_name": "Ándale Market",
+#    "location": "5232 N Clark St, Chicago, IL 60640",
+#    "website": "https://andalemarket.com/",
+#    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/andalemarket.png",
     },
     "Green Day": {
     "playlist": "Amped Up",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "AlleyCat Comics",
-    "location": "5304 N Clark St, Chicago, IL 60640",
-    "website": "https://www.alleycatcomics.com/",
-    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/alleycatcomics.png"
+#    "business_name": "AlleyCat Comics",
+#    "location": "5304 N Clark St, Chicago, IL 60640",
+#    "website": "https://www.alleycatcomics.com/",
+#    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/alleycatcomics.png"
     },
     "Destiny's Child": {
     "playlist": "Off the Charts Pop",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Five Elements Home",
-    "location": "5239 N Clark St, Chicago, IL 60640",
-    "website": "https://www.fiveelementshome.com/",
-    "business_image": "https://www.fiveelementshome.com/cdn/shop/t/55/assets/logo.png?v=63601364107164957311456001943"
+#    "business_name": "Five Elements Home",
+#    "location": "5239 N Clark St, Chicago, IL 60640",
+#    "website": "https://www.fiveelementshome.com/",
+#    "business_image": "https://www.fiveelementshome.com/cdn/shop/t/55/assets/logo.png?v=63601364107164957311456001943"
     },
 }
 
@@ -264,10 +264,10 @@ if selected_tech and selected_movie and selected_ppl and y2k_choice:
     st.markdown(f"[Listen Here]({info['playlist_link']})")
 
     # Business info display
-    st.image(info['business_image'], width=250)
-    st.write(f"🏷️ **Business Name:** {info['business_name']}")
-    st.write(f"🌐 [Visit Website]({info['website']})")
-    st.write(f"📍 **Address:** {info['location']}")
+#    st.image(info['business_image'], width=250)
+#    st.write(f"🏷️ **Business Name:** {info['business_name']}")
+#    st.write(f"🌐 [Visit Website]({info['website']})")
+#    st.write(f"📍 **Address:** {info['location']}")
 
     st.write("")
     st.subheader("Share your playlist!", divider="grey")

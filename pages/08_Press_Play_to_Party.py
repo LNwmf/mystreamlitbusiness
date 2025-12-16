@@ -154,7 +154,7 @@ trick_data = {
     "business_image": "https://images.squarespace-cdn.com/content/v1/54aab93ae4b0fbd5ffc9f050/1531771582354-T4W5OUJJOD6L9QF6XLAW/CML_logo.png?format=500w"
     },
     "Stage comedian": {
-    "playlist": "Turn Up the Vibes!",
+    "playlist": "Turn Up the Vibes",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "business_name": "Le Piano",
     "location": "6970 N Glenwood Ave, Chicago, IL 60626",

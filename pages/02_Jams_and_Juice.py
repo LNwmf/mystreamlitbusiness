@@ -1,4 +1,5 @@
 import streamlit as st
+import json
 #streamlit run sl1.py
 
 st.set_page_config(
@@ -252,7 +253,15 @@ if selected_flavor and selected_travel and selected_ingredient and selected_mood
 
     # Display playlist and business info
     st.subheader(f"🎵 Your playlist is {info['playlist']}!")
+    playlist_link_js = json.dumps(info["playlist_link"])
 
+    st.markdown(
+        f"""
+        <h2>🎧 <a href="{info['playlist_link']}" target="_blank">Listen on Spotify</a></h2>
+        <button onclick="navigator.clipboard.writeText({playlist_link_js})">📋 Copy link</button>
+        """,
+        unsafe_allow_html=True
+    )
 
     # Business info display
 #    st.image(info['business_image'], width=250)  # Show business image (if available)

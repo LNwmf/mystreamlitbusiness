@@ -26,7 +26,7 @@ drink = ["Apple cider", "Pumpkin spice latte", "Chai", "Hot chocolate"]
 selected_drink = st.selectbox("Pick a fall drink:", drink, index=None)
 
 #Q2
-st.write("Which Halloween movie is your go-to?")
+st.write("Which Halloween movie is your go-to? (double-click button)")
 images = [
 
         "https://lumiere-a.akamaihd.net/v1/images/p_hocuspocus_19880_e000b013.jpeg",
@@ -84,7 +84,7 @@ spent = ["Alone", "With family and friends", "In nature", "With lots of food"]
 selected_spent = st.selectbox("Fall is best spent...", spent, index=None)
 
 #Q5
-st.write("Pick a fall activity")
+st.write("Pick a fall activity: (double-click button)")
 images = [
 
         "https://theworldmusicfoundation.org/wp-content/streamlitimages/pumpkin.jpg",

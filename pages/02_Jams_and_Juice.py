@@ -258,7 +258,7 @@ if selected_flavor and selected_travel and selected_ingredient and selected_mood
         playlist_link = info["playlist_link"]
 
         # Create two columns: one wider for the link, one narrower for the button
-        col1, col2 = st.columns([2, 1])
+        col1, col2 = st.columns([8, 1])
 
         # Put the hyperlink in the first column
         with col1:

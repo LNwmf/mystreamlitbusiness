@@ -240,7 +240,7 @@ if selected_perform and selected_era and selected_place and selected_word and va
 
     # Display playlist and business info
     st.subheader(f"🎵 Your playlist is {info3['playlist']}!")
-    playlist_link = info["playlist_link"]
+    playlist_link = info3["playlist_link"]
 
     # Create two columns: one wider for the link, one narrower for the button
     col1, col2 = st.columns([0.2, 1])

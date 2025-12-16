@@ -448,7 +448,7 @@ if selected_flavor and selected_time and selected_life and selected_season and d
         info = dessert_data[result_key]
 
     # Display playlist and business info
-    st.subheader(f"🎵 {info['playlist']}")
+    st.subheader(f"🎵 Your playlist is {info['playlist']}!")
     st.markdown(f"[Listen Here]({info['playlist_link']})")
 
     # Business info display

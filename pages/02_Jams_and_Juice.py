@@ -253,21 +253,21 @@ if selected_flavor and selected_travel and selected_ingredient and selected_mood
 
     # Display playlist and business info
 
-    st.subheader(f"🎵 Your playlist is {info['playlist']}!")
+        st.subheader(f"🎵 Your playlist is {info['playlist']}!")
 
-    playlist_link = info["playlist_link"]
+        playlist_link = info["playlist_link"]
 
-    if playlist_link:
-        st.markdown(f"🎧 [Listen on Spotify]({playlist_link})")
+        if playlist_link:
+            st.markdown(f"🎧 [Listen on Spotify]({playlist_link})")
 
-        copy_button(
-            value=playlist_link,
-            label="📋 Copy link",
-            tooltip="Click to copy playlist link",
-            copied_label="✅ Copied!"
-        )
-    else:
-        st.error("No playlist link found.")
+            copy_button(
+                value=playlist_link,
+                label="📋 Copy link",
+                tooltip="Click to copy playlist link",
+                copied_label="✅ Copied!"
+            )
+        else:
+            st.error("No playlist link found.")
 
     # Business info display
 #    st.image(info['business_image'], width=250)  # Show business image (if available)

@@ -262,7 +262,7 @@ if selected_flavor and selected_travel and selected_ingredient and selected_mood
 
         # Put the hyperlink in the first column
         with col1:
-            st.markdown(f"[Listen Here]({playlist_link})")
+            st.markdown(f"##[Listen Here]({playlist_link})")
 
         # Put the copy button in the second column
         with col2:

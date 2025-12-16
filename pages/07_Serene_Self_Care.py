@@ -439,7 +439,7 @@ if selected_unwind and selected_act and selected_secret and selected_getaway and
     if output:
         info3 = energy_data[output]
 
-    st.subheader(f"🎵 {info3['playlist']}")
+    st.subheader(f"🎵 Your playlist is {info3['playlist']}!")
     st.markdown(f"[Listen Here]({info3['playlist_link']})")
 
     # Business info display

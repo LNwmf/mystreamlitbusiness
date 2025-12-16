@@ -251,7 +251,7 @@ if selected_flavor and selected_travel and selected_ingredient and selected_mood
         info = drink_data[result_key]
 
     # Display playlist and business info
-    st.subheader(f"🎵 {info['playlist']}")
+    st.subheader(f"🎵 Your playlist is {info['playlist']}!")
     st.markdown(f"[Listen Here]({info['playlist_link']})")
 
     # Business info display

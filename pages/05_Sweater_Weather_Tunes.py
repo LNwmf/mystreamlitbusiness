@@ -250,7 +250,7 @@ if selected_film and selected_element and selected_fall:
 
 
     # Display playlist and business info
-    st.subheader(f"🎵 {info['playlist']}")
+    st.subheader(f"🎵 Your playlist is {info['playlist']}!")
     st.markdown(f"[Listen Here]({info['playlist_link']})")
 
     # Business info display

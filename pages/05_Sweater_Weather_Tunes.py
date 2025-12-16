@@ -137,34 +137,34 @@ fall_data = {
     "Pumpkin carving": {
         "playlist": "Chilly Orchards",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "business_name": "pHlour Bakery & Cafe",
-        "location": "1138 W Bryn Mawr Ave, Chicago, IL 60660",
-        "website": "https://www.phlour.com/",
-        "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/phlour.png",
+#        "business_name": "pHlour Bakery & Cafe",
+#        "location": "1138 W Bryn Mawr Ave, Chicago, IL 60660",
+#        "website": "https://www.phlour.com/",
+#        "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/phlour.png",
     },
     "Apple picking": {
-    "playlist": "Good Ol' Times",
-    "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Eli Tea Bar",
-    "location": "5507 N Clark St, Chicago, IL 60640",
-    "website": "https://www.eliteabar.com/pages/chicago?srsltid=AfmBOoqZ9MveNUGO0oLPMFnIerXvvwttDi_PocAmQXuax6clgCdgzJp7",
-    "business_image": "https://cdn.shopify.com/s/files/1/0171/0582/t/12/assets/andersonville-circle-logo-white-1632947388908.jpg?v=1632947390",
+        "playlist": "Good Ol' Times",
+        "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+#        "business_name": "Eli Tea Bar",
+#        "location": "5507 N Clark St, Chicago, IL 60640",
+#        "website": "https://www.eliteabar.com/pages/chicago?srsltid=AfmBOoqZ9MveNUGO0oLPMFnIerXvvwttDi_PocAmQXuax6clgCdgzJp7",
+#        "business_image": "https://cdn.shopify.com/s/files/1/0171/0582/t/12/assets/andersonville-circle-logo-white-1632947388908.jpg?v=1632947390",
     },
     "Trick or treating": {
-    "playlist": "Dark Blues",
-    "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Loaves and Witches",
-    "location": "6034 N Broadway, Chicago, IL 60660",
-    "website": "https://loavesandwitches.com/",
-    "business_image": "https://static.spotapps.co/website_images/ab_websites/307737_website_v1/logo.png"
+        "playlist": "Dark Blues",
+        "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+#        "business_name": "Loaves and Witches",
+#        "location": "6034 N Broadway, Chicago, IL 60660",
+#        "website": "https://loavesandwitches.com/",
+#        "business_image": "https://static.spotapps.co/website_images/ab_websites/307737_website_v1/logo.png"
     },
     "Bonfires": {
-    "playlist": "Jazz 'n Smores",
-    "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Isabella Bakery",
-    "location": "1659 W Foster Ave, Chicago, IL 60640",
-    "website": "https://www.yelp.com/biz/isabella-bakery-chicago-2",
-    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/isabellabakery.png"
+        "playlist": "Jazz 'n Smores",
+        "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+#        "business_name": "Isabella Bakery",
+#        "location": "1659 W Foster Ave, Chicago, IL 60640",
+#        "website": "https://www.yelp.com/biz/isabella-bakery-chicago-2",
+#        "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/isabellabakery.png"
     },
 }
 
@@ -254,10 +254,10 @@ if selected_film and selected_element and selected_fall:
     st.markdown(f"[Listen Here]({info['playlist_link']})")
 
     # Business info display
-    st.image(info['business_image'], width=250)
-    st.write(f"🏷️ **Business Name:** {info['business_name']}")
-    st.write(f"🌐 [Visit Website]({info['website']})")
-    st.write(f"📍 **Address:** {info['location']}")
+#    st.image(info['business_image'], width=250)
+#    st.write(f"🏷️ **Business Name:** {info['business_name']}")
+#    st.write(f"🌐 [Visit Website]({info['website']})")
+#    st.write(f"📍 **Address:** {info['location']}")
 
     st.write("")
     st.subheader("Share your playlist!", divider="grey")

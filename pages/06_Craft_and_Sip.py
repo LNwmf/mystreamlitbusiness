@@ -240,7 +240,25 @@ if selected_perform and selected_era and selected_place and selected_word and va
 
     # Display playlist and business info
     st.subheader(f"🎵 Your playlist is {info3['playlist']}!")
-    st.markdown(f"[Listen Here]({info3['playlist_link']})")
+    playlist_link = info["playlist_link"]
+
+    # Create two columns: one wider for the link, one narrower for the button
+    col1, col2 = st.columns([0.2, 1])
+
+    # Put the hyperlink in the first column
+    with col1:
+        st.markdown(
+            f"""
+                       <a href="{playlist_link}" target="_blank" style="font-size:20px; font-weight:bold;">
+                           Listen Here
+                       </a>
+                       """,
+            unsafe_allow_html=True
+        )
+
+    # Put the copy button in the second column
+    with col2:
+        copy_button(playlist_link)
 
     # Business info display
 #    st.image(info3['business_image'], width=250)

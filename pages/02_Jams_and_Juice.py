@@ -256,7 +256,14 @@ if selected_flavor and selected_travel and selected_ingredient and selected_mood
 
         st.subheader(f"🎵 Your playlist is {info['playlist']}!")
         playlist_link = info["playlist_link"]
-
+        st.markdown(
+            f"""
+            <a href="{playlist_link}" target="_blank" style="font-size:20px; font-weight:bold;">
+                🎧 Listen Here
+            </a>
+            """,
+            unsafe_allow_html=True
+        )
         # Create two columns: one wider for the link, one narrower for the button
         col1, col2 = st.columns([0.2, 1])
 

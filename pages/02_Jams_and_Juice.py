@@ -255,10 +255,9 @@ if selected_flavor and selected_travel and selected_ingredient and selected_mood
     # Display playlist and business info
 
         st.subheader(f"🎵 Your playlist is {info['playlist']}!")
+        st.markdown(f"[Listen Here]({info['playlist_link']})")
 
         playlist_link = info["playlist_link"]
-
-        st.markdown(f"🎧 [Listen on Spotify]({playlist_link})")
 
         copy_button(playlist_link)
 

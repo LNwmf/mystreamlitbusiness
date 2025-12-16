@@ -134,34 +134,34 @@ energy_data = {
     "Glowing": {
         "playlist": "Mood: Dewy",
         "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "business_name": "Apothecary EO",
-        "location": "5601 N Clark St, Chicago, IL 60660",
-        "website": "https://www.apothecaryeo.com/",
-        "business_image": "https://static.wixstatic.com/media/d5bbda_fd6fbc09537f4e1480e3a6b0bcb91d1a~mv2.png/v1/fill/w_788,h_328,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Apothecary%20EO.png",
+#        "business_name": "Apothecary EO",
+#        "location": "5601 N Clark St, Chicago, IL 60660",
+#        "website": "https://www.apothecaryeo.com/",
+#        "business_image": "https://static.wixstatic.com/media/d5bbda_fd6fbc09537f4e1480e3a6b0bcb91d1a~mv2.png/v1/fill/w_788,h_328,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Apothecary%20EO.png",
     },
     "Clear": {
     "playlist": "Drifting in the Sun",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "105F Hot Yoga, Pilates, & Wellness",
-    "location": "5715 N Clark St, Chicago, IL 60660",
-    "website": "https://105f.com/classes/",
-    "business_image": "https://105f.com/wp-content/uploads/2020/01/105f_logo_without-Background-1.gif",
+#    "business_name": "105F Hot Yoga, Pilates, & Wellness",
+#    "location": "5715 N Clark St, Chicago, IL 60660",
+#    "website": "https://105f.com/classes/",
+#    "business_image": "https://105f.com/wp-content/uploads/2020/01/105f_logo_without-Background-1.gif",
     },
     "Soft": {
     "playlist": "Bubbles & Wine",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "AMK Massage",
-    "location": "5347 N Clark St #2, Chicago, Illinois 60640",
-    "website": "https://www.amkmassage.com/",
-    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/massage.png"
+#    "business_name": "AMK Massage",
+#    "location": "5347 N Clark St #2, Chicago, Illinois 60640",
+#    "website": "https://www.amkmassage.com/",
+#    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/massage.png"
     },
     "Reflective": {
     "playlist": "Nostalgic Strings",
     "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "business_name": "Freestyle Ceramics & Tufting",
-    "location": "5127 N Clark St, Chicago, IL 60640",
-    "website": "https://www.freestyletufting.com/",
-    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/freestyleceramicsandtufting.png"
+#    "business_name": "Freestyle Ceramics & Tufting",
+#    "location": "5127 N Clark St, Chicago, IL 60640",
+#    "website": "https://www.freestyletufting.com/",
+#    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/freestyleceramicsandtufting.png"
     },
 }
 
@@ -443,10 +443,10 @@ if selected_unwind and selected_act and selected_secret and selected_getaway and
     st.markdown(f"[Listen Here]({info3['playlist_link']})")
 
     # Business info display
-    st.image(info3['business_image'], width=250)
-    st.write(f"🏷️ **Business Name:** {info3['business_name']}")
-    st.write(f"🌐 [Visit Website]({info3['website']})")
-    st.write(f"📍 **Address:** {info3['location']}")
+#    st.image(info3['business_image'], width=250)
+#    st.write(f"🏷️ **Business Name:** {info3['business_name']}")
+#    st.write(f"🌐 [Visit Website]({info3['website']})")
+#    st.write(f"📍 **Address:** {info3['location']}")
 
     st.write("")
     st.subheader("Share your playlist!", divider="grey")

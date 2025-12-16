@@ -252,10 +252,7 @@ if selected_flavor and selected_travel and selected_ingredient and selected_mood
 
     # Display playlist and business info
     st.subheader(f"🎵 Your playlist is {info['playlist']}!")
-    if st.button("📋 Copy link"):
-        st.experimental_set_clipboard(info["playlist_link"])
-        st.success("Link copied!")
-    )
+
 
     # Business info display
 #    st.image(info['business_image'], width=250)  # Show business image (if available)

@@ -252,12 +252,17 @@ if selected_flavor and selected_travel and selected_ingredient and selected_mood
         info = drink_data[result_key]
 
     # Display playlist and business info
+    playlist_link = info["playlist_link"]
     st.subheader(f"🎵 Your playlist is {info['playlist']}!")
 
-    playlist_link = info["playlist_link"]
 
     st.markdown(f"🎧 [Listen on Spotify]({playlist_link})")
-    copy_button(playlist_link, tooltip="Copy playlist link", copied_label="Copied!")
+
+    copy_button(
+        playlist_link,
+        tooltip="Copy playlist link",
+        copied_label="Copied!"
+    )
 
     # Business info display
 #    st.image(info['business_image'], width=250)  # Show business image (if available)

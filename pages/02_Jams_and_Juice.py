@@ -252,11 +252,11 @@ if selected_flavor and selected_travel and selected_ingredient and selected_mood
 
     # Display playlist and business info
     st.subheader(f"🎵 Your playlist is {info['playlist']}!")
-    st.link_button(
-        "▶️ Listen on Spotify",
-        info["playlist_link"]
+    st.markdown(
+        f"## 🎧 [Listen on Spotify]({info['playlist_link']})"
     )
 
+    st.caption("Copy link")
     st.code(info["playlist_link"], language="text")
 
     # Business info display

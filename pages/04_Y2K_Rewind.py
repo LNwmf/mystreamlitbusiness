@@ -133,7 +133,7 @@ selected_ppl = st.selectbox("Which Y2K character are you?", ppl, index=None)
 # Business options and related data
 y2k_data = {
     "Britney Spears": {
-        "playlist": "Global Hits",
+        "playlist": "Global Jams",
         "playlist_link": "https://open.spotify.com/playlist/21mLluoK8TIHpPmgFIJUxB?si=gVJOo4KuTYKlh-h1hvk0GA",
 #        "business_name": "Edgewater Candles",
 #        "location": "1050 W Bryn Mawr Ave, Chicago, IL 60660",

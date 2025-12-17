@@ -34,7 +34,7 @@ trivia_questions = [
         "type": "true_false",
         "question": "Amapiano is a subgenre of house music that incorporates piano, jazz, and distinctive basslines. It originated from South Africa in the 2010s.",
         "answer": "True",
-        "image": "https://cms.forbesafrica.com/wp-content/uploads/2021/10/Screenshot-2021-10-22-at-14.32.24-1.png"
+        "image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/amapiano.png"
     },
     {
         "type": "multiple_choice",

@@ -25,7 +25,7 @@ st.image("https://theworldmusicfoundation.org/wp-content/uploads/2016/11/wmf_sma
 
 st.title("🍹 Jams & Juice")
 st.markdown("""
-Welcome! Pick a drink below to discover a blended playlist and unlock a surprise for sharing with others. Yay!
+Welcome! Pick a drink below to discover a blended playlist and unlock a surprise for sharing with others.
 """)
 
 #Q1

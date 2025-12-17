@@ -134,7 +134,7 @@ st.write("")
 energy_data = {
     "Glowing": {
         "playlist": "Mood: Dewy",
-        "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "playlist_link": "https://open.spotify.com/playlist/3KqR0JO9SyVChRmtJl3h8E?si=0Az8nnoaQuy28BdsvTd_Cg",
 #        "business_name": "Apothecary EO",
 #        "location": "5601 N Clark St, Chicago, IL 60660",
 #        "website": "https://www.apothecaryeo.com/",
@@ -142,7 +142,7 @@ energy_data = {
     },
     "Clear": {
     "playlist": "Drifting in the Sun",
-    "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "playlist_link": "https://open.spotify.com/playlist/56XDtYltTtWDNm3vHXrpsy?si=6qcxLaEJQFCI_mZSvNsRXQ",
 #    "business_name": "105F Hot Yoga, Pilates, & Wellness",
 #    "location": "5715 N Clark St, Chicago, IL 60660",
 #    "website": "https://105f.com/classes/",
@@ -150,15 +150,15 @@ energy_data = {
     },
     "Soft": {
     "playlist": "Bubbles & Wine",
-    "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "playlist_link": "https://open.spotify.com/playlist/5rMYIk7cKoUZe7TqX3Alm9?si=2M6fFiVCRE6EQl_7-A7uDg",
 #    "business_name": "AMK Massage",
 #    "location": "5347 N Clark St #2, Chicago, Illinois 60640",
 #    "website": "https://www.amkmassage.com/",
 #    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/massage.png"
     },
     "Reflective": {
-    "playlist": "Nostalgic Strings",
-    "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "playlist": "Just Thinking...",
+    "playlist_link": "https://open.spotify.com/playlist/30rsriukBie1aX6feryzMu?si=EVtDnaFAQQ2wiYm6hhJqQA",
 #    "business_name": "Freestyle Ceramics & Tufting",
 #    "location": "5127 N Clark St, Chicago, IL 60640",
 #    "website": "https://www.freestyletufting.com/",

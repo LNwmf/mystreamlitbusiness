@@ -47,7 +47,7 @@ trivia_questions = [
         "type": "true_false",
         "question": "Famous Bulgarian composer Pancho Vladigerov is best known for his work 'Balkan Suites'.",
         "answer": "False",
-        "image": "https://operasofia.bg/uploads/people/1814.png?_=1733060649"
+        "image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/balkansuites.png"
     },
     {
         "type": "multiple_choice",

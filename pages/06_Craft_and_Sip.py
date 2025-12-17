@@ -128,15 +128,15 @@ selected_word = st.selectbox("If you were to describe your life in one artistic 
 value_data = {
     "Emotion": {
         "playlist": "Happy Accidents",
-        "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "playlist_link": "https://open.spotify.com/playlist/6LbmKSIGJQydOilRqW4qgu?si=iVm6GtdCQLqgsrCnR6kbVA",
 #        "business_name": "Paper and Pencil",
 #        "location": "1480 W Berwyn Ave, Chicago, IL 60640",
 #        "website": "https://paperandpencilchicago.com/",
 #        "business_image": "https://paperandpencilchicago.com/cdn/shop/files/Primary_1.png?v=1680104637&width=500",
     },
     "Color": {
-    "playlist": "Palette Pop",
-    "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "playlist": "Palette Spirits",
+    "playlist_link": "https://open.spotify.com/playlist/3GIM2lxfjVOq5njYdGsctK?si=JDZ-nn0hS1mV__jKrFk_iA",
 #    "business_name": "Foursided",
 #    "location": "5061 N Clark St, Chicago, IL 60640",
 #    "website": "https://foursided.com/",
@@ -144,7 +144,7 @@ value_data = {
     },
     "Texture": {
     "playlist": "Velvet Tunes",
-    "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "playlist_link": "https://open.spotify.com/playlist/7DPSUXq6oVgBFdwiHYeL4y?si=WixjjZcmS8qlif_e3RvFEg",
 #    "business_name": "Mercantile M",
 #    "location": "5409 1/2 N Clark St, Chicago, Illinois 60640",
 #    "website": "https://www.facebook.com/MercantileM//",
@@ -152,7 +152,7 @@ value_data = {
     },
     "Storytelling": {
     "playlist": "Memory Lane",
-    "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "playlist_link": "https://open.spotify.com/playlist/6nwxC9UYqJFMLXwzH4bj0q?si=0awinhzNQcu0tOeG3K6I0g",
 #    "business_name": "Andersonville Galleria",
 #    "location": "5247 N Clark St, Chicago, IL 60640",
 #    "website": "https://andersonvillegalleria.com/",

@@ -137,7 +137,7 @@ st.write("")
 fall_data = {
     "Pumpkin carving": {
         "playlist": "Chilly Orchards",
-        "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "playlist_link": "https://open.spotify.com/playlist/0TJzYGSGd8iHqEZaAZsJ91?si=jyaEU-gSS9C477KpFA1ZrQ",
 #        "business_name": "pHlour Bakery & Cafe",
 #        "location": "1138 W Bryn Mawr Ave, Chicago, IL 60660",
 #        "website": "https://www.phlour.com/",
@@ -145,15 +145,15 @@ fall_data = {
     },
     "Apple picking": {
         "playlist": "Good Ol' Times",
-        "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "playlist_link": "https://open.spotify.com/playlist/2yyucwaGEd87Kf0fd2sbU6?si=FlGpRdjXSCa7RCmsdYjJmg",
 #        "business_name": "Eli Tea Bar",
 #        "location": "5507 N Clark St, Chicago, IL 60640",
 #        "website": "https://www.eliteabar.com/pages/chicago?srsltid=AfmBOoqZ9MveNUGO0oLPMFnIerXvvwttDi_PocAmQXuax6clgCdgzJp7",
 #        "business_image": "https://cdn.shopify.com/s/files/1/0171/0582/t/12/assets/andersonville-circle-logo-white-1632947388908.jpg?v=1632947390",
     },
     "Trick or treating": {
-        "playlist": "Dark Blues",
-        "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "playlist": "Deep Blues",
+        "playlist_link": "https://open.spotify.com/playlist/46NHISvuSn4U8QArciFuIW?si=lkSU3SabSTmz8CErfkO7vQ",
 #        "business_name": "Loaves and Witches",
 #        "location": "6034 N Broadway, Chicago, IL 60660",
 #        "website": "https://loavesandwitches.com/",
@@ -161,7 +161,7 @@ fall_data = {
     },
     "Bonfires": {
         "playlist": "Jazz 'n Smores",
-        "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "playlist_link": "https://open.spotify.com/playlist/1cTPZbmSHxptMBewPXSg41?si=rdslvz0YR5yVHW97nLy5_Q",
 #        "business_name": "Isabella Bakery",
 #        "location": "1659 W Foster Ave, Chicago, IL 60640",
 #        "website": "https://www.yelp.com/biz/isabella-bakery-chicago-2",

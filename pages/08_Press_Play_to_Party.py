@@ -131,7 +131,7 @@ selected_complete = st.selectbox("No party is complete without:", complete, inde
 trick_data = {
     "Karaoke master": {
         "playlist": "Throwback Classics",
-        "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "playlist_link": "https://open.spotify.com/playlist/6DuciCQaGlsqsHiO2Rj2YY?si=EBqore-3S6WIMvg4py9omA",
 #        "business_name": "La Pharmacie",
 #        "location": "5557 N Sheridan Rd, Chicago, IL 60640",
 #        "website": "https://www.lapharmaciechicago.com/",
@@ -139,7 +139,7 @@ trick_data = {
     },
     "Professional breakdancer": {
         "playlist": "Like No One's Watching",
-        "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "playlist_link": "https://open.spotify.com/playlist/1Bf2iCYXSYvEdQRi6pTIlh?si=bnb0Kv0pRM-KNHOjnAPZsw",
 #        "business_name": "Fiya",
 #        "location": "5419 N Clark St, Chicago, IL 60640",
 #        "website": "https://www.fiyarestaurant.com/",
@@ -147,7 +147,7 @@ trick_data = {
     },
     "Magician": {
         "playlist": "Now You See Me, Now You Don't",
-        "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "playlist_link": "https://open.spotify.com/playlist/4SHfhb2TNRlqk6Xuy3zHf1?si=XU0Rq3mKRTWpZ2nMCga6MQ",
 #        "business_name": "Chicago Magic Lounge",
 #        "location": "5050 N Clark St, Chicago, IL 60640",
 #        "website": "https://www.chicagomagiclounge.com/",
@@ -155,7 +155,7 @@ trick_data = {
     },
     "Stage comedian": {
         "playlist": "Turn Up the Vibes",
-        "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "playlist_link": "https://open.spotify.com/playlist/1WtuTWjjXCbN1qg9SMpnLV?si=sbPUcvTrR-GZh67gQXodVA",
 #        "business_name": "Le Piano",
 #        "location": "6970 N Glenwood Ave, Chicago, IL 60626",
 #        "website": "https://www.lepianochicago.com/",

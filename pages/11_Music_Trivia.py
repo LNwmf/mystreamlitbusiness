@@ -28,7 +28,7 @@ trivia_questions = [
         "question": "This famous tango composed in Uruguay in 1916 is called...",
         "options": ["El Choclo", "Por una cabeza", "La Cumparsita", "Libertango"],
         "answer": "La Cumparsita",
-        "image": "https://i.ytimg.com/vi/I2kbPVQDlvM/maxresdefault.jpg"
+        "image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/lacumparsita.jpg"
     },
     {
         "type": "true_false",

@@ -157,7 +157,7 @@ y2k_data = {
 #    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/alleycatcomics.png"
     },
     "Destiny's Child": {
-    "playlist": "Off the Charts Pop",
+    "playlist": "Off the Charts",
     "playlist_link": "https://open.spotify.com/playlist/1YpUBBaQ9hS5P5KpndONGu?si=38KYS0O5RzuSiwnCh098Qg",
 #    "business_name": "Five Elements Home",
 #    "location": "5239 N Clark St, Chicago, IL 60640",

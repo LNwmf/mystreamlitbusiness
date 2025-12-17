@@ -21,7 +21,7 @@ st.image("https://theworldmusicfoundation.org/wp-content/uploads/2016/11/wmf_sma
 
 st.title("🍬 Sweet Melodies")
 st.markdown("""
-Welcome! Pick a dessert below to discover a blended playlist and unlock a surprise for sharing with others.
+Welcome! Pick a dessert below to discover a blended playlist and unlock a surprise for sharing with others. Answer all questions to see a cute surprise and fun music!
 """)
 
 #Q1

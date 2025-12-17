@@ -157,7 +157,7 @@ energy_data = {
 #    "business_image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/massage.png"
     },
     "Reflective": {
-    "playlist": "Just Thinking...",
+    "playlist": "Still Thinking...",
     "playlist_link": "https://open.spotify.com/playlist/30rsriukBie1aX6feryzMu?si=EVtDnaFAQQ2wiYm6hhJqQA",
 #    "business_name": "Freestyle Ceramics & Tufting",
 #    "location": "5127 N Clark St, Chicago, IL 60640",

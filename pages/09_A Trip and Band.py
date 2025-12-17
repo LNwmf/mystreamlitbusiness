@@ -437,7 +437,7 @@ if result:
 
     if result["music"]:
         music_link = result["music"]
-        col1, col2 = st.columns([0.2, 1])
+        col1, col2 = st.columns([0.5, 1])
         with col1:
             st.markdown(
                 f"""

@@ -1,3 +1,4 @@
+from st_copy import copy_button
 import streamlit as st
 
 st.set_page_config(
@@ -426,14 +427,27 @@ best_band = max(band_scores, key=band_scores.get)
 
 result = logic_data[best_band]
 
+
 if result:
     st.subheader(result["join"])
     st.header(result["band"])
     st.write(result["fun_fact"])
     if result["band_image"]:
-        st.image(result["band_image"], width=600)
-    if result["music"]:
-        st.markdown(f"[Music recommendation]({result['music']})")
+        st.image(result["band_image"], width=400)
 
+    if result["music"]:
+        music_link = result["music"]
+        col1, col2 = st.columns([0.2, 1])
+        with col1:
+            st.markdown(
+                f"""
+                         <a href="{music_link}" target="_blank" style="font-size:20px; font-weight:bold;">
+                             Listen Here
+                         </a>
+                         """,
+                unsafe_allow_html=True
+            )
+        with col2:
+            copy_button(music_link)  # copies the music link
 
 

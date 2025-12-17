@@ -150,7 +150,7 @@ dessert_data = {
 #    "business_image": "https://3mrestaurant.com/wp-content/uploads/2023/02/3M-LOGO.png",
     },
     "Taiyaki": {
-    "playlist": "Chill J-Rock",
+    "playlist": "Chill Classics",
     "playlist_link": "https://open.spotify.com/playlist/6bwKvzWbyYgjILrBZctfXC?si=6eTaIJ0HRHGffHBs6YX56g",
 #    "business_name": "Sayuri Sushi Bar",
 #    "location": "1553 W Devon Ave, Chicago, IL 60660",

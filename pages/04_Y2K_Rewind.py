@@ -133,8 +133,8 @@ selected_ppl = st.selectbox("Which Y2K character are you?", ppl, index=None)
 # Business options and related data
 y2k_data = {
     "Britney Spears": {
-        "playlist": "Oop...I did it again",
-        "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "playlist": "Global Hits",
+        "playlist_link": "https://open.spotify.com/playlist/21mLluoK8TIHpPmgFIJUxB?si=gVJOo4KuTYKlh-h1hvk0GA",
 #        "business_name": "Edgewater Candles",
 #        "location": "1050 W Bryn Mawr Ave, Chicago, IL 60660",
 #        "website": "https://edgewatercandles.com/?srsltid=AfmBOooOnjGXBIqXVBK-zps-K3C05oH3rcqn72f7BYUijz8L_CN4TsrP",
@@ -142,7 +142,7 @@ y2k_data = {
     },
     "Usher": {
     "playlist": "Smooth Grooves",
-    "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "playlist_link": "https://open.spotify.com/playlist/1dFrH8T9DjXR6pK80qz7FC?si=M1Dh0PX-QW-xGbS7sKPQwQ",
 #    "business_name": "Ándale Market",
 #    "location": "5232 N Clark St, Chicago, IL 60640",
 #    "website": "https://andalemarket.com/",
@@ -150,7 +150,7 @@ y2k_data = {
     },
     "Green Day": {
     "playlist": "Amped Up",
-    "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "playlist_link": "https://open.spotify.com/playlist/5LFR9EXWYS1Xn0FgolkiSy?si=u3-FMgAFSx6fH8G0v2gWjw",
 #    "business_name": "AlleyCat Comics",
 #    "location": "5304 N Clark St, Chicago, IL 60640",
 #    "website": "https://www.alleycatcomics.com/",
@@ -158,7 +158,7 @@ y2k_data = {
     },
     "Destiny's Child": {
     "playlist": "Off the Charts Pop",
-    "playlist_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "playlist_link": "https://open.spotify.com/playlist/1YpUBBaQ9hS5P5KpndONGu?si=38KYS0O5RzuSiwnCh098Qg",
 #    "business_name": "Five Elements Home",
 #    "location": "5239 N Clark St, Chicago, IL 60640",
 #    "website": "https://www.fiveelementshome.com/",

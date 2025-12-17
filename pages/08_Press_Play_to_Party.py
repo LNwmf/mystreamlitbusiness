@@ -22,7 +22,6 @@ st.title("🎉 Press Play to Party")
 st.markdown("""
 Welcome! Pick a party trick below to discover a blended playlist and unlock a surprise for sharing with others.
 """)
-st.write("")
 
 #Q1
 st.write("Pick a classic party food: (double-click button)")

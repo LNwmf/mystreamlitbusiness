@@ -87,7 +87,7 @@ quiz = {
             "Clue 3: The instrument is played in pairs, one male and female.",
             "Clue 4: A traditional instrument of Ghana."
         ],
-        "options": ["Steel drum", "Darbuka", "Bongo", "Bata drum"],
+        "options": ["Atumpan", "Darbuka", "Bongo", "Bata drum"],
         "audio": "https://i.imgur.com/jC2jK7p.mp4",
         "image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/atumpan.jpeg"
     },

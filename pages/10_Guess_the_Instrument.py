@@ -98,7 +98,7 @@ quiz = {
             "Clue 3: Two small wooden sticks are used to play it.",
             "Clue 4: A traditional instrument of Iran."
         ],
-        "options": ["Santur", "Yangqin", "Dutar", "Lyre"],
+        "options": ["Santoor", "Yangqin", "Dutar", "Lyre"],
         "audio": "https://i.imgur.com/O3E44tr.mp4",
         "image": "https://theworldmusicfoundation.org/wp-content/streamlitimages/santoor.jpg"
     },
